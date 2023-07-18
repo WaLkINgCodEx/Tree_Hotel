@@ -1,162 +1,261 @@
+@font-face {
+  font-family: Reforma_1969;
+  src: url(./assets/fonts/reforma.1969-gris.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
-    font-family: Reforma_1969;
-    src: url(./assets/fonts/reforma.1969-gris.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} 
-    
+  font-family: "Niramit ExtraLight Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Niramit ExtraLight Regular"),
+    url(./assets/fonts/Niramit-ExtraLight.woff) format("woff");
+}
 
 body {
-    margin: auto;
-    font-family: Reforma_1969, AXtManalBold Regular ,Helvetica,Arial, Microsoft Yahei , PingFang SC , PingFang TC , PingFang HK , Hiragino Sans ,sans-serif;
+  margin: auto;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
 }
 
 .hero-section {
-    position: relative;
+  position: relative;
 }
 
-
 .nav-top {
-    z-index: 11;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
 }
 
 .nav-bar-1 {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-bar-1 ul {
-    margin: auto;
-    list-style: none;
-    padding: 0;
-    display: flex;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+  display: flex;
 }
 
 .nav-bar-1 li {
-    /* margin: 1rem 2rem; */
-    padding: 0.7rem 1.7rem;
-    display: flex;
-    align-items: center;
-    font-size: 0.9rem;
+  /* margin: 1rem 2rem; */
+  padding: 0.7rem 1.7rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
 }
 
 #logo {
-    margin-right: 10rem;
+  margin-right: 10rem;
 }
 
 .icon-logo {
-    width: 2.2rem;
-    margin-left: 20px;
-    margin-right: 20px;
+  width: 2.2rem;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .arrow-icon {
-    display: flex;
+  display: flex;
 }
 
 .arrow-icon span {
-    display: inherit;
-    width: auto;
-    margin-left: 5px;
+  display: inherit;
+  width: auto;
+  margin-left: 5px;
 }
 
 .bookNowButton {
-    background-color: #BAA382;
-    color: white;
+  background-color: #baa382;
+  color: white;
 }
 
-
 .heroView {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin: auto;
-    min-height: 800px;
-    min-width: 100%;
-    max-height: 100%;
-    max-width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: auto;
+  min-height: 800px;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .heroFrame {
-    min-height: 100%;
-    min-width: 100%;
-    max-height: 100%;
-    max-width: 100%;
-    overflow: hidden;
+  min-height: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-
 .heroFrame img {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    object-fit: cover;
-    min-height: 100%;
-    min-width: 100%;
-    max-height: 100%;
-    max-width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .heroText {
-    z-index: 11;
-    text-align: center;
+  z-index: 11;
+  text-align: center;
 }
 
-.heroText h1, p {
-    margin: 0 5rem;
-    font-size: 3rem;
-    letter-spacing: 0.75rem
+.heroText h1,
+p {
+  margin: 0 5rem;
+  font-size: 3rem;
+  letter-spacing: 0.75rem;
 }
 
 .heroText p {
-    margin-top: 30px;
-    font-size: 1.3333rem;
-    letter-spacing: normal;
+  margin-top: 30px;
+  font-size: 1.3333rem;
+  letter-spacing: normal;
 }
 
 .nav-bottom {
-    z-index: 1;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-top: 1px solid rgba(255,255,255,0.3);
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-bar-2 {
-    margin: auto;
-    padding: 0 20px;
-    max-width: 1455px;
+  margin: auto;
+  padding: 0 20px;
+  max-width: 1455px;
 }
 
 .nav-bottom ul {
-    display: flex;
-    margin: auto;
-    list-style: none;
-    padding: 0;
-    color: white;
+  display: flex;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+  color: white;
 }
 
 .nav-bottom li {
-    font-family: 'Niramit', sans-serif;
-    margin: 0.7rem 0rem;
-    font-size: 0.9rem;
+  font-family: "Niramit", sans-serif;
+  margin: 0.7rem 0rem;
+  font-size: 0.9rem;
 }
-
 
 .arrow-icon span {
-    width: 15px;
-    margin: 0 0.5rem;
-    color: white;
-    transform: rotate(-90deg);
+  width: 15px;
+  margin: 0 0.5rem;
+  color: white;
+  transform: rotate(-90deg);
 }
 
+.desc-banner-wrapper {
+  background-color: #e7e6e2;
+  padding: 50px;
+}
+
+.desc-container p {
+  font-family: Niramit, "AXtManalBold Regular", Helvetica, Arial,
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: normal;
+  margin: 0px;
+}
+
+.comparison-slider-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  background-color: white;
+}
+.comparison-slider {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+.comparison-slider > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.comparison-slider .resize {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+.comparison-slider .resize > img {
+  display: block;
+}
+
+.divider {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: rgba(256, 256, 256, 0.2);
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  margin-left: -1px;
+  cursor: ew-resize;
+}
+.divider:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -9px;
+  top: 50%;
+  margin-top: -10px;
+  background-color: white;
+  transform: rotate(45deg);
+  transition: all 0.1s ease-in-out;
+}
+.divider:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -5px;
+  top: 50%;
+  margin-top: -6px;
+  background-color: white;
+  transform: rotate(45deg);
+  transition: all 0.1s ease-in-out;
+}
+
+.divider.draggable:before {
+  width: 30px;
+  height: 30px;
+  left: -14px;
+  margin-top: -15px;
+}
+.divider.draggable:after {
+  width: 20px;
+  height: 20px;
+  left: -9px;
+  margin-top: -10px;
+  background-color: #555;
+}
