@@ -67,10 +67,11 @@ body {
   display: flex;
 }
 
-.arrow-icon span {
-  display: inherit;
+.nav-bar-1 .arrow-icon span {
+  display: flex;
   width: auto;
   margin-left: 5px;
+  color: black;
 }
 
 .bookNowButton {
@@ -148,7 +149,6 @@ p {
   display: flex;
   margin: auto;
   list-style: none;
-  padding: 0;
   color: white;
 }
 
@@ -158,26 +158,68 @@ p {
   font-size: 0.9rem;
 }
 
-.arrow-icon span {
-  width: 15px;
-  margin: 0 0.5rem;
-  color: white;
-  transform: rotate(-90deg);
+.nav-bar-2 .arrow-icon span {
+    display: flex;
+    width: auto;
+    margin-left: 5px;
+    width: 15px;
+    margin: 0 0.5rem;
+    color: white;
+    transform: rotate(-90deg);
 }
 
 .desc-banner-wrapper {
   background-color: #e7e6e2;
-  padding: 50px;
+  padding: 50px 80px;
+}
+
+.banner-container {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    max-width: 1330px;
+    margin: auto 6.5rem;
+}
+
+.photo-container{
+    display: flex;
+    min-height: 490px;
+    width: 62%;
+    margin: auto;
+}
+
+.desc-container {
+    width: 38%;
+    margin-top: 60px;
+    /* padding-right: 75px;
+    padding-top: 55px; */
+}
+
+.desc-p {
+    margin-top: 32.8125px;
+    padding-left: 45px;
+    padding-right: 70px;
+}
+
+.desc-container h2 {
+    font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+        Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+        sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    letter-spacing: 5px;
+    margin: 0px;
 }
 
 .desc-container p {
-  font-family: Niramit, "AXtManalBold Regular", Helvetica, Arial,
-    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
-  letter-spacing: normal;
-  margin: 0px;
+    font-family: Niramit, "AXtManalBold Regular", Helvetica, Arial,
+        "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+        "Hiragino Sans", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    letter-spacing: normal;
+    margin: 0px;
 }
 
 .comparison-slider-wrapper {
@@ -186,16 +228,27 @@ p {
   margin: 20px 0;
   background-color: white;
 }
+
 .comparison-slider {
   position: relative;
   width: 100%;
   margin: 0;
+  height: 490px;
+  overflow: hidden;
   box-sizing: border-box;
 }
+
 .comparison-slider > img {
-  width: 100%;
-  height: auto;
-  display: block;
+    margin: auto;
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
 }
 
 .comparison-slider .resize {
@@ -203,42 +256,53 @@ p {
   top: 0;
   left: 0;
   height: 100%;
-  width: 50%;
+  width: 70%;
   overflow: hidden;
 }
-.comparison-slider .resize > img {
-  display: block;
+
+.comparison-slider .resize img {
+    position: absolute;
+    margin: auto;
+    display: block;
+    object-fit: cover;
+    inset: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 517px;
+    max-height: 517px;
 }
 
 .divider {
   position: absolute;
-  width: 2px;
+  width: 5px;
   height: 100%;
   background-color: rgba(256, 256, 256, 0.2);
-  left: 50%;
+  left: 70%;
   top: 0;
   bottom: 0;
   margin-left: -1px;
   cursor: ew-resize;
 }
+
 .divider:before {
   content: "";
   position: absolute;
   width: 20px;
   height: 20px;
-  left: -9px;
+  left: -7px;
   top: 50%;
   margin-top: -10px;
   background-color: white;
   transform: rotate(45deg);
   transition: all 0.1s ease-in-out;
 }
+
 .divider:after {
   content: "";
   position: absolute;
   width: 12px;
   height: 12px;
-  left: -5px;
+  left: -3px;
   top: 50%;
   margin-top: -6px;
   background-color: white;
@@ -249,13 +313,14 @@ p {
 .divider.draggable:before {
   width: 30px;
   height: 30px;
-  left: -14px;
+  left: -12px;
   margin-top: -15px;
 }
+
 .divider.draggable:after {
   width: 20px;
   height: 20px;
-  left: -9px;
+  left: -7px;
   margin-top: -10px;
   background-color: #555;
 }
