@@ -1,3 +1,5 @@
+import awardImg1 from "./assets/images/award-Virtuoso.webp";
+
 export const hotelBasic = {
   address: "279 Moo 3 Tambon Nongtalay, Amphoe Muang, Krabi 81180 Thailand",
   tel: "+66 75 811 888",
@@ -42,5 +44,20 @@ export const facilities = [
   {
     facility: "Restaurant Dining",
     icon: "data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NS44MSA1NC43Ij48ZGVmcz48c3R5bGU+LmNscy0xLC5jbHMtMntmaWxsOm5vbmU7fS5jbHMtMntzdHJva2U6IzA4MmIyNjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLXdpZHRoOjIuNzVweDt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTAuOTEsNS4zNWg0NHY0NGgtNDRaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNNDUuNzQsMTAuODV2MjJIMzYuNTdDMzYuNTMsMjYuMSwzNi45MSwxOS4yNyw0NS43NCwxMC44NVptMCwyMnYxMUg0My45MXYtNS41TTI1LjU3LDEyLjY4VjQzLjg1bS01LjUtMzEuMTd2NS41YTUuNSw1LjUsMCwwLDAsMTEsMHYtNS41Ii8+PC9zdmc+",
+  },
+];
+
+export const awards = [
+  {
+    name: "Virtuoso Preferred Resorts",
+    image: "award-Virtuoso.webp",
+  },
+  {
+    name: "EarthCheck - Bronze Benchmarked 2023",
+    image: "award-Earthcheck.webp",
+  },
+  {
+    name: "DestinAsian - Reader's Choice Awards 2023: Best Boutique Hotels 2023",
+    image: "award-destinasian.webp",
   },
 ];

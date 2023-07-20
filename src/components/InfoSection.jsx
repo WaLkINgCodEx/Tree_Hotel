@@ -1,4 +1,5 @@
-import { hotelBasic, facilities } from "../data";
+import { hotelBasic, facilities, awards } from "../data";
+import Awards from "./Awards";
 import Facilities from "./Facilities";
 
 const InfoSection = () => {
@@ -19,6 +20,9 @@ const InfoSection = () => {
         <div className="address-col">
           <h6>Address</h6>
           <div className="address">{hotelBasic.address}</div>
+          <a href="#">
+            <button className="address-btn">How to get there</button>
+          </a>
         </div>
         <div className="extra-details-col">
           <div className="extra-details">
@@ -97,6 +101,34 @@ const InfoSection = () => {
                 fill-rule="nonzero"
               ></path>
             </svg>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div className="info-second-row">
+        <div className="award-col">
+          <h6>Awards & Accreditations</h6>
+          <div className="award-container">
+            {awards.map((award) => {
+              return <Awards name={award.name} image={award.image} />;
+            })}
+          </div>
+        </div>
+        <div className="press-col">
+          <h6>Press</h6>
+          <div className="press-list">
+            <div className="press">
+              <h6>SANCTUARY FOR THE SENSES 2021</h6>
+              <p>Read Review</p>
+            </div>
+            <div className="press">
+              <h6>How a taai resort won over this wellness cynic 2022</h6>
+              <p>Read Review</p>
+            </div>
+            <div className="press">
+              <h6>The thailand hotel view that blew my mind 2022</h6>
+              <p>Read Review</p>
+            </div>
           </div>
         </div>
       </div>
