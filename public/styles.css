@@ -18,6 +18,7 @@ body {
   font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
     Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", sans-serif;
+  font-size: 15px;
 }
 
 h1,
@@ -45,6 +46,12 @@ hr {
     sans-serif;
 }
 
+h2 {
+  margin-bottom: 1.5rem;
+  white-space: pre-wrap;
+  letter-spacing: 5px;
+}
+
 h6 {
   color: #b9bcb3;
   letter-spacing: 2px;
@@ -58,10 +65,69 @@ p {
   font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
     Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", sans-serif;
-  font-size: 0.9rem;
+  font-size: 15px;
   line-height: 1.4;
   letter-spacing: normal;
   margin: 0px;
+}
+
+.button-area {
+  text-align: center;
+  margin: 25px 0px;
+}
+
+@media (min-width: 960px) {
+  .button-area {
+    text-align: start;
+  }
+}
+
+.box-btn {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.75;
+  text-transform: uppercase;
+  min-width: 64px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: rgb(8, 43, 38);
+  border-radius: 0px;
+  border: 1px solid rgb(186, 163, 130);
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 10.5px 31.5px;
+  color: rgb(186, 163, 130);
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
+  width: 100%;
+}
+.box-btn:hover {
+  border-color: rgb(186, 163, 130);
+  background-color: rgb(186, 163, 130);
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 960px) {
+  .box-btn {
+    width: 230px;
+  }
 }
 
 .hero-section {
@@ -633,4 +699,135 @@ p {
 
 .press h6 {
   color: #000;
+}
+
+.intro-wrapper {
+  background-color: #e7e6e2;
+  padding: 3rem 0rem;
+}
+
+.intro-desc {
+  text-align: center;
+  padding: 0px 30px;
+  margin: 0 auto;
+}
+.intro-desc-para {
+  font-size: 15px;
+}
+
+@media (min-width: 960px) {
+  .intro-desc {
+    padding: 0px 2rem;
+    max-width: 960px;
+  }
+}
+
+.dining-list-wrapper {
+  background-color: #e7e6e2;
+  padding: 3rem 0rem;
+}
+
+@media (min-width: 960px) {
+  .dining-list-wrapper {
+    padding: 60px 30px;
+  }
+}
+
+.dining-list-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  overflow-y: auto;
+}
+
+@media (min-width: 960px) {
+  .dining-list-container {
+    flex-direction: column;
+    align-items: center;
+    overflow-y: initial;
+  }
+}
+
+.dining-card-container {
+  margin: 30px;
+  background-color: #fff;
+  min-width: 325px;
+  max-width: 325px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 960px) {
+  .dining-card-container {
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+  }
+
+  .dining-card-container:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.dining-photo-container {
+}
+@media (min-width: 960px) {
+  .dining-photo-container {
+    width: 50%;
+    height: initial;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+}
+
+.dining-photo {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.dining-info {
+  padding: 15px;
+}
+
+@media (min-width: 960px) {
+  .dining-info {
+    width: 50%;
+    padding: 30px;
+  }
+}
+
+.dining-title {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin: 0px;
+}
+
+.dining-desc {
+  margin: 15px 0px;
+}
+
+.dining-card-rows {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 960px) {
+  .dining-card-rows {
+    padding: 30px 0px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+.dining-card-row {
+  display: flex;
+}
+
+@media (min-width: 960px) {
+  .dining-card-row {
+    width: 50%;
+  }
 }

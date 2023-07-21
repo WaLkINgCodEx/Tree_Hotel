@@ -1,14 +1,23 @@
 import React from "react";
-import Header from "./Header";
-import DescBanner from "./DescBanner";
-import InfoSection from "./InfoSection";
+import HomeLayout from "../assets/routes/HomeLayout";
+import Dining from "../assets/routes/Dining";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import LandingPage from "../assets/routes/LandingPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeLayout />,
+    children: [
+      { index: true, element: <LandingPage /> },
+      {
+        path: "dining",
+        element: <Dining />,
+      },
+    ],
+  },
+]);
 
 export default function App() {
-  return (
-    <>
-      <Header />
-      <DescBanner />
-      <InfoSection />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
