@@ -773,7 +773,8 @@ p {
 }
 @media (min-width: 960px) {
   .dining-photo-container {
-    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
     height: initial;
     flex-grow: 1;
     overflow: hidden;
