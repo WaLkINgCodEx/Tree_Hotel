@@ -711,7 +711,6 @@ p {
   color: #000;
 }
 
-
 .connect-banner-wrapper {
   position: relative;
   width: 100%;
@@ -878,7 +877,7 @@ p {
   overflow: hidden;
   object-fit: cover;
   z-index: 1;
-=======
+}
 .intro-wrapper {
   background-color: #e7e6e2;
   padding: 3rem 0rem;
@@ -947,8 +946,6 @@ p {
   }
 }
 
-.dining-photo-container {
-}
 @media (min-width: 960px) {
   .dining-photo-container {
     min-width: 50%;

@@ -1,8 +1,8 @@
 import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import HomeLayout from "../assets/routes/HomeLayout";
 import Dining from "../assets/routes/Dining";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LandingPage from "../assets/routes/LandingPage";
 
 const router = createBrowserRouter([
@@ -21,5 +21,4 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />;
-
 }
