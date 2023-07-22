@@ -4,6 +4,7 @@ import HomeLayout from "../routes/HomeLayout";
 import LandingPage from "../routes/LandingPage";
 import Dining from "../routes/Dining";
 import Offers from "../routes/Offers";
+
 const router = createBrowserRouter([
   {
     path: "/",
