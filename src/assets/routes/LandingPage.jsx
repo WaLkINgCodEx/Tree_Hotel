@@ -10,7 +10,7 @@ const LandingPage = () => {
       <Header
         hotel="BANYAN TREE KRABI"
         navPage=""
-        img="/assets/images/header_img/lobby_1.webp"
+        img="/assets/images/header_img/lobby_6.webp"
       />
       <DescBanner />
       <InfoSection />
