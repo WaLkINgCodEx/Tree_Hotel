@@ -18,6 +18,7 @@ body {
   font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
     Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", sans-serif;
+  background-color: #e7e6e2;
   font-size: 15px;
 }
 
@@ -69,6 +70,7 @@ p {
   line-height: 1.4;
   letter-spacing: normal;
   margin: 0px;
+  font-weight: 400;
 }
 
 .button-area {
@@ -454,9 +456,17 @@ p {
 }
 
 .info-section-wrapper {
+  background-color: white;
+  width: 100%;
+}
+
+.info-background {
+  background-color: white;
   margin: 0 auto;
   max-width: 1330px;
-  padding: 60px 30px;
+  padding: 0 30px;
+  /* margin-top: 50px; */
+  margin-bottom: 50px;
 }
 
 .info-first-row {
@@ -701,6 +711,174 @@ p {
   color: #000;
 }
 
+
+.connect-banner-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+  overflow: hidden;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.connect-background {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  inset: 0px;
+  transform: translateY(-8px) scale(1.3875);
+}
+
+.connect-background img {
+  position: absolute;
+  inset: 0;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+
+  transform: translateY(-42px) scale(1.3875);
+}
+
+.connect-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+.connect-banner-container {
+  z-index: 1;
+  color: white;
+  width: 100%;
+  max-width: 960px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.connect-banner-container h2 {
+  margin: auto;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.connect-banner-container p {
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.chat-btn {
+  display: inline-flex;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-color: white;
+  border: 1px solid;
+}
+
+.feature-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 18px 30px;
+}
+
+.card-frame {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.feature-card-wrapper:nth-child(odd) > .card-frame {
+  flex-direction: row-reverse;
+}
+
+.card-left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding-right: 75px;
+  margin-bottom: 22.5px;
+}
+
+.feature-card-wrapper:nth-child(odd) > .card-frame > .card-left {
+  padding-right: 0;
+  padding-left: 75px;
+}
+
+.card-left h2 {
+  margin: auto;
+  font-size: 1.7rem;
+  letter-spacing: 5px;
+}
+
+.card-p {
+  margin-top: 32.8125px;
+  padding-left: 45px;
+}
+
+.card-p p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.card-left span {
+  margin-top: 65px;
+  background-color: #baa382;
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 10px 50px;
+}
+
+.card-right {
+  position: relative;
+  width: 67%;
+  overflow: hidden;
+  inset: 0px;
+  min-height: 500px;
+  /* max-height: 500px; */
+  /* top: 0;
+  left: 0; */
+  z-index: 1;
+}
+
+.card-right img {
+  position: absolute;
+  inset: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  object-fit: cover;
+  z-index: 1;
+=======
 .intro-wrapper {
   background-color: #e7e6e2;
   padding: 3rem 0rem;

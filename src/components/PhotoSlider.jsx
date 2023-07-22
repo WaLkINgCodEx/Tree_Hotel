@@ -1,11 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 
 const PhotoSlider = ({ image1, image2 }) => {
-
   const sliderRef = useRef(null);
 
   useEffect(() => {
-
     const slider = sliderRef.current;
     const resizeElement = slider.querySelector(".resize");
     const dividerElement = slider.querySelector(".divider");
@@ -41,9 +39,6 @@ const PhotoSlider = ({ image1, image2 }) => {
         }
 
         const moveX = e.pageX || e.touches[0].pageX;
-
-
-
 
         let leftValue = moveX + posX - dragWidth;
 
@@ -92,16 +87,15 @@ const PhotoSlider = ({ image1, image2 }) => {
   }, []);
 
   return (
-    <div class="comparison-slider-wrapper">
-      <div class="comparison-slider" ref={sliderRef}>
-        
+    <div className="comparison-slider-wrapper">
+      <div className="comparison-slider" ref={sliderRef}>
         <img src={image1} alt="hotel overview" />
 
-        <div class="resize">
-            <img src={image2} alt="hotel overview" />
+        <div className="resize">
+          <img src={image2} alt="hotel overview" />
         </div>
 
-        <div class="divider"></div>
+        <div className="divider"></div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+
 import HomeLayout from "../assets/routes/HomeLayout";
 import Dining from "../assets/routes/Dining";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -20,4 +21,5 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />;
+
 }
