@@ -1,7 +1,7 @@
 import React from "react";
 import Li from "./Li";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <div className="hero-section">
       <div className="nav-top">
@@ -29,10 +29,10 @@ export default function Header() {
 
       <div className="heroView">
         <div className="heroFrame">
-          <img src="./assets/images/BTTHKB_KP_1020_lobby_HR0005-1.jpg"></img>
+          <img src={props.img}></img>
         </div>
         <div className="heroText">
-          <h1>BANYAN TREE KRABI</h1>
+          <h1>{props.hotel}</h1>
           <p>Krabi, Thailand</p>
         </div>
       </div>
@@ -43,8 +43,13 @@ export default function Header() {
             <Li name="Home" className="arrow-icon" />
             <Li name="Thailand" className="arrow-icon" />
             <strong>
-              <Li name="Banyan Tree Krabi" />
+              <Li
+                name="Banyan Tree Krabi"
+                // className="arrow-icon"
+                className={props.navPage != "" ? "arrow-icon" : null}
+              />
             </strong>
+            {props.navPage && <Li name={props.navPage} />}
           </ul>
         </div>
       </div>
