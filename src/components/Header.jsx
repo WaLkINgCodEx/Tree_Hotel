@@ -4,14 +4,15 @@ import Li from "./Li";
 export default function Header() {
   return (
     <div className="hero-section">
-      <div class="nav-top">
-        <div class="nav-bar-1">
+      <div className="nav-top">
+        <div className="nav-bar-1">
           <ul>
             <Li
-              idName="logo"
+              brandIcon="logo"
               className="icon-logo"
               img="./assets/images/icon-logo-green-2.svg"
               alt="icon-logo"
+              // key="logo"
             />
             <Li name="ABOUT" />
             <Li name="OFFERS" />
@@ -36,8 +37,8 @@ export default function Header() {
         </div>
       </div>
 
-      <div class="nav-bottom">
-        <div class="nav-bar-2">
+      <div className="nav-bottom">
+        <div className="nav-bar-2">
           <ul>
             <Li name="Home" className="arrow-icon" />
             <Li name="Thailand" className="arrow-icon" />

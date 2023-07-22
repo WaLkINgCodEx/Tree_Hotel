@@ -19,6 +19,7 @@ body {
     Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", sans-serif;
   background-color: #e7e6e2;
+  font-size: 15px;
 }
 
 h1,
@@ -63,6 +64,7 @@ p {
   line-height: 1.4;
   letter-spacing: normal;
   margin: 0px;
+  font-weight: 400;
 }
 
 .hero-section {
@@ -724,4 +726,90 @@ p {
   text-transform: uppercase;
   border-color: white;
   border: 1px solid;
+}
+
+.feature-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 18px 30px;
+}
+
+.card-frame {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.feature-card-wrapper:nth-child(odd) > .card-frame {
+  flex-direction: row-reverse;
+}
+
+.card-left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding-right: 75px;
+  margin-bottom: 22.5px;
+}
+
+.feature-card-wrapper:nth-child(odd) > .card-frame > .card-left {
+  padding-right: 0;
+  padding-left: 75px;
+}
+
+.card-left h2 {
+  margin: auto;
+  font-size: 1.7rem;
+  letter-spacing: 5px;
+}
+
+.card-p {
+  margin-top: 32.8125px;
+  padding-left: 45px;
+}
+
+.card-p p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.card-left span {
+  margin-top: 65px;
+  background-color: #baa382;
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 10px 50px;
+}
+
+.card-right {
+  position: relative;
+  width: 67%;
+  overflow: hidden;
+  inset: 0px;
+  min-height: 500px;
+  /* max-height: 500px; */
+  /* top: 0;
+  left: 0; */
+  z-index: 1;
+}
+
+.card-right img {
+  position: absolute;
+  inset: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  object-fit: cover;
+  z-index: 1;
 }
