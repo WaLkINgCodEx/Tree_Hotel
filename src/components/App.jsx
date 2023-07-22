@@ -1,9 +1,9 @@
 import React from "react";
-import HomeLayout from "../assets/routes/HomeLayout";
-import Dining from "../assets/routes/Dining";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import LandingPage from "../assets/routes/LandingPage";
-
+import HomeLayout from "../routes/HomeLayout";
+import LandingPage from "../routes/LandingPage";
+import Dining from "../routes/Dining";
+import Offers from "../routes/Offers";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: "dining",
         element: <Dining />,
+      },
+      {
+        path: "offers",
+        element: <Offers />,
       },
     ],
   },
