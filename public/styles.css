@@ -53,6 +53,12 @@ h2 {
   letter-spacing: 5px;
 }
 
+h3 {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
 h6 {
   color: #b9bcb3;
   letter-spacing: 2px;
@@ -1006,4 +1012,128 @@ p {
   .dining-card-row {
     width: 50%;
   }
+}
+
+.offers-wrapper {
+  background-color: #e7e6e2;
+}
+
+@media (min-width: 1300px) {
+  .offers-wrapper {
+    margin: 0 auto;
+  }
+}
+
+.carousel-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+@media (min-width: 1300px) {
+  .carousel-container {
+    display: flex;
+  }
+}
+.carousel-container .swiper {
+  width: 1450px;
+  margin: 15px 0px;
+}
+
+.carousel-row-container {
+  margin: 15px;
+}
+
+.small-card-wrapper {
+  max-width: 1300px;
+}
+.small-card-container {
+  display: flex;
+  overflow-y: auto;
+  background-color: white;
+  margin-bottom: 50px;
+}
+@media (min-width: 1300px) {
+  .small-card-container {
+    display: none;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-card {
+  max-width: 266px;
+  min-width: 266px;
+  padding: 15px;
+  margin: 15px;
+  display: grid;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+@media (min-width: 1300px) {
+  .offer-card {
+    max-width: 396px;
+    min-width: 396px;
+    min-height: 800px;
+    margin: 40px;
+  }
+}
+.offer-image-container {
+  width: 100%;
+  height: 335px;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 1300px) {
+  .offer-image-container {
+    height: 512px;
+  }
+}
+
+.offer-image {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.offer-desc {
+  text-align: left;
+}
+
+.read-more-btn-area {
+  text-align: start;
+  align-self: end;
+}
+
+.read-more-btn {
+  color: #fff;
+  background-color: #baa382;
+}
+.read-more-btn:hover {
+  color: #baa382;
+  background-color: #fff;
+}
+
+.conditions-wrapper {
+  margin: 0 auto;
+  background-color: #e7e6e2;
+  display: flex;
+  justify-content: center;
+}
+
+.condition-container {
+  padding: 25px;
+  background-color: #fff;
+  max-width: 1400px;
 }
