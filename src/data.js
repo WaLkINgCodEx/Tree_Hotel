@@ -1,5 +1,3 @@
-import awardImg1 from "./assets/images/award-Virtuoso.webp";
-
 export const hotelBasic = {
   address: "279 Moo 3 Tambon Nongtalay, Amphoe Muang, Krabi 81180 Thailand",
   tel: "+66 75 811 888",
@@ -115,3 +113,93 @@ export const icons = {
     "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAgMzAiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzAiPjxkZWZzPjxjbGlwUGF0aCBpZD0iaWNvbi1jdXRsZXJ5X3N2Z19fYiI+PHVzZSB4bGluazpocmVmPSIjaWNvbi1jdXRsZXJ5X3N2Z19fYSIgY2xpcC1ydWxlPSJldmVub2RkIj48L3VzZT48L2NsaXBQYXRoPjxwYXRoIGlkPSJpY29uLWN1dGxlcnlfc3ZnX19hIiBkPSJNMCAwaDMwdjMwSDB6Ij48L3BhdGg+PC9kZWZzPjxnIGZpbGw9ImN1cnJlbnRDb2xvciIgY2xpcC1wYXRoPSJ1cmwoI2ljb24tY3V0bGVyeV9zdmdfX2IpIj48cGF0aCBkPSJNOS4wNjggMTMuOThjLTEuNDEgMC0yLjU2OC0xLjU1NC0yLjU2OC0zLjQ3MSAwLTEuOTE4IDEuMTU3LTMuNDczIDIuNTY4LTMuNDczIDEuNDEgMCAyLjU2OCAxLjU1NSAyLjU2OCAzLjQ3MyAwIDEuOTE3LTEuMTkzIDMuNDcyLTIuNTY4IDMuNDcyem0wLTYuMjU3Yy0xLjAxMyAwLTEuODQ1IDEuMjMtMS44NDUgMi43NSAwIDEuNTE4LjgzMiAyLjc0OCAxLjg0NSAyLjc0OHMxLjg0NS0xLjIzIDEuODQ1LTIuNzQ5YzAtMS41MTktLjg2OC0yLjc0OS0xLjg0NS0yLjc0OXoiPjwvcGF0aD48cGF0aCBkPSJNOS4wNjggMjMuNDk0Yy0uMjE3IDAtLjM2Mi0uMTQ1LS4zNjItLjM2MnYtOS41MTNjMC0uMjE3LjE0NS0uMzYyLjM2Mi0uMzYycy4zNjIuMTQ1LjM2Mi4zNjJ2OS41MTNjMCAuMTgtLjE4MS4zNjItLjM2Mi4zNjJ6TTE1Ljk0IDIzLjQ5NGMtLjIxNyAwLS4zNjEtLjE0NS0uMzYxLS4zNjJ2LTkuNTEzYzAtLjIxNy4xNDQtLjM2Mi4zNjEtLjM2MnMuMzYyLjE0NS4zNjIuMzYydjkuNTEzYzAgLjE4LS4xNDUuMzYyLS4zNjIuMzYyeiI+PC9wYXRoPjxwYXRoIGQ9Ik0xNi40MSAxMy40NzRoLS45NGEyLjM0NiAyLjM0NiAwIDAxLTIuMzUtMi4zNVY3LjM2MWMwLS4yMTcuMTQ0LS4zNjIuMzYtLjM2Mi4yMTggMCAuMzYzLjE0NS4zNjMuMzYydjMuNzYxYTEuNjIgMS42MiAwIDAwMS42MjcgMS42MjhoLjk0YTEuNjIgMS42MiAwIDAwMS42MjgtMS42MjhWNy4zNjJjMC0uMjE3LjE0NS0uMzYyLjM2Mi0uMzYycy4zNjIuMTQ1LjM2Mi4zNjJ2My43NjFhMi4zNDYgMi4zNDYgMCAwMS0yLjM1MSAyLjM1MXoiPjwvcGF0aD48cGF0aCBkPSJNMTUuOTQgMTMuNDc0Yy0uMjE3IDAtLjM2MS0uMTQ0LS4zNjEtLjM2MVY3LjM2MmMwLS4yMTcuMTQ0LS4zNjIuMzYxLS4zNjJzLjM2Mi4xNDUuMzYyLjM2MnY1Ljc1YzAgLjIxOC0uMTQ1LjM2Mi0uMzYyLjM2MnoiPjwvcGF0aD48Zz48cGF0aCBkPSJNMjEuMDQgMjMuNDk0Yy0uMjE3IDAtLjM2MS0uMTQ1LS4zNjEtLjM2MlY3LjM2MmMwLS4yMTcuMTQ0LS4zNjIuMzYxLS4zNjJzLjM2Mi4xNDUuMzYyLjM2MnYxNS43MzRjMCAuMjE3LS4xOC4zOTgtLjM2Mi4zOTh6Ij48L3BhdGg+PHBhdGggZD0iTTIzLjEzOCAxNy40NTNIMjEuMDRjLS4yMTcgMC0uMzYxLS4xNDQtLjM2MS0uMzYxdi05LjczYzAtLjIxNy4xNDQtLjM2Mi4zNjEtLjM2MiAxLjcgMCAyLjQ2IDIuNDIzIDIuNDYgNy44MTN2Mi4yNzljMCAuMjE3LS4xNDUuMzYxLS4zNjIuMzYxem0tMS43MzYtLjcyM2gxLjM3NXYtMS45MTdjMC00LjEyNC0uNDctNi41MS0xLjM3NS03LjAxN3Y4LjkzNHoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==",
   time: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAgMzAiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJDb250YWN0SW5mby1pY29uIj48ZGVmcz48Y2xpcFBhdGggaWQ9Imljb24tY2xvY2tfc3ZnX19iIj48dXNlIHhsaW5rOmhyZWY9IiNpY29uLWNsb2NrX3N2Z19fYSIgY2xpcC1ydWxlPSJldmVub2RkIj48L3VzZT48L2NsaXBQYXRoPjxwYXRoIGlkPSJpY29uLWNsb2NrX3N2Z19fYSIgZD0iTTAgMGgzMHYzMEgweiI+PC9wYXRoPjwvZGVmcz48ZyBjbGlwLXBhdGg9InVybCgjaWNvbi1jbG9ja19zdmdfX2IpIj48cGF0aCBkPSJNMTUuMTY0IDIyLjI5OWE3LjE2NCA3LjE2NCAwIDExNy4xNjMtNy4xNjQgNy4xODQgNy4xODQgMCAwMS03LjE2MyA3LjE2NHptMC0xMy41N2E2LjQwNiA2LjQwNiAwIDEwNi40MDUgNi40MDYgNi40MjIgNi40MjIgMCAwMC02LjQwNS02LjQwNXoiIGZpbGw9ImN1cnJlbnRDb2xvciI+PC9wYXRoPjxwYXRoIGQ9Ik0xNS4xNjMgMTYuMDAxaC0zLjYzOGMtLjIxIDAtLjM4LS4yNzgtLjM4LS42MjJzLjE3LS42MjMuMzgtLjYyM2gzLjYzOGMuMjEgMCAuMzc5LjI3OS4zNzkuNjIzcy0uMTcuNjIyLS4zOC42MjJ6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48cGF0aCBkPSJNMTUuNDA3IDE1LjUxNGEuODI4LjgyOCAwIDAxLS40NTEtLjEwNGMtLjEyLS4wNzItLjE4MS0uMTcyLS4xNzEtLjI3NVYxMC4zNmMwLS4xMzYuMTE4LS4yNjEuMzEtLjMyOWEuOTc3Ljk3NyAwIDAxLjYyMyAwYy4xOTIuMDY4LjMxLjE5My4zMS4zMjl2NC43NzVjLjAxLjEwMy0uMDUxLjIwMy0uMTcuMjc1YS44MjguODI4IDAgMDEtLjQ1MS4xMDR6TTE1LjQwNyA4LjczYS44MjguODI4IDAgMDEtLjQ1MS0uMTA0Yy0uMTItLjA3My0uMTgxLS4xNzMtLjE3MS0uMjc1VjYuMzhjMC0uMTM2LjExOC0uMjYuMzEtLjMyOWEuOTc3Ljk3NyAwIDAxLjYyMyAwYy4xOTIuMDY4LjMxLjE5My4zMS4zMjl2MS45N2MuMDEuMTAzLS4wNTEuMjAzLS4xNy4yNzZhLjgyOC44MjggMCAwMS0uNDUxLjEwNHoiIGZpbGw9ImN1cnJlbnRDb2xvciI+PC9wYXRoPjxwYXRoIGQ9Ik0xNy4wOTcgNy4yNDRIMTMuMjNjLS4xMDIuMDEtLjIwMi0uMDUyLS4yNzQtLjE3YS44MjguODI4IDAgMDEtLjEwNS0uNDUxLjgyOC44MjggMCAwMS4xMDUtLjQ1MWMuMDcyLS4xMTkuMTcyLS4xODEuMjc0LS4xN2gzLjkwNGMuMTAyLS4wMTEuMjAyLjA1MS4yNzUuMTcuMDcyLjExOS4xMS4yODMuMTA0LjQ1YS44Ni44NiAwIDAxLS4xMjcuNDU3Yy0uMDc5LjExOC0uMTgzLjE3Ny0uMjkuMTY1ek0xOS45MDEgMjMuODE1aC05LjQ3NWEuMzk4LjM5OCAwIDAxLS4zNDEtLjE5LjM0NS4zNDUgMCAwMTAtLjM3OWwxLjQ0LTIuMzVhLjM4NC4zODQgMCAwMS42NDUuNDE3bC0xLjEgMS43ODFoOC4xNDlsLTEuMS0xLjc4YS4zODQuMzg0IDAgMTEuNjQ1LS40MThsMS40NCAyLjM1YS4zNDUuMzQ1IDAgMDEwIC4zOC4zMzguMzM4IDAgMDEtLjMwMy4xODl6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L2c+PC9zdmc+",
 };
+
+export const offers = [
+  {
+    name: "Krabi Calling",
+    desc: "Embark on your dream vacation in the tranquility of the tropics with 35% off your stay and more.",
+    image: "/assets/images/offer_krabi.webp",
+  },
+  {
+    name: "Ways of Well",
+    desc: "Embark on your journey of self-discovery at our Banyan Tree Wellbeing Sanctuaries — spaces that combine stay, spa, dining and wellbeing experiences to help you reconnect with yourself, others and nature.",
+    image: "assets/images/offer-krabi-ways-of-well.webp",
+  },
+  {
+    name: "Come Closer",
+    desc: "Rekindle the romance amidst sweeping views of mountains, or in a secluded seaside sanctuary. Create new memories with your partner at any of our enchanting destinations and receive an exclusive offer.",
+    image: "/assets/images/offer-krabi-come-closer-card.webp",
+  },
+  {
+    name: "Sharing Time",
+    desc: "Your family are the most important people in the world. Nothing compares to the trips taken together each one a defining rite of passage in itself, brimming with opportunities to forge meaningful connections and make lifelong memories. Come together on a trip of a lifetime, and enjoy 20% off our Best Available Rate and exclusive perks.",
+    image: "/assets/images/offer-Kids-Club.webp",
+  },
+  {
+    name: "Wedding Package: Early Bird",
+    desc: "Make your love eternal as you exchange vows in the extraordinary surroundings of Krabi and enjoy exclusive savings with our special offer.",
+    image: "/assets/images/offer-romance_wedding.webp",
+  },
+  {
+    name: "Discover Krabi's Newest Jewel",
+    desc: "Be the first to experience the new sanctuary for the senses at Banyan Tree Krabi and save 15% on private pool suites and villas. ",
+    image: "/assets/images/offer-swiming.webp",
+  },
+  {
+    name: "Stay Safe, Stay Longer",
+    desc: "Retreat to the tranquility of the tropics and make the most of your getaway with our special inclusions.",
+    image: "/assets/images/offer-stay-longer.webp",
+  },
+  {
+    name: "Stay More Pay Less",
+    desc: "Extend your fun and adventure at Banyan Tree Krabi",
+    image: "/assets/images/offer-stay-more-pay-less.webp",
+  },
+  {
+    name: "Advance Purchase",
+    desc: "Save up to 10% off your stay at Banyan Tree Krabi when you book in advance",
+    image: "/assets/images/offer-card-advance-purchase-krabi.webp",
+  },
+  {
+    name: "Best Available Rate",
+    desc: "Book now to enjoy greater fliexbility on our villas with our Best Available Rates",
+    image: "/assets/images/offer-krabi-bar-best-rate.webp",
+  },
+  {
+    name: "Thai Resident Offer",
+    desc: " Exclusive and limited time offer for residents of Thailand",
+    image: "/assets/images/offer-thai-resident.webp",
+  },
+  {
+    name: "New Year's Eve Sanctuary Offer",
+    desc: "Revel in a four-night stay in your very own private pool suite or villa at the tropical beachfront sanctuary of Banyan Tree Krabi.",
+    image: "/assets/images/offer-new-year.webp",
+  },
+];
+
+export const gerneralConditions = [
+  "Rates are quoted in Thai Baht (THB) on a per villa per night basis.",
+  "Rates are subject to 10% service charge and 8.7% government tax and buffet breakfast.",
+  "Check-in time is 1500 hours and check-out time is 1200 hours.",
+  "Early check-in and late check-out are subject to availability.",
+  "Late check-out from 1200 hours to 1800 hours will be charged 50% of the Best Available Rate of the day.",
+  "Late check-out after 1800 hours will be charged 100% of the Best Available Rate of the day.",
+  "In the event of a no-show or early departure, the total rate of the confirmed room nights for the entire stay shall be chargeable.",
+  "Credit card information provided does not require a signature and constitutes approval by the cardholder to guarantee the booking as per our cancellation policy; however, it requires the passport number of the cardholder. The valid credit card used to guarantee the booking must be presented upon check-in. A credit card from a third person is not permitted.",
+  "Reservations will be cancelled at the resort’s discretion without prior notice should an invalid credit card be submitted.",
+  "A compulsory gala dinner on 31 December for two adults per one bedroom is included in the room rate.",
+  "Extra person charge for gala dinner on 31 December is THB 16,000 nett per adult and THB 8,000 nett per child, ages 4 to 12 years old.",
+  "Extra person charge with breakfast is THB 4,000 per person per night, inclusive of service charge and prevailing taxes. No pets are allowed.",
+];
+
+export const childPolicy = [
+  "Infants and toddlers, who are below 4 years old, accompanying adults, can stay on sofa in living room prepared as a bed or in a baby cot with our compliments. Baby cot is subject to availability.",
+  "Children 4 to 12 years old, accompanying adults, can stay on sofa in room prepared as a bed with our compliments and dine at 50% off regular menu prices, except for the kid’s menu. Extra bed may be reserved with compliments, subject to availability.",
+  "Children 13 years old and above are considered as an adult and extra person charge applies.",
+];
+
+export const otherInformation = [
+  "Airport transfer is available at THB 2,500 nett per vehicle per way for a Luxury Van with a maximum of 5 passengers. Rate is inclusive of service charge and prevailing taxes.",
+  "Due to the unique architectural style of Banyan Tree Krabi, it is not recommended for families with children below 12 years of age. Allowing children to stay in the villas will be at the discretion of the parents and a signature on our waiver form I required.",
+  "Banyan Tree Krabi is not a participating hotel in the Accor Live Limitless loyalty programme. Guests are not entitled to earn points, use points, benefit from advantages or take advantage of the members’ rate.",
+];

@@ -1,5 +1,5 @@
-import DiningList from "../../components/DiningList";
-import IntroBanner from "../../components/IntroBanner";
+import DiningList from "../components/DiningList";
+import IntroBanner from "../components/IntroBanner";
 
 const Dining = () => {
   const title =
