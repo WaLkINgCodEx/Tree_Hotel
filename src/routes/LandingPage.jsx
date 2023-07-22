@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import DescBanner from "../components/DescBanner";
 import InfoSection from "../components/InfoSection";
 const LandingPage = () => {
