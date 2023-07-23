@@ -30,7 +30,7 @@ export default function (props) {
     );
   } else {
     return (
-      <li className={props.className}>
+      <li className={props.className} id={props.idName}>
         <a href={props.url}>{props.name}</a>
       </li>
     );

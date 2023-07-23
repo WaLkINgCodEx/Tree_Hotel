@@ -30,14 +30,18 @@ export default function Card(props) {
 
         <div className="card-right">
           {props.card.img.length == 2 ? (
-            <div className="photo-container">
+            <div className="silder-container">
               <PhotoSlider
                 image1={props.card.img[0]}
                 image2={props.card.img[1]}
               />
             </div>
           ) : (
-            <img src={props.card.img} alt={props.card.name} />
+            <img
+              className="non-slider"
+              src={props.card.img}
+              alt={props.card.name}
+            />
           )}
         </div>
       </div>

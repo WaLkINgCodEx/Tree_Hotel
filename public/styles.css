@@ -194,8 +194,12 @@ p {
   color: black;
 }
 
-.bookNowButton {
+#bookNowButton {
   background-color: #baa382;
+  color: white;
+}
+
+#bookNowButton > a {
   color: white;
 }
 
@@ -318,11 +322,12 @@ p {
   }
 }
 
-.photo-container {
+.silder-container {
   display: flex;
   min-height: 490px;
   width: 100%;
   height: 100%;
+  max-height: 100%;
   margin: auto;
 }
 
@@ -369,7 +374,7 @@ p {
 }
 
 .comparison-slider {
-  /* position: absolute; */
+  position: absolute;
   inset: 0px;
   width: 100%;
   margin: 0;
@@ -391,7 +396,7 @@ p {
   max-height: 100%;
 } */
 
-.fixedFrame {
+.resize-frame {
   position: absolute;
   min-height: 100%;
   width: 807px;
@@ -416,7 +421,7 @@ p {
   inset: 0;
   min-width: 100%;
   max-width: 100%;
-  min-height: 517px;
+  min-height: 100%;
 }
 
 .divider {
@@ -827,6 +832,7 @@ p {
   justify-content: center;
   min-width: 100%;
   min-height: 100%;
+  min-height: 490px;
 }
 
 .feature-card-wrapper:nth-child(odd) > .card-frame {
@@ -837,9 +843,9 @@ p {
   width: 33%;
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  padding-top: 30px;
   padding-right: 75px;
-  margin-bottom: 22.5px;
+  padding-bottom: 22.5px;
 }
 
 .feature-card-wrapper:nth-child(odd) > .card-frame > .card-left {
@@ -881,7 +887,6 @@ p {
   /* max-height: 500px; */
   /* top: 0;
   left: 0; */
-  z-index: 1;
 }
 
 .card-right img {
@@ -894,8 +899,12 @@ p {
   margin: auto;
   overflow: hidden;
   object-fit: cover;
-  z-index: 1;
 }
+
+.card-right > .non-slider {
+  max-height: 550px;
+}
+
 .intro-wrapper {
   background-color: #e7e6e2;
   padding: 3rem 0rem;
