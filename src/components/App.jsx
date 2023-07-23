@@ -4,6 +4,7 @@ import HomeLayout from "../routes/HomeLayout";
 import LandingPage from "../routes/LandingPage";
 import Dining from "../routes/Dining";
 import Offers from "../routes/Offers";
+import Spa from "../routes/Spa";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "offers",
         element: <Offers />,
+      },
+      {
+        path: "spa",
+        element: <Spa />,
       },
     ],
   },
