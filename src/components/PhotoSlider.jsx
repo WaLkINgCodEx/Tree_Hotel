@@ -91,7 +91,7 @@ const PhotoSlider = (props) => {
       <img src={props.image1} alt="hotel overview" />
       <div className="comparison-slider" ref={sliderRef}>
         <div className="resize">
-          <div className="fixedFrame">
+          <div className="resize-frame">
             <img src={props.image2} alt="" />
           </div>
         </div>
