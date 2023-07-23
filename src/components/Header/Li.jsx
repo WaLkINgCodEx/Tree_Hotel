@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function (props) {
   if (props.brandIcon) {
@@ -30,7 +31,7 @@ export default function (props) {
   } else {
     return (
       <li className={props.className}>
-        <a>{props.name}</a>
+        <a href={props.url}>{props.name}</a>
       </li>
     );
   }

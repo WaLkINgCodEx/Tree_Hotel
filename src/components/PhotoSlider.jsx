@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const PhotoSlider = ({ image1, image2 }) => {
+const PhotoSlider = (props) => {
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -88,13 +88,13 @@ const PhotoSlider = ({ image1, image2 }) => {
 
   return (
     <div className="comparison-slider-wrapper">
+      <img src={props.image1} alt="hotel overview" />
       <div className="comparison-slider" ref={sliderRef}>
-        <img src={image1} alt="hotel overview" />
-
         <div className="resize">
-          <img src={image2} alt="hotel overview" />
+          <div className="fixedFrame">
+            <img src={props.image2} alt="" />
+          </div>
         </div>
-
         <div className="divider"></div>
       </div>
     </div>

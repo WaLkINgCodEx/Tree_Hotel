@@ -1,13 +1,16 @@
 import React, { Fragment } from "react";
-import { features } from "./features";
 import Card from "./Card.jsx";
 
-export default function CardList() {
-  return (
-    <Fragment>
-      {features.map((feature, index) => {
-        return <Card item={feature} key={index} />;
-      })}
-    </Fragment>
-  );
+export default function CardList(props) {
+  if (props.cardData.type == "silder") {
+    return <Card card={props.cardData} />;
+  } else {
+    return (
+      <Fragment>
+        {props.cardData.map((card, index) => {
+          return <Card card={card} key={index} />;
+        })}
+      </Fragment>
+    );
+  }
 }

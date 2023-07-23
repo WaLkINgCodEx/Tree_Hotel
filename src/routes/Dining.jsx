@@ -1,5 +1,6 @@
 import DiningList from "../components/DiningList";
 import IntroBanner from "../components/IntroBanner";
+import Header from "../components/Header/Header";
 
 const Dining = () => {
   const title =
@@ -12,6 +13,11 @@ const Dining = () => {
   return (
     //nav bar and hero
     <>
+      <Header
+        hotel="Dining"
+        navPage="Dining"
+        img="/assets/images/header_img/lobby_4.webp"
+      />
       <IntroBanner title={title} paragraphs={paragraphs} />
       <DiningList />
     </>

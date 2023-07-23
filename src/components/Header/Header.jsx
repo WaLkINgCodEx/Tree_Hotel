@@ -14,12 +14,12 @@ export default function Header(props) {
               alt="icon-logo"
               // key="logo"
             />
-            <Li name="ABOUT" />
-            <Li name="OFFERS" />
-            <Li name="ACCOMMODATION" />
-            <Li name="DINING" />
-            <Li name="SPA" />
-            <Li name="EXPERIENCE" />
+            <Li name="ABOUT" url="/" />
+            <Li name="OFFERS" url="offers" />
+            <Li name="ACCOMMODATION" url="accommodation" />
+            <Li name="DINING" url="dining" />
+            <Li name="SPA" url="spa" />
+            <Li name="EXPERIENCE" url="experience" />
             <Li name="MORE" className="arrow-icon" />
             <Li name="EN" className="arrow-icon" />
             <Li name="BOOK NOW" className="bookNowButton" />
