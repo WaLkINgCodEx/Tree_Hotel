@@ -1,21 +1,18 @@
 import PhotoSlider from "./PhotoSlider";
-import bannerImg1 from "../assets/images/banner-img-1.webp";
-import bannerImg2 from "../assets/images/banner-img-2.webp";
-
+// import bannerImg1 from "../assets/images/banner-img-1.webp";
+// import bannerImg2 from "../assets/images/banner-img-2.webp";
 
 const DescBanner = () => {
   return (
-
     <div className="desc-banner-wrapper">
-
       <div className="banner-container">
         <div className="desc-container">
           <h2>ESCAPE TO TROPICAL TRANQUILITY</h2>
           <div className="desc-p">
             <p>
-              Step into our sanctuary for the senses, where the sapphire blue sea
-              meets tropical white sands against a backdrop of lush jungle-green
-              mountains.
+              Step into our sanctuary for the senses, where the sapphire blue
+              sea meets tropical white sands against a backdrop of lush
+              jungle-green mountains.
             </p>
             <p>
               <br />
@@ -27,20 +24,18 @@ const DescBanner = () => {
             </p>
             <p>
               <br />
-              Retreat to a setting of unparalleled indulgence where you can truly
-              unwind and rejuvenate your mind, body and soul.
+              Retreat to a setting of unparalleled indulgence where you can
+              truly unwind and rejuvenate your mind, body and soul.
             </p>
           </div>
         </div>
 
         <div className="photo-container">
-          <PhotoSlider image1={bannerImg1} image2={bannerImg2} />
+          {/* <PhotoSlider image1={bannerImg1} image2={bannerImg2} /> */}
         </div>
-
       </div>
     </div>
   );
 };
-
 
 export default DescBanner;

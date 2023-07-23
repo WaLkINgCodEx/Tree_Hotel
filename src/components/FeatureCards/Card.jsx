@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import PhotoSlider from "../PhotoSlider";
 
 export default function Card(props) {
   return (
@@ -6,11 +7,11 @@ export default function Card(props) {
       <div className="card-frame">
         <div className="card-left">
           <div>
-            <h2>{props.item.name}</h2>
+            <h2>{props.card.name}</h2>
           </div>
 
           <div className="card-p">
-            {props.item.paragraphs.map((para, index) => {
+            {props.card.paragraphs.map((para, index) => {
               return (
                 <Fragment key={index}>
                   {index != 0 && <br />}
@@ -20,13 +21,24 @@ export default function Card(props) {
             })}
 
             <a>
-              <span className="chat-btn">{props.item.button}</span>
+              {props.card.button && (
+                <span className="chat-btn">{props.card.button}</span>
+              )}
             </a>
           </div>
         </div>
 
         <div className="card-right">
-          <img src={props.item.img} alt="The White Pearl" />
+          {props.card.img.length == 2 ? (
+            <div className="photo-container">
+              <PhotoSlider
+                image1={props.card.img[0]}
+                image2={props.card.img[1]}
+              />
+            </div>
+          ) : (
+            <img src={props.card.img} alt={props.card.name} />
+          )}
         </div>
       </div>
     </div>

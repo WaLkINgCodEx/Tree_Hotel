@@ -22,12 +22,14 @@ const DiningCards = ({ dining }) => {
         <h5 className="dining-title">{name}</h5>
         <p className="dining-desc">{desciption}</p>
         <div className="dining-card-rows">
-          <div className="dining-card-row">
-            <div>
-              <img className="fac-icon" src={icons.attire} />
+          {attire && (
+            <div className="dining-card-row">
+              <div>
+                <img className="fac-icon" src={icons.attire} />
+              </div>
+              <div>{attire}</div>
             </div>
-            <div>{attire}</div>
-          </div>
+          )}
           <div className="dining-card-row">
             <div>
               <img className="fac-icon" src={icons.cuisine} />
