@@ -11,7 +11,7 @@ const OfferCard = ({ offer }) => {
       </div>
       <div className="read-more-btn-area">
         <br />
-        <button className="box-btn read-more-btn">READ MORE</button>
+        <button className="box-btn inverse-btn">READ MORE</button>
       </div>
     </div>
   );
