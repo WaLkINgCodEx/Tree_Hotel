@@ -3,7 +3,8 @@ import DescBanner from "../components/DescBanner";
 import InfoSection from "../components/InfoSection";
 import SubscriptionBanner from "../components/SubscriptionBanner";
 import CardList from "../components/FeatureCards/CardList";
-import { aboutCards, aboutSliderCards } from "../data";
+import PhotoBooth from "../components/PhotosBooth";
+import { aboutCards, aboutSliderCards, photosBoothData } from "../data";
 
 const LandingPage = () => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
       <SubscriptionBanner />
       <CardList cardData={aboutCards} />
       <CardList cardData={aboutSliderCards[1]} />
+      <PhotoBooth photoData={photosBoothData} />
     </>
   );
 };

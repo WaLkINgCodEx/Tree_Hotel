@@ -22,7 +22,7 @@ export default function Card(props) {
 
             <a>
               {props.card.button && (
-                <span className="chat-btn">{props.card.button}</span>
+                <span className="card-btn">{props.card.button}</span>
               )}
             </a>
           </div>
