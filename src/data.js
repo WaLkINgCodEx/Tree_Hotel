@@ -660,3 +660,45 @@ export const roomType = [
     image: "/assets/images/accom_img/Presidential-Beachfront-Pool-Villa.webp",
   },
 ];
+
+export const experienceActivities = [
+  {
+    name: "Local Attractions",
+    desc: "Explore the unique natural and cultural attractions found within close proximity to Banyan Tree Krabi",
+    tag: ["attraction"],
+    image: ["assets/images/exp-local-1.webp", "assets/images/exp-local-2.webp"],
+  },
+  {
+    name: "Things To Do For Families",
+    desc: "There's never a dull moment in Krabi, with activities for all ages to give you and your family the vacation of a lifetime.",
+    tag: ["family"],
+    image: [
+      "assets/images/exp-family-2.webp",
+      "assets/images/exp-family-1.webp",
+    ],
+  },
+  {
+    name: "Things To Do For Couples",
+    desc: "Well known for having some of the most pristine and uncrowded beaches in the world, Krabi is a living museum of natural history and a sanctuary where romance takes flight.",
+    tag: ["couple"],
+    image: [
+      "assets/images/exp-couple-1.webp",
+      "assets/images/exp-couple-2.webp",
+      "assets/images/exp-couple-3.webp",
+      "assets/images/exp-couple-4.webp",
+      "assets/images/exp-couple-5.webp",
+    ],
+  },
+  {
+    name: "5 Day Krabi Itinerary",
+    desc: "Indulge and enjoy the best of Krabi with our recommended 5-day itinerary, which is sure to leave you with many memories of your stay at our Sanctuary for the Senses!",
+    tag: ["itinerary"],
+    image: ["assets/images/exp-five-day-1.webp"],
+  },
+  {
+    name: "Stay for good",
+    desc: "We believe in travel with a purpose. Our Stay for Good programme invites you to experience the world authentically by highlighting the intricacies of each destination, while at the same time honouring the heritage and traditions of local communities.",
+    tag: ["stay"],
+    image: ["assets/images/exp-stay-good.webp"],
+  },
+];
