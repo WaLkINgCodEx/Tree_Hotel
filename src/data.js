@@ -103,6 +103,30 @@ export const aboutSliderCards = [
   },
 ];
 
+export const photosBoothData = {
+  type: null,
+  name: "GALLERY",
+  paragraphs: ["Destination • Sanctuaries • Experiences • Communities"],
+  button: "View More",
+  images: [
+    [
+      "/assets/images/photoBooth/photoBooth_1.webp",
+      "/assets/images/photoBooth/photoBooth_2.webp",
+      "/assets/images/photoBooth/photoBooth_3.webp",
+    ],
+    [
+      "/assets/images/photoBooth/photoBooth_4.webp",
+      "/assets/images/photoBooth/photoBooth_5.webp",
+      "./assets/images/photoBooth/photoBooth_6.webp",
+    ],
+    [
+      "/assets/images/photoBooth/photoBooth_7.webp",
+      "/assets/images/photoBooth/photoBooth_8.webp",
+      "/assets/images/photoBooth/photoBooth_9.webp",
+    ],
+  ],
+};
+
 export const facilities = [
   {
     facility: "Banyan Tree Gallery",

@@ -17,7 +17,7 @@ export default function ubscriptionBanner() {
           via WhatsApp.
         </p>
         <a>
-          <span className="chat-btn">Click to chat</span>
+          <span className="connect-btn">Click to chat</span>
         </a>
       </div>
     </div>
