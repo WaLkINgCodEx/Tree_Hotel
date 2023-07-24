@@ -1350,6 +1350,7 @@ p {
   inset: 0;
   overflow: hidden;
   object-fit: cover;
+}
 
 .icon-entry {
   display: flex;
