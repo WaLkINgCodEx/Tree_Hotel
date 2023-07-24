@@ -1118,11 +1118,11 @@ p {
   align-self: end;
 }
 
-.read-more-btn {
+.inverse-btn {
   color: #fff;
   background-color: #baa382;
 }
-.read-more-btn:hover {
+.inverse-btn:hover {
   color: #baa382;
   background-color: #fff;
 }

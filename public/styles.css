@@ -917,6 +917,19 @@ p {
   padding: 3rem 0rem;
 }
 
+.intro-title {
+  letter-spacing: 5px;
+  line-height: 1.4;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 1280px) {
+  .intro-title {
+    line-height: 1.7;
+    font-size: 2.6rem;
+  }
+}
+
 .intro-desc {
   text-align: center;
   padding: 0px 30px;
@@ -1144,11 +1157,11 @@ p {
   align-self: end;
 }
 
-.read-more-btn {
+.inverse-btn {
   color: #fff;
   background-color: #baa382;
 }
-.read-more-btn:hover {
+.inverse-btn:hover {
   color: #baa382;
   background-color: #fff;
 }
@@ -1168,19 +1181,6 @@ p {
 
 .intro-image-desc {
   z-index: 1;
-}
-
-.intro-image-title {
-  letter-spacing: 5px;
-  line-height: 1.4;
-  font-size: 1.6rem;
-}
-
-@media (min-width: 1280px) {
-  .intro-image-title {
-    line-height: 1.7;
-    font-size: 2.6rem;
-  }
 }
 
 .intro-banner-btn {
@@ -1215,4 +1215,139 @@ p {
 .banner-link:active {
   background: rgba(255, 255, 255, 0.2);
   border-color: transparent;
+}
+
+.icon-entry {
+  display: flex;
+  align-items: center;
+}
+
+.accom-s-card-container {
+  width: 325px;
+  background-color: #fff;
+  min-height: 650px;
+  position: relative;
+}
+
+.accom-s-card-image {
+  width: 100%;
+}
+
+.accom-s-card-bottom {
+  padding: 15px;
+}
+
+.room-basics {
+  display: flex;
+  flex-direction: column;
+}
+
+.accom-card-title {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-transform: capitalize;
+  margin: 15px 0px;
+}
+
+.room-cards-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.room-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: 15px 0px;
+}
+
+.accom-button-area {
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  left: 15px;
+  margin-top: 10px;
+}
+.accom-btn {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.accom-b-card-container {
+  width: 325px;
+  background-color: #fff;
+  min-height: 650px;
+  position: relative;
+}
+
+@media (min-width: 740px) {
+  .accom-b-card-container {
+    width: 441px;
+    background-color: #fff;
+    min-height: 680px;
+    position: relative;
+  }
+}
+
+.accom-b-card-image {
+  width: 100%;
+}
+
+.accom-b-card-bottom {
+  padding: 15px;
+}
+
+.policies-wrapper {
+  margin: 0 auto;
+  max-width: 1380px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+}
+
+.policies-container {
+  margin-bottom: 15px;
+}
+
+.policy-title {
+  position: relative;
+  padding: 30px;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  background-color: #fff;
+  margin: 0px;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
+}
+
+.policy-title::before {
+  content: "+";
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
+
+.policy-details {
+  position: relative;
+  height: 0;
+  font-size: 15px;
+  text-align: justify;
+  overflow: hidden;
+  transition: 0.5s;
+  padding: 0px 30px;
+  background-color: #fff;
+}
+
+.policy.open .policy-details {
+  height: 6rem;
+}
+
+.policy.open .policy-title::before {
+  content: "-";
+  font-size: 30px;
 }
