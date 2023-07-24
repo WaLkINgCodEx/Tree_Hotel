@@ -145,7 +145,7 @@ p {
 }
 
 .nav-top {
-  z-index: 11;
+  z-index: 12;
   position: fixed;
   top: 0;
   left: 0;
@@ -1083,6 +1083,29 @@ p {
   margin: 15px 0px;
 }
 
+.swiper-button-prev {
+  background-image: url(/assets/images/ArrowLeft.svg);
+  background-size: contain;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  left: 69px;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next {
+  background-image: url(/assets/images/ArrowLeft.svg);
+  transform: rotate(180deg);
+  background-size: contain;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  right: 69px;
+}
+.swiper-button-next::after {
+  display: none;
+}
+
 .carousel-row-container {
   margin: 15px;
 }
@@ -1484,4 +1507,61 @@ p {
 .policy.open .policy-title::before {
   content: "-";
   font-size: 30px;
+}
+
+.exp-wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.exp-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.exp-card-title {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.exp-card-container {
+  max-width: 400px;
+  background-color: #fff;
+}
+
+.exp-swiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 510px;
+  margin-bottom: 15px;
+}
+
+.exp-card-image-container {
+  width: 100%;
+  height: 510px;
+  margin-bottom: 15px;
+}
+
+.slide-image {
+  max-height: 100%;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.exp-btn {
+  width: 100%;
+}
+
+.exp-swiper > .swiper-button-prev {
+  filter: invert(1);
+}
+
+.exp-swiper > .swiper-button-next {
+  filter: invert(1);
 }
