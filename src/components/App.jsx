@@ -5,6 +5,8 @@ import LandingPage from "../routes/LandingPage";
 import Dining from "../routes/Dining";
 import Offers from "../routes/Offers";
 import Spa from "../routes/Spa";
+import Accommodation from "../routes/Accommodation";
+import Experience from "../routes/Experience";
 
 const router = createBrowserRouter([
   {
@@ -13,16 +15,24 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <LandingPage /> },
       {
-        path: "dining",
-        element: <Dining />,
-      },
-      {
         path: "offers",
         element: <Offers />,
       },
       {
+        path: "accommodation",
+        element: <Accommodation />,
+      },
+      {
+        path: "dining",
+        element: <Dining />,
+      },
+      {
         path: "spa",
         element: <Spa />,
+      },
+      {
+        path: "Experience",
+        element: <Experience />,
       },
     ],
   },

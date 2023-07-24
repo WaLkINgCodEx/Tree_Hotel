@@ -4,7 +4,7 @@ const IntroBanner = ({ title, paragraphs }) => {
   return (
     <div className="intro-wrapper">
       <div className="intro-desc">
-        <h2>{title}</h2>
+        <h2 className="intro-title">{title}</h2>
 
         {paragraphs.length > 0 &&
           paragraphs.map((paragraph, idx) => {

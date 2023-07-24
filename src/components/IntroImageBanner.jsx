@@ -7,7 +7,7 @@ const IntroImageBanner = ({ title, paragraphs, image }) => {
         <img src={image} alt={title} />
       </div>
       <div className="intro-desc intro-image-desc">
-        <h1 className="intro-image-title">{title}</h1>
+        <h1 className="intro-title">{title}</h1>
 
         {paragraphs.length > 0 &&
           paragraphs.map((paragraph, idx) => {
