@@ -1,5 +1,6 @@
 import DiningCards from "./DiningCards";
 import { diningList } from "../data";
+
 const DiningList = () => {
   return (
     <div className="dining-list-wrapper">

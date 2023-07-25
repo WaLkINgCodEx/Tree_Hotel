@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 
-export default function PhotoBooth(props) {
+export default function Gallery(props) {
   return (
     <div className="photo-booth-wrapper">
       <div className="booth-frame">
@@ -29,7 +29,7 @@ export default function PhotoBooth(props) {
             }}
           >
             <div className="muti-col-frame">
-              {props.photoData.images.map((col, index) => {
+              {props.galleryData.images.map((col, index) => {
                 return (
                   <Fragment key={index}>
                     <div className="frame-col">

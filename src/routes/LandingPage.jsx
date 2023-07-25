@@ -3,8 +3,9 @@ import DescBanner from "../components/DescBanner";
 import InfoSection from "../components/InfoSection";
 import SubscriptionBanner from "../components/SubscriptionBanner";
 import CardList from "../components/FeatureCards/CardList";
-import PhotoBooth from "../components/PhotosBooth";
-import { aboutCards, aboutSliderCards, photosBoothData } from "../data";
+import Gallery from "../components/Gallery";
+import HighLight from "../components/HighLight";
+import { aboutCards, aboutSliderCards, galleryData } from "../data";
 
 const LandingPage = () => {
   return (
@@ -19,7 +20,8 @@ const LandingPage = () => {
       <SubscriptionBanner />
       <CardList cardData={aboutCards} />
       <CardList cardData={aboutSliderCards[1]} />
-      <PhotoBooth photoData={photosBoothData} />
+      <Gallery galleryData={galleryData} />
+      <HighLight />
     </>
   );
 };
