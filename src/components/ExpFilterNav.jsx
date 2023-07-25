@@ -24,13 +24,7 @@ const ExpFilterNav = () => {
       tag: "stay",
     },
   ];
-  const tagName = [
-    "Attractions",
-    "Family Retreats",
-    "Romantic Getaways",
-    "Curated Itineraries",
-    "Stay For Good",
-  ];
+
   const [selectedTags, setSelectedTags] = useState([]);
 
   const checkboxChangeHandler = (e) => {
@@ -68,7 +62,7 @@ const ExpFilterNav = () => {
     <div className="filter-nav-wrapper">
       <div className="filter-nav-container">
         <div className="filter-left">
-          I am looking for
+          <h4 className="filter-looking-for">I am looking for</h4>
           {tagList.map((tag) => {
             return (
               <div className="filter-nav-select">
