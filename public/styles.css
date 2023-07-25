@@ -1511,16 +1511,16 @@ p {
 }
 
 .exp-wrapper {
-  max-width: 1380px;
+  max-width: 1500px;
   margin: 0 auto;
   padding-top: 50px;
 }
 
 .exp-cards-container {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
-  gap: 30px;
+
   background-color: #fff;
   padding: 30px;
 }
@@ -1532,8 +1532,9 @@ p {
 }
 
 .exp-card-container {
-  max-width: 400px;
+  max-width: 432px;
   background-color: #fff;
+  padding-left: 30px;
 }
 
 .exp-swiper .swiper-wrapper .swiper-slide {
@@ -1566,6 +1567,43 @@ p {
 .exp-swiper > .swiper-button-next {
   filter: invert(1);
 }
+
+
+.filter-nav-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.filter-nav-container {
+  max-width: 1500px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+
+.filter-nav-select > input[type="checkbox"] {
+  display: none;
+}
+.filter-nav-btn {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.filter-nav-select > input[type="checkbox"]:checked ~ .filter-nav-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.filter-nav-select > input[type="checkbox"]:checked ~ .filter-nav-btn::after {
+  content: " \2573";
+  font-size: 10px;
 
 .highlight-wrapper {
   position: relative;
@@ -1669,4 +1707,5 @@ p {
 .hightlight-swiper .swiper-slide {
   width: 335px !important;
   margin-right: 30px !important;
+
 }
