@@ -1566,3 +1566,107 @@ p {
 .exp-swiper > .swiper-button-next {
   filter: invert(1);
 }
+
+.highlight-wrapper {
+  position: relative;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  height: 800px;
+}
+
+.hightlight-bg {
+  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hightlight-bg > img {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.highlight-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.highlight-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.highlight-container > h2 {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 4rem;
+  font-size: 2.6rem;
+  line-height: 1.7;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.333rem;
+  text-transform: uppercase;
+}
+
+.hightlight-swiper {
+  max-width: 1080px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.hightlight-swiper > .swiper-wrapper {
+  height: auto;
+}
+
+.hightlight-swiper img {
+  width: 100%;
+  max-height: 417px;
+  position: absolute;
+  top: 0;
+  inset: 0px;
+  padding: 0px;
+  object-fit: cover;
+}
+
+#swiperslide {
+  display: block;
+  /* margin-right: 30px; */
+}
+
+.swiper-btn {
+  position: absolute;
+  top: 399px;
+  font-size: 1.3rem;
+  color: white;
+  background-color: #baa382;
+  padding: 1px 90px;
+}
+
+.hightlight-swiper .swiper-slide {
+  width: 335px !important;
+  margin-right: 30px !important;
+}

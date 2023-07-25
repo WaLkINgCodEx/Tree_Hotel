@@ -93,8 +93,6 @@ export const aboutSliderCards = [
       "Look for this eco-friendly amenity upon arrival during your future visit to our Sanctuary for the Senses!",
       "Click below to learn more about our partnership with Souvenirs from the Sea.",
     ],
-    button: "Learn More Here",
-    img: "/assets/images/card-img2.webp",
     button: "Learn more here",
     img: [
       "../../assets/images/about-silder-img-3.webp",
@@ -103,26 +101,26 @@ export const aboutSliderCards = [
   },
 ];
 
-export const photosBoothData = {
+export const galleryData = {
   type: null,
   name: "GALLERY",
   paragraphs: ["Destination • Sanctuaries • Experiences • Communities"],
   button: "View More",
   images: [
     [
-      "/assets/images/photoBooth/photoBooth_1.webp",
-      "/assets/images/photoBooth/photoBooth_2.webp",
-      "/assets/images/photoBooth/photoBooth_3.webp",
+      "/assets/images/gallery_img/gallery_1.webp",
+      "/assets/images/gallery_img/gallery_2.webp",
+      "/assets/images/gallery_img/gallery_3.webp",
     ],
     [
-      "/assets/images/photoBooth/photoBooth_4.webp",
-      "/assets/images/photoBooth/photoBooth_5.webp",
-      "./assets/images/photoBooth/photoBooth_6.webp",
+      "/assets/images/gallery_img/gallery_4.webp",
+      "/assets/images/gallery_img/gallery_5.webp",
+      "./assets/images/gallery_img/gallery_6.webp",
     ],
     [
-      "/assets/images/photoBooth/photoBooth_7.webp",
-      "/assets/images/photoBooth/photoBooth_8.webp",
-      "/assets/images/photoBooth/photoBooth_9.webp",
+      "/assets/images/gallery_img/gallery_7.webp",
+      "/assets/images/gallery_img/gallery_8.webp",
+      "/assets/images/gallery_img/gallery_9.webp",
     ],
   ],
 };
