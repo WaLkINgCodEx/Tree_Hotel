@@ -5,7 +5,12 @@ import SubscriptionBanner from "../components/SubscriptionBanner";
 import CardList from "../components/FeatureCards/CardList";
 import Gallery from "../components/Gallery";
 import HighLight from "../components/HighLight";
-import { aboutCards, aboutSliderCards, galleryData } from "../data";
+import {
+  aboutCards,
+  aboutSliderCards,
+  galleryData,
+  highlightData,
+} from "../data";
 
 const LandingPage = () => {
   return (
@@ -21,7 +26,7 @@ const LandingPage = () => {
       <CardList cardData={aboutCards} />
       <CardList cardData={aboutSliderCards[1]} />
       <Gallery galleryData={galleryData} />
-      <HighLight />
+      <HighLight highlightData={highlightData} />
     </>
   );
 };
