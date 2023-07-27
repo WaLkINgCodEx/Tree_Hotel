@@ -125,6 +125,45 @@ export const galleryData = {
   ],
 };
 
+export const highlightData = [
+  {
+    name: "Wellbeing Sanctuary",
+    paragraph:
+      "Our philosophy is that we are all interconnected, and that wellbeing is about the connection to self and the relationship of the self with others and nature. It is in tapping this connection that one discovers balancing points, appreciates the here and now, and finds ways to contribute and improve one’s state of being. We believe that wellbeing should be inspiring and accessible to all. Our wellbeing experiences enable you to design and combine a leisure vacation with wellbeing elements in a flexible and open way.",
+    image: "/assets/images/highlight_img/highlight_1.webp",
+  },
+  {
+    name: "Destination Dining",
+    paragraph:
+      "A special moment just for you: a private table for two on the beach, sitting under the stars, secluded and intimate. Banyan Tree Krabi serves up a magnificent dinner and a memorable experience.",
+    image: "/assets/images/highlight_img/highlight_2.webp",
+  },
+  {
+    name: "Marine Excursions",
+    paragraph:
+      "Tantalisingly located on the tropical shores of southern Thailand’s Andaman coast, visitors to Krabi are drawn to its colourful culture and famed hospitality, as well as its myriad attractions - hot springs, a wildlife sanctuary, sea caves, flourishing coral reefs and exotic marine life, limestone cliffs to entice rock climbers, and the conserved emerald waters of marine national parks, including the famous island paradises of Koh Phi Phi and Koh Hong.",
+    image: "/assets/images/highlight_img/highlight_3.webp",
+  },
+  {
+    name: "Wellbeing Sanctuary",
+    paragraph:
+      "Our philosophy is that we are all interconnected, and that wellbeing is about the connection to self and the relationship of the self with others and nature. It is in tapping this connection that one discovers balancing points, appreciates the here and now, and finds ways to contribute and improve one’s state of being. We believe that wellbeing should be inspiring and accessible to all. Our wellbeing experiences enable you to design and combine a leisure vacation with wellbeing elements in a flexible and open way.",
+    image: "/assets/images/highlight_img/highlight_1.webp",
+  },
+  {
+    name: "Destination Dining",
+    paragraph:
+      "A special moment just for you: a private table for two on the beach, sitting under the stars, secluded and intimate. Banyan Tree Krabi serves up a magnificent dinner and a memorable experience.",
+    image: "/assets/images/highlight_img/highlight_2.webp",
+  },
+  {
+    name: "Marine Excursions",
+    paragraph:
+      "Tantalisingly located on the tropical shores of southern Thailand’s Andaman coast, visitors to Krabi are drawn to its colourful culture and famed hospitality, as well as its myriad attractions - hot springs, a wildlife sanctuary, sea caves, flourishing coral reefs and exotic marine life, limestone cliffs to entice rock climbers, and the conserved emerald waters of marine national parks, including the famous island paradises of Koh Phi Phi and Koh Hong.",
+    image: "/assets/images/highlight_img/highlight_3.webp",
+  },
+];
+
 export const facilities = [
   {
     facility: "Banyan Tree Gallery",
