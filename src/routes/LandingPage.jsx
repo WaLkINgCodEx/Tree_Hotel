@@ -5,11 +5,14 @@ import SubscriptionBanner from "../components/SubscriptionBanner";
 import CardList from "../components/FeatureCards/CardList";
 import Gallery from "../components/Gallery";
 import HighLight from "../components/HighLight";
+import Footer from "../components/Footer";
 import {
   aboutCards,
   aboutSliderCards,
   galleryData,
   highlightData,
+  socialMediaSVG,
+  footerMidData,
 } from "../data";
 
 const LandingPage = () => {
@@ -27,6 +30,7 @@ const LandingPage = () => {
       <CardList cardData={aboutSliderCards[1]} />
       <Gallery galleryData={galleryData} />
       <HighLight highlightData={highlightData} />
+      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} />
     </>
   );
 };
