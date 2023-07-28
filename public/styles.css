@@ -1938,14 +1938,103 @@ p {
   border-radius: 0;
 }
 
+.mid-container li {
+  padding-top: 0;
+}
+
 .mid-container span {
+  display: inline-flex;
   color: white;
+  font-family: Niramit, "AXtManalBold Regular", Helvetica, Arial,
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", sans-serif;
+  font-size: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mid-container .is-head {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 12px;
+}
+
+.mid-container .is-head span {
+  padding-top: 3.75px;
+  padding-bottom: 3.75px;
+  display: inline-flex;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
   font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans;
+  font-weight: bold;
+}
+
+.footer-bottom {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.copyright p {
+  font-weight: 600;
+  font-size: 0.9333333333333333rem;
+  line-height: 1.57;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 .footer-bottom span,
-ul {
+.footer-bottom li {
   color: white;
+  list-style: none;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.footer-bottom ul {
+  padding-left: 0;
+  display: flex;
+}
+
+.footer-bottom li {
+  margin: 0;
+  margin-right: 15px;
+  font-family: Niramit, "AXtManalBold Regular", Helvetica, Arial,
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.9333333333333333rem;
+  line-height: 1.57;
+}
+
+.footer-bottom-C {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 30px;
+  height: 42px;
+}
+
+.footer-bottom-R {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.footer-bottom-R span {
+  margin: 0;
+  font-family: Niramit, "AXtManalBold Regular", Helvetica, Arial,
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.9333333333333333rem;
+  line-height: 1.57;
+}
+
+.footer-bottom-R .footer-logo2 {
+  width: 80px;
 }

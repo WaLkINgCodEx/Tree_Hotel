@@ -66,9 +66,11 @@ export default function Footer(props) {
       <Box className="footer-bottom" sx={{ flexGrow: 1 }}>
         <Grid className="bottom-container" container spacing={0}>
           <Grid item xs={12} lg={5}>
-            <span>
-              Copyright © 2023 - Banyan Tree Hotels & Resorts. All rights
-              reserved
+            <span className="copyright">
+              <p>
+                Copyright © 2023 - Banyan Tree Hotels & Resorts. All rights
+                reserved
+              </p>
             </span>
             <ul>
               <li>Terms & Conditions</li>
@@ -77,18 +79,20 @@ export default function Footer(props) {
             </ul>
           </Grid>
 
-          <Grid item xs={12} lg={2}>
-            <a className="footer-logo">
+          <Grid className="footer-bottom-C" item xs={12} lg={2}>
+            <a href="">
               <img
+                className="footer-logo"
                 src="/assets/images/icon-logo-white.svg"
                 alt="tree-logo-white"
               ></img>
             </a>
           </Grid>
 
-          <Grid item xs={12} lg={5}>
+          <Grid className="footer-bottom-R" item xs={12} lg={5}>
             <span>In partnership with</span>
             <img
+              className="footer-logo2"
               src="/assets/images/icon-logo-white_2.svg"
               alt="tree-logo-white2"
             ></img>

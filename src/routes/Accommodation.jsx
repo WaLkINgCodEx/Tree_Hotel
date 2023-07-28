@@ -2,6 +2,8 @@ import Header from "../components/Header/Header";
 import IntroBanner from "../components/IntroBanner";
 import PolicydropDown from "../components/PolicydropDown";
 import RoomCards from "../components/RoomCards";
+import Footer from "../components/Footer";
+import { socialMediaSVG, footerMidData } from "../data";
 
 const Accommodation = () => {
   const title =
@@ -41,6 +43,7 @@ const Accommodation = () => {
             return <PolicydropDown policy={policy} />;
           })}
       </div>
+      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} />
     </>
   );
 };

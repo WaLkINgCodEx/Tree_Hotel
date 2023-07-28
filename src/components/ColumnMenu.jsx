@@ -8,7 +8,7 @@ export default function ColumnMenu(props) {
     <MenuList>
       {props.column.map((item) => {
         return (
-          <MenuItem>
+          <MenuItem className={item.className}>
             <Link href={item.link} underline="none">
               <span>{item.topic}</span>
             </Link>

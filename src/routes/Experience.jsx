@@ -1,6 +1,9 @@
 import ExpFilterNav from "../components/ExpFilterNav";
 import Header from "../components/Header/Header";
 import IntroImageBanner from "../components/IntroImageBanner";
+import Footer from "../components/Footer";
+import { socialMediaSVG, footerMidData } from "../data";
+
 const Experience = () => {
   const experienceBannerInfo = {
     title: "DISCOVER AND DESIGN YOUR TRAVEL EXPERIENCE AT BANYAN TREE KRABI",
@@ -25,6 +28,7 @@ const Experience = () => {
         haveLink={experienceBannerInfo.haveLink}
       />
       <ExpFilterNav />
+      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} />
     </>
   );
 };

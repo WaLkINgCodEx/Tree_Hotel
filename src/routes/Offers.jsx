@@ -1,8 +1,9 @@
 import Carousel from "../components/Carousel";
 import Header from "../components/Header/Header";
 import OfferCard from "../components/OfferCard";
-import { offers } from "../data";
+import { offers, socialMediaSVG, footerMidData } from "../data";
 import Conditions from "../components/Conditions";
+import Footer from "../components/Footer";
 
 const Offers = () => {
   return (
@@ -37,6 +38,7 @@ const Offers = () => {
           <Conditions />
         </div>
       </div>
+      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} />
     </>
   );
 };
