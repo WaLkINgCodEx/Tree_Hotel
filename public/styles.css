@@ -13,13 +13,16 @@
     url(./assets/fonts/Niramit-ExtraLight.woff) format("woff");
 }
 
+html {
+  font-size: 15px;
+}
+
 body {
   margin: auto;
   font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
     Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", sans-serif;
   background-color: #e7e6e2;
-  font-size: 15px;
 }
 
 h1,
@@ -1722,9 +1725,11 @@ p {
 }
 
 .silder-frame {
+  box-sizing: border-box;
+  width: 100%;
   position: relative;
   max-width: 1280px;
-  padding: 0 100px;
+  padding: 0 107px;
 }
 
 .hightlight-swiper > .swiper-wrapper {
@@ -1859,4 +1864,88 @@ p {
 .silder-frame .swiper-button-prev {
   transform: rotate(90deg);
   left: -10px;
+}
+
+.banyanfooter {
+  background-color: #baa382;
+}
+
+.footer-top {
+  display: flex;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 30px;
+  max-width: 1280px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.social-buttons {
+  display: flex;
+  height: 100%;
+}
+
+.social-buttons div {
+  width: 40px;
+  height: 40px;
+}
+
+.banyanfooter-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.social-buttons .whatsapp {
+  padding-left: 9px;
+}
+
+.footer-top .best-price {
+  display: inline-flex;
+  border: 1px solid white;
+  font-size: 1rem;
+  margin: auto;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 10.5px 29px;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
+}
+
+.footer-separator {
+  max-width: 100%;
+  margin: 0;
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-mid,
+.footer-bottom {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 30px;
+  max-width: 1280px;
+  margin: auto;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
+}
+
+.footer-mid .mid-container .min-column {
+  border-radius: 0;
+}
+
+.mid-container span {
+  color: white;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
+}
+
+.footer-bottom span,
+ul {
+  color: white;
 }
