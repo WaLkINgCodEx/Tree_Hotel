@@ -373,6 +373,7 @@ export const otherInformation = [
 
 export const roomType = [
   {
+    _id: "DeluxeGPS-K",
     roomType: "Deluxe Garden Pool Suite - King",
     roomDesc: "Your private haven with a lush and spacious private garden",
     roomLongDesc:
@@ -381,6 +382,7 @@ export const roomType = [
     size: 125,
     bed: "King",
     view: ["Garden"],
+    quantity: 10,
     amenities: [
       "Bathtub",
       "Coffee and Tea Making Facilites",
@@ -397,6 +399,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Deluxe-Garden-Pool-Suite-King.webp",
   },
   {
+    _id: "DeluxeGPS-T",
     roomType: "Deluxe Garden Pool Suite - Twin",
     roomDesc: "Your private haven with a lush and spacious private garden",
     roomLongDesc:
@@ -405,6 +408,7 @@ export const roomType = [
     size: 125,
     bed: "Twin",
     view: ["Garden"],
+    quantity: 10,
     amenities: [
       "Bathtub",
       "Coffee and Tea Making Facilites",
@@ -421,6 +425,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Deluxe-Garden-Pool-Suite-Twin.webp",
   },
   {
+    _id: "PartialOPS-K",
     roomType: "Partial Ocean Pool Suite - King",
     roomDesc: "Adore the ocean views and lush garden in your haven",
     roomLongDesc:
@@ -429,6 +434,7 @@ export const roomType = [
     size: 99,
     bed: "King",
     view: ["Garden", "Sea"],
+    quantity: 10,
     amenities: [
       "Bathtub",
       "Coffee and Tea Making Facilites",
@@ -444,6 +450,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Partial-Ocean-Pool-Suite-King.webp",
   },
   {
+    _id: "PartialOPS-T",
     roomType: "Partial Ocean Pool Suite - Twin",
     roomDesc: "Adore the ocean views and lush garden in your haven",
     roomLongDesc:
@@ -452,6 +459,7 @@ export const roomType = [
     size: 99,
     bed: "Twin",
     view: ["Garden", "Sea"],
+    quantity: 10,
     amenities: [
       "Accessible Room (Limited)",
       "Bathtub",
@@ -468,6 +476,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Partial-Ocean-Pool-Suite-Twin.webp",
   },
   {
+    _id: "WellbeingSPS-K",
     roomType: "Wellbeing Sanctuary Pool Suite - King",
     roomDesc: "Your wellbeing journey begins here.",
     roomLongDesc:
@@ -476,6 +485,7 @@ export const roomType = [
     size: 125,
     bed: "King",
     view: ["Garden"],
+    quantity: 8,
     amenities: [
       "Bathtub",
       "Coffee and Tea Making Facilites",
@@ -507,6 +517,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Wellbeing-Sanctuary-Pool-Suite-King.webp",
   },
   {
+    _id: "WellbeingSPS-T",
     roomType: "Wellbeing Sanctuary Pool Suite - Twin",
     roomDesc: "Your wellbeing journey begins here.",
     roomLongDesc:
@@ -515,6 +526,7 @@ export const roomType = [
     size: 125,
     bed: "Twin",
     view: ["Garden"],
+    quantity: 8,
     amenities: [
       "Bathtub",
       "Coffee and Tea Making Facilites",
@@ -546,6 +558,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Wellbeing-Sanctuary-Pool-Suite-Twin.webp",
   },
   {
+    _id: "PremiumOPS-K",
     roomType: "Premium Ocean Pool Suite - King",
     roomDesc: "An idyllic suite with stunning ocean views",
     roomLongDesc:
@@ -554,6 +567,7 @@ export const roomType = [
     size: 99,
     bed: "King",
     view: ["Sea"],
+    quantity: 8,
     amenities: [
       "Bathtub",
       "Coffee and Tea Making Facilites",
@@ -568,6 +582,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Premium-Ocean-Pool-Suite-King.webp",
   },
   {
+    _id: "PremiumOPS-T",
     roomType: "Premium Ocean Pool Suite - Twin",
     roomDesc: "An idyllic suite with stunning ocean views",
     roomLongDesc:
@@ -576,6 +591,7 @@ export const roomType = [
     size: 99,
     bed: "Twin",
     view: ["Sea"],
+    quantity: 8,
     amenities: [
       "Bathtub",
       "Coffee and Tea Making Facilites",
@@ -590,6 +606,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Premium-Ocean-Pool-Suite-Twin.webp",
   },
   {
+    _id: "OPS-TB",
     roomType: "Two-Bedroom Ocean Pool Suite",
     roomDesc: "An expansive private living space with panoramic ocean views",
     roomLongDesc:
@@ -598,6 +615,7 @@ export const roomType = [
     size: 213,
     bed: "King, Twin",
     view: ["Sea"],
+    quantity: 4,
     amenities: [
       "2 Television Sets",
       "Bathtub",
@@ -615,6 +633,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Two-Bedroom-Beachfront-Pool-Villa.webp",
   },
   {
+    _id: "DeluxeGPV",
     roomType: "Deluxe Garden Pool Villa",
     roomDesc: "An intimate retreat where elegance meets nature",
     roomLongDesc:
@@ -623,6 +642,7 @@ export const roomType = [
     size: 204,
     bed: "King",
     view: ["Garden"],
+    quantity: 4,
     amenities: [
       "Bathtub",
       "Coffee and Tea Making Facilites",
@@ -639,6 +659,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Deluxe-Garden-Pool-Villa.webp",
   },
   {
+    _id: "BeachfrontPV",
     roomType: "Beachfront Pool Villa",
     roomDesc: "Your private haven on the white sand beach",
     roomLongDesc:
@@ -647,6 +668,7 @@ export const roomType = [
     size: 204,
     bed: "King",
     view: ["Sea"],
+    quantity: 4,
     amenities: [
       "Bathtub",
       "Coffee and Tea Making Facilites",
@@ -664,6 +686,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Beachfront-Pool-Villa.webp",
   },
   {
+    _id: "BeachfrontPV-TB",
     roomType: "Two-Bedroom Beachfront Pool Villa",
     roomDesc:
       "Commune with friends and family in this luxury beachfront pool villa",
@@ -673,6 +696,7 @@ export const roomType = [
     size: 387,
     bed: "King, Twin",
     view: ["Sea"],
+    quantity: 4,
     amenities: [
       "3 Smart TVs",
       "Bathtub",
@@ -692,6 +716,7 @@ export const roomType = [
     image: "/assets/images/accom_img/Two-Bedroom-Beachfront-Pool-Villa.webp",
   },
   {
+    _id: "BeachfrontPV-VIP",
     roomType: "Presidential Beachfront Pool Villa",
     roomDesc: "Ultimate luxury and privacy on the beach",
     roomLongDesc:
@@ -701,6 +726,7 @@ export const roomType = [
     size: 587,
     bed: "King, Twin",
     view: ["Sea"],
+    quantity: 1,
     amenities: [
       "4 Smart TVs",
       "Bathtub",
@@ -721,6 +747,23 @@ export const roomType = [
     image: "/assets/images/accom_img/Presidential-Beachfront-Pool-Villa.webp",
   },
 ];
+
+export const pricing = {
+  // roomTypeId: ObjectId("DeluxeGPS-K"),
+  basePrice: 200,
+  pricingRules: [
+    {
+      startDate: "2023-08-01",
+      endDate: "2023-08-31",
+      priceModifier: 1.3,
+    },
+    {
+      startDate: "2023-09-01",
+      endDate: "2023-09-20",
+      priceModifier: 1.1,
+    },
+  ],
+};
 
 export const experienceActivities = [
   {

@@ -2038,3 +2038,113 @@ p {
 .footer-bottom-R .footer-logo2 {
   width: 80px;
 }
+
+.reservation-nav-bar-wrapper {
+  background-color: white;
+  margin: 0 auto;
+}
+
+.hamburger {
+  background-color: #baa382;
+  width: 60px;
+  font-size: 25px;
+  color: white;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.reservation-brand {
+  display: flex;
+  align-items: center;
+}
+
+.reservation-nav-bar-container {
+  max-width: 1400px;
+  display: flex;
+  border-bottom: 5px solid black;
+}
+
+.sidebar-container {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  z-index: -1;
+  opacity: 0;
+  margin-left: -250px;
+  transition: 0.3s ease-in-out all;
+  visibility: hidden;
+}
+
+.show-sidebar {
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  margin-left: 0;
+}
+
+.close-btn {
+  background: transparent;
+  border-color: transparent;
+  width: 65px;
+  min-height: 65px;
+  cursor: pointer;
+  color: #173f35;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+.content {
+  background-color: #fff;
+  height: 100vh;
+  width: 70vw;
+  box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 768px) {
+  .content {
+    width: 400px;
+  }
+}
+
+.sidebar-top {
+  display: flex;
+  align-items: center;
+  background-color: #e7e6e2;
+}
+
+.sidebar-top-right {
+  border-left: 1px solid #b9bcb3;
+  padding: 0px 8px;
+}
+
+.sidebar-brand {
+  font-size: 18px;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
+}
+
+.sidebar-nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+  font-size: 16px;
+  color: #baa382;
+}
+
+.sidebar-nav-link {
+  text-decoration: none;
+  display: flex;
+  padding: 1rem 0;
+  padding-left: 2.5rem;
+  text-transform: uppercase;
+  color: #baa382;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
+}
+.phone-icon {
+  margin-right: 5px;
+}

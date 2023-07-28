@@ -7,6 +7,7 @@ import Offers from "../routes/Offers";
 import Spa from "../routes/Spa";
 import Accommodation from "../routes/Accommodation";
 import Experience from "../routes/Experience";
+import Reservation from "../routes/Reservation";
 
 const router = createBrowserRouter([
   {
@@ -31,8 +32,12 @@ const router = createBrowserRouter([
         element: <Spa />,
       },
       {
-        path: "Experience",
+        path: "experience",
         element: <Experience />,
+      },
+      {
+        path: "reservation",
+        element: <Reservation />,
       },
     ],
   },
