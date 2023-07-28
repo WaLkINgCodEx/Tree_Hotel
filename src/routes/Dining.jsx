@@ -1,6 +1,8 @@
 import DiningList from "../components/DiningList";
 import IntroBanner from "../components/IntroBanner";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer";
+import { socialMediaSVG, footerMidData } from "../data";
 
 const Dining = () => {
   const title =
@@ -20,6 +22,7 @@ const Dining = () => {
       />
       <IntroBanner title={title} paragraphs={paragraphs} />
       <DiningList />
+      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} />
     </>
   );
 };

@@ -814,6 +814,7 @@ export const footerMidData = {
     {
       topic: "OUR BRANDS",
       link: "",
+      className: "visible is-head",
     },
     {
       topic: "Banyan Tree Escape",
@@ -856,6 +857,7 @@ export const footerMidData = {
     {
       topic: "OUR PRODUCTS",
       link: "",
+      className: "visible is-head",
     },
     {
       topic: "Essentials",
@@ -870,10 +872,12 @@ export const footerMidData = {
     {
       topic: "CORPORATE SITE",
       link: "",
+      className: "visible is-head",
     },
     {
       topic: "ASSOCIATED SITES",
       link: "",
+      className: "visible is-head",
     },
     {
       topic: "banyan Tree Global Foundation",
@@ -900,6 +904,7 @@ export const footerMidData = {
     {
       topic: "CONTACT US",
       link: "",
+      className: "visible is-head",
     },
     {
       topic: "Brand Story",
@@ -908,6 +913,7 @@ export const footerMidData = {
     {
       topic: "MEDIA",
       link: "",
+      className: "visible is-head",
     },
     {
       topic: "Press Releases",

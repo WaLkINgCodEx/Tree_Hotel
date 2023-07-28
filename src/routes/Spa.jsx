@@ -1,5 +1,8 @@
 import Header from "../components/Header/Header";
 import IntroImageBanner from "../components/IntroImageBanner";
+import Footer from "../components/Footer";
+import { socialMediaSVG, footerMidData } from "../data";
+
 const Spa = () => {
   const spaBannerInfo = {
     title: "RETREAT TO THE TENDER TOUCH OF OUR HIGHLY-SKILLED THERAPISTS",
@@ -23,6 +26,7 @@ const Spa = () => {
         image={spaBannerInfo.image}
         haveLink={spaBannerInfo.haveLink}
       />
+      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} />
     </>
   );
 };
