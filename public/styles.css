@@ -2062,7 +2062,8 @@ p {
 .reservation-nav-bar-container {
   max-width: 1400px;
   display: flex;
-  border-bottom: 5px solid black;
+
+  justify-content: space-between;
 }
 
 .sidebar-container {
@@ -2075,6 +2076,52 @@ p {
   margin-left: -250px;
   transition: 0.3s ease-in-out all;
   visibility: hidden;
+}
+
+.nav-brand-name {
+  text-transform: uppercase;
+}
+.res-navbar-left {
+  display: flex;
+}
+
+.res-navbar-right {
+  display: none;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .res-navbar-right {
+    display: flex;
+    align-items: center;
+  }
+}
+.res-navbar-right > div {
+  height: 100%;
+}
+
+.res-navbar-right > a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #575c5a;
+  text-transform: uppercase;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans;
+  padding-right: 8px;
+}
+
+.res-navbar-right > a:hover {
+  color: #baa382;
+}
+
+.mid-lg-only {
+  display: none;
+}
+@media (min-width: 960px) {
+  .mid-lg-only {
+    display: flex;
+    padding-right: 5px;
+  }
 }
 
 .show-sidebar {
@@ -2114,6 +2161,9 @@ p {
   background-color: #e7e6e2;
 }
 
+.sidebar-top-left {
+  display: flex;
+}
 .sidebar-top-right {
   border-left: 1px solid #b9bcb3;
   padding: 0px 8px;
@@ -2145,6 +2195,92 @@ p {
     Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
     sans-serif;
 }
+
+.sidebar-nav-links > a:hover {
+  color: #000;
+}
+
+.mid-lg-only-sidebar {
+  display: block;
+}
+@media (min-width: 768px) {
+  .mid-lg-only-sidebar {
+    display: none;
+  }
+}
+
 .phone-icon {
   margin-right: 5px;
+}
+
+.res-search-wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.res-search-bar {
+  display: flex;
+  background-color: #173f35;
+  color: #fff;
+  padding: 10px;
+  flex-direction: column;
+  padding: 30px 15px;
+}
+
+@media (min-width: 960px) {
+  .small-size-only {
+    display: none;
+  }
+}
+
+.top-stay-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-guest-bar {
+  text-align: left;
+}
+
+.stay-info {
+  text-align: end;
+}
+
+.date-range-picker {
+  width: 100%;
+}
+
+.no-check-in {
+  margin: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.checkinout-info {
+  font-size: 14px;
+  padding: 0px 10px;
+  margin-right: 5px;
+}
+
+.check-key1 {
+  border: 1px solid #e7e6e2;
+  display: inline-block;
+  content: "";
+  height: 1.5rem;
+  max-height: 24px;
+  width: 1.5rem;
+  max-width: 24px;
+  vertical-align: middle;
+  background: linear-gradient(to right bottom, #b9bcb3, 50%, #ffffff 50%);
+}
+
+.check-key2 {
+  border: 1px solid #e7e6e2;
+  display: inline-block;
+  content: "";
+  height: 1.5rem;
+  max-height: 24px;
+  width: 1.5rem;
+  max-width: 24px;
+  vertical-align: middle;
+  background: linear-gradient(to left top, #b9bcb3, 50%, #ffffff 50%);
 }
