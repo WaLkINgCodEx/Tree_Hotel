@@ -1,7 +1,9 @@
 import { TfiClose } from "react-icons/tfi";
 import { BsTelephone } from "react-icons/bs";
+
 const ReservationSideBar = ({ showSidebar, toggleSidebar }) => {
   console.log(showSidebar);
+
   return (
     <div className="sidebar-wrapper">
       <div
