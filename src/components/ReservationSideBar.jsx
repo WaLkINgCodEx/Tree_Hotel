@@ -1,6 +1,8 @@
 import { TfiClose } from "react-icons/tfi";
 import { BsTelephone } from "react-icons/bs";
 
+import { PiCaretDownLight } from "react-icons/pi";
+
 const ReservationSideBar = ({ showSidebar, toggleSidebar }) => {
   console.log(showSidebar);
 
@@ -31,6 +33,12 @@ const ReservationSideBar = ({ showSidebar, toggleSidebar }) => {
             </a>
             <a href="" className="sidebar-nav-link">
               Find Reservation
+            </a>
+            <a href="" className="sidebar-nav-link mid-lg-only-sidebar">
+              English <PiCaretDownLight />
+            </a>
+            <a href="" className="sidebar-nav-link mid-lg-only-sidebar">
+              Canadian Dollars <PiCaretDownLight />
             </a>
             <span className="sidebar-nav-link">
               <span className="phone-icon">

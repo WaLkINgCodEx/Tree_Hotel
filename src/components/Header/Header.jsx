@@ -87,7 +87,7 @@ export default function Header(props) {
             <Li name="EXPERIENCES" url="experience" />
             <Li name="MORE" className="arrow-icon" />
             <Li name="EN" className="arrow-icon" />
-            <Li name="BOOK NOW" idName="bookNowButton" />
+            <Li name="BOOK NOW" idName="bookNowButton" url="reservation" />
           </ul>
         </div>
       </div>

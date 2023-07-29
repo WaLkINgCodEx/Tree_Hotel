@@ -1,4 +1,5 @@
 import React from "react";
+import "react-dates/initialize";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../routes/HomeLayout";
 import LandingPage from "../routes/LandingPage";
