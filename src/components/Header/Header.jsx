@@ -3,9 +3,11 @@ import Li from "./Li";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
+import MenuSideBar from "./MenuSideBar";
 
 export default function Header(props) {
   const [showSidebar, setShowSidebar] = useState(false);
+
   const toggleSidebar = () => {
     console.log(showSidebar);
     setShowSidebar(!showSidebar);
@@ -70,6 +72,7 @@ export default function Header(props) {
             </Grid>
           </Grid>
         </Box>
+        <MenuSideBar />
         <div className="nav-bar-top">
           <ul>
             <Li
