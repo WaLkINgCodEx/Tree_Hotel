@@ -1,8 +1,11 @@
 import { TfiClose } from "react-icons/tfi";
 import { BsTelephone } from "react-icons/bs";
+
 import { PiCaretDownLight } from "react-icons/pi";
+
 const ReservationSideBar = ({ showSidebar, toggleSidebar }) => {
   console.log(showSidebar);
+
   return (
     <div className="sidebar-wrapper">
       <div
