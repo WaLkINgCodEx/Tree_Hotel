@@ -157,6 +157,7 @@ p {
   background-color: white; */
   position: relative;
   height: 47px;
+  background-color: white;
 }
 
 @media (min-width: 1280px) {
@@ -329,21 +330,56 @@ p {
   align-items: center;
   color: white;
   margin: auto;
-  min-height: 800px;
+  min-height: 300px;
   min-width: 100%;
   max-height: 100%;
   max-width: 100%;
+}
+
+@media (min-width: 960px) {
+  .heroView {
+    min-height: 400px;
+    height: calc(100vh - 47px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .heroView {
+    height: calc(100vh - 130px);
+  }
 }
 
 .heroFrame {
-  min-height: 100%;
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  width: initial;
+  height: initial;
+  background: none;
+  opacity: 1;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* min-height: 100%;
   min-width: 100%;
   max-height: 100%;
-  max-width: 100%;
-  overflow: hidden;
+  max-width: 100%; */
 }
 
 .heroFrame img {
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
   position: absolute;
   top: 0;
   z-index: 1;
@@ -352,6 +388,7 @@ p {
   min-width: 100%;
   max-height: 100%;
   max-width: 100%;
+  transform: translateY(0px);
 }
 
 .heroText {
