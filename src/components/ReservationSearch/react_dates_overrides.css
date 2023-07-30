@@ -30,6 +30,22 @@
   top: 380px;
 }
 
+.lg-search-container .DateInput {
+  width: auto;
+}
+
+.lg-search-container .DateInput_input {
+  width: 145px;
+  font-size: 17px;
+  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
+    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", sans-serif;
+}
+
+.lg-search-container .DateRangePickerInput_arrow {
+  font-size: 15px;
+}
+
 .CalendarDay__default {
   border: 2px solid white;
 }
