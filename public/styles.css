@@ -299,6 +299,18 @@ p {
   margin-bottom: 0;
 }
 
+.nav-sidebar-container .lang-select button {
+  color: black;
+}
+
+.nav-sidebar-container .lang-button span {
+  padding-right: 10px;
+}
+
+/* .MuiMenu-paper {
+  border-radius: 0;
+} */
+
 .nav-sidebar-container button {
   width: 100%;
   height: 100%;
