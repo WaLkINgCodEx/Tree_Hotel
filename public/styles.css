@@ -2263,9 +2263,14 @@ p {
   width: 80px;
 }
 
+.reservation-wrapper {
+  background-color: #fff;
+}
+
 .reservation-nav-bar-wrapper {
   background-color: white;
   margin: 0 auto;
+  max-width: 1260px;
 }
 
 .hamburger {
@@ -2277,6 +2282,11 @@ p {
   place-items: center;
   cursor: pointer;
 }
+@media (min-width: 960px) {
+  .hamburger {
+    display: none;
+  }
+}
 
 .reservation-brand {
   display: flex;
@@ -2284,9 +2294,10 @@ p {
 }
 
 .reservation-nav-bar-container {
-  max-width: 1400px;
+  max-width: 1260px;
   display: flex;
-  border-bottom: 5px solid black;
+
+  justify-content: space-between;
 }
 
 .sidebar-container {
@@ -2299,6 +2310,52 @@ p {
   margin-left: -250px;
   transition: 0.3s ease-in-out all;
   visibility: hidden;
+}
+
+.nav-brand-name {
+  text-transform: uppercase;
+}
+.res-navbar-left {
+  display: flex;
+}
+
+.res-navbar-right {
+  display: none;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .res-navbar-right {
+    display: flex;
+    align-items: center;
+  }
+}
+.res-navbar-right > div {
+  height: 100%;
+}
+
+.res-navbar-right > a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #575c5a;
+  text-transform: uppercase;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans;
+  padding-right: 8px;
+}
+
+.res-navbar-right > a:hover {
+  color: #baa382;
+}
+
+.mid-lg-only {
+  display: none;
+}
+@media (min-width: 960px) {
+  .mid-lg-only {
+    display: flex;
+    padding-right: 5px;
+  }
 }
 
 .show-sidebar {
@@ -2338,6 +2395,9 @@ p {
   background-color: #e7e6e2;
 }
 
+.sidebar-top-left {
+  display: flex;
+}
 .sidebar-top-right {
   border-left: 1px solid #b9bcb3;
   padding: 0px 8px;
@@ -2369,6 +2429,321 @@ p {
     Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
     sans-serif;
 }
+
+.sidebar-nav-links > a:hover {
+  color: #000;
+}
+
+.mid-lg-only-sidebar {
+  display: block;
+}
+@media (min-width: 768px) {
+  .mid-lg-only-sidebar {
+    display: none;
+  }
+}
+
 .phone-icon {
   margin-right: 5px;
+}
+
+.res-search-wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.res-search-bar {
+  display: flex;
+  background-color: #173f35;
+  color: #fff;
+  padding: 10px;
+  flex-direction: column;
+  padding: 30px 15px;
+}
+
+@media (min-width: 960px) {
+  .small-size-only {
+    display: none;
+  }
+}
+
+.top-stay-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-guest-bar {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-guest-bar .guest-count-button {
+  color: white;
+  font-size: 15px;
+}
+
+.guest-count-bar {
+  color: #000;
+}
+.guest-count-bar-end {
+  width: 70px;
+}
+
+.stay-info {
+  text-align: end;
+}
+
+.date-range-picker {
+  width: 100%;
+}
+
+.no-check-in {
+  margin: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.checkinout-info {
+  font-size: 14px;
+  padding: 0px 10px;
+  margin-right: 5px;
+}
+
+.check-key1 {
+  border: 1px solid #e7e6e2;
+  display: inline-block;
+  content: "";
+  height: 1.5rem;
+  max-height: 24px;
+  width: 1.5rem;
+  max-width: 24px;
+  vertical-align: middle;
+  background: linear-gradient(to right bottom, #b9bcb3, 50%, #ffffff 50%);
+}
+
+.check-key2 {
+  border: 1px solid #e7e6e2;
+  display: inline-block;
+  content: "";
+  height: 1.5rem;
+  max-height: 24px;
+  width: 1.5rem;
+  max-width: 24px;
+  vertical-align: middle;
+  background: linear-gradient(to left top, #b9bcb3, 50%, #ffffff 50%);
+}
+
+.warning-area {
+  margin: 0 auto;
+  max-width: 1260px;
+}
+
+.msg-content {
+  display: flex;
+  align-items: center;
+}
+
+.warning-msg-container {
+  background: #fff;
+  border: 1px solid #b9bcb3;
+  border-radius: 0;
+  padding: 1rem;
+  margin: 50px 0px;
+}
+
+.icon-circle {
+  min-width: 45px;
+  min-height: 45px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: #baa382;
+  margin-right: 15px;
+}
+
+.warning-size {
+  font-size: 30px;
+}
+
+.warning-msg > h4 {
+  text-transform: capitalize;
+  margin: 0px;
+  color: #baa382;
+}
+
+.lg-only {
+  display: none;
+  margin: 0 auto;
+  background-color: #fff;
+  height: 100vh;
+}
+@media (min-width: 960px) {
+  .lg-only {
+    display: block;
+  }
+}
+
+.lg-search-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #baa382;
+}
+
+.lg-date-range {
+  min-width: 60%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.guest-number {
+  min-width: 40%;
+  font-size: 18px;
+  border-right: 1px solid #baa382;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.search-title {
+  font-weight: bold;
+  font-size: 15px;
+  color: #baa382;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
+    sans-serif;
+}
+
+.additional-search {
+  display: block;
+  border: 1px solid #baa382;
+  border-top: 0px;
+  padding: 10px;
+}
+
+.additional-search-container {
+  display: none;
+  background-color: #eee;
+}
+.show-dropdown {
+  display: block;
+}
+.sp-rates-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 960px) {
+  .sp-rates-container {
+    flex-direction: row;
+  }
+}
+
+.additional-search-container input {
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+  border: 1px solid #baa382;
+  flex-grow: 1;
+  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
+    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", sans-serif;
+}
+
+@media (min-width: 960px) {
+  .additional-search-container input {
+    width: 50%;
+  }
+}
+
+.search-bottons {
+  display: flex;
+  justify-content: end;
+  background-color: #eee;
+  padding: 10px;
+}
+.guest-count-button-area {
+  position: relative;
+}
+
+.guest-count-button {
+  background-color: transparent;
+  border: 0px;
+  font-size: 16px;
+  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
+    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", sans-serif;
+}
+
+.special-rate-btn {
+  background-color: #173f35;
+  border: 0px;
+  font-weight: bolder;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 17px;
+  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
+    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.lg-special-rate-btn {
+  background-color: #fff;
+  color: #baa382;
+  text-decoration: underline;
+  padding: 5px;
+  margin: initial;
+  display: flex;
+  justify-content: end;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.dropdown-select-container {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #baa382;
+  min-width: 200px;
+  min-height: 250px;
+  position: absolute;
+  top: 45px;
+  z-index: 5;
+  padding: 0px 10px;
+}
+.dropdown-select-container.open {
+  display: block;
+}
+
+.dropdown-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #baa382;
+}
+
+.control-container {
+  border: 1px solid #baa382;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-btn {
+  background-color: #baa382;
+  height: 45px;
+  width: 45px;
+  border: 0px;
 }
