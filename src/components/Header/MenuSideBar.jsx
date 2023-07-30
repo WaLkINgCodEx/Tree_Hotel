@@ -3,41 +3,38 @@ import Container from "@mui/material/Container";
 import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
+import { sideBarURLs } from "../../data";
 
-export default function MenuSideBar(props) {
+export default function MenuSideBar({ showSidebar, toggleSidebar }) {
   return (
     <>
       <Container
-        class="nav-sidebar-container"
+        class={
+          showSidebar
+            ? "nav-sidebar-container showSidebar"
+            : "nav-sidebar-container"
+        }
         maxWidth="false"
         disableGutters="true"
       >
         <MenuList>
-          <MenuItem>
+          {sideBarURLs.map((item) => {
+            return (
+              <MenuItem>
+                <Button>
+                  <a href={item.url}>
+                    <span>{item.topic}</span>
+                  </a>
+                </Button>
+              </MenuItem>
+            );
+          })}
+        </MenuList>
+        <MenuList>
+          <MenuItem className="lang-select">
             <Button>
-              <a href="">
-                <span>ABOUT</span>
-              </a>
-            </Button>
-          </MenuItem>
-          <MenuItem>
-            <Button>
-              <a href="">
-                <span>ABOUT</span>
-              </a>
-            </Button>
-          </MenuItem>
-          <MenuItem>
-            <Button>
-              <a href="">
-                <span>ABOUT</span>
-              </a>
-            </Button>
-          </MenuItem>
-          <MenuItem>
-            <Button>
-              <a href="">
-                <span>ABOUT</span>
+              <a>
+                <span>ENGLISH</span>
               </a>
             </Button>
           </MenuItem>

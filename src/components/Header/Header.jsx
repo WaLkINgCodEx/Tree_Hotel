@@ -4,6 +4,8 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import MenuSideBar from "./MenuSideBar";
+import IconHamburger from "../../assets/icons/icon-hamburger";
+import IconClose from "../../assets/icons/icon-close";
 
 export default function Header(props) {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -12,45 +14,20 @@ export default function Header(props) {
     console.log(showSidebar);
     setShowSidebar(!showSidebar);
   };
-
+  <hamburger></hamburger>;
   return (
     <div className="header-wrap">
       <div className="header-nav-top">
-        <Box
-          showSidebar={showSidebar}
-          toggleSidebar={toggleSidebar}
-          className="nav-bar-top-m"
-          sx={{ flexGrow: 1, height: 47 }}
-        >
-          <Grid container spacing={2}>
+        <Box className="nav-bar-top-m" sx={{ flexGrow: 1, height: 47 }}>
+          <Grid container spacing={0} disableGutters="false">
             <Grid className="nav-m-l" item xs={5}>
-              <Button color="inherit" size="large" variant="text">
-                <svg
-                  width="24"
-                  viewBox="0 0 24 24"
-                  xlink="http://www.w3.org/1999/xlink"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <clipPath id="icon-hamburger_menu_svg__b">
-                      <use
-                        href="#icon-hamburger_menu_svg__a"
-                        clip-rule="evenodd"
-                      ></use>
-                    </clipPath>
-                    <path
-                      id="icon-hamburger_menu_svg__a"
-                      d="M0 0h24v24H0z"
-                    ></path>
-                  </defs>
-                  <g
-                    clip-path="url(#icon-hamburger_menu_svg__b)"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <path d="M3 12.5h18.506M3 6.5h18.506M3 18.5h18.506"></path>
-                  </g>
-                </svg>
+              <Button
+                onClick={toggleSidebar}
+                color="inherit"
+                size="large"
+                variant="text"
+              >
+                {!showSidebar ? <IconHamburger /> : <IconClose />}
               </Button>
             </Grid>
             <Grid className="nav-m-mid" item xs={2}>
@@ -72,7 +49,7 @@ export default function Header(props) {
             </Grid>
           </Grid>
         </Box>
-        <MenuSideBar />
+        <MenuSideBar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
         <div className="nav-bar-top">
           <ul>
             <Li
