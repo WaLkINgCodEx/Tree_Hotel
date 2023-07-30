@@ -3,6 +3,7 @@ import Container from "@mui/material/Container";
 import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
+import LangMenu from "./LangMenu";
 import { sideBarURLs } from "../../data";
 
 export default function MenuSideBar({ showSidebar, toggleSidebar }) {
@@ -31,12 +32,8 @@ export default function MenuSideBar({ showSidebar, toggleSidebar }) {
           })}
         </MenuList>
         <MenuList>
-          <MenuItem className="lang-select">
-            <Button>
-              <a>
-                <span>ENGLISH</span>
-              </a>
-            </Button>
+          <MenuItem class="lang-select">
+            <LangMenu />
           </MenuItem>
         </MenuList>
       </Container>
