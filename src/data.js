@@ -6,6 +6,23 @@ export const hotelBasic = {
   checkout: "12:00 pm",
 };
 
+export const sideBarURLs = [
+  { topic: "ABOUT", url: "" },
+  { topic: "OFFERS", url: "" },
+  { topic: "ACCOMODATION", url: "" },
+  { topic: "DINING", url: "" },
+  { topic: "SPA", url: "" },
+  { topic: "EXPERIENCES", url: "" },
+  { topic: "SUSTAINABILITY", url: "" },
+  { topic: "WELLBEING SANCTUARY", url: "" },
+  { topic: "FACILITIES", url: "" },
+  { topic: "WEDDINGS", url: "" },
+  { topic: "HOMEMOONS", url: "" },
+  { topic: "MEETING & EVENTS", url: "" },
+  { topic: "GALLERY", url: "" },
+  { topic: "LOCATION", url: "" },
+];
+
 export const aboutCards = [
   {
     name: "360° Virtual Tour",

@@ -25,6 +25,7 @@ body {
   background-color: #e7e6e2;
 }
 
+a,
 h1,
 h2,
 h3,
@@ -149,20 +150,19 @@ p {
 }
 
 .header-nav-top {
-  /* z-index: 12;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: white; */
+  z-index: 2;
   position: relative;
+  /* top: 0;
+  left: 0;
+  right: 0; */
+  /* width: 100%; */
   height: 47px;
   background-color: white;
 }
 
 @media (min-width: 1280px) {
   .header-nav-top {
-    height: initial;
+    height: 71.05px;
   }
 }
 
@@ -181,6 +181,10 @@ p {
   margin-left: 0;
   width: 100%;
   height: 100%;
+  height: 47px;
+  position: fixed;
+  width: 100%;
+  background: white;
 }
 
 .header-nav-top .MuiGrid-container .MuiGrid-item {
@@ -261,12 +265,6 @@ p {
   letter-spacing: 1px;
 }
 
-/* @media (max-width: 1280px) {
-  .nav-bar-top {
-    display: none;
-  }
-} */
-
 .nav-sidebar-container {
   position: fixed;
   width: 100%;
@@ -275,18 +273,70 @@ p {
   margin-left: 0;
   height: calc(100% - 47px);
   z-index: 2;
+  left: -400px;
+  transition: 0.3s;
+}
+
+.nav-sidebar-container.showSidebar {
+  left: 0;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-sidebar-container li {
+  border-bottom: 1px solid #f5f5f5;
+  margin-bottom: 10.625px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 22.5px;
+  margin-right: 22.5px;
+  padding: 0;
+}
+
+.nav-sidebar-container .lang-select {
+  margin-bottom: 0;
+}
+
+.nav-sidebar-container button {
+  width: 100%;
+  height: 100%;
+  justify-content: left;
+  border-radius: 0;
+  /* padding: 0; */
+  font-size: 0.8rem;
+}
+
+.nav-sidebar-container button span {
+  display: inline-flex;
+  color: black;
 }
 
 .nav-bar-top {
-  display: flex;
-  justify-content: center;
-  max-width: 1455px;
+  /* position: fixed;
+  width: 100%; */
+  /* display: flex;
+  justify-content: center; */
+
+  width: 100%;
+  /* height: 47px;
+  background-color: white; */
   margin: auto;
-  height: 100%;
+  /* z-index: 2; */
+  position: fixed;
+  background-color: white;
+}
+
+@media (max-width: 1280px) {
+  .nav-bar-top {
+    display: none;
+  }
 }
 
 .nav-bar-top ul {
   width: 100%;
+  max-width: 1455px;
   margin: auto;
   list-style: none;
   padding: 0;

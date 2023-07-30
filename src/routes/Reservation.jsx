@@ -10,6 +10,7 @@ const Reservation = () => {
     console.log(showSidebar);
     setShowSidebar(!showSidebar);
   };
+
   return (
     <>
       <div className="reservation-nav-bar-wrapper">
