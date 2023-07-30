@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import LangMenu from "./LangMenu";
 import { sideBarURLs } from "../../data";
 
-export default function MenuSideBar({ showSidebar, toggleSidebar }) {
+export default function MobileSideBar({ showSidebar, toggleSidebar }) {
   return (
     <>
       <Container
