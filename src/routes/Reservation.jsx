@@ -11,7 +11,7 @@ const Reservation = () => {
     setShowSidebar(!showSidebar);
   };
   return (
-    <>
+    <div className="reservation-wrapper">
       <div className="reservation-nav-bar-wrapper">
         <ReservationSideBar
           showSidebar={showSidebar}
@@ -20,7 +20,7 @@ const Reservation = () => {
         <ReservationNavBar toggleSidebar={toggleSidebar} />
       </div>
       <ResSearch />
-    </>
+    </div>
   );
 };
 export default Reservation;
