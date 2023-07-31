@@ -3,6 +3,8 @@ import ReservationSideBar from "../components/ReservationSideBar";
 
 import ReservationNavBar from "../components/ReservationNavBar";
 import ResSearch from "../components/ReservationSearch/ResSearch";
+import { ReservationProvider } from "../contexts/ReservationContext";
+import SearchResults from "../components/SearchResults";
 
 const Reservation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -12,16 +14,19 @@ const Reservation = () => {
   };
 
   return (
-    <div className="reservation-wrapper">
-      <div className="reservation-nav-bar-wrapper">
-        <ReservationSideBar
-          showSidebar={showSidebar}
-          toggleSidebar={toggleSidebar}
-        />
-        <ReservationNavBar toggleSidebar={toggleSidebar} />
+    <ReservationProvider>
+      <div className="reservation-wrapper">
+        <div className="reservation-nav-bar-wrapper">
+          <ReservationSideBar
+            showSidebar={showSidebar}
+            toggleSidebar={toggleSidebar}
+          />
+          <ReservationNavBar toggleSidebar={toggleSidebar} />
+        </div>
+        <ResSearch />
+        <SearchResults />
       </div>
-      <ResSearch />
-    </div>
+    </ReservationProvider>
   );
 };
 export default Reservation;

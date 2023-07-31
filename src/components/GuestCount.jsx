@@ -1,36 +1,10 @@
 import { useState } from "react";
 import { TfiClose } from "react-icons/tfi";
-const GuestCount = ({
-  adultNumber,
-  setAdultNumber,
-  kidNumber,
-  setKidNumber,
-}) => {
+import { useReservationContext } from "../contexts/ReservationContext";
+const GuestCount = () => {
+  const { minusAdult, addAdult, minusKid, addKid, kidNumber, adultNumber } =
+    useReservationContext();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  const minusAdult = () => {
-    if (adultNumber > 0) {
-      setAdultNumber(adultNumber - 1);
-    }
-  };
-
-  const addAdult = () => {
-    if (adultNumber >= 0 && adultNumber < 10) {
-      setAdultNumber(adultNumber + 1);
-    }
-  };
-
-  const minusKid = () => {
-    if (kidNumber > 0) {
-      setKidNumber(kidNumber - 1);
-    }
-  };
-
-  const addKid = () => {
-    if (kidNumber >= 0 && kidNumber < 10) {
-      setKidNumber(kidNumber + 1);
-    }
-  };
 
   const dropdown = () => {
     setDropdownOpen(!isDropdownOpen);
