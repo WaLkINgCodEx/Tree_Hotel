@@ -1,13 +1,20 @@
-import React, { Fragment, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { styled, alpha } from "@mui/material/styles";
+import { styled, alpha, duration } from "@mui/material/styles";
 import BigArrow from "../../assets/icons/BigArrow";
 
 export default function LangMenu(props) {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [lang, setLang] = useState("ENGLISH");
+  const [lang, setLang] = useState(() => {
+    if (props.notMobile) {
+      return "ENG";
+    } else {
+      return "ENGLISH";
+    }
+  });
+  const previousLang = useRef("");
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
@@ -18,8 +25,16 @@ export default function LangMenu(props) {
     setLang(lang);
   };
 
+  useEffect(() => {
+    if (lang) {
+      previousLang.current = lang;
+      console.log(previousLang.current);
+    }
+  }, [lang]);
+
   const handleClose = (event) => {
     changeLang(event.target.getAttribute("value"));
+    // changeLang(event.target.innerText);
     setAnchorEl(null);
   };
 
@@ -41,6 +56,7 @@ export default function LangMenu(props) {
       borderRadius: 0,
       marginTop: theme.spacing(1),
       minWidth: 180,
+      marginTop: 0,
       color:
         theme.palette.mode === "light"
           ? "rgb(55, 65, 81)"
@@ -75,10 +91,10 @@ export default function LangMenu(props) {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <span>
+        <span className="navbar-arrow">
           <BigArrow />
         </span>
-        {lang}
+        {lang ?? previousLang.current}
       </Button>
       <StyledMenu
         id="basic-menu"
@@ -89,7 +105,10 @@ export default function LangMenu(props) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem value="ENGLISH" onClick={handleClose}>
+        <MenuItem
+          value={props.notMobile ? "ENG" : "ENGLISH"}
+          onClick={handleClose}
+        >
           ENGLISH
         </MenuItem>
         <MenuItem value="日本語" onClick={handleClose}>
