@@ -303,6 +303,7 @@ export const offers = [
     name: "Krabi Calling",
     desc: "Embark on your dream vacation in the tranquility of the tropics with 35% off your stay and more.",
     image: "/assets/images/offer_krabi.webp",
+    bookDesc: "Extended fun and adventure when you stay 2 nights with us.",
   },
   {
     name: "Ways of Well",
@@ -313,11 +314,15 @@ export const offers = [
     name: "Come Closer",
     desc: "Rekindle the romance amidst sweeping views of mountains, or in a secluded seaside sanctuary. Create new memories with your partner at any of our enchanting destinations and receive an exclusive offer.",
     image: "/assets/images/offer-krabi-come-closer-card.webp",
+    bookDesc:
+      "Retreat into a space that is exclusively yours with our special romantic package",
   },
   {
     name: "Sharing Time",
     desc: "Your family are the most important people in the world. Nothing compares to the trips taken together each one a defining rite of passage in itself, brimming with opportunities to forge meaningful connections and make lifelong memories. Come together on a trip of a lifetime, and enjoy 20% off our Best Available Rate and exclusive perks.",
     image: "/assets/images/offer-Kids-Club.webp",
+    bookDesc:
+      "Come together on a trip of a lifetime with 20% off stays, plus other exclusive perks for you and your family",
   },
   {
     name: "Wedding Package: Early Bird",
@@ -328,6 +333,7 @@ export const offers = [
     name: "Discover Krabi's Newest Jewel",
     desc: "Be the first to experience the new sanctuary for the senses at Banyan Tree Krabi and save 15% on private pool suites and villas. ",
     image: "/assets/images/offer-swiming.webp",
+    bookDesc: "Banyan Tree Krabi's Introductory Special",
   },
   {
     name: "Stay Safe, Stay Longer",
@@ -338,16 +344,21 @@ export const offers = [
     name: "Stay More Pay Less",
     desc: "Extend your fun and adventure at Banyan Tree Krabi",
     image: "/assets/images/offer-stay-more-pay-less.webp",
+    bookDesc: "Extended fun and adventure when you stay 4 nights with us.",
   },
   {
     name: "Advance Purchase",
     desc: "Save up to 10% off your stay at Banyan Tree Krabi when you book in advance",
     image: "/assets/images/offer-card-advance-purchase-krabi.webp",
+    bookDesc:
+      "Plan and book your holiday early. Save up to 10% off your stay at Banyan Tree Krabi when you book in advance.",
   },
   {
     name: "Best Available Rate",
     desc: "Book now to enjoy greater fliexbility on our villas with our Best Available Rates",
     image: "/assets/images/offer-krabi-bar-best-rate.webp",
+    bookDesc:
+      "Enjoy our best available rate inclusive of breakfast for 2 persons",
   },
   {
     name: "Thai Resident Offer",
@@ -391,6 +402,7 @@ export const otherInformation = [
 export const roomType = [
   {
     _id: "DeluxeGPS-K",
+    room: "Deluxe Garden Pool Suite",
     roomType: "Deluxe Garden Pool Suite - King",
     roomDesc: "Your private haven with a lush and spacious private garden",
     roomLongDesc:
@@ -417,6 +429,7 @@ export const roomType = [
   },
   {
     _id: "DeluxeGPS-T",
+    room: "Deluxe Garden Pool Suite",
     roomType: "Deluxe Garden Pool Suite - Twin",
     roomDesc: "Your private haven with a lush and spacious private garden",
     roomLongDesc:
@@ -443,6 +456,7 @@ export const roomType = [
   },
   {
     _id: "PartialOPS-K",
+    room: "Ocean Pool Suite",
     roomType: "Partial Ocean Pool Suite - King",
     roomDesc: "Adore the ocean views and lush garden in your haven",
     roomLongDesc:
@@ -468,6 +482,7 @@ export const roomType = [
   },
   {
     _id: "PartialOPS-T",
+    room: "Ocean Pool Suite",
     roomType: "Partial Ocean Pool Suite - Twin",
     roomDesc: "Adore the ocean views and lush garden in your haven",
     roomLongDesc:
@@ -494,6 +509,7 @@ export const roomType = [
   },
   {
     _id: "WellbeingSPS-K",
+    room: "Ocean Pool Suite",
     roomType: "Wellbeing Sanctuary Pool Suite - King",
     roomDesc: "Your wellbeing journey begins here.",
     roomLongDesc:
@@ -535,6 +551,7 @@ export const roomType = [
   },
   {
     _id: "WellbeingSPS-T",
+    room: "Ocean Pool Suite",
     roomType: "Wellbeing Sanctuary Pool Suite - Twin",
     roomDesc: "Your wellbeing journey begins here.",
     roomLongDesc:
@@ -576,6 +593,7 @@ export const roomType = [
   },
   {
     _id: "PremiumOPS-K",
+    room: "Ocean Pool Suite",
     roomType: "Premium Ocean Pool Suite - King",
     roomDesc: "An idyllic suite with stunning ocean views",
     roomLongDesc:
@@ -600,6 +618,7 @@ export const roomType = [
   },
   {
     _id: "PremiumOPS-T",
+    room: "Ocean Pool Suite",
     roomType: "Premium Ocean Pool Suite - Twin",
     roomDesc: "An idyllic suite with stunning ocean views",
     roomLongDesc:
@@ -624,6 +643,7 @@ export const roomType = [
   },
   {
     _id: "OPS-TB",
+    room: "Two-Bedroom",
     roomType: "Two-Bedroom Ocean Pool Suite",
     roomDesc: "An expansive private living space with panoramic ocean views",
     roomLongDesc:
@@ -651,6 +671,7 @@ export const roomType = [
   },
   {
     _id: "DeluxeGPV",
+    room: "Deluxe Garden Pool Villa",
     roomType: "Deluxe Garden Pool Villa",
     roomDesc: "An intimate retreat where elegance meets nature",
     roomLongDesc:
@@ -677,6 +698,7 @@ export const roomType = [
   },
   {
     _id: "BeachfrontPV",
+    room: "Beachfront Pool Villa",
     roomType: "Beachfront Pool Villa",
     roomDesc: "Your private haven on the white sand beach",
     roomLongDesc:
@@ -704,6 +726,7 @@ export const roomType = [
   },
   {
     _id: "BeachfrontPV-TB",
+    room: "Two-Bedroom",
     roomType: "Two-Bedroom Beachfront Pool Villa",
     roomDesc:
       "Commune with friends and family in this luxury beachfront pool villa",
@@ -734,6 +757,7 @@ export const roomType = [
   },
   {
     _id: "BeachfrontPV-VIP",
+    room: "Presidential Beachfront Pool Villa",
     roomType: "Presidential Beachfront Pool Villa",
     roomDesc: "Ultimate luxury and privacy on the beach",
     roomLongDesc:
@@ -767,6 +791,7 @@ export const roomType = [
 
 export const pricing = {
   // roomTypeId: ObjectId("DeluxeGPS-K"),
+  roomTypeId: "DeluxeGPS-K",
   basePrice: 200,
   pricingRules: [
     {

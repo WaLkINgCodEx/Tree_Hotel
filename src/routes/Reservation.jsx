@@ -1,6 +1,10 @@
 import { useState } from "react";
 import ReservationSideBar from "../components/ReservationSideBar";
-import { RxHamburgerMenu } from "react-icons/rx";
+
+import ReservationNavBar from "../components/ReservationNavBar";
+import ResSearch from "../components/ReservationSearch/ResSearch";
+import { ReservationProvider } from "../contexts/ReservationContext";
+import SearchResults from "../components/SearchResults";
 
 const Reservation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -10,21 +14,19 @@ const Reservation = () => {
   };
 
   return (
-    <div className="reservation-nav-bar-wrapper">
-      <ReservationSideBar
-        showSidebar={showSidebar}
-        toggleSidebar={toggleSidebar}
-      />
-      <div className="reservation-nav-bar-container">
-        <div className="hamburger" onClick={toggleSidebar}>
-          <RxHamburgerMenu />
+    <ReservationProvider>
+      <div className="reservation-wrapper">
+        <div className="reservation-nav-bar-wrapper">
+          <ReservationSideBar
+            showSidebar={showSidebar}
+            toggleSidebar={toggleSidebar}
+          />
+          <ReservationNavBar toggleSidebar={toggleSidebar} />
         </div>
-        <div className="reservation-brand">
-          <img src="/assets/images/bt-logo-plain.png" alt="brand" />
-        </div>
-        <h3>Banyan Tree Krabi</h3>
+        <ResSearch />
+        <SearchResults />
       </div>
-    </div>
+    </ReservationProvider>
   );
 };
 export default Reservation;
