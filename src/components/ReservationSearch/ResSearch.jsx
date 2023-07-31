@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import {
   DateRangePicker,
@@ -7,7 +7,6 @@ import {
 } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 import "./react_dates_overrides.css";
-import moment from "moment";
 import { useMediaQuery } from "react-responsive";
 import { GoDash } from "react-icons/go";
 import { PiCaretDownLight } from "react-icons/pi";
@@ -15,16 +14,22 @@ import { SlUser } from "react-icons/sl";
 import ReservationWarning from "../ReservationWarning";
 import GuestCount from "../GuestCount";
 import SpecialRateDropdown from "../SpecialRateDropdown";
+import { useReservationContext } from "../../contexts/ReservationContext";
 
 const ResSearch = () => {
-  const today = moment();
-  const tomorrow = moment(today).add(1, "days");
-  const [startDate, setStartDate] = useState(today);
-  const [endDate, setEndDate] = useState(tomorrow);
-  const [focusedInput, setFocusedInput] = useState();
+  const {
+    startDate,
+    setStartDate,
+    endDate,
+    setEndDate,
+    focusedInput,
+    setFocusedInput,
+    adultNumber,
+    setAdultNumber,
+    kidNumber,
+    setKidNumber,
+  } = useReservationContext();
 
-  const [adultNumber, setAdultNumber] = useState(0);
-  const [kidNumber, setKidNumber] = useState(0);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const isBigScreen = useMediaQuery({
