@@ -381,8 +381,21 @@ p {
 .nav-bar-top .arrow-icon span {
   display: flex;
   width: auto;
-  margin-left: 8px;
+  /* margin-left: 8px; */
   color: black;
+}
+
+.nav-bar-top .lang-button button {
+  border-radius: 0;
+  height: 100%;
+  direction: rtl;
+  color: black;
+}
+
+.nav-bar-top .lang-button button .navbar-arrow {
+  display: flex;
+  margin: auto;
+  margin-left: 8px;
 }
 
 #bookNowButton {
@@ -404,8 +417,8 @@ p {
   margin: auto;
   min-height: 300px;
   min-width: 100%;
-  max-height: 100%;
   max-width: 100%;
+  height: auto;
 }
 
 @media (min-width: 960px) {

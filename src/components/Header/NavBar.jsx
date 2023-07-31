@@ -1,5 +1,6 @@
 import React from "react";
 import Li from "./Li";
+import LangMenu from "./LangMenu";
 
 export default function NavBar() {
   return (
@@ -20,6 +21,7 @@ export default function NavBar() {
         <Li name="EXPERIENCES" url="experience" />
         <Li name="MORE" className="arrow-icon" />
         <Li name="EN" className="arrow-icon" />
+        {/* <LangMenu notMobile={true} /> */}
         <Li name="BOOK NOW" idName="bookNowButton" />
       </ul>
     </div>

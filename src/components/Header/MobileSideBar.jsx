@@ -33,7 +33,7 @@ export default function MobileSideBar({ showSidebar, toggleSidebar }) {
         </MenuList>
         <MenuList>
           <MenuItem class="lang-select">
-            <LangMenu />
+            <LangMenu notMobile={false} />
           </MenuItem>
         </MenuList>
       </Container>
