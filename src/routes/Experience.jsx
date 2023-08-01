@@ -18,7 +18,7 @@ const Experience = () => {
     <>
       <Header
         hotel="Experience"
-        navPage="Experience"
+        navURL="experience"
         img="/assets/images/header_img/lobby_6.webp"
       />
       <IntroImageBanner

@@ -7,12 +7,12 @@ export const hotelBasic = {
 };
 
 export const sideBarURLs = [
-  { topic: "ABOUT", url: "" },
-  { topic: "OFFERS", url: "" },
-  { topic: "ACCOMODATION", url: "" },
-  { topic: "DINING", url: "" },
-  { topic: "SPA", url: "" },
-  { topic: "EXPERIENCES", url: "" },
+  { topic: "ABOUT", url: "/" },
+  { topic: "OFFERS", url: "offers" },
+  { topic: "ACCOMODATION", url: "accommodation" },
+  { topic: "DINING", url: "dining" },
+  { topic: "SPA", url: "spa" },
+  { topic: "EXPERIENCES", url: "experience" },
   { topic: "SUSTAINABILITY", url: "" },
   { topic: "WELLBEING SANCTUARY", url: "" },
   { topic: "FACILITIES", url: "" },

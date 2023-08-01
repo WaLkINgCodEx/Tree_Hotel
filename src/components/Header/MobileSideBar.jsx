@@ -22,11 +22,9 @@ export default function MobileSideBar({ showSidebar, toggleSidebar }) {
           {sideBarURLs.map((item) => {
             return (
               <MenuItem>
-                <Button>
-                  <a href={item.url}>
-                    <span>{item.topic}</span>
-                  </a>
-                </Button>
+                <a className="menu-item-link" href={item.url}>
+                  <span>{item.topic}</span>
+                </a>
               </MenuItem>
             );
           })}

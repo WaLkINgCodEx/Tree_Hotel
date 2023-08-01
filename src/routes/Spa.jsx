@@ -17,7 +17,7 @@ const Spa = () => {
     <>
       <Header
         hotel="Spa & Wellbeing"
-        navPage="Spa"
+        navURL="spa"
         img="/assets/images/header_img/lobby_5.webp"
       />
       <IntroImageBanner
