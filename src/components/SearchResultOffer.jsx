@@ -1,8 +1,22 @@
 import { BsCheck2, BsFillCreditCardFill } from "react-icons/bs";
+import { pricing } from "../data";
+import { useReservationContext } from "../contexts/ReservationContext";
+const SearchResultOffer = ({ offer, idx, isMoreOfferOpen, price }) => {
+  const { getTotalNights } = useReservationContext();
 
-const SearchResultOffer = ({ offer }) => {
+  const totalPrice =
+    (price + offer.addOnPrice) * offer.discountRate * getTotalNights();
+
+  const pricePerNight = (totalPrice / getTotalNights()).toFixed(2);
+
   return (
-    <div className="avail-card-offer">
+    <div
+      className={
+        isMoreOfferOpen
+          ? `avail-card-offer c${idx} offerOpen`
+          : `avail-card-offer c${idx}`
+      }
+    >
       <div className="avail-card-offer-left">
         <a href="" className="avail-room-details-link avail-offer-link">
           {offer.name}
@@ -25,7 +39,7 @@ const SearchResultOffer = ({ offer }) => {
         <p></p>
       </div>
       <div className="avail-card-offer-right">
-        <span className="avail-card-offer-price"> CA $464</span>
+        <span className="avail-card-offer-price">CA$ {pricePerNight}</span>
         <span className="avail-card-offer-desc">Average Per Night</span>
         <span className="avail-card-offer-desc tax-desc">
           Excluding Taxes & Fees

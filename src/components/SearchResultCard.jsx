@@ -1,6 +1,25 @@
 import SearchResultOffer from "./SearchResultOffer";
 import { offers } from "../data";
+import { useState } from "react";
+import { useReservationContext } from "../contexts/ReservationContext";
+
 const SearchResultCard = ({ roomType, offers }) => {
+  const { startDate, endDate, getTotalGuests, getTotalNights } =
+    useReservationContext();
+  const [isMoreOfferOpen, setIsMoreOfferOpen] = useState(false);
+  const toggleMoreOfferOpen = () => {
+    setIsMoreOfferOpen(!isMoreOfferOpen);
+  };
+
+  const nowAvailOffers = offers.filter(
+    (offer) =>
+      offer.isOpen === true &&
+      offer.minNights <= getTotalNights() &&
+      offer.minGuests <= getTotalGuests() &&
+      (startDate.isBetween(offer.dateOpen.start, offer.dateOpen.end) ||
+        endDate.isBetween(offer.dateOpen.start, offer.dateOpen.end))
+  );
+
   return (
     <div className="avail-card">
       <div className="avail-card-photo-container">
@@ -18,14 +37,26 @@ const SearchResultCard = ({ roomType, offers }) => {
         </a>
         <hr className="avail-room-hr" />
         <div className="avail-offers-container">
-          {offers.map((offer) => {
-            return <SearchResultOffer key={offer.name} offer={offer} />;
+          {nowAvailOffers.map((offer, idx) => {
+            return (
+              <SearchResultOffer
+                key={offer.name}
+                idx={idx}
+                offer={offer}
+                isMoreOfferOpen={isMoreOfferOpen}
+                price={roomType.basePrice}
+              />
+            );
           })}
         </div>
         <div className="view-rates-container">
-          <a href="" className="avail-room-details-link">
-            View More Rates
-          </a>
+          <button
+            type="button"
+            onClick={toggleMoreOfferOpen}
+            className="more-rates-button"
+          >
+            {isMoreOfferOpen ? "View Less Rate" : "View More Rates"}
+          </button>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import moment from "moment";
 import { createContext, useContext } from "react";
 
@@ -13,6 +13,16 @@ export const ReservationProvider = ({ children }) => {
 
   const [adultNumber, setAdultNumber] = useState(0);
   const [kidNumber, setKidNumber] = useState(0);
+
+  const getTotalNights = () => {
+    if (startDate && endDate) {
+      return endDate.diff(startDate, "days");
+    }
+  };
+
+  const getTotalGuests = () => {
+    return adultNumber + kidNumber;
+  };
 
   const minusAdult = () => {
     if (adultNumber > 0) {
@@ -53,6 +63,8 @@ export const ReservationProvider = ({ children }) => {
     addAdult,
     minusKid,
     addKid,
+    getTotalNights,
+    getTotalGuests,
   };
 
   return (
