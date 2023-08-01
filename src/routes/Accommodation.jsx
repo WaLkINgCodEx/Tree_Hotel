@@ -32,7 +32,7 @@ const Accommodation = () => {
     <>
       <Header
         hotel="Accommodation"
-        navPage="Accommodation"
+        navURL="accommodation"
         img="/assets/images/header_img/lobby_3.webp"
       />
       <IntroBanner title={title} paragraphs={paragraphs} />

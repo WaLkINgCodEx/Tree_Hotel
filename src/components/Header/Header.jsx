@@ -25,16 +25,25 @@ export default function Header(props) {
       <div className="header-nav-bottom">
         <div className="nav-bar-bottom">
           <ul>
-            <Li name="Home" className="arrow-icon" />
-            <Li name="Thailand" className="arrow-icon" />
-            <strong>
+            <Li name="Home" className="Home" />
+            <Li className="arrow-icon" />
+            <Li name="Thailand" className="Thailand" />
+            <Li className="arrow-icon" />
+            <Li
+              name="Banyan Tree Krabi"
+              className={props.navURL}
+              currentPage={props.navURL === "" ? true : false}
+            />
+
+            {props.navURL === "" ? null : <Li name="" className="arrow-icon" />}
+
+            {props.navURL && (
               <Li
-                name="Banyan Tree Krabi"
-                // className="arrow-icon"
-                className={props.navPage != "" ? "arrow-icon" : null}
+                name={props.navURL}
+                className={props.navURL}
+                currentPage={true}
               />
-            </strong>
-            {props.navPage && <Li name={props.navPage} />}
+            )}
           </ul>
         </div>
       </div>

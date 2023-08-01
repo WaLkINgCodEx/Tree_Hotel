@@ -20,7 +20,7 @@ const LandingPage = () => {
     <>
       <Header
         hotel="BANYAN TREE KRABI"
-        navPage=""
+        navURL=""
         img="/assets/images/header_img/lobby_1.webp"
       />
       <CardList cardData={aboutSliderCards[0]} />

@@ -10,7 +10,7 @@ const Offers = () => {
     <>
       <Header
         hotel="Offers"
-        navPage="Offers"
+        navURL="offers"
         img="/assets/images/header_img/lobby_2.webp"
       />
       <div className="offers-wrapper">

@@ -4,50 +4,34 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { styled, alpha, duration } from "@mui/material/styles";
 import BigArrow from "../../assets/icons/BigArrow";
+import { sideBarURLs } from "../../data";
 
-export default function LangMenu(props) {
+export default function MoreMenu(props) {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [lang, setLang] = useState(() => {
-    if (props.notMobile) {
-      return "ENG";
-    } else {
-      return "ENGLISH";
-    }
-  });
+
   const previousLang = useRef("");
+
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const changeLang = (lang) => {
-    setLang(lang);
-  };
-
-  useEffect(() => {
-    if (lang) {
-      previousLang.current = lang;
-      console.log(previousLang.current);
-    }
-  }, [lang]);
-
   const handleClose = (event) => {
-    changeLang(event.target.getAttribute("value"));
-    // changeLang(event.target.innerText);
     setAnchorEl(null);
   };
 
   const StyledMenu = styled((props) => (
     <Menu
       elevation={0}
+      transitionDuration={350}
       anchorOrigin={{
         vertical: "bottom",
-        horizontal: "left",
+        horizontal: "right",
       }}
       transformOrigin={{
         vertical: "top",
-        horizontal: "left",
+        horizontal: "right",
       }}
       {...props}
     />
@@ -71,7 +55,7 @@ export default function LangMenu(props) {
   }));
 
   return (
-    <div class="lang-button">
+    <div class="more-button">
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
@@ -82,7 +66,7 @@ export default function LangMenu(props) {
         <span className="navbar-arrow">
           <BigArrow />
         </span>
-        {lang ?? previousLang.current}
+        MORE
       </Button>
       <StyledMenu
         id="basic-menu"
@@ -93,24 +77,17 @@ export default function LangMenu(props) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem
-          value={props.notMobile ? "ENG" : "ENGLISH"}
-          onClick={handleClose}
-        >
-          <a className="menu-item-link" href="">
-            <span>ENGLISH</span>
-          </a>
-        </MenuItem>
-        <MenuItem value="日本語" onClick={handleClose}>
-          <a className="menu-item-link" href="">
-            <span>日本語</span>
-          </a>
-        </MenuItem>
-        <MenuItem value="中文" onClick={handleClose}>
-          <a className="menu-item-link" href="">
-            <span>中文</span>
-          </a>
-        </MenuItem>
+        {sideBarURLs.map((item, index) => {
+          if (index > 5) {
+            return (
+              <MenuItem className="more-menu-list" onClick={handleClose}>
+                <a className="menu-item-link" href={item.url}>
+                  <span>{item.topic}</span>
+                </a>
+              </MenuItem>
+            );
+          }
+        })}
       </StyledMenu>
     </div>
   );

@@ -52,9 +52,18 @@ hr {
   text-decoration: none;
   color: black;
   letter-spacing: 0.5px;
+  padding: 1.7rem 1.9rem;
 }
 
-h2 {
+.nav-bar-top ul li > a:hover {
+  color: #baa382;
+}
+
+.nav-bar-top ul #logo-frame > a {
+  padding: 0;
+}
+
+.nav-bar-top ul li > h2 {
   margin-bottom: 1.5rem;
   white-space: pre-wrap;
   letter-spacing: 5px;
@@ -255,26 +264,37 @@ p {
   }
 }
 
+.nav-m-r button:hover {
+  background-color: none;
+}
+
 .nav-m-r a {
   display: inline-flex;
   text-decoration: none;
-}
-
-.nav-m-r span {
   color: white;
   letter-spacing: 1px;
 }
+
+/* .nav-m-r span {
+  color: white;
+  letter-spacing: 1px;
+} */
 
 .nav-sidebar-container {
   position: fixed;
   width: 100%;
   background-color: #e7e6e2;
-  max-width: 400px;
   margin-left: 0;
   height: calc(100% - 47px);
   z-index: 2;
-  left: -400px;
+  left: -100%;
   transition: 0.3s;
+}
+
+@media (min-width: 600px) {
+  .nav-sidebar-container {
+    max-width: 400px;
+  }
 }
 
 .nav-sidebar-container.showSidebar {
@@ -293,6 +313,7 @@ p {
   margin-left: 22.5px;
   margin-right: 22.5px;
   padding: 0;
+  min-height: auto;
 }
 
 .nav-sidebar-container .lang-select {
@@ -301,41 +322,45 @@ p {
 
 .nav-sidebar-container .lang-select button {
   color: black;
+  border-radius: 0;
+}
+
+.nav-sidebar-container .lang-select button:hover {
+  color: #baa382;
 }
 
 .nav-sidebar-container .lang-button span {
-  padding-right: 10px;
+  padding-right: 12px;
+  display: flex;
+  justify-content: center;
 }
 
 /* .MuiMenu-paper {
   border-radius: 0;
 } */
 
-.nav-sidebar-container button {
+.nav-sidebar-container a {
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 8.5px 7.5px;
+}
+
+/* .nav-sidebar-container button {
   width: 100%;
   height: 100%;
   justify-content: left;
   border-radius: 0;
-  /* padding: 0; */
   font-size: 0.8rem;
 }
 
 .nav-sidebar-container button span {
   display: inline-flex;
   color: black;
-}
+} */
 
 .nav-bar-top {
-  /* position: fixed;
-  width: 100%; */
-  /* display: flex;
-  justify-content: center; */
-
   width: 100%;
-  /* height: 47px;
-  background-color: white; */
   margin: auto;
-  /* z-index: 2; */
   position: fixed;
   background-color: white;
 }
@@ -356,19 +381,35 @@ p {
 }
 
 .nav-bar-top li {
-  /* margin: 1rem 2rem; */
   padding: 0.7rem 1.9rem;
   display: flex;
   align-items: center;
   font-size: 0.9rem;
+  padding: 0;
 }
 
-#logo {
+/* .nav-bar-top li:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+  color: #baa382;
+}
+
+@media (hover: none) {
+  .nav-bar-top li:hover {
+    background-color: transparent;
+  }
+} */
+
+/* .nav-bar-top li:hover none{
+  background-color: rgba(25, 118, 210, 0.04);
+  color: #baa382;
+} */
+
+#logo-frame {
   margin-right: auto;
   padding: 0.7rem 1.7rem;
 }
 
-.icon-logo {
+.tree-logo {
   width: 2.2rem;
   margin-left: 10px;
   margin-right: 10px;
@@ -385,17 +426,42 @@ p {
   color: black;
 }
 
-.nav-bar-top .lang-button button {
+.nav-bar-top .lang-button button,
+.nav-bar-top .more-button button {
   border-radius: 0;
   height: 100%;
   direction: rtl;
   color: black;
+  padding: 10.5px 28.5px;
 }
 
-.nav-bar-top .lang-button button .navbar-arrow {
+.menu-item-link {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  padding: 13px 25px;
+  font-size: 0.875rem;
+}
+
+.nav-bar-top .more-button button[aria-expanded="true"],
+.nav-bar-top .lang-button button[aria-expanded="true"],
+.nav-bar-top .lang-button button:hover,
+.nav-bar-top .more-button button:hover,
+.menu-item-link:hover {
+  color: #baa382;
+}
+
+.nav-bar-top .lang-button button .navbar-arrow,
+.nav-bar-top .more-button button .navbar-arrow {
   display: flex;
   margin: auto;
   margin-left: 8px;
+}
+
+.nav-bar-top .more-button button[aria-expanded="true"] .navbar-arrow,
+.nav-bar-top .lang-button button[aria-expanded="true"] .navbar-arrow {
+  transform: rotate(-180deg);
 }
 
 #bookNowButton {
@@ -484,8 +550,15 @@ p {
 .heroText h1,
 .heroText p {
   margin: 0 5rem;
-  font-size: 3rem;
+  font-size: 1.5rem;
   letter-spacing: 0.75rem;
+}
+
+@media (min-width: 960px) {
+  .heroText h1,
+  .heroText p {
+    font-size: 3rem;
+  }
 }
 
 .heroText p {
@@ -501,6 +574,13 @@ p {
   left: 0;
   right: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .header-nav-bottom {
+    display: block;
+  }
 }
 
 .nav-bar-bottom {
@@ -522,7 +602,18 @@ p {
     "Hiragino Sans", sans-serif;
   margin: 0.7rem 0rem;
   font-size: 0.9rem;
+  padding: 0;
 }
+
+.header-nav-bottom li span {
+  display: flex;
+  height: 100%;
+  font-size: 0.8rem;
+}
+
+/* .header-nav-bottom li a {
+  margin: auto;
+} */
 
 .nav-bar-bottom .arrow-icon span {
   display: flex;
@@ -533,6 +624,11 @@ p {
   color: white;
   transform: rotate(-90deg);
 }
+
+/* .nav-bar-bottom span {
+  display: flex;
+  height: 100%;
+} */
 
 .desc-banner-wrapper {
   background-color: #e7e6e2;

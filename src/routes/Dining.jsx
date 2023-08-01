@@ -17,7 +17,7 @@ const Dining = () => {
     <>
       <Header
         hotel="Dining"
-        navPage="Dining"
+        navURL="dining"
         img="/assets/images/header_img/lobby_4.webp"
       />
       <IntroBanner title={title} paragraphs={paragraphs} />

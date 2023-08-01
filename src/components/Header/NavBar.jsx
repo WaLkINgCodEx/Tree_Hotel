@@ -1,14 +1,16 @@
 import React from "react";
 import Li from "./Li";
+import sideBarURLs from "../../data";
 import LangMenu from "./LangMenu";
+import MoreMenu from "./MoreMenu";
 
 export default function NavBar() {
   return (
     <div className="nav-bar-top">
       <ul>
         <Li
-          brandIcon="logo"
-          className="icon-logo"
+          logoFrame="logo-frame"
+          className="tree-logo"
           img="./assets/images/icon-logo-green-2.svg"
           alt="icon-logo"
           // key="logo"
@@ -19,9 +21,8 @@ export default function NavBar() {
         <Li name="DINING" url="dining" />
         <Li name="SPA" url="spa" />
         <Li name="EXPERIENCES" url="experience" />
-        <Li name="MORE" className="arrow-icon" />
-        <Li name="EN" className="arrow-icon" />
-        {/* <LangMenu notMobile={true} /> */}
+        <MoreMenu />
+        <LangMenu notMobile={true} />
         <Li name="BOOK NOW" idName="bookNowButton" />
       </ul>
     </div>

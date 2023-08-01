@@ -14,6 +14,19 @@ export default function NavBarMobile() {
     setShowSidebar(!showSidebar);
   };
 
+  const useStyle = {
+    Button: {
+      "&:hover": {
+        backgroundColor: "none",
+        boxShadow: "none",
+      },
+      "&:active": {
+        boxShadow: "none",
+        backgroundColor: "none",
+      },
+    },
+  };
+
   return (
     <>
       <Box className="nav-bar-top-m" sx={{ flexGrow: 1, height: 47 }}>
@@ -39,7 +52,14 @@ export default function NavBarMobile() {
             </Button>
           </Grid>
           <Grid className="nav-m-r" item xs={5}>
-            <Button>
+            <Button
+              sx={{
+                ":hover": {
+                  bgcolor: "#baa382", // theme.palette.primary.main
+                  color: "white",
+                },
+              }}
+            >
               <a href="">
                 <span>BOOK NOW</span>
               </a>
