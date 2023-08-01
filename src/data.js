@@ -304,11 +304,27 @@ export const offers = [
     desc: "Embark on your dream vacation in the tranquility of the tropics with 35% off your stay and more.",
     image: "/assets/images/offer_krabi.webp",
     bookDesc: "Extended fun and adventure when you stay 2 nights with us.",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 2,
+    addOnPrice: 0,
+    discountRate: 0.75,
   },
   {
     name: "Ways of Well",
     desc: "Embark on your journey of self-discovery at our Banyan Tree Wellbeing Sanctuaries — spaces that combine stay, spa, dining and wellbeing experiences to help you reconnect with yourself, others and nature.",
     image: "assets/images/offer-krabi-ways-of-well.webp",
+    isOpen: false,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 1,
   },
   {
     name: "Come Closer",
@@ -316,6 +332,15 @@ export const offers = [
     image: "/assets/images/offer-krabi-come-closer-card.webp",
     bookDesc:
       "Retreat into a space that is exclusively yours with our special romantic package",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 1,
+    addOnPrice: 50,
+    discountRate: 1,
   },
   {
     name: "Sharing Time",
@@ -323,28 +348,74 @@ export const offers = [
     image: "/assets/images/offer-Kids-Club.webp",
     bookDesc:
       "Come together on a trip of a lifetime with 20% off stays, plus other exclusive perks for you and your family",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 3,
+    minNights: 1,
+    addOnPrice: 200,
+    discountRate: 0.8,
   },
   {
     name: "Wedding Package: Early Bird",
     desc: "Make your love eternal as you exchange vows in the extraordinary surroundings of Krabi and enjoy exclusive savings with our special offer.",
     image: "/assets/images/offer-romance_wedding.webp",
+    isOpen: false,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 2,
+    minNights: 3,
+    addOnPrice: 500,
+    discountRate: 0.9,
   },
   {
     name: "Discover Krabi's Newest Jewel",
     desc: "Be the first to experience the new sanctuary for the senses at Banyan Tree Krabi and save 15% on private pool suites and villas. ",
     image: "/assets/images/offer-swiming.webp",
     bookDesc: "Banyan Tree Krabi's Introductory Special",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 1,
+    addOnPrice: 0,
+    discountRate: 0.85,
   },
   {
     name: "Stay Safe, Stay Longer",
     desc: "Retreat to the tranquility of the tropics and make the most of your getaway with our special inclusions.",
     image: "/assets/images/offer-stay-longer.webp",
+    isOpen: false,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 1,
+    addOnPrice: 0,
+    discountRate: 0.9,
   },
   {
     name: "Stay More Pay Less",
     desc: "Extend your fun and adventure at Banyan Tree Krabi",
     image: "/assets/images/offer-stay-more-pay-less.webp",
-    bookDesc: "Extended fun and adventure when you stay 4 nights with us.",
+    bookDesc:
+      "Extended fun and adventure when you stay 2 or more nights with us.",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 2,
+    addOnPrice: 60,
+    discountRate: 0.9,
   },
   {
     name: "Advance Purchase",
@@ -352,6 +423,15 @@ export const offers = [
     image: "/assets/images/offer-card-advance-purchase-krabi.webp",
     bookDesc:
       "Plan and book your holiday early. Save up to 10% off your stay at Banyan Tree Krabi when you book in advance.",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 2,
+    addOnPrice: 0,
+    discountRate: 0.9,
   },
   {
     name: "Best Available Rate",
@@ -359,16 +439,43 @@ export const offers = [
     image: "/assets/images/offer-krabi-bar-best-rate.webp",
     bookDesc:
       "Enjoy our best available rate inclusive of breakfast for 2 persons",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 2,
+    minNights: 1,
+    addOnPrice: 70,
+    discountRate: 0.9,
   },
   {
     name: "Thai Resident Offer",
     desc: " Exclusive and limited time offer for residents of Thailand",
     image: "/assets/images/offer-thai-resident.webp",
+    isOpen: false,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 1,
+    addOnPrice: 0,
+    discountRate: 0.95,
   },
   {
     name: "New Year's Eve Sanctuary Offer",
     desc: "Revel in a four-night stay in your very own private pool suite or villa at the tropical beachfront sanctuary of Banyan Tree Krabi.",
     image: "/assets/images/offer-new-year.webp",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-12-25"),
+      end: new Date("2024-01-03"),
+    },
+    minGuests: 1,
+    minNights: 4,
+    addOnPrice: 200,
+    discountRate: 1,
   },
 ];
 
@@ -425,6 +532,7 @@ export const roomType = [
       "Private Terrace",
       "Smart TV",
     ],
+    basePrice: 420,
     image: "/assets/images/accom_img/Deluxe-Garden-Pool-Suite-King.webp",
   },
   {
@@ -452,6 +560,7 @@ export const roomType = [
       "Private Terrace",
       "Smart TV",
     ],
+    basePrice: 420,
     image: "/assets/images/accom_img/Deluxe-Garden-Pool-Suite-Twin.webp",
   },
   {
@@ -478,6 +587,7 @@ export const roomType = [
       "Private Terrace",
       "Smart TV",
     ],
+    basePrice: 480,
     image: "/assets/images/accom_img/Partial-Ocean-Pool-Suite-King.webp",
   },
   {
@@ -505,6 +615,7 @@ export const roomType = [
       "Private Terrace",
       "Smart TV",
     ],
+    basePrice: 480,
     image: "/assets/images/accom_img/Partial-Ocean-Pool-Suite-Twin.webp",
   },
   {
@@ -547,6 +658,7 @@ export const roomType = [
       "30% off chargeable activities",
       "Wellbeing guide to take home for personal practice",
     ],
+    basePrice: 500,
     image: "/assets/images/accom_img/Wellbeing-Sanctuary-Pool-Suite-King.webp",
   },
   {
@@ -589,6 +701,7 @@ export const roomType = [
       "30% off chargeable activities",
       "Wellbeing guide to take home for personal practice",
     ],
+    basePrice: 500,
     image: "/assets/images/accom_img/Wellbeing-Sanctuary-Pool-Suite-Twin.webp",
   },
   {
@@ -614,6 +727,7 @@ export const roomType = [
       "Private Swimming Pool",
       "Smart TV",
     ],
+    basePrice: 510,
     image: "/assets/images/accom_img/Premium-Ocean-Pool-Suite-King.webp",
   },
   {
@@ -639,6 +753,7 @@ export const roomType = [
       "Private Swimming Pool",
       "Smart TV",
     ],
+    basePrice: 510,
     image: "/assets/images/accom_img/Premium-Ocean-Pool-Suite-Twin.webp",
   },
   {
@@ -667,6 +782,7 @@ export const roomType = [
       "Smart TV",
       "Wine Fridge",
     ],
+    basePrice: 1000,
     image: "/assets/images/accom_img/Two-Bedroom-Beachfront-Pool-Villa.webp",
   },
   {
@@ -694,6 +810,7 @@ export const roomType = [
       "Private Terrace",
       "Smart TV",
     ],
+    basePrice: 650,
     image: "/assets/images/accom_img/Deluxe-Garden-Pool-Villa.webp",
   },
   {
@@ -722,6 +839,7 @@ export const roomType = [
       "Private Wooden Raft",
       "Smart TV",
     ],
+    basePrice: 820,
     image: "/assets/images/accom_img/Beachfront-Pool-Villa.webp",
   },
   {
@@ -753,6 +871,7 @@ export const roomType = [
       "Smart TV",
       "Wine Fridge",
     ],
+    basePrice: 1100,
     image: "/assets/images/accom_img/Two-Bedroom-Beachfront-Pool-Villa.webp",
   },
   {
@@ -785,6 +904,7 @@ export const roomType = [
       "Smart TV",
       "Wine Fridge",
     ],
+    basePrice: 3050,
     image: "/assets/images/accom_img/Presidential-Beachfront-Pool-Villa.webp",
   },
 ];
@@ -792,7 +912,7 @@ export const roomType = [
 export const pricing = {
   // roomTypeId: ObjectId("DeluxeGPS-K"),
   roomTypeId: "DeluxeGPS-K",
-  basePrice: 200,
+  // basePrice: 200,
   pricingRules: [
     {
       startDate: "2023-08-01",
