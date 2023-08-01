@@ -6,7 +6,7 @@ export default function Card(props) {
     <div className="feature-card-wrapper">
       <div className="card-frame">
         <div className="card-left">
-          <div>
+          <div className="card-title">
             <h2>{props.card.name}</h2>
           </div>
 
