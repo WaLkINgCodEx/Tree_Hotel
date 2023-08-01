@@ -24,13 +24,13 @@ const LandingPage = () => {
         img="/assets/images/header_img/lobby_1.webp"
       />
       <CardList cardData={aboutSliderCards[0]} />
-      <InfoSection />
+      {/* <InfoSection />
       <SubscriptionBanner />
       <CardList cardData={aboutCards} />
       <CardList cardData={aboutSliderCards[1]} />
       <Gallery galleryData={galleryData} />
       <HighLight highlightData={highlightData} />
-      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} />
+      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} /> */}
     </>
   );
 };

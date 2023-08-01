@@ -28,14 +28,17 @@ export default function LangMenu(props) {
   useEffect(() => {
     if (lang) {
       previousLang.current = lang;
-      console.log(previousLang.current);
+      // console.log(previousLang.current);
     }
   }, [lang]);
 
   const handleClose = (event) => {
+    // console.log(event.target);
+    // console.log(event.target.getAttribute("value"));
     changeLang(event.target.getAttribute("value"));
     // changeLang(event.target.innerText);
     setAnchorEl(null);
+    event.preventDefault();
   };
 
   const StyledMenu = styled((props) => (
@@ -93,22 +96,19 @@ export default function LangMenu(props) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem
-          value={props.notMobile ? "ENG" : "ENGLISH"}
-          onClick={handleClose}
-        >
+        <MenuItem onClick={handleClose}>
           <a className="menu-item-link" href="">
-            <span>ENGLISH</span>
+            <span value={props.notMobile ? "ENG" : "ENGLISH"}>ENGLISH</span>
           </a>
         </MenuItem>
-        <MenuItem value="日本語" onClick={handleClose}>
+        <MenuItem onClick={handleClose}>
           <a className="menu-item-link" href="">
-            <span>日本語</span>
+            <span value="日本語">日本語</span>
           </a>
         </MenuItem>
-        <MenuItem value="中文" onClick={handleClose}>
+        <MenuItem onClick={handleClose}>
           <a className="menu-item-link" href="">
-            <span>中文</span>
+            <span value="中文">中文</span>
           </a>
         </MenuItem>
       </StyledMenu>
