@@ -24,12 +24,12 @@ const LandingPage = () => {
       />
       <CardList cardData={aboutSliderCards[0]} />
       <InfoSection />
-      {/* <SubscriptionBanner /> */}
-      {/* <CardList cardData={aboutCards} />
+      <SubscriptionBanner />
+      <CardList cardData={aboutCards} />
       <CardList cardData={aboutSliderCards[1]} />
       <Gallery galleryData={galleryData} />
       <HighLight highlightData={highlightData} />
-      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} /> */}
+      <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} />
     </>
   );
 };

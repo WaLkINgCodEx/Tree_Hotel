@@ -615,7 +615,7 @@ p {
   flex-direction: column;
   max-width: 1280px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 25px;
   margin-bottom: 30px;
   padding: 0;
 }
@@ -629,9 +629,28 @@ p {
 }
 
 .card-frame {
+  /* display: flex; */
   margin: auto;
   min-width: 100%;
   min-height: 100%;
+}
+
+@media (max-width: 960px) {
+  #silder_2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.non-silder.card-frame {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 960px) {
+  .non-silder.card-frame {
+    flex-direction: initial;
+  }
 }
 
 @media (min-width: 960px) {
@@ -641,16 +660,21 @@ p {
   }
 }
 
-.feature-card-wrapper:nth-child(odd) > .card-frame {
-  flex-direction: row-reverse;
+@media (min-width: 960px) {
+  .feature-card-wrapper:nth-child(odd) > .card-frame {
+    flex-direction: row-reverse;
+  }
 }
 
 .card-left {
   display: flex;
   flex-direction: column;
+  padding: 18px 18px;
   padding-bottom: 22.5px;
-  padding-left: 18px;
-  padding-right: 18px;
+}
+
+#silder_1 .card-left {
+  padding-top: 0;
 }
 
 @media (min-width: 960px) {
@@ -667,9 +691,11 @@ p {
   }
 }
 
-.feature-card-wrapper:nth-child(odd) > .card-frame > .card-left {
-  padding-right: 0;
-  padding-left: 75px;
+@media (min-width: 960px) {
+  .feature-card-wrapper:nth-child(odd) > .card-frame > .card-left {
+    padding-right: 0;
+    padding-left: 75px;
+  }
 }
 
 @media (min-width: 1028px) {
@@ -680,7 +706,7 @@ p {
 
 .card-left h2 {
   margin: auto;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   letter-spacing: 5px;
 }
 
@@ -707,14 +733,48 @@ p {
   line-height: 1.4;
 }
 
+.card-p a {
+  width: 100%;
+  display: flex;
+  background-color: #baa382;
+  margin-top: 25px;
+  text-decoration: none;
+}
+
+@media (min-width: 960px) {
+  .card-p a {
+    display: inline-flex;
+    width: auto;
+    margin-top: 45px;
+  }
+}
+
 .card-left span,
 .booth-left span {
-  margin-top: 65px;
+  display: inline-flex;
+  /* margin-top: 25px; */
   background-color: #baa382;
   color: white;
   text-transform: uppercase;
   font-size: 15px;
-  padding: 10px 50px;
+  /* padding: 10px 50px; */
+  line-height: 1.4;
+  padding: 10px 0;
+  margin: auto;
+}
+
+@media (min-width: 960px) {
+  .card-left span,
+  .booth-left span {
+    padding: 10px 50px;
+    /* margin-top: 45px; */
+
+    /* background-color: #baa382;
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 10px 50px; */
+  }
 }
 
 .card-right {
@@ -722,15 +782,24 @@ p {
   width: 100%;
   overflow: hidden;
   inset: 0px;
-  max-height: 300px;
+  height: 300px;
 }
 
 @media (min-width: 960px) {
   .card-right {
     width: 65%;
-
+    height: auto;
     min-height: 100%;
     max-height: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card-right {
+    width: 65%;
+    height: auto;
+    min-height: 450px;
+    max-height: 590px;
   }
 }
 
@@ -746,11 +815,9 @@ p {
   object-fit: cover;
 }
 
-.card-right > .non-slider {
+/* .card-right > .non-slider {
   max-height: 550px;
-}
-
-/* ///////////////////////////////////////////// Feature Cards ///////////////////////////////////////////// */
+} */
 
 .desc-banner-wrapper {
   background-color: #e7e6e2;
@@ -935,8 +1002,15 @@ p {
   background-color: white;
   margin: 0 auto;
   max-width: 1330px;
-  padding: 0 30px;
-  margin-bottom: 50px;
+  padding: 0 15px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 960px) {
+  .info-background {
+    padding: 0 30px;
+    margin-bottom: 60px;
+  }
 }
 
 .info-background h6 {
@@ -1070,7 +1144,7 @@ p {
 .extra-details-col .text-box,
 .fac-container .text-box {
   margin: auto;
-  margin-left: 0;
+  margin-left: 5px;
 }
 
 .extra-details {
@@ -1085,6 +1159,7 @@ p {
 .time {
   display: flex;
   flex-direction: column;
+  margin-left: 5px;
 }
 
 .fac-container {
@@ -1360,8 +1435,7 @@ p {
   font-weight: 400;
 }
 
-.connect-btn,
-.card-btn {
+.connect-btn {
   display: inline-flex;
   font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
     Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
