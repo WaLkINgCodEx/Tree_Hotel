@@ -1,6 +1,5 @@
 import Header from "../components/Header/Header";
-import DescBanner from "../components/DescBanner";
-import InfoSection from "../components/InfoSection";
+import InfoSection from "../components/InfoSection/InfoSection";
 import SubscriptionBanner from "../components/SubscriptionBanner";
 import CardList from "../components/FeatureCards/CardList";
 import Gallery from "../components/Gallery";
@@ -24,9 +23,9 @@ const LandingPage = () => {
         img="/assets/images/header_img/lobby_1.webp"
       />
       <CardList cardData={aboutSliderCards[0]} />
-      {/* <InfoSection />
-      <SubscriptionBanner />
-      <CardList cardData={aboutCards} />
+      <InfoSection />
+      {/* <SubscriptionBanner /> */}
+      {/* <CardList cardData={aboutCards} />
       <CardList cardData={aboutSliderCards[1]} />
       <Gallery galleryData={galleryData} />
       <HighLight highlightData={highlightData} />

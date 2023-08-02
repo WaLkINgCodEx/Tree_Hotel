@@ -9,7 +9,9 @@ export default function Header(props) {
   return (
     <div className="header-wrap">
       <div className="header-nav-top">
-        {isMobile ? <NavBarMobile /> : <NavBar />}
+        <div className="navBar-frame">
+          {isMobile ? <NavBarMobile /> : <NavBar />}
+        </div>
       </div>
 
       <div className="heroView">

@@ -43,6 +43,7 @@ export default function LangMenu(props) {
 
   const StyledMenu = styled((props) => (
     <Menu
+      disableScrollLock={true}
       elevation={0}
       anchorOrigin={{
         vertical: "bottom",
@@ -96,19 +97,38 @@ export default function LangMenu(props) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>
-          <a className="menu-item-link" href="">
-            <span value={props.notMobile ? "ENG" : "ENGLISH"}>ENGLISH</span>
+        <MenuItem>
+          <a
+            className="menu-item-link"
+            href=""
+            onClick={handleClose}
+            value={props.notMobile ? "ENG" : "ENGLISH"}
+          >
+            <span
+              onClick={handleClose}
+              value={props.notMobile ? "ENG" : "ENGLISH"}
+            >
+              ENGLISH
+            </span>
+          </a>
+        </MenuItem>
+        <MenuItem>
+          <a
+            className="menu-item-link"
+            onClick={handleClose}
+            value="日本語"
+            href=""
+          >
+            <span onClick={handleClose} value="日本語">
+              日本語
+            </span>
           </a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menu-item-link" href="">
-            <span value="日本語">日本語</span>
-          </a>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <a className="menu-item-link" href="">
-            <span value="中文">中文</span>
+          <a className="menu-item-link" value="中文" href="">
+            <span onClick={handleClose} value="中文">
+              中文
+            </span>
           </a>
         </MenuItem>
       </StyledMenu>

@@ -4,7 +4,7 @@ const Awards = ({ name, image }) => {
       <div className="award-image">
         <img
           className="award-image-size"
-          src={require(`../assets/images/${image}`)}
+          src={require(`../../assets/images/${image}`)}
           alt={name}
         />
       </div>

@@ -14,19 +14,6 @@ export default function NavBarMobile() {
     setShowSidebar(!showSidebar);
   };
 
-  const useStyle = {
-    Button: {
-      "&:hover": {
-        backgroundColor: "none",
-        boxShadow: "none",
-      },
-      "&:active": {
-        boxShadow: "none",
-        backgroundColor: "none",
-      },
-    },
-  };
-
   return (
     <>
       <Box className="nav-bar-top-m" sx={{ flexGrow: 1, height: 47 }}>
