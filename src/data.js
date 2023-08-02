@@ -911,8 +911,11 @@ export const roomType = [
 
 export const pricing = {
   // roomTypeId: ObjectId("DeluxeGPS-K"),
-  roomTypeId: "DeluxeGPS-K",
+  // roomTypeId: "DeluxeGPS-K",
   // basePrice: 200,
+  govTax: 0.07,
+  provTax: 0.01,
+  serviceCharge: 0.1,
   pricingRules: [
     {
       startDate: "2023-08-01",

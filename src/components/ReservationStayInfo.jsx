@@ -1,7 +1,15 @@
 import { useReservationContext } from "../contexts/ReservationContext";
 import moment from "moment";
+import ReservationItem from "./ReservationItem";
 const ReservationStayInfo = () => {
-  const { adultNumber, kidNumber, startDate, endDate } = useReservationContext;
+  const {
+    adultNumber,
+    kidNumber,
+    startDate,
+    endDate,
+    reservationItems,
+    reservationTotal,
+  } = useReservationContext();
 
   return (
     <div className="avail-stay-info">
@@ -21,9 +29,26 @@ const ReservationStayInfo = () => {
         {moment(endDate).format("ddd, MMM D, YYYY")}
       </div>
       <div className="avail-stay-guest">
-        {adultNumber} Adults, {kidNumber} Children
+        {adultNumber}
+        {adultNumber > 1 ? " Adults" : " Adult"}, {kidNumber}
+        {kidNumber > 1 ? " Children" : " Child"}
       </div>
-      <div>Total:</div>
+      {reservationItems.length > 0 &&
+        reservationItems.map((reservationItem) => {
+          return <ReservationItem reservationItem={reservationItem} />;
+        })}
+
+      <div className="avail-stay-total-fee">
+        <div className="avail-stay-total-fee-left">Total:</div>
+        <div className="avail-stay-total-fee-right">
+          CA$ {reservationTotal}
+          {reservationTotal > 0 && (
+            <span className="avail-stay-total-fee-tax-stat">
+              (CAD tax included)
+            </span>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
