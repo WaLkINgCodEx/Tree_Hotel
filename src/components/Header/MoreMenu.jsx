@@ -23,6 +23,7 @@ export default function MoreMenu(props) {
 
   const StyledMenu = styled((props) => (
     <Menu
+      disableScrollLock={true}
       elevation={0}
       transitionDuration={350}
       anchorOrigin={{

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import PhotoSlider from "../PhotoSlider";
+import PhotoSlider from "./PhotoSlider";
 
 export default function Card(props) {
   return (
