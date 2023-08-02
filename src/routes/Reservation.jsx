@@ -5,6 +5,7 @@ import ReservationNavBar from "../components/ReservationNavBar";
 import ResSearch from "../components/ReservationSearch/ResSearch";
 import { ReservationProvider } from "../contexts/ReservationContext";
 import SearchResults from "../components/SearchResults";
+import ReservationGuest from "../components/ReservationGuest";
 
 const Reservation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -25,6 +26,7 @@ const Reservation = () => {
         </div>
         <ResSearch />
         <SearchResults />
+        <ReservationGuest />
       </div>
     </ReservationProvider>
   );

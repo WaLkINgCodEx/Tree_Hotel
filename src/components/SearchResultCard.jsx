@@ -44,7 +44,7 @@ const SearchResultCard = ({ roomType, offers }) => {
                 idx={idx}
                 offer={offer}
                 isMoreOfferOpen={isMoreOfferOpen}
-                price={roomType.basePrice}
+                roomType={roomType}
               />
             );
           })}

@@ -13,6 +13,14 @@
     url(./assets/fonts/Niramit-ExtraLight.woff) format("woff");
 }
 
+@font-face {
+  font-family: "Niramit Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Niramit Regular"),
+    url(./assets/fonts/Niramit-Regular.ttf) format("woff");
+}
+
 html {
   font-size: 15px;
 }
@@ -2376,6 +2384,7 @@ p {
 
 .reservation-wrapper {
   background-color: #fff;
+  font-family: Niramit Regular, sans-serif;
 }
 
 .reservation-nav-bar-wrapper {
@@ -2753,8 +2762,8 @@ p {
   font-size: 20px;
   border: 1px solid #baa382;
   flex-grow: 1;
-  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
-    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+  font-family: Niramit Regular, "AXtManalBold Regular", Helvetica, Arial,
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", sans-serif;
 }
 
@@ -2778,8 +2787,8 @@ p {
   background-color: transparent;
   border: 0px;
   font-size: 16px;
-  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
-    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+  font-family: Niramit Regular, "AXtManalBold Regular", Helvetica, Arial,
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", sans-serif;
 }
 
@@ -2792,8 +2801,8 @@ p {
   padding: 10px;
   margin-top: 10px;
   font-size: 17px;
-  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
-    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+  font-family: Niramit Regular, "AXtManalBold Regular", Helvetica, Arial,
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", sans-serif;
   display: grid;
   place-items: center;
@@ -3108,4 +3117,130 @@ p {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 1px solid #baa382;
+}
+
+.avail-stay-total-fee {
+  font-size: 20px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #173f35;
+}
+
+.avail-stay-total-fee-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.avail-stay-total-fee-tax-stat {
+  font-size: 13.5px;
+  color: #baa382;
+}
+
+.reservation-item-container {
+  border-bottom: 1px solid #baa382;
+}
+.reservation-item {
+  display: flex;
+  color: #173f35;
+  justify-content: space-between;
+}
+
+.reservation-item-suite {
+  text-decoration: underline;
+  color: #3b2e0a;
+}
+.reservation-item-suite-type {
+  text-transform: uppercase;
+}
+
+.reservation-item-left {
+  width: 70%;
+}
+
+.reservation-item-right {
+  font-weight: bold;
+}
+
+.reservation-item-nights-button {
+  text-decoration: underline;
+  color: #baa382;
+  font-size: 13.5px;
+  margin-bottom: 10px;
+}
+
+.reservation-item-offer {
+  margin-bottom: 10px;
+}
+
+.reservation-item-tax {
+  margin-bottom: 10px;
+}
+
+.guest-details-wrapper {
+  margin: 15px auto;
+}
+
+.guest-details-container {
+  background-color: #eee;
+  padding: 10px;
+  max-width: 835px;
+  border: 1px solid #baa382;
+  color: #173f35;
+}
+
+.guest-details-container input,
+.guest-details-container select {
+  color: #082b26;
+  border: 1px solid #575c5a;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  padding: 30px 10px 10px 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.guest-contact-info-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 5px;
+}
+
+.guest-contact-info-each-div {
+  display: flex;
+  flex-basis: 400px;
+}
+
+.guest-contact-info-bottom {
+  display: flex;
+}
+
+.input-box {
+  position: relative;
+  height: 60px;
+  flex-grow: 1;
+}
+
+.input-box > label {
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  color: #999;
+}
+
+.guest-details-container input:focus ~ label,
+.guest-details-container input:not(:placeholder-shown) ~ label,
+.guest-details-container select:focus ~ label,
+.guest-details-container select:not([value="Prefix"]):valid ~ label {
+  top: 5px;
+  left: 5px;
+  font-size: 14px;
+  color: #000;
 }

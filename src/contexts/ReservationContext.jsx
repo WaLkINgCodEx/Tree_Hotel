@@ -11,6 +11,8 @@ export const ReservationProvider = ({ children }) => {
   const [endDate, setEndDate] = useState(tomorrow);
   const [focusedInput, setFocusedInput] = useState();
 
+  const [reservationItems, setReservationItems] = useState([]);
+  const [reservationTotal, setReservationTotal] = useState(0);
   const [adultNumber, setAdultNumber] = useState(0);
   const [kidNumber, setKidNumber] = useState(0);
 
@@ -48,6 +50,22 @@ export const ReservationProvider = ({ children }) => {
     }
   };
 
+  const addReservationItem = (reservationToAdd, offer) => {
+    return [
+      ...reservationItems,
+      {
+        ...reservationToAdd,
+        offer: offer,
+        adult: adultNumber,
+        kid: kidNumber,
+        totalNights: getTotalNights(),
+      },
+    ];
+  };
+
+  const addItemToCart = (reservationToAdd, offer) =>
+    setReservationItems(addReservationItem(reservationToAdd, offer));
+
   const value = {
     startDate,
     setStartDate,
@@ -65,6 +83,10 @@ export const ReservationProvider = ({ children }) => {
     addKid,
     getTotalNights,
     getTotalGuests,
+    reservationItems,
+    addItemToCart,
+    reservationTotal,
+    setReservationTotal,
   };
 
   return (

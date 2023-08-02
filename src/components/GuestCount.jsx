@@ -13,7 +13,8 @@ const GuestCount = () => {
   return (
     <div className="guest-count-button-area">
       <button className="guest-count-button" onClick={dropdown}>
-        {adultNumber} Adults, {kidNumber} Children
+        {adultNumber} {adultNumber > 1 ? " Adults" : " Adult"}, {kidNumber}
+        {kidNumber > 1 ? " Children" : " Child"}
       </button>
       <div
         className={
