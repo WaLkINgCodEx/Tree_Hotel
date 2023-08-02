@@ -4,7 +4,7 @@ import PhotoSlider from "./PhotoSlider";
 export default function Card(props) {
   return (
     <div className="feature-card-wrapper">
-      <div className="card-frame">
+      <div className={props.frameclass} id={props.index}>
         <div className="card-left">
           <div className="card-title">
             <h2>{props.card.name}</h2>
@@ -20,11 +20,11 @@ export default function Card(props) {
               );
             })}
 
-            <a>
-              {props.card.button && (
-                <span className="card-btn">{props.card.button}</span>
-              )}
-            </a>
+            {props.card.button && (
+              <a href="">
+                <span className="card-btn">{props.card.button}</span>{" "}
+              </a>
+            )}
           </div>
         </div>
 

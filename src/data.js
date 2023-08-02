@@ -89,6 +89,7 @@ export const aboutCards = [
 
 export const aboutSliderCards = [
   {
+    idName: "silder_1",
     type: "silder",
     name: "ESCAPE TO TROPICAL TRANQUILITY",
     paragraphs: [
@@ -103,6 +104,7 @@ export const aboutSliderCards = [
     ],
   },
   {
+    idName: "silder_2",
     type: "silder",
     name: "SOUVENIRS FROM THE SEA",
     paragraphs: [
