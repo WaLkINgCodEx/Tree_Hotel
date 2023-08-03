@@ -3,10 +3,14 @@ import ReservationSideBar from "../components/ReservationSideBar";
 
 import ReservationNavBar from "../components/ReservationNavBar";
 import ResSearch from "../components/ReservationSearch/ResSearch";
-import { ReservationProvider } from "../contexts/ReservationContext";
+import {
+  ReservationProvider,
+  useReservationContext,
+} from "../contexts/ReservationContext";
 import SearchResults from "../components/SearchResults";
 import ReservationGuest from "../components/ReservationGuest";
-
+import ReservationStepper from "../components/ReservationStepper";
+import ReservationStayInfo from "../components/ReservationStayInfo";
 const Reservation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const toggleSidebar = () => {
@@ -25,8 +29,18 @@ const Reservation = () => {
           <ReservationNavBar toggleSidebar={toggleSidebar} />
         </div>
         <ResSearch />
-        <SearchResults />
-        <ReservationGuest />
+        <div className="avail-cards-container">
+          <div className="avail-results-container">
+            <div className="results-left">
+              <ReservationStepper />
+            </div>
+            <div className="results-right">
+              <ReservationStayInfo />
+            </div>
+          </div>
+        </div>
+        {/* <SearchResults />
+        <ReservationGuest /> */}
       </div>
     </ReservationProvider>
   );

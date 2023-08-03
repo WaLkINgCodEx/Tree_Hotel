@@ -1,7 +1,13 @@
 import { BsCheck2, BsFillCreditCardFill } from "react-icons/bs";
 import { pricing } from "../data";
 import { useReservationContext } from "../contexts/ReservationContext";
-const SearchResultOffer = ({ offer, idx, isMoreOfferOpen, roomType }) => {
+const SearchResultOffer = ({
+  offer,
+  idx,
+  isMoreOfferOpen,
+  roomType,
+  handleNext,
+}) => {
   const { getTotalNights, addItemToCart, reservationItems } =
     useReservationContext();
 
@@ -53,6 +59,7 @@ const SearchResultOffer = ({ offer, idx, isMoreOfferOpen, roomType }) => {
           className="avail-card-btn"
           onClick={() => {
             addItemToCart(roomType, offer);
+            handleNext();
           }}
         >
           Book now

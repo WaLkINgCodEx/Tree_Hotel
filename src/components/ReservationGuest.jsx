@@ -16,6 +16,7 @@ import { useState } from "react";
 import { countryRegion, time } from "../data";
 import { AiOutlineCaretDown } from "react-icons/ai";
 import ReservationPolicy from "./ReservationPolicy";
+import ReservationAcknow from "./ReservationAcknow";
 
 const ReservationGuest = () => {
   const [prefix, setPrefix] = useState("");
@@ -54,6 +55,7 @@ const ReservationGuest = () => {
               value={prefix}
               label="Prefix"
               onChange={handleChangePrefix}
+              required
             >
               <MenuItem value="" disabled></MenuItem>
               <MenuItem value="dr">Dr.</MenuItem>
@@ -78,6 +80,7 @@ const ReservationGuest = () => {
                 label="First Name"
                 placeholder=""
                 variant="filled"
+                required
               />
 
               <TextField
@@ -86,6 +89,7 @@ const ReservationGuest = () => {
                 label="Last Name"
                 placeholder=""
                 variant="filled"
+                required
               />
             </div>
           </FormControl>
@@ -98,6 +102,7 @@ const ReservationGuest = () => {
                 label="Phone"
                 placeholder=""
                 variant="filled"
+                required
               />
             </FormControl>
             <FormControl sx={{ width: { xs: "100%", md: "initial" } }}>
@@ -107,6 +112,7 @@ const ReservationGuest = () => {
                 label="Email Address"
                 placeholder=""
                 variant="filled"
+                required
               />
               <FormHelperText id="email-helper-text">
                 This is the email we will send your confirmation to.
@@ -127,6 +133,7 @@ const ReservationGuest = () => {
                     variant="filled"
                     {...params}
                     label="Country/Region"
+                    required
                   />
                 )}
               />
@@ -246,6 +253,9 @@ const ReservationGuest = () => {
       </div>
       <div className="res-policy-wrapper">
         <ReservationPolicy />
+      </div>
+      <div className="res-policy-wrapper">
+        <ReservationAcknow />
       </div>
     </div>
   );
