@@ -3425,3 +3425,19 @@ p {
 .res-policy {
   margin-bottom: 10px;
 }
+
+.stepper-wrapper {
+  max-width: 1260px;
+  margin: 15px auto;
+}
+
+.acknow-container {
+  background-color: #eee;
+  padding: 10px;
+  max-width: 835px;
+  border: 1px solid #baa382;
+  color: #173f35;
+  font-family: Niramit Regular, "AXtManalBold Regular", Helvetica, Arial,
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", sans-serif;
+}
