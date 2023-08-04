@@ -17,8 +17,6 @@ const SearchResultOffer = ({
     getTotalNights();
   const pricePerNight = (totalPrice / getTotalNights()).toFixed(2);
 
-  console.log(reservationItems);
-
   return (
     <div
       className={

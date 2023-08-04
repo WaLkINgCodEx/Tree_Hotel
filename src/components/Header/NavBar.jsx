@@ -23,7 +23,7 @@ export default function NavBar() {
         <Li name="EXPERIENCES" url="experience" />
         <MoreMenu />
         <LangMenu notMobile={true} />
-        <Li name="BOOK NOW" idName="bookNowButton" />
+        <Li name="BOOK NOW" idName="bookNowButton" url="reservation" />
       </ul>
     </div>
   );
