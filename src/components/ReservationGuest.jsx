@@ -22,6 +22,13 @@ const ReservationGuest = () => {
   const [prefix, setPrefix] = useState("");
   const [arrivalTime, setArrivalTime] = useState("");
   const [departureTime, setDepartureTime] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState("");
+  const [zip, setZip] = useState("");
+  const [specialReq, setSpecialReq] = useState("");
 
   const handleChangePrefix = (event) => {
     setPrefix(event.target.value);
@@ -34,6 +41,11 @@ const ReservationGuest = () => {
   const handleChangeDeparture = (event) => {
     setDepartureTime(event.target.value);
   };
+
+  const handleChangeFirstName = (event) => {
+    setFirstName(event.target.value);
+  };
+
   return (
     <div className="guest-details-wrapper">
       <div className="guest-details-container">
@@ -56,6 +68,8 @@ const ReservationGuest = () => {
               label="Prefix"
               onChange={handleChangePrefix}
               required
+              error={prefix === ""}
+              helperText={prefix === "" && `Please Provide ${prefix}`}
             >
               <MenuItem value="" disabled></MenuItem>
               <MenuItem value="dr">Dr.</MenuItem>
@@ -81,6 +95,12 @@ const ReservationGuest = () => {
                 placeholder=""
                 variant="filled"
                 required
+                value={firstName}
+                error={firstName === ""}
+                helperText={
+                  firstName === "" && `Please Provide Your First Name`
+                }
+                onChange={handleChangeFirstName}
               />
 
               <TextField
