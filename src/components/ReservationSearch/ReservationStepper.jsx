@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import SearchResults from "./SearchResults";
 import ReservationGuest from "./ReservationGuest";
-import { useReservationContext } from "../contexts/ReservationContext";
+import { useReservationContext } from "../../contexts/ReservationContext";
 
 const ReservationStepper = () => {
   const { reservationItems } = useReservationContext();

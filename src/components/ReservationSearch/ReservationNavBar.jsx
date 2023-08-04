@@ -1,5 +1,6 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { PiCaretDownLight } from "react-icons/pi";
+
 const ReservationNavBar = ({ toggleSidebar }) => {
   return (
     <div className="reservation-nav-bar-container">

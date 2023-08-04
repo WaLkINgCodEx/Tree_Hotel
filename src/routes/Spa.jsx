@@ -1,6 +1,6 @@
 import Header from "../components/Header/Header";
 import IntroImageBanner from "../components/IntroImageBanner";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import { socialMediaSVG, footerMidData } from "../data";
 
 const Spa = () => {

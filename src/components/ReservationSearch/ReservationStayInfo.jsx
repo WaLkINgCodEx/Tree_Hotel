@@ -1,6 +1,7 @@
-import { useReservationContext } from "../contexts/ReservationContext";
+import { useReservationContext } from "../../contexts/ReservationContext";
 import moment from "moment";
 import ReservationItem from "./ReservationItem";
+
 const ReservationStayInfo = () => {
   const {
     adultNumber,

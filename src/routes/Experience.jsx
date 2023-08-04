@@ -1,7 +1,7 @@
-import ExpFilterNav from "../components/ExpFilterNav";
 import Header from "../components/Header/Header";
+import ExpFilterNav from "../components/Experience/ExpFilterNav";
 import IntroImageBanner from "../components/IntroImageBanner";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import { socialMediaSVG, footerMidData } from "../data";
 
 const Experience = () => {

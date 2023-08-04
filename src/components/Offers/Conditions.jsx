@@ -1,5 +1,5 @@
-import { gerneralConditions, childPolicy, otherInformation } from "../data";
-import ConditionList from "./ConditionList";
+import { gerneralConditions, childPolicy, otherInformation } from "../../data";
+import ConditionList from "../ConditionList";
 
 const Conditions = () => {
   return (

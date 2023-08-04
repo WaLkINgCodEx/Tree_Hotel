@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { experienceActivities } from "../data";
+import { experienceActivities } from "../../data";
 import ExperienceCard from "./ExperienceCard";
 
 const ExpFilterNav = () => {

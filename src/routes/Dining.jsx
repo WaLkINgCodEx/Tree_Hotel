@@ -1,7 +1,7 @@
-import DiningList from "../components/DiningList";
-import IntroBanner from "../components/IntroBanner";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer";
+import IntroBanner from "../components/IntroBanner";
+import DiningList from "../components/Dining/DiningList";
+import Footer from "../components/Footer/Footer";
 import { socialMediaSVG, footerMidData } from "../data";
 
 const Dining = () => {
