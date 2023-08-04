@@ -1,8 +1,9 @@
 import Header from "../components/Header/Header";
 import IntroBanner from "../components/IntroBanner";
-import PolicydropDown from "../components/PolicydropDown";
-import RoomCards from "../components/RoomCards";
-import Footer from "../components/Footer";
+import PolicydropDown from "../components/Accommodation/PolicydropDown";
+import Footer from "../components/Footer/Footer";
+import RoomCards from "../components/Accommodation/RoomCards";
+
 import { socialMediaSVG, footerMidData } from "../data";
 
 const Accommodation = () => {

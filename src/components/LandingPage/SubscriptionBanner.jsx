@@ -1,5 +1,5 @@
 import React from "react";
-import connectImg from "../assets/images/connect-img.webp";
+import connectImg from "../../assets/images/connect-img.webp";
 
 export default function ubscriptionBanner() {
   return (

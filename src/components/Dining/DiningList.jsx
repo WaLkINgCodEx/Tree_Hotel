@@ -1,5 +1,5 @@
 import DiningCards from "./DiningCards";
-import { diningList } from "../data";
+import { diningList } from "../../data";
 
 const DiningList = () => {
   return (

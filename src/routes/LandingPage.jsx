@@ -1,10 +1,10 @@
 import Header from "../components/Header/Header";
 import InfoSection from "../components/InfoSection/InfoSection";
-import SubscriptionBanner from "../components/SubscriptionBanner";
-import CardList from "../components/FeatureCards/CardList";
-import Gallery from "../components/Gallery";
-import HighLight from "../components/HighLight";
-import Footer from "../components/Footer";
+import SubscriptionBanner from "../components/LandingPage/SubscriptionBanner";
+import CardList from "../components/LandingPage/FeatureCards/CardList";
+import Gallery from "../components/LandingPage/Gallery";
+import HighLight from "../components/LandingPage/HighLight";
+import Footer from "../components/Footer/Footer";
 import {
   aboutCards,
   aboutSliderCards,

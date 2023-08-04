@@ -1,9 +1,9 @@
-import Carousel from "../components/Carousel";
 import Header from "../components/Header/Header";
-import OfferCard from "../components/OfferCard";
+import Carousel from "../components/Offers/Carousel";
+import OfferCard from "../components/Offers/OfferCard";
 import { offers, socialMediaSVG, footerMidData } from "../data";
-import Conditions from "../components/Conditions";
-import Footer from "../components/Footer";
+import Conditions from "../components/Offers/Conditions";
+import Footer from "../components/Footer/Footer";
 
 const Offers = () => {
   return (

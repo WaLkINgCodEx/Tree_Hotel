@@ -1,4 +1,4 @@
-import { roomType } from "../data";
+import { roomType } from "../../data";
 import AccomCardSmall from "./AccomCardSmall";
 import AccomCardBig from "./AccomCardBig";
 const RoomCards = () => {

@@ -1,16 +1,16 @@
 import { useState } from "react";
-import ReservationSideBar from "../components/ReservationSideBar";
-
-import ReservationNavBar from "../components/ReservationNavBar";
+import ReservationSideBar from "../components/ReservationSearch/ReservationSideBar";
+import ReservationNavBar from "../components/ReservationSearch/ReservationNavBar";
 import ResSearch from "../components/ReservationSearch/ResSearch";
 import {
   ReservationProvider,
   useReservationContext,
 } from "../contexts/ReservationContext";
-import SearchResults from "../components/SearchResults";
-import ReservationGuest from "../components/ReservationGuest";
-import ReservationStepper from "../components/ReservationStepper";
-import ReservationStayInfo from "../components/ReservationStayInfo";
+import SearchResults from "../components/ReservationSearch/SearchResults";
+import ReservationGuest from "../components/ReservationSearch/ReservationGuest";
+import ReservationStepper from "../components/ReservationSearch/ReservationStepper";
+import ReservationStayInfo from "../components/ReservationSearch/ReservationStayInfo";
+
 const Reservation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const toggleSidebar = () => {

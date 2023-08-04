@@ -1,4 +1,4 @@
-import { icons } from "../data";
+import { icons } from "../../data";
 import IconEntry from "./IconEntry";
 
 const AccomCardBig = ({ room }) => {

@@ -1,5 +1,5 @@
-import { useReservationContext } from "../contexts/ReservationContext";
-import { roomType, pricing, offers } from "../data";
+import { useReservationContext } from "../../contexts/ReservationContext";
+import { roomType, pricing, offers } from "../../data";
 import ReservationStayInfo from "./ReservationStayInfo";
 import SearchResultCard from "./SearchResultCard";
 

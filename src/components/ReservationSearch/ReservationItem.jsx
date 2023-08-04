@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { pricing } from "../data";
-import { useReservationContext } from "../contexts/ReservationContext";
+import { pricing } from "../../data";
+import { useReservationContext } from "../../contexts/ReservationContext";
 
 const ReservationItem = ({ reservationItem }) => {
   const { basePrice, offer, totalNights } = reservationItem;
