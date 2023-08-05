@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ConditionList from "../ConditionList";
+import ConditionList from "../Share/ConditionList/ConditionList";
 const PolicydropDown = ({ policy }) => {
   const [isPolicyOpen, setIsPolicyOpen] = useState(false);
   const toggleIsPolicyOpen = () => setIsPolicyOpen(!isPolicyOpen);

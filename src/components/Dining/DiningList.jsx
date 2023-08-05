@@ -1,5 +1,6 @@
 import DiningCards from "./DiningCards";
 import { diningList } from "../../data";
+import "./style/dining.css";
 
 const DiningList = () => {
   return (

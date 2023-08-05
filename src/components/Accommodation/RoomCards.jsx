@@ -1,6 +1,8 @@
 import { roomType } from "../../data";
 import AccomCardSmall from "./AccomCardSmall";
 import AccomCardBig from "./AccomCardBig";
+import "./style/accommodation.css";
+
 const RoomCards = () => {
   return (
     <div className="room-cards-wrapper">

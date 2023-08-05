@@ -10,18 +10,18 @@ export default function MobileSideBar({ showSidebar, toggleSidebar }) {
   return (
     <>
       <Container
-        class={
+        className={
           showSidebar
             ? "nav-sidebar-container showSidebar"
             : "nav-sidebar-container"
         }
         maxWidth="false"
-        disableGutters="true"
+        disablegutters="true"
       >
         <MenuList>
-          {sideBarURLs.map((item) => {
+          {sideBarURLs.map((item, index) => {
             return (
-              <MenuItem>
+              <MenuItem key={index}>
                 <a className="menu-item-link" href={item.url}>
                   <span>{item.topic}</span>
                 </a>
@@ -30,7 +30,7 @@ export default function MobileSideBar({ showSidebar, toggleSidebar }) {
           })}
         </MenuList>
         <MenuList>
-          <MenuItem class="lang-select">
+          <MenuItem className="lang-select">
             <LangMenu notMobile={false} />
           </MenuItem>
         </MenuList>

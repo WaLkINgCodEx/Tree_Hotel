@@ -1,0 +1,126 @@
+.photo-booth-wrapper {
+  min-width: 100%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 18px 0;
+}
+
+.booth-frame {
+  display: flex;
+  margin: auto;
+}
+
+.booth-left {
+  min-width: 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding-top: 49px;
+  /* padding-right: 75px; */
+  padding-bottom: 22.5px;
+}
+
+.left-content {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: end;
+  margin-right: 300px;
+  margin-left: auto;
+}
+
+.booth-left h2 {
+  margin: auto;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+}
+
+.booth-p {
+  margin-top: 32.8125px;
+  padding-left: 45px;
+}
+
+.booth-p p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.booth-btn {
+  display: inline-flex;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-color: white;
+  border: 1px solid;
+}
+
+.booth-right {
+  position: relative;
+  min-width: 50%;
+  max-width: 50%;
+  overflow: hidden;
+  inset: 0px;
+  min-height: 100%;
+}
+
+/* .simplebar-vertical > .simplebar-scrollbar:before {
+  opacity: 1;
+  top: 3px;
+  bottom: 3px;
+  left: -9px;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  background-color: white;
+  transform: rotate(45deg);
+  transition: all 0.1s ease-in-out;
+} */
+
+.simplebar-vertical > .simplebar-scrollbar {
+  max-height: 50px;
+}
+
+.simplebar-vertical > .simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 0;
+  background-color: #555;
+  overflow: visible;
+}
+
+.simplebar-track.simplebar-vertical {
+  /* height: 186.5%; */
+  left: 1px;
+  overflow: visible;
+  background-color: rgb(186, 163, 130);
+  max-width: 2px;
+}
+
+.muti-col-frame {
+  display: inline-flex;
+  /* padding-left: 15px; */
+  min-width: 810px;
+  max-height: 500px;
+}
+
+.frame-col {
+  position: relative;
+  margin-top: -30px;
+}
+
+.photo-box {
+  padding-top: 30px;
+  padding-left: 30px;
+  width: 240px;
+  height: 160px;
+}
+
+.photo-box img {
+  max-width: 100%;
+  inset: 0;
+  overflow: hidden;
+  object-fit: cover;
+}

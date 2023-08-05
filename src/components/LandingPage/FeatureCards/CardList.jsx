@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Card from "./Card.jsx";
+import "./style/card.css";
 
 export default function CardList(props) {
   if (props.cardData.type == "silder") {
