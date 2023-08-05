@@ -6,9 +6,9 @@ import Link from "@mui/material/Link";
 export default function ColumnMenu(props) {
   return (
     <MenuList>
-      {props.column.map((item) => {
+      {props.column.map((item, index) => {
         return (
-          <MenuItem className={item.className}>
+          <MenuItem className={item.className} key={index}>
             <Link href={item.link} underline="none">
               <span>{item.topic}</span>
             </Link>

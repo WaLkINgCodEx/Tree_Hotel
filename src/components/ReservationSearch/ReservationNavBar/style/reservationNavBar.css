@@ -1,0 +1,74 @@
+.reservation-nav-bar-container {
+  max-width: 1260px;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.reservation-brand {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  background-color: #baa382;
+  width: 60px;
+  font-size: 25px;
+  color: white;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+@media (min-width: 960px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.nav-brand-name {
+  text-transform: uppercase;
+}
+
+.res-navbar-left {
+  display: flex;
+}
+
+.res-navbar-right {
+  display: none;
+  padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .res-navbar-right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.res-navbar-right > div {
+  height: 100%;
+}
+
+.res-navbar-right > a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #575c5a;
+  text-transform: uppercase;
+  padding-right: 8px;
+}
+
+.res-navbar-right > a:hover {
+  color: #baa382;
+}
+
+.mid-lg-only {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .mid-lg-only {
+    display: flex;
+    padding-right: 5px;
+  }
+}

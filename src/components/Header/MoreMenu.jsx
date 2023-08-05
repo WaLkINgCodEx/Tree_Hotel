@@ -2,14 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { styled, alpha, duration } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import BigArrow from "../../assets/icons/BigArrow";
 import { sideBarURLs } from "../../data";
 
 export default function MoreMenu(props) {
   const [anchorEl, setAnchorEl] = useState(null);
-
-  const previousLang = useRef("");
 
   const open = Boolean(anchorEl);
 
@@ -56,7 +54,7 @@ export default function MoreMenu(props) {
   }));
 
   return (
-    <div class="more-button">
+    <div className="more-button">
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
@@ -81,7 +79,11 @@ export default function MoreMenu(props) {
         {sideBarURLs.map((item, index) => {
           if (index > 5) {
             return (
-              <MenuItem className="more-menu-list" onClick={handleClose}>
+              <MenuItem
+                className="more-menu-list"
+                onClick={handleClose}
+                key={index}
+              >
                 <a className="menu-item-link" href={item.url}>
                   <span>{item.topic}</span>
                 </a>

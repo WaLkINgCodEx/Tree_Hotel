@@ -4,10 +4,10 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import ColumnMenu from "./ColumnMenu";
+import "./style/footer.css";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "transparent",
-
   textAlign: "left",
   color: "white",
 }));
@@ -17,21 +17,21 @@ export default function Footer(props) {
     <div className="banyanfooter">
       <div className="footer-top">
         <div className="social-buttons">
-          {props.socialMediaSVG.map((item) => {
+          {props.socialMediaSVG.map((item, index) => {
             return (
-              <div>
+              <div key={index}>
                 <a className={item.className}>
                   <svg
                     width={item.width}
                     height={item.height}
                     viewBox={item.viewBox}
                     xmlns="http://www.w3.org/2000/svg"
-                    class="BanyanTreeFooter-whiteSvgIcon"
+                    className="BanyanTreeFooter-whiteSvgIcon"
                   >
                     <path
                       d={item.d}
                       fill="currentColor"
-                      fill-rule="nonzero"
+                      fillRule="nonzero"
                     ></path>
                   </svg>
                 </a>
