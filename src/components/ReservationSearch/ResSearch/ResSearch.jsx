@@ -5,15 +5,18 @@ import {
   SingleDatePicker,
   DayPickerRangeController,
 } from "react-dates";
+import "./style/resSearch.css";
 import "react-dates/lib/css/_datepicker.css";
 import "./style/react_dates_overrides.css";
 import { useMediaQuery } from "react-responsive";
+
 import { GoDash } from "react-icons/go";
 import { PiCaretDownLight } from "react-icons/pi";
 import { SlUser } from "react-icons/sl";
-import ReservationWarning from "../ReservationWarning";
-import GuestCount from "../GuestCount";
-import SpecialRateDropdown from "../SpecialRateDropdown";
+
+import ReservationWarning from "./ReservationWarning";
+import GuestCount from "./GuestCount";
+import SpecialRateDropdown from "./SpecialRateDropdown";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
 const ResSearch = () => {

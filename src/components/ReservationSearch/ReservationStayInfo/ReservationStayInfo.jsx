@@ -1,6 +1,7 @@
-import { useReservationContext } from "../../contexts/ReservationContext";
+import { useReservationContext } from "../../../contexts/ReservationContext";
 import moment from "moment";
 import ReservationItem from "./ReservationItem";
+import "./style/reservationStayInfo.css";
 
 const ReservationStayInfo = () => {
   const {

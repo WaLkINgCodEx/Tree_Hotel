@@ -13,6 +13,7 @@
   background-color: transparent;
   width: 140px;
 }
+
 .res-search-bar .DateInput_input {
   background-color: transparent;
   color: white;
@@ -53,15 +54,18 @@
 .CalendarDay__selected {
   background-color: #baa382;
 }
+
 .CalendarDay__selected:active,
 .CalendarDay__selected:hover {
   background-color: #baa382;
   border: 1px double #baa382;
 }
+
 .CalendarDay__hovered_span {
   background-color: rgba(186, 163, 130, 0.5);
   color: white;
 }
+
 .CalendarDay__hovered_span:active,
 .CalendarDay__hovered_span:hover {
   background-color: rgba(186, 163, 130, 0.5);
@@ -72,6 +76,7 @@
 .CalendarDay__selected_span {
   background-color: #baa382;
 }
+
 .CalendarDay__selected_span:active,
 .CalendarDay__selected_span:hover {
   background-color: #baa382;
@@ -81,6 +86,7 @@
 .CalendarDay__blocked_out_of_range {
   background-color: #eee;
 }
+
 .DayPickerKeyboardShortcuts_show__bottomRight::before {
   border-right: 33px solid #baa382;
 }

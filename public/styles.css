@@ -2673,7 +2673,9 @@ hr {
   font-size: 18px;
 }
 
-.res-search-wrapper {
+/* ///////////////////////////////////////////// ReSearch ///////////////////////////////////////////// */
+
+/* .res-search-wrapper {
   margin: 0 auto;
   background-color: #fff;
 }
@@ -2697,6 +2699,11 @@ hr {
   display: flex;
   justify-content: space-between;
 }
+
+.stay-info {
+  text-align: end;
+}
+
 .bottom-guest-bar {
   text-align: left;
   display: flex;
@@ -2711,16 +2718,9 @@ hr {
 .guest-count-bar {
   color: #000;
 }
+
 .guest-count-bar-end {
   width: 70px;
-}
-
-.stay-info {
-  text-align: end;
-}
-
-.date-range-picker {
-  width: 100%;
 }
 
 .no-check-in {
@@ -2764,17 +2764,17 @@ hr {
   max-width: 1260px;
 }
 
-.msg-content {
-  display: flex;
-  align-items: center;
-}
-
 .warning-msg-container {
   background: #fff;
   border: 1px solid #b9bcb3;
   border-radius: 0;
   padding: 1rem;
   margin: 50px 0px;
+}
+
+.msg-content {
+  display: flex;
+  align-items: center;
 }
 
 .icon-circle {
@@ -2802,6 +2802,7 @@ hr {
   margin: 0 auto;
   background-color: #fff;
 }
+
 @media (min-width: 960px) {
   .lg-only {
     display: block;
@@ -2813,16 +2814,16 @@ hr {
   border: 1px solid #baa382;
 }
 
-.lg-date-range {
+.guest-number {
+  min-width: 40%;
+  font-size: 18px;
+  border-right: 1px solid #baa382;
   display: flex;
   align-items: center;
   margin-left: 15px;
 }
 
-.guest-number {
-  min-width: 40%;
-  font-size: 18px;
-  border-right: 1px solid #baa382;
+.lg-date-range {
   display: flex;
   align-items: center;
   margin-left: 15px;
@@ -2844,16 +2845,88 @@ hr {
   padding: 10px;
 }
 
+
+.special-rate-btn {
+  background-color: #173f35;
+  border: 0px;
+  font-weight: bolder;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 17px;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
+  display: grid;
+  place-items: center;
+}
+
+.lg-special-rate-btn {
+  background-color: #fff;
+  color: #baa382;
+  text-decoration: underline;
+  padding: 5px;
+  margin: initial;
+  display: flex;
+  justify-content: end;
+}
+
+.guest-count-button-area {
+  position: relative;
+}
+
+.guest-count-button {
+  background-color: transparent;
+  border: 0px;
+  font-size: 16px;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
+}
+
+.dropdown-select-container {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #baa382;
+  min-width: 200px;
+  min-height: 250px;
+  position: absolute;
+  top: 45px;
+  z-index: 5;
+  padding: 0px 10px;
+}
+
+.dropdown-select-container.open {
+  display: block;
+}
+
+.dropdown-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #baa382;
+}
+
+.control-container {
+  border: 1px solid #baa382;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-btn {
+  background-color: #baa382;
+  height: 45px;
+  width: 45px;
+  border: 0px;
+}
+
 .additional-search-container {
   display: none;
   background-color: #eee;
 }
-
-/* @media (min-width: 960px) {
-  .additional-search-container .box-btn {
-    width: 230px;
-  }
-} */
 
 .show-dropdown {
   display: block;
@@ -2893,93 +2966,11 @@ hr {
   justify-content: end;
   background-color: #eee;
   padding: 10px;
-}
-.guest-count-button-area {
-  position: relative;
-}
+} */
 
-.guest-count-button {
-  background-color: transparent;
-  border: 0px;
-  font-size: 16px;
-  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
-    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", "sans-serif";
-}
+/* ///////////////////////////////////////////// ReservationStepper ///////////////////////////////////////////// */
 
-.special-rate-btn {
-  background-color: #173f35;
-  border: 0px;
-  font-weight: bolder;
-  color: #fff;
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  font-size: 17px;
-  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
-    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", "sans-serif";
-  display: grid;
-  place-items: center;
-}
-
-.lg-special-rate-btn {
-  background-color: #fff;
-  color: #baa382;
-  text-decoration: underline;
-  padding: 5px;
-  margin: initial;
-  display: flex;
-  justify-content: end;
-}
-
-.backdrop {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.33);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.dropdown-select-container {
-  display: none;
-  background-color: #fff;
-  border: 1px solid #baa382;
-  min-width: 200px;
-  min-height: 250px;
-  position: absolute;
-  top: 45px;
-  z-index: 5;
-  padding: 0px 10px;
-}
-.dropdown-select-container.open {
-  display: block;
-}
-
-.dropdown-close {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  color: #baa382;
-}
-
-.control-container {
-  border: 1px solid #baa382;
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.control-btn {
-  background-color: #baa382;
-  height: 45px;
-  width: 45px;
-  border: 0px;
-}
-
-.avail-card {
+/* .avail-card {
   max-width: 835px;
   background-color: #e7e6e2;
   border: 1px solid #baa382;
@@ -3092,24 +3083,6 @@ hr {
   height: auto;
 }
 
-.more-rates-button {
-  background-color: transparent;
-  border: 0px;
-
-  font-size: 16px;
-  padding: 5px 5px;
-  font-family: "Reforma_1969", "AXtManalBold Regular", "Helvetica", "Arial",
-    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", "sans-serif";
-  color: #baa382;
-  text-decoration: underline;
-  transition: color 150ms;
-}
-
-.more-rates-button:hover {
-  color: #3b2e0a;
-}
-
 .avail-card-offer-left {
   width: 75%;
 }
@@ -3135,9 +3108,11 @@ hr {
   font-weight: bold;
   margin-bottom: 5px;
 }
+
 .avail-card-offer-desc {
   font-size: 13.5px;
 }
+
 .tax-desc {
   color: #baa382;
   font-size: 13px;
@@ -3167,113 +3142,22 @@ hr {
   color: #baa382;
 }
 
-.avail-stay-title {
-  font-size: 21px;
-  margin: 0px 0px 10px 0px;
-  color: #173f35;
-  letter-spacing: 0px;
-  text-transform: capitalize;
-}
+.more-rates-button {
+  background-color: transparent;
+  border: 0px;
 
-.avail-stay-info {
-  background-color: #e7e6e2;
-  border: 1px solid #baa382;
-  margin: 20px 0px;
-  padding: 20px;
-  max-width: 410px;
   font-size: 16px;
-}
-
-.avail-stay-check-time {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #baa382;
-  display: flex;
-}
-
-.avail-stay-check-time > div > p {
-  color: #173f35;
-}
-
-.stay-check-time-title {
-  color: #173f35;
-  letter-spacing: 0px;
-  text-transform: capitalize;
-  margin: 0px;
-}
-
-.avail-stay-check-time > div {
-  padding-right: 15px;
-}
-
-.avail-stay-date {
-  margin-top: 10px;
-  color: #173f35;
-}
-
-.avail-stay-guest {
-  color: #173f35;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #baa382;
-}
-
-.avail-stay-total-fee {
-  font-size: 20px;
-  padding: 10px 0px;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  color: #173f35;
-}
-
-.avail-stay-total-fee-right {
-  display: flex;
-  flex-direction: column;
-}
-
-.avail-stay-total-fee-tax-stat {
-  font-size: 13.5px;
+  padding: 5px 5px;
+  font-family: "Reforma_1969", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
   color: #baa382;
-}
-
-.reservation-item-container {
-  border-bottom: 1px solid #baa382;
-}
-.reservation-item {
-  display: flex;
-  color: #173f35;
-  justify-content: space-between;
-}
-
-.reservation-item-suite {
   text-decoration: underline;
+  transition: color 150ms;
+}
+
+.more-rates-button:hover {
   color: #3b2e0a;
-}
-.reservation-item-suite-type {
-  text-transform: uppercase;
-}
-
-.reservation-item-left {
-  width: 70%;
-}
-
-.reservation-item-right {
-  font-weight: bold;
-}
-
-.reservation-item-nights-button {
-  text-decoration: underline;
-  color: #baa382;
-  font-size: 13.5px;
-  margin-bottom: 10px;
-}
-
-.reservation-item-offer {
-  margin-bottom: 10px;
-}
-
-.reservation-item-tax {
-  margin-bottom: 10px;
 }
 
 .guest-details-wrapper {
@@ -3336,11 +3220,6 @@ hr {
   margin-bottom: 10px;
 }
 
-.stepper-wrapper {
-  max-width: 1260px;
-  margin: 15px auto;
-}
-
 .acknow-container {
   background-color: #eee;
   padding: 10px;
@@ -3350,4 +3229,137 @@ hr {
   font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", "sans-serif";
+}
+
+.stepper-wrapper {
+  max-width: 1260px;
+  margin: 15px auto;
+} */
+
+/* ///////////////////////////////////////////// ReservationStayinfo ///////////////////////////////////////////// */
+/* 
+.avail-stay-info {
+  background-color: #e7e6e2;
+  border: 1px solid #baa382;
+  margin: 20px 0px;
+  padding: 20px;
+  max-width: 410px;
+  font-size: 16px;
+}
+
+.avail-stay-title {
+  font-size: 21px;
+  margin: 0px 0px 10px 0px;
+  color: #173f35;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+.avail-stay-check-time {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #baa382;
+  display: flex;
+}
+
+.avail-stay-check-time > div > p {
+  color: #173f35;
+}
+
+.stay-check-time-title {
+  color: #173f35;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.avail-stay-check-time > div {
+  padding-right: 15px;
+}
+
+.avail-stay-date {
+  margin-top: 10px;
+  color: #173f35;
+}
+
+.avail-stay-guest {
+  color: #173f35;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #baa382;
+}
+
+.reservation-item-container {
+  border-bottom: 1px solid #baa382;
+}
+
+.reservation-item {
+  display: flex;
+  color: #173f35;
+  justify-content: space-between;
+}
+
+.reservation-item-suite {
+  text-decoration: underline;
+  color: #3b2e0a;
+}
+
+.reservation-item-suite-type {
+  text-transform: uppercase;
+}
+
+.reservation-item-offer {
+  margin-bottom: 10px;
+}
+
+.reservation-item-left {
+  width: 70%;
+}
+
+.reservation-item-tax {
+  margin-bottom: 10px;
+}
+
+.reservation-item-right {
+  font-weight: bold;
+}
+
+.reservation-item-nights-button {
+  text-decoration: underline;
+  color: #baa382;
+  font-size: 13.5px;
+  margin-bottom: 10px;
+}
+
+.avail-stay-total-fee {
+  font-size: 20px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #173f35;
+}
+
+.avail-stay-total-fee-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.avail-stay-total-fee-tax-stat {
+  font-size: 13.5px;
+  color: #baa382;
+} */
+
+/* /////////////////////////////////////////////  ///////////////////////////////////////////// */
+
+.date-range-picker {
+  width: 100%;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  top: 0;
+  left: 0;
 }

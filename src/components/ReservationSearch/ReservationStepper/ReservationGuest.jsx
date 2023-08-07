@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 
 import { useState } from "react";
-import { countryRegion, time } from "../../data";
+import { countryRegion, time } from "../../../data";
 import { AiOutlineCaretDown } from "react-icons/ai";
 import ReservationPolicy from "./ReservationPolicy";
 import ReservationAcknow from "./ReservationAcknow";

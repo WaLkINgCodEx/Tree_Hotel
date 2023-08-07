@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TfiClose } from "react-icons/tfi";
-import { useReservationContext } from "../../contexts/ReservationContext";
+import { useReservationContext } from "../../../contexts/ReservationContext";
 const GuestCount = () => {
   const { minusAdult, addAdult, minusKid, addKid, kidNumber, adultNumber } =
     useReservationContext();

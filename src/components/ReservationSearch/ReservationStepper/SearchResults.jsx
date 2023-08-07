@@ -1,6 +1,6 @@
-import { useReservationContext } from "../../contexts/ReservationContext";
-import { roomType, pricing, offers } from "../../data";
-import ReservationStayInfo from "./ReservationStayInfo";
+import { useReservationContext } from "../../../contexts/ReservationContext";
+import { roomType, pricing, offers } from "../../../data";
+import ReservationStayInfo from "../ReservationStayInfo/ReservationStayInfo";
 import SearchResultCard from "./SearchResultCard";
 
 const SearchResults = ({ handleNext }) => {
