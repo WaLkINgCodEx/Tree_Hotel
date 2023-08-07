@@ -1,6 +1,6 @@
 import { BsCheck2, BsFillCreditCardFill } from "react-icons/bs";
-import { pricing } from "../../data";
-import { useReservationContext } from "../../contexts/ReservationContext";
+import { pricing } from "../../../data";
+import { useReservationContext } from "../../../contexts/ReservationContext";
 
 const SearchResultOffer = ({
   offer,

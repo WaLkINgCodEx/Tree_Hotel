@@ -6,10 +6,10 @@ import {
   ReservationProvider,
   useReservationContext,
 } from "../../contexts/ReservationContext";
-import SearchResults from "../../components/ReservationSearch/SearchResults";
-import ReservationGuest from "../../components/ReservationSearch/ReservationGuest";
-import ReservationStepper from "../../components/ReservationSearch/ReservationStepper";
-import ReservationStayInfo from "../../components/ReservationSearch/ReservationStayInfo";
+import SearchResults from "../../components/ReservationSearch/ReservationStepper/SearchResults";
+import ReservationGuest from "../../components/ReservationSearch/ReservationStepper/ReservationGuest";
+import ReservationStepper from "../../components/ReservationSearch/ReservationStepper/ReservationStepper";
+import ReservationStayInfo from "../../components/ReservationSearch/ReservationStayInfo/ReservationStayInfo";
 import "./style/reservation.css";
 
 const Reservation = () => {
