@@ -1,0 +1,197 @@
+.banyanfooter {
+  background-color: #baa382;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 30px;
+  max-width: 1280px;
+  margin: auto;
+  justify-content: center;
+}
+
+@media (min-width: 960px) {
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.social-buttons {
+  display: flex;
+  height: 100%;
+}
+
+@media (max-width: 960px) {
+  .social-buttons {
+    margin: auto;
+  }
+}
+
+/* @media (max-width: 960px) {
+  .footer-top {
+    justify-content: center;
+  }
+} */
+
+.social-buttons div {
+  width: 40px;
+  height: 40px;
+}
+
+.banyanfooter-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.social-buttons .whatsapp {
+  padding-left: 9px;
+}
+
+@media (max-width: 960px) {
+  .price-col {
+    margin: auto;
+    margin-top: 22px;
+  }
+}
+
+.footer-top .best-price {
+  display: inline-flex;
+  border: 1px solid white;
+  font-size: 1rem;
+  margin: auto;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 10.5px 29px;
+}
+
+.footer-separator {
+  max-width: 100%;
+  margin: 0;
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-mid,
+.footer-bottom {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 30px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.footer-mid a {
+  text-transform: capitalize;
+}
+
+.footer-mid .mid-container .min-column {
+  border-radius: 0;
+}
+
+.mid-container li {
+  padding-top: 0;
+}
+
+.mid-container span {
+  display: inline-flex;
+  color: white;
+  font-family: "Niramit Regular", "AXtManalBold Regular", Helvetica, Arial,
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
+  font-size: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mid-container .is-head {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 12px;
+}
+
+.mid-container .is-head span {
+  padding-top: 3.75px;
+  padding-bottom: 3.75px;
+  display: inline-flex;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans;
+  font-weight: bold;
+}
+
+.footer-bottom {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.copyright p {
+  font-size: 0.9333333333333333rem;
+  line-height: 1.57;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.footer-bottom span,
+.footer-bottom li {
+  color: white;
+  list-style: none;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.footer-bottom ul {
+  padding-left: 0;
+  display: flex;
+}
+
+.footer-bottom li {
+  margin: 0;
+  margin-right: 15px;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
+  font-weight: 500;
+  font-size: 0.9333333333333333rem;
+  line-height: 1.57;
+}
+
+.footer-bottom-C {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 30px;
+  height: 42px;
+}
+
+.footer-bottom-R {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.footer-bottom-R span {
+  margin: 0;
+  margin-right: 10px;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
+  font-weight: 500;
+  font-size: 0.9333333333333333rem;
+  line-height: 1.57;
+}
+
+.footer-bottom-R .footer-logo2 {
+  width: 80px;
+}

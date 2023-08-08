@@ -1,0 +1,35 @@
+.carousel-row-container {
+  margin: 15px;
+}
+
+.carousel-row-container .swiper-slide {
+  text-align: center;
+  background: #fff;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev {
+  background-image: url(/public/assets/images/ArrowLeft.svg);
+  background-size: contain;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  /* left: 69px; */
+}
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next {
+  background-image: url(/public/assets/images/ArrowLeft.svg);
+  transform: rotate(180deg);
+  background-size: contain;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  /* right: 69px; */
+}
+
+.swiper-button-next::after {
+  display: none;
+}

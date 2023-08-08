@@ -39,7 +39,7 @@ export default function Footer(props) {
             );
           })}
         </div>
-        <div>
+        <div className="price-col">
           <a className="best-price">
             <span>BEST PRICE GUARANTEE</span>
           </a>
