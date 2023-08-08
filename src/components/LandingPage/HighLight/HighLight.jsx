@@ -29,6 +29,7 @@ export default function HighLight(props) {
             spaceBetween={30}
             loop={true}
             speed={700}
+            centeredSlides="true"
             onSwiper={(swiper) => {
               // console.log(swiper);
               // console.log(swiperRef);
