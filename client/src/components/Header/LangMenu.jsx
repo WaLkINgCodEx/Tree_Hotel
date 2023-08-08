@@ -75,7 +75,7 @@ export default function LangMenu(props) {
   }));
 
   return (
-    <div class="lang-button">
+    <div className="lang-button">
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}

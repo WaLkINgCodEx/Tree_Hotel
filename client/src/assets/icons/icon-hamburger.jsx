@@ -11,12 +11,12 @@ export default function IconHamburger() {
       >
         <defs>
           <clipPath id="icon-hamburger_menu_svg__b">
-            <use href="#icon-hamburger_menu_svg__a" clip-rule="evenodd"></use>
+            <use href="#icon-hamburger_menu_svg__a" clipRule="evenodd"></use>
           </clipPath>
           <path id="icon-hamburger_menu_svg__a" d="M0 0h24v24H0z"></path>
         </defs>
         <g
-          clip-path="url(#icon-hamburger_menu_svg__b)"
+          clipPath="url(#icon-hamburger_menu_svg__b)"
           fill="none"
           stroke="currentColor"
         >

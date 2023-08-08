@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Reforma_1969;
+  font-family: "Reforma_1969";
   src: url(./assets/fonts/reforma.1969-gris.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -27,9 +27,9 @@ html {
 
 body {
   margin: auto;
-  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
-    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
+  font-family: "Niramit ExtraLight Regular", "AXtManalBold Regular", "Helvetica",
+    "Arial", "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
   background-color: #e7e6e2;
 }
 
@@ -41,42 +41,9 @@ h4,
 h5,
 h6 {
   text-transform: uppercase;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
-}
-
-hr {
-  max-width: 1330px;
-  border-color: #e7e6e2;
-  border-top: none;
-  margin: 0;
-}
-
-/* ///////////////////////////////////////////// Header ///////////////////////////////////////////// */
-
-.nav-bar-top ul li > a {
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
-  text-decoration: none;
-  color: black;
-  letter-spacing: 0.5px;
-  padding: 1.7rem 1.9rem;
-}
-
-.nav-bar-top ul li > a:hover {
-  color: #baa382;
-}
-
-.nav-bar-top ul #logo-frame > a {
-  padding: 0;
-}
-
-.nav-bar-top ul li > h2 {
-  margin-bottom: 1.5rem;
-  white-space: pre-wrap;
-  letter-spacing: 5px;
+  font-family: "Reforma_1969", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
 }
 
 h3 {
@@ -95,14 +62,21 @@ h6 {
 }
 
 p {
-  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
-    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
   font-size: 15px;
   line-height: 1.4;
   letter-spacing: normal;
   margin: 0px;
   font-weight: 400;
+}
+
+hr {
+  max-width: 1330px;
+  border-color: #e7e6e2;
+  border-top: none;
+  margin: 0;
 }
 
 .button-area {
@@ -152,6 +126,7 @@ p {
     sans-serif;
   width: 100%;
 }
+
 .box-btn:hover {
   border-color: rgb(186, 163, 130);
   background-color: rgb(186, 163, 130);
@@ -164,6 +139,30 @@ p {
   }
 }
 
+/* ///////////////////////////////////////////// Header ///////////////////////////////////////////// */
+/* 
+.nav-bar-top ul li > a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.5px;
+  padding: 1.7rem 1.9rem;
+}
+
+.nav-bar-top ul li > a:hover {
+  color: #baa382;
+}
+
+.nav-bar-top ul #logo-frame > a {
+  padding: 0;
+}
+
+.nav-bar-top ul li > h2 {
+  margin-bottom: 1.5rem;
+  white-space: pre-wrap;
+  letter-spacing: 5px;
+}
+
+
 .header-wrap {
   position: relative;
 }
@@ -171,10 +170,6 @@ p {
 .header-nav-top {
   z-index: 2;
   position: relative;
-  /* top: 0;
-  left: 0;
-  right: 0; */
-  /* width: 100%; */
   height: 47px;
   background-color: white;
 }
@@ -291,11 +286,6 @@ p {
   letter-spacing: 1px;
 }
 
-/* .nav-m-r span {
-  color: white;
-  letter-spacing: 1px;
-} */
-
 .nav-sidebar-container {
   position: fixed;
   width: 100%;
@@ -358,11 +348,6 @@ p {
 }
 
 .nav-bar-top {
-  /* width: 100%; */
-  /* margin: auto;
-  position: fixed;
-  background-color: white;
-  height: 71.25px; */
   height: 100%;
   height: 71.25px;
 }
@@ -409,7 +394,6 @@ p {
 .nav-bar-top .arrow-icon span {
   display: flex;
   width: auto;
-  /* margin-left: 8px; */
   color: black;
 }
 
@@ -503,10 +487,6 @@ p {
   left: 0;
   bottom: 0;
   right: 0;
-  /* min-height: 100%;
-  min-width: 100%;
-  max-height: 100%;
-  max-width: 100%; */
 }
 
 .heroFrame img {
@@ -584,9 +564,6 @@ p {
 }
 
 .header-nav-bottom li {
-  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
-    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
   margin: 0.7rem 0rem;
   font-size: 0.9rem;
   padding: 0;
@@ -595,7 +572,11 @@ p {
 .header-nav-bottom li span {
   display: flex;
   height: 100%;
-  font-size: 0.8rem;
+  font-family: "Niramit ExtraLight Regular", "AXtManalBold Regular", "Helvetica",
+    "Arial", "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
+  text-transform: capitalize;
+  font-size: 1rem;
 }
 
 .nav-bar-bottom .arrow-icon span {
@@ -606,11 +587,11 @@ p {
   margin: 0 0.5rem;
   color: white;
   transform: rotate(-90deg);
-}
+} */
 
 /* ///////////////////////////////////////////// Feature Cards ///////////////////////////////////////////// */
 
-.feature-card-wrapper {
+/* .feature-card-wrapper {
   display: flex;
   flex-direction: column;
   max-width: 1280px;
@@ -629,7 +610,6 @@ p {
 }
 
 .card-frame {
-  /* display: flex; */
   margin: auto;
   min-width: 100%;
   min-height: 100%;
@@ -752,12 +732,10 @@ p {
 .card-left span,
 .booth-left span {
   display: inline-flex;
-  /* margin-top: 25px; */
   background-color: #baa382;
   color: white;
   text-transform: uppercase;
   font-size: 15px;
-  /* padding: 10px 50px; */
   line-height: 1.4;
   padding: 10px 0;
   margin: auto;
@@ -767,13 +745,6 @@ p {
   .card-left span,
   .booth-left span {
     padding: 10px 50px;
-    /* margin-top: 45px; */
-
-    /* background-color: #baa382;
-  color: white;
-  text-transform: uppercase;
-  font-size: 15px;
-  padding: 10px 50px; */
   }
 }
 
@@ -815,34 +786,6 @@ p {
   object-fit: cover;
 }
 
-/* .card-right > .non-slider {
-  max-height: 550px;
-} */
-
-.desc-banner-wrapper {
-  background-color: #e7e6e2;
-  padding: 50px 0px;
-  margin: 0px auto;
-}
-@media (min-width: 960px) {
-  .desc-banner-wrapper {
-    padding: 50px 80px;
-  }
-}
-
-.banner-container {
-  display: flex;
-  flex-direction: column-reverse;
-  max-width: 1330px;
-  margin: 0 auto;
-}
-
-@media (min-width: 960px) {
-  .banner-container {
-    flex-direction: row;
-  }
-}
-
 .silder-container {
   display: flex;
   min-height: 490px;
@@ -852,35 +795,7 @@ p {
   margin: auto;
 }
 
-.desc-container {
-  width: 100%;
-  margin-top: 60px;
-  padding: 15px 30px;
-}
-@media (min-width: 960px) {
-  .desc-container {
-    width: 38%;
-  }
-}
-
-.desc-p {
-  margin-top: 32.8125px;
-  padding-left: 45px;
-  padding-right: 70px;
-}
-
-.desc-container h2 {
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
-  font-size: 1.8rem;
-  line-height: 1.4;
-  letter-spacing: 5px;
-  margin: 0px;
-}
-
 .comparison-slider-wrapper {
-  /* position: relative; */
   width: 100%;
   height: 100%;
   background-color: white;
@@ -895,19 +810,6 @@ p {
   overflow: hidden;
   box-sizing: border-box;
 }
-
-/* .comparison-slider > img {
-  margin: auto;
-  width: 100%;
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  inset: 0;
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
-} */
 
 .resize-frame {
   position: absolute;
@@ -989,11 +891,11 @@ p {
   left: -7px;
   margin-top: -10px;
   background-color: #555;
-}
+} */
 
 /* ///////////////////////////////////////////// info-section ///////////////////////////////////////////// */
 
-.info-section-wrapper {
+/* .info-section-wrapper {
   background-color: white;
   width: 100%;
 }
@@ -1100,9 +1002,9 @@ p {
 }
 
 .address-btn {
-  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
-    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
+  font-family: "Niramit ExtraLight Regular", "AXtManalBold Regular", "Helvetica",
+    "Arial", "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
   padding: 6px 8px;
   padding-left: 0;
   border: none;
@@ -1190,9 +1092,6 @@ p {
   display: flex;
   font-size: 0.9rem;
   align-items: center;
-  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
-    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
   margin-top: 9px;
 }
 
@@ -1205,7 +1104,6 @@ p {
   display: flex;
   padding: 30px 20px;
   justify-content: center;
-  /* padding-right: 0; */
   flex-grow: 1;
   width: 100%;
 }
@@ -1213,8 +1111,6 @@ p {
 @media (min-width: 960px) {
   .social-col {
     display: flex;
-    /* padding-left: 0; */
-    /* padding: 30px 20px; */
     justify-content: start;
     padding-right: 0;
     flex-direction: column;
@@ -1356,11 +1252,11 @@ p {
   color: #000;
   font-size: 12px;
   font-weight: 600;
-}
+} */
 
 /* ///////////////////////////////////////////// SubscriptionBanner ///////////////////////////////////////////// */
 
-.connect-banner-wrapper {
+/* .connect-banner-wrapper {
   position: relative;
   width: 100%;
   display: flex;
@@ -1437,17 +1333,16 @@ p {
 
 .connect-btn {
   display: inline-flex;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
   font-size: 1rem;
   line-height: 1.4;
   padding: 10px 30px;
   text-transform: uppercase;
   border-color: white;
   border: 1px solid;
-}
+} */
 
+/* ///////////////////////////////////////////// IntroBanner ///////////////////////////////////////////// */
+/* 
 .intro-wrapper {
   background-color: #e7e6e2;
   padding: 3rem 0rem;
@@ -1471,9 +1366,6 @@ p {
   padding: 0px 30px;
   margin: 0 auto;
 }
-.intro-desc-para {
-  font-size: 15px;
-}
 
 @media (min-width: 960px) {
   .intro-desc {
@@ -1482,7 +1374,13 @@ p {
   }
 }
 
-.dining-list-wrapper {
+.intro-desc-para {
+  font-size: 15px;
+} */
+
+/* ///////////////////////////////////////////// DiningList ///////////////////////////////////////////// */
+
+/* .dining-list-wrapper {
   background-color: #e7e6e2;
   padding: 3rem 0rem;
 }
@@ -1506,8 +1404,10 @@ p {
     align-items: center;
     overflow-y: initial;
   }
-}
+} */
 
+/* ///////////////////////////////////////////// DiningCard ///////////////////////////////////////////// */
+/* 
 .dining-card-container {
   margin: 30px;
   background-color: #fff;
@@ -1589,9 +1489,11 @@ p {
   .dining-card-row {
     width: 50%;
   }
-}
+} */
 
-.offers-wrapper {
+/* ///////////////////////////////////////////// Offers ///////////////////////////////////////////// */
+
+/* .offers-wrapper {
   background-color: #e7e6e2;
 }
 
@@ -1617,6 +1519,35 @@ p {
   margin: 15px 0px;
 }
 
+.small-card-wrapper {
+  max-width: 1300px;
+}
+.small-card-container {
+  display: flex;
+  overflow-y: auto;
+  background-color: white;
+  margin-bottom: 50px;
+}
+@media (min-width: 1300px) {
+  .small-card-container {
+    display: none;
+  }
+} */
+
+/* ///////////////////////////////////////////// Carousel ///////////////////////////////////////////// */
+
+/* .carousel-row-container {
+  margin: 15px;
+}
+
+.carousel-row-container .swiper-slide {
+  text-align: center;
+  background: #fff;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
 .swiper-button-prev {
   background-image: url(/assets/images/ArrowLeft.svg);
   background-size: contain;
@@ -1638,35 +1569,10 @@ p {
 }
 .swiper-button-next::after {
   display: none;
-}
+} */
 
-.carousel-row-container {
-  margin: 15px;
-}
-
-.small-card-wrapper {
-  max-width: 1300px;
-}
-.small-card-container {
-  display: flex;
-  overflow-y: auto;
-  background-color: white;
-  margin-bottom: 50px;
-}
-@media (min-width: 1300px) {
-  .small-card-container {
-    display: none;
-  }
-}
-
-.swiper-slide {
-  text-align: center;
-  background: #fff;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-}
-
+/* ///////////////////////////////////////////// OfferCard ///////////////////////////////////////////// */
+/* 
 .offer-card {
   max-width: 266px;
   min-width: 266px;
@@ -1723,8 +1629,10 @@ p {
 .inverse-btn:hover {
   color: #baa382;
   background-color: #fff;
-}
+} */
 
+/* ///////////////////////////////////////////// Conditions ///////////////////////////////////////////// */
+/* 
 .conditions-wrapper {
   margin: 0 auto;
   background-color: #e7e6e2;
@@ -1736,13 +1644,11 @@ p {
   padding: 25px;
   background-color: #fff;
   max-width: 1400px;
-}
+} */
 
-.intro-image-desc {
-  z-index: 1;
-}
+/* ///////////////////////////////////////////// IntroBanner ///////////////////////////////////////////// */
 
-.intro-banner-btn {
+/* .intro-image-desc {
   z-index: 1;
 }
 
@@ -1762,9 +1668,6 @@ p {
   padding: 6px 8px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   border-radius: 0px;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
   border: 1px solid transparent;
   font-size: 1.5rem;
   background-color: transparent;
@@ -1774,12 +1677,11 @@ p {
 .banner-link:active {
   background: rgba(255, 255, 255, 0.2);
   border-color: transparent;
-}
+} */
 
-.photo-booth-wrapper {
-  /* display: flex;
-  flex-direction: column; */
-  /* max-width: 1280px; */
+/* ///////////////////////////////////////////// SubscriptionBanner ///////////////////////////////////////////// */
+
+/* .photo-booth-wrapper {
   min-width: 100%;
   margin: auto;
   margin-top: 60px;
@@ -1797,9 +1699,7 @@ p {
   max-width: 50%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   padding-top: 49px;
-  /* padding-right: 75px; */
   padding-bottom: 22.5px;
 }
 
@@ -1830,9 +1730,6 @@ p {
 
 .booth-btn {
   display: inline-flex;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
   font-size: 1rem;
   line-height: 1.4;
   padding: 10px 30px;
@@ -1850,19 +1747,6 @@ p {
   min-height: 100%;
 }
 
-/* .simplebar-vertical > .simplebar-scrollbar:before {
-  opacity: 1;
-  top: 3px;
-  bottom: 3px;
-  left: -9px;
-  width: 20px;
-  height: 20px;
-  border-radius: 0;
-  background-color: white;
-  transform: rotate(45deg);
-  transition: all 0.1s ease-in-out;
-} */
-
 .simplebar-vertical > .simplebar-scrollbar {
   max-height: 50px;
 }
@@ -1876,7 +1760,6 @@ p {
 }
 
 .simplebar-track.simplebar-vertical {
-  /* height: 186.5%; */
   left: 1px;
   overflow: visible;
   background-color: rgb(186, 163, 130);
@@ -1885,7 +1768,6 @@ p {
 
 .muti-col-frame {
   display: inline-flex;
-  /* padding-left: 15px; */
   min-width: 810px;
   max-height: 500px;
 }
@@ -1907,14 +1789,18 @@ p {
   inset: 0;
   overflow: hidden;
   object-fit: cover;
-}
+} */
 
-.icon-entry {
+/* ///////////////////////////////////////////// IconEntry ///////////////////////////////////////////// */
+
+/* .icon-entry {
   display: flex;
   align-items: center;
-}
+} */
 
-.accom-s-card-container {
+/* ///////////////////////////////////////////// AccomCardSmall ///////////////////////////////////////////// */
+
+/* .accom-s-card-container {
   width: 325px;
   background-color: #fff;
   min-height: 650px;
@@ -1938,10 +1824,13 @@ p {
   font-size: 1.2rem;
   line-height: 1.4;
   text-transform: capitalize;
+  font-weight: 100;
   margin: 15px 0px;
-}
+} */
 
-.room-cards-wrapper {
+/* ///////////////////////////////////////////// RoomCards ///////////////////////////////////////////// */
+
+/* .room-cards-wrapper {
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -1952,9 +1841,11 @@ p {
   gap: 25px;
   justify-content: center;
   margin: 15px 0px;
-}
+} */
 
-.accom-button-area {
+/* ///////////////////////////////////////////// AccomCardBig ///////////////////////////////////////////// */
+
+/* .accom-button-area {
   position: absolute;
   bottom: 12px;
   right: 15px;
@@ -1988,9 +1879,11 @@ p {
 
 .accom-b-card-bottom {
   padding: 15px;
-}
+} */
 
-.policies-wrapper {
+/* ///////////////////////////////////////////// PolicydropDown ///////////////////////////////////////////// */
+
+/* .policies-wrapper {
   margin: 0 auto;
   max-width: 1380px;
   padding-top: 15px;
@@ -2009,9 +1902,9 @@ p {
   cursor: pointer;
   background-color: #fff;
   margin: 0px;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
+  font-family: "Reforma_1969", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
 }
 
 .policy-title::before {
@@ -2042,27 +1935,11 @@ p {
 .policy.open .policy-title::before {
   content: "-";
   font-size: 30px;
-}
+} */
 
-.exp-wrapper {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 50px 0px;
-}
+/* ///////////////////////////////////////////// ExperienceCard ///////////////////////////////////////////// */
 
-.exp-cards-container {
-  display: flex;
-  justify-content: start;
-  background-color: #fff;
-  padding: 0px 20px;
-  padding-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 960px) {
-}
-
-.exp-card-title {
+/* .exp-card-title {
   text-transform: capitalize;
   font-size: 1.4rem;
   margin-bottom: 15px;
@@ -2124,9 +2001,11 @@ p {
 
 .exp-swiper > .swiper-button-next {
   filter: invert(1);
-}
+} */
 
-.filter-nav-wrapper {
+/* ///////////////////////////////////////////// ExpFilterNav ///////////////////////////////////////////// */
+
+/* .filter-nav-wrapper {
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -2186,7 +2065,24 @@ p {
   font-size: 10px;
 }
 
-.highlight-wrapper {
+.exp-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 50px 0px;
+}
+
+.exp-cards-container {
+  display: flex;
+  justify-content: start;
+  background-color: #fff;
+  padding: 0px 20px;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+} */
+
+/* ///////////////////////////////////////////// HighHight Section ///////////////////////////////////////////// */
+
+/* .highlight-wrapper {
   position: relative;
   flex-direction: column;
   justify-content: center;
@@ -2197,7 +2093,6 @@ p {
   max-width: 100%;
   min-height: 100%;
   max-height: 100%;
-  /* height: 800px; */
 }
 
 .hightlight-bg {
@@ -2280,7 +2175,6 @@ p {
 .hightlight-swiper .img-container {
   width: 100%;
   position: relative;
-  /* margin-bottom: 45px; */
   margin-bottom: 30px;
   transition-duration: 0.8s;
 }
@@ -2358,8 +2252,6 @@ p {
   padding-bottom: 10.5px;
   background-color: #baa382;
   text-transform: uppercase;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans;
   font-size: 1rem;
 }
 
@@ -2395,9 +2287,11 @@ p {
 .silder-frame .swiper-button-prev {
   transform: rotate(90deg);
   left: -10px;
-}
+} */
 
-.banyanfooter {
+/* ///////////////////////////////////////////// Footer Section ///////////////////////////////////////////// */
+
+/* .banyanfooter {
   background-color: #baa382;
 }
 
@@ -2440,9 +2334,6 @@ p {
   box-sizing: border-box;
   align-items: center;
   padding: 10.5px 29px;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
 }
 
 .footer-separator {
@@ -2460,9 +2351,10 @@ p {
   padding: 15px 30px;
   max-width: 1280px;
   margin: auto;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
+}
+
+.footer-mid a {
+  text-transform: capitalize;
 }
 
 .footer-mid .mid-container .min-column {
@@ -2476,9 +2368,9 @@ p {
 .mid-container span {
   display: inline-flex;
   color: white;
-  font-family: Niramit, "AXtManalBold Regular", Helvetica, Arial,
+  font-family: "Niramit Regular", "AXtManalBold Regular", Helvetica, Arial,
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
+    "Hiragino Sans", "sans-serif";
   font-size: 1rem;
   padding-top: 0;
   padding-bottom: 0;
@@ -2507,7 +2399,6 @@ p {
 }
 
 .copyright p {
-  font-weight: 600;
   font-size: 0.9333333333333333rem;
   line-height: 1.57;
   margin-top: 14px;
@@ -2530,9 +2421,9 @@ p {
 .footer-bottom li {
   margin: 0;
   margin-right: 15px;
-  font-family: Niramit, "AXtManalBold Regular", Helvetica, Arial,
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
+    "Hiragino Sans", "sans-serif";
   font-weight: 500;
   font-size: 0.9333333333333333rem;
   line-height: 1.57;
@@ -2558,9 +2449,10 @@ p {
 
 .footer-bottom-R span {
   margin: 0;
-  font-family: Niramit, "AXtManalBold Regular", Helvetica, Arial,
+  margin-right: 10px;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
+    "Hiragino Sans", "sans-serif";
   font-weight: 500;
   font-size: 0.9333333333333333rem;
   line-height: 1.57;
@@ -2568,17 +2460,52 @@ p {
 
 .footer-bottom-R .footer-logo2 {
   width: 80px;
-}
+} */
 
-.reservation-wrapper {
+/* ///////////////////////////////////////////// Reservation ///////////////////////////////////////////// */
+
+/* .reservation-wrapper {
   background-color: #fff;
-  font-family: Niramit Regular, sans-serif;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
 }
 
 .reservation-nav-bar-wrapper {
   background-color: white;
   margin: 0 auto;
   max-width: 1260px;
+}
+
+.avail-cards-container {
+  margin: 15px auto;
+  max-width: 1260px;
+}
+
+.avail-results-container {
+  display: flex;
+}
+
+.results-left {
+  width: 70%;
+}
+
+.results-right {
+  width: 30%;
+} */
+
+/* ///////////////////////////////////////////// ReservationNavBar ///////////////////////////////////////////// */
+
+/* .reservation-nav-bar-container {
+  max-width: 1260px;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.reservation-brand {
+  display: flex;
+  align-items: center;
 }
 
 .hamburger {
@@ -2596,19 +2523,57 @@ p {
   }
 }
 
-.reservation-brand {
-  display: flex;
-  align-items: center;
+.nav-brand-name {
+  text-transform: uppercase;
 }
 
-.reservation-nav-bar-container {
-  max-width: 1260px;
+.res-navbar-left {
   display: flex;
-
-  justify-content: space-between;
 }
 
-.sidebar-container {
+.res-navbar-right {
+  display: none;
+  padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .res-navbar-right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.res-navbar-right > div {
+  height: 100%;
+}
+
+.res-navbar-right > a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #575c5a;
+  text-transform: uppercase;
+  padding-right: 8px;
+}
+
+.res-navbar-right > a:hover {
+  color: #baa382;
+}
+
+.mid-lg-only {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .mid-lg-only {
+    display: flex;
+    padding-right: 5px;
+  }
+} */
+
+/* ///////////////////////////////////////////// ReservationSideBar ///////////////////////////////////////////// */
+
+/* .sidebar-container {
   position: fixed;
   inset: 0;
   background-color: rgba(255, 255, 255, 0.5);
@@ -2620,69 +2585,11 @@ p {
   visibility: hidden;
 }
 
-.nav-brand-name {
-  text-transform: uppercase;
-}
-.res-navbar-left {
-  display: flex;
-}
-
-.res-navbar-right {
-  display: none;
-  padding-right: 10px;
-}
-@media (min-width: 768px) {
-  .res-navbar-right {
-    display: flex;
-    align-items: center;
-  }
-}
-.res-navbar-right > div {
-  height: 100%;
-}
-
-.res-navbar-right > a {
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 15px;
-  color: #575c5a;
-  text-transform: uppercase;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans;
-  padding-right: 8px;
-}
-
-.res-navbar-right > a:hover {
-  color: #baa382;
-}
-
-.mid-lg-only {
-  display: none;
-}
-@media (min-width: 960px) {
-  .mid-lg-only {
-    display: flex;
-    padding-right: 5px;
-  }
-}
-
 .show-sidebar {
   z-index: 99;
   opacity: 1;
   visibility: visible;
   margin-left: 0;
-}
-
-.close-btn {
-  background: transparent;
-  border-color: transparent;
-  width: 65px;
-  min-height: 65px;
-  cursor: pointer;
-  color: #173f35;
-  display: grid;
-  place-items: center;
-  font-size: 18px;
 }
 
 .content {
@@ -2713,9 +2620,9 @@ p {
 
 .sidebar-brand {
   font-size: 18px;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
+  font-family: "Reforma_1969", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
 }
 
 .sidebar-nav-links {
@@ -2733,9 +2640,6 @@ p {
   padding-left: 2.5rem;
   text-transform: uppercase;
   color: #baa382;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
 }
 
 .sidebar-nav-links > a:hover {
@@ -2753,9 +2657,25 @@ p {
 
 .phone-icon {
   margin-right: 5px;
+} */
+
+/* /////////////////////////////////////////////  ///////////////////////////////////////////// */
+
+.close-btn {
+  background: transparent;
+  border-color: transparent;
+  width: 65px;
+  min-height: 65px;
+  cursor: pointer;
+  color: #173f35;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
 }
 
-.res-search-wrapper {
+/* ///////////////////////////////////////////// ReSearch ///////////////////////////////////////////// */
+
+/* .res-search-wrapper {
   margin: 0 auto;
   background-color: #fff;
 }
@@ -2779,6 +2699,11 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
+.stay-info {
+  text-align: end;
+}
+
 .bottom-guest-bar {
   text-align: left;
   display: flex;
@@ -2793,16 +2718,9 @@ p {
 .guest-count-bar {
   color: #000;
 }
+
 .guest-count-bar-end {
   width: 70px;
-}
-
-.stay-info {
-  text-align: end;
-}
-
-.date-range-picker {
-  width: 100%;
 }
 
 .no-check-in {
@@ -2846,17 +2764,17 @@ p {
   max-width: 1260px;
 }
 
-.msg-content {
-  display: flex;
-  align-items: center;
-}
-
 .warning-msg-container {
   background: #fff;
   border: 1px solid #b9bcb3;
   border-radius: 0;
   padding: 1rem;
   margin: 50px 0px;
+}
+
+.msg-content {
+  display: flex;
+  align-items: center;
 }
 
 .icon-circle {
@@ -2884,6 +2802,7 @@ p {
   margin: 0 auto;
   background-color: #fff;
 }
+
 @media (min-width: 960px) {
   .lg-only {
     display: block;
@@ -2895,12 +2814,6 @@ p {
   border: 1px solid #baa382;
 }
 
-.lg-date-range {
-  display: flex;
-  align-items: center;
-  margin-left: 15px;
-}
-
 .guest-number {
   min-width: 40%;
   font-size: 18px;
@@ -2910,13 +2823,19 @@ p {
   margin-left: 15px;
 }
 
+.lg-date-range {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
 .search-title {
   font-weight: bold;
   font-size: 15px;
   color: #baa382;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
+  font-family: "Reforma_1969", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
 }
 
 .additional-search {
@@ -2926,59 +2845,6 @@ p {
   padding: 10px;
 }
 
-.additional-search-container {
-  display: none;
-  background-color: #eee;
-}
-.show-dropdown {
-  display: block;
-}
-.sp-rates-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-@media (min-width: 960px) {
-  .sp-rates-container {
-    flex-direction: row;
-  }
-}
-
-.additional-search-container input {
-  padding: 5px;
-  margin: 10px;
-  font-size: 20px;
-  border: 1px solid #baa382;
-  flex-grow: 1;
-  font-family: Niramit Regular, "AXtManalBold Regular", Helvetica, Arial,
-    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
-}
-
-@media (min-width: 960px) {
-  .additional-search-container input {
-    width: 50%;
-  }
-}
-
-.search-bottons {
-  display: flex;
-  justify-content: end;
-  background-color: #eee;
-  padding: 10px;
-}
-.guest-count-button-area {
-  position: relative;
-}
-
-.guest-count-button {
-  background-color: transparent;
-  border: 0px;
-  font-size: 16px;
-  font-family: Niramit Regular, "AXtManalBold Regular", Helvetica, Arial,
-    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
-}
 
 .special-rate-btn {
   background-color: #173f35;
@@ -2989,9 +2855,9 @@ p {
   padding: 10px;
   margin-top: 10px;
   font-size: 17px;
-  font-family: Niramit Regular, "AXtManalBold Regular", Helvetica, Arial,
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
+    "Hiragino Sans", "sans-serif";
   display: grid;
   place-items: center;
 }
@@ -3006,13 +2872,17 @@ p {
   justify-content: end;
 }
 
-.backdrop {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.33);
-  position: absolute;
-  top: 0;
-  left: 0;
+.guest-count-button-area {
+  position: relative;
+}
+
+.guest-count-button {
+  background-color: transparent;
+  border: 0px;
+  font-size: 16px;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
 }
 
 .dropdown-select-container {
@@ -3026,6 +2896,7 @@ p {
   z-index: 5;
   padding: 0px 10px;
 }
+
 .dropdown-select-container.open {
   display: block;
 }
@@ -3052,24 +2923,54 @@ p {
   border: 0px;
 }
 
-.avail-cards-container {
-  margin: 15px auto;
-  max-width: 1260px;
+.additional-search-container {
+  display: none;
+  background-color: #eee;
 }
 
-.avail-results-container {
+.show-dropdown {
+  display: block;
+}
+
+.sp-rates-container {
   display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.results-left {
-  width: 70%;
+@media (min-width: 960px) {
+  .sp-rates-container {
+    flex-direction: row;
+  }
 }
 
-.results-right {
-  width: 30%;
+.additional-search-container input {
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+  border: 1px solid #baa382;
+  flex-grow: 1;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
 }
 
-.avail-card {
+@media (min-width: 960px) {
+  .additional-search-container input {
+    width: 50%;
+  }
+}
+
+.search-bottons {
+  display: flex;
+  justify-content: end;
+  background-color: #eee;
+  padding: 10px;
+} */
+
+/* ///////////////////////////////////////////// ReservationStepper ///////////////////////////////////////////// */
+
+/* .avail-card {
   max-width: 835px;
   background-color: #e7e6e2;
   border: 1px solid #baa382;
@@ -3182,24 +3083,6 @@ p {
   height: auto;
 }
 
-.more-rates-button {
-  background-color: transparent;
-  border: 0px;
-
-  font-size: 16px;
-  padding: 5px 5px;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
-  color: #baa382;
-  text-decoration: underline;
-  transition: color 150ms;
-}
-
-.more-rates-button:hover {
-  color: #3b2e0a;
-}
-
 .avail-card-offer-left {
   width: 75%;
 }
@@ -3225,9 +3108,11 @@ p {
   font-weight: bold;
   margin-bottom: 5px;
 }
+
 .avail-card-offer-desc {
   font-size: 13.5px;
 }
+
 .tax-desc {
   color: #baa382;
   font-size: 13px;
@@ -3243,9 +3128,9 @@ p {
   color: white;
   padding: 10px 5px;
   font-size: 13px;
-  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
-    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans,
-    sans-serif;
+  font-family: "Reforma_1969", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
   text-transform: uppercase;
   transition: background-color 150ms;
   cursor: pointer;
@@ -3257,113 +3142,22 @@ p {
   color: #baa382;
 }
 
-.avail-stay-title {
-  font-size: 21px;
-  margin: 0px 0px 10px 0px;
-  color: #173f35;
-  letter-spacing: 0px;
-  text-transform: capitalize;
-}
+.more-rates-button {
+  background-color: transparent;
+  border: 0px;
 
-.avail-stay-info {
-  background-color: #e7e6e2;
-  border: 1px solid #baa382;
-  margin: 20px 0px;
-  padding: 20px;
-  max-width: 410px;
   font-size: 16px;
-}
-
-.avail-stay-check-time {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #baa382;
-  display: flex;
-}
-
-.avail-stay-check-time > div > p {
-  color: #173f35;
-}
-
-.stay-check-time-title {
-  color: #173f35;
-  letter-spacing: 0px;
-  text-transform: capitalize;
-  margin: 0px;
-}
-
-.avail-stay-check-time > div {
-  padding-right: 15px;
-}
-
-.avail-stay-date {
-  margin-top: 10px;
-  color: #173f35;
-}
-
-.avail-stay-guest {
-  color: #173f35;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #baa382;
-}
-
-.avail-stay-total-fee {
-  font-size: 20px;
-  padding: 10px 0px;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  color: #173f35;
-}
-
-.avail-stay-total-fee-right {
-  display: flex;
-  flex-direction: column;
-}
-
-.avail-stay-total-fee-tax-stat {
-  font-size: 13.5px;
+  padding: 5px 5px;
+  font-family: "Reforma_1969", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
   color: #baa382;
-}
-
-.reservation-item-container {
-  border-bottom: 1px solid #baa382;
-}
-.reservation-item {
-  display: flex;
-  color: #173f35;
-  justify-content: space-between;
-}
-
-.reservation-item-suite {
   text-decoration: underline;
+  transition: color 150ms;
+}
+
+.more-rates-button:hover {
   color: #3b2e0a;
-}
-.reservation-item-suite-type {
-  text-transform: uppercase;
-}
-
-.reservation-item-left {
-  width: 70%;
-}
-
-.reservation-item-right {
-  font-weight: bold;
-}
-
-.reservation-item-nights-button {
-  text-decoration: underline;
-  color: #baa382;
-  font-size: 13.5px;
-  margin-bottom: 10px;
-}
-
-.reservation-item-offer {
-  margin-bottom: 10px;
-}
-
-.reservation-item-tax {
-  margin-bottom: 10px;
 }
 
 .guest-details-wrapper {
@@ -3426,18 +3220,146 @@ p {
   margin-bottom: 10px;
 }
 
-.stepper-wrapper {
-  max-width: 1260px;
-  margin: 15px auto;
-}
-
 .acknow-container {
   background-color: #eee;
   padding: 10px;
   max-width: 835px;
   border: 1px solid #baa382;
   color: #173f35;
-  font-family: Niramit Regular, "AXtManalBold Regular", Helvetica, Arial,
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
+    "Hiragino Sans", "sans-serif";
+}
+
+.stepper-wrapper {
+  max-width: 1260px;
+  margin: 15px auto;
+} */
+
+/* ///////////////////////////////////////////// ReservationStayinfo ///////////////////////////////////////////// */
+/* 
+.avail-stay-info {
+  background-color: #e7e6e2;
+  border: 1px solid #baa382;
+  margin: 20px 0px;
+  padding: 20px;
+  max-width: 410px;
+  font-size: 16px;
+}
+
+.avail-stay-title {
+  font-size: 21px;
+  margin: 0px 0px 10px 0px;
+  color: #173f35;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+.avail-stay-check-time {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #baa382;
+  display: flex;
+}
+
+.avail-stay-check-time > div > p {
+  color: #173f35;
+}
+
+.stay-check-time-title {
+  color: #173f35;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.avail-stay-check-time > div {
+  padding-right: 15px;
+}
+
+.avail-stay-date {
+  margin-top: 10px;
+  color: #173f35;
+}
+
+.avail-stay-guest {
+  color: #173f35;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #baa382;
+}
+
+.reservation-item-container {
+  border-bottom: 1px solid #baa382;
+}
+
+.reservation-item {
+  display: flex;
+  color: #173f35;
+  justify-content: space-between;
+}
+
+.reservation-item-suite {
+  text-decoration: underline;
+  color: #3b2e0a;
+}
+
+.reservation-item-suite-type {
+  text-transform: uppercase;
+}
+
+.reservation-item-offer {
+  margin-bottom: 10px;
+}
+
+.reservation-item-left {
+  width: 70%;
+}
+
+.reservation-item-tax {
+  margin-bottom: 10px;
+}
+
+.reservation-item-right {
+  font-weight: bold;
+}
+
+.reservation-item-nights-button {
+  text-decoration: underline;
+  color: #baa382;
+  font-size: 13.5px;
+  margin-bottom: 10px;
+}
+
+.avail-stay-total-fee {
+  font-size: 20px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #173f35;
+}
+
+.avail-stay-total-fee-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.avail-stay-total-fee-tax-stat {
+  font-size: 13.5px;
+  color: #baa382;
+} */
+
+/* /////////////////////////////////////////////  ///////////////////////////////////////////// */
+
+.date-range-picker {
+  width: 100%;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  top: 0;
+  left: 0;
 }

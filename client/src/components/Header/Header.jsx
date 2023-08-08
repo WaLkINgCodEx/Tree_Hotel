@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import NavBarMobile from "./NavBarMobile";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Li from "./Li";
+import "./style/header.css";
 
 export default function Header(props) {
   const isMobile = useMediaQuery("(max-width: 1280px)");

@@ -1,0 +1,40 @@
+.offers-wrapper {
+  background-color: #e7e6e2;
+}
+
+@media (min-width: 1300px) {
+  .offers-wrapper {
+    margin: 0 auto;
+  }
+}
+
+.carousel-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+@media (min-width: 1300px) {
+  .carousel-container {
+    display: flex;
+  }
+}
+.carousel-container .swiper {
+  width: 1450px;
+  margin: 15px 0px;
+}
+
+.small-card-wrapper {
+  max-width: 1300px;
+}
+.small-card-container {
+  display: flex;
+  overflow-y: auto;
+  background-color: white;
+  margin-bottom: 50px;
+}
+@media (min-width: 1300px) {
+  .small-card-container {
+    display: none;
+  }
+}

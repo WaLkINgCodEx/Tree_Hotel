@@ -17,8 +17,8 @@ export default function NavBarMobile() {
   return (
     <>
       <Box className="nav-bar-top-m" sx={{ flexGrow: 1, height: 47 }}>
-        <Grid container spacing={0} disableGutters="false">
-          <Grid className="nav-m-l" item xs={5}>
+        <Grid container spacing={0} disablegutters="true">
+          <Grid className="nav-m-l" disablegutters="true" item xs={5}>
             <Button
               onClick={toggleSidebar}
               color="inherit"
@@ -28,7 +28,7 @@ export default function NavBarMobile() {
               {!showSidebar ? <IconHamburger /> : <IconClose />}
             </Button>
           </Grid>
-          <Grid className="nav-m-mid" item xs={2}>
+          <Grid className="nav-m-mid" disablegutters="true" item xs={2}>
             <Button>
               <span>
                 <img
@@ -38,7 +38,7 @@ export default function NavBarMobile() {
               </span>
             </Button>
           </Grid>
-          <Grid className="nav-m-r" item xs={5}>
+          <Grid className="nav-m-r" disablegutters="true" item xs={5}>
             <Button
               sx={{
                 ":hover": {
