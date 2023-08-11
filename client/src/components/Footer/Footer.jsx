@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import ColumnMenu from "./ColumnMenu";
+import { createTheme } from "@mui/material/styles";
 import "./style/footer.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -11,6 +12,18 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: "left",
   color: "white",
 }));
+
+const footerBottomBP = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1280,
+    },
+  },
+});
 
 export default function Footer(props) {
   return (
@@ -49,23 +62,23 @@ export default function Footer(props) {
       <Box className="footer-mid" sx={{ flexGrow: 1 }}>
         <Grid className="mid-container" container spacing={0}>
           <Grid item xs={12} lg={3}>
-            <ColumnMenu column={props.footerMidData.column_1} />
+            <ColumnMenu columnTopic={props.footerMidData.column_1} />
           </Grid>
           <Grid item xs={12} lg={3}>
-            <ColumnMenu column={props.footerMidData.column_2} />
+            <ColumnMenu columnTopic={props.footerMidData.column_2} />
           </Grid>
           <Grid item xs={12} lg={3}>
-            <ColumnMenu column={props.footerMidData.column_3} />
+            <ColumnMenu columnTopic={props.footerMidData.column_3} />
           </Grid>
           <Grid item xs={12} lg={3}>
-            <ColumnMenu column={props.footerMidData.column_4} />
+            <ColumnMenu columnTopic={props.footerMidData.column_4} />
           </Grid>
         </Grid>
       </Box>
       <hr className="footer-separator" />
       <Box className="footer-bottom" sx={{ flexGrow: 1 }}>
         <Grid className="bottom-container" container spacing={0}>
-          <Grid item xs={12} lg={5}>
+          <Grid item xs={12} xl={5} theme={footerBottomBP}>
             <span className="copyright">
               <p>
                 Copyright © 2023 - Banyan Tree Hotels & Resorts. All rights
@@ -79,7 +92,13 @@ export default function Footer(props) {
             </ul>
           </Grid>
 
-          <Grid className="footer-bottom-C" item xs={12} lg={2}>
+          <Grid
+            className="footer-bottom-C"
+            item
+            xs={12}
+            xl={2}
+            theme={footerBottomBP}
+          >
             <a href="">
               <img
                 className="footer-logo"
@@ -89,7 +108,13 @@ export default function Footer(props) {
             </a>
           </Grid>
 
-          <Grid className="footer-bottom-R" item xs={12} lg={5}>
+          <Grid
+            className="footer-bottom-R"
+            item
+            xs={12}
+            xl={5}
+            theme={footerBottomBP}
+          >
             <span>In partnership with</span>
             <img
               className="footer-logo2"

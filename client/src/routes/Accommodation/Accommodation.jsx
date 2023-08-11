@@ -35,6 +35,7 @@ const Accommodation = () => {
         hotel="Accommodation"
         navURL="accommodation"
         img="/assets/images/header_img/lobby_3.webp"
+        className="darkfilter"
       />
       <IntroBanner title={title} paragraphs={paragraphs} />
       <RoomCards />
