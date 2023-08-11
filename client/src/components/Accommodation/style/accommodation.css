@@ -58,9 +58,10 @@
   right: 15px;
   left: 15px;
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 .accom-btn {
-  margin-top: 5px;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -130,13 +131,13 @@
   font-size: 15px;
   text-align: justify;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 0.3s;
   padding: 0px 30px;
   background-color: #fff;
 }
 
 .policy.open .policy-details {
-  height: 6rem;
+  height: 10rem;
 }
 
 .policy.open .policy-title::before {

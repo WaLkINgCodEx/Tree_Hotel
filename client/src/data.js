@@ -181,6 +181,24 @@ export const highlightData = [
       "Tantalisingly located on the tropical shores of southern Thailand’s Andaman coast, visitors to Krabi are drawn to its colourful culture and famed hospitality, as well as its myriad attractions - hot springs, a wildlife sanctuary, sea caves, flourishing coral reefs and exotic marine life, limestone cliffs to entice rock climbers, and the conserved emerald waters of marine national parks, including the famous island paradises of Koh Phi Phi and Koh Hong.",
     image: "/assets/images/highlight_img/highlight_3.webp",
   },
+  {
+    name: "Wellbeing Sanctuary",
+    paragraph:
+      "Our philosophy is that we are all interconnected, and that wellbeing is about the connection to self and the relationship of the self with others and nature. It is in tapping this connection that one discovers balancing points, appreciates the here and now, and finds ways to contribute and improve one’s state of being. We believe that wellbeing should be inspiring and accessible to all. Our wellbeing experiences enable you to design and combine a leisure vacation with wellbeing elements in a flexible and open way.",
+    image: "/assets/images/highlight_img/highlight_1.webp",
+  },
+  {
+    name: "Destination Dining",
+    paragraph:
+      "A special moment just for you: a private table for two on the beach, sitting under the stars, secluded and intimate. Banyan Tree Krabi serves up a magnificent dinner and a memorable experience.",
+    image: "/assets/images/highlight_img/highlight_2.webp",
+  },
+  {
+    name: "Marine Excursions",
+    paragraph:
+      "Tantalisingly located on the tropical shores of southern Thailand’s Andaman coast, visitors to Krabi are drawn to its colourful culture and famed hospitality, as well as its myriad attractions - hot springs, a wildlife sanctuary, sea caves, flourishing coral reefs and exotic marine life, limestone cliffs to entice rock climbers, and the conserved emerald waters of marine national parks, including the famous island paradises of Koh Phi Phi and Koh Hong.",
+    image: "/assets/images/highlight_img/highlight_3.webp",
+  },
 ];
 
 export const facilities = [
@@ -1019,120 +1037,249 @@ export const socialMediaSVG = [
   },
 ];
 
+// export const footerMidData = {
+//   column_1: [
+//     {
+//       topic: "OUR BRANDS",
+//       link: "",
+//       className: "visible is-head",
+//     },
+//     {
+//       topic: "Banyan Tree Escape",
+//       link: "",
+//     },
+//     {
+//       topic: "Banyan Tree Veya",
+//       link: "",
+//     },
+//     {
+//       topic: "Angsana",
+//       link: "",
+//     },
+//     {
+//       topic: "Cassia",
+//       link: "",
+//     },
+//     {
+//       topic: "Dhawa",
+//       link: "",
+//     },
+//     {
+//       topic: "Folio",
+//       link: "",
+//     },
+//     {
+//       topic: "Garrya",
+//       link: "",
+//     },
+//     {
+//       topic: "Homm",
+//       link: "",
+//     },
+//     {
+//       topic: "Laguna",
+//       link: "",
+//     },
+//   ],
+//   column_2: [
+//     {
+//       topic: "OUR PRODUCTS",
+//       link: "",
+//       className: "visible is-head",
+//     },
+//     {
+//       topic: "Essentials",
+//       link: "",
+//     },
+//     {
+//       topic: "e-Gifting",
+//       link: "",
+//     },
+//   ],
+//   column_3: [
+//     {
+//       topic: "CORPORATE SITE",
+//       link: "",
+//       className: "visible is-head",
+//     },
+//     {
+//       topic: "ASSOCIATED SITES",
+//       link: "",
+//       className: "visible is-head",
+//     },
+//     {
+//       topic: "banyan Tree Global Foundation",
+//       link: "",
+//     },
+//     {
+//       topic: "Business Development",
+//       link: "",
+//     },
+//     {
+//       topic: "Private Collection",
+//       link: "",
+//     },
+//     {
+//       topic: "Sanctuary Club",
+//       link: "",
+//     },
+//     {
+//       topic: "Careers",
+//       link: "",
+//     },
+//   ],
+//   column_4: [
+//     {
+//       topic: "CONTACT US",
+//       link: "",
+//       className: "visible is-head",
+//     },
+//     {
+//       topic: "Brand Story",
+//       link: "",
+//     },
+//     {
+//       topic: "MEDIA",
+//       link: "",
+//       className: "visible is-head",
+//     },
+//     {
+//       topic: "Press Releases",
+//       link: "",
+//     },
+//     {
+//       topic: "Under the Banyan Tree",
+//       link: "",
+//     },
+//   ],
+// };
+
 export const footerMidData = {
   column_1: [
-    {
-      topic: "OUR BRANDS",
-      link: "",
-      className: "visible is-head",
-    },
-    {
-      topic: "Banyan Tree Escape",
-      link: "",
-    },
-    {
-      topic: "Banyan Tree Veya",
-      link: "",
-    },
-    {
-      topic: "Angsana",
-      link: "",
-    },
-    {
-      topic: "Cassia",
-      link: "",
-    },
-    {
-      topic: "Dhawa",
-      link: "",
-    },
-    {
-      topic: "Folio",
-      link: "",
-    },
-    {
-      topic: "Garrya",
-      link: "",
-    },
-    {
-      topic: "Homm",
-      link: "",
-    },
-    {
-      topic: "Laguna",
-      link: "",
-    },
+    [
+      {
+        topic: "OUR BRANDS",
+        link: "",
+        className: "visible is-head",
+      },
+      {
+        topic: "Banyan Tree Escape",
+        link: "",
+      },
+      {
+        topic: "Banyan Tree Veya",
+        link: "",
+      },
+      {
+        topic: "Angsana",
+        link: "",
+      },
+      {
+        topic: "Cassia",
+        link: "",
+      },
+      {
+        topic: "Dhawa",
+        link: "",
+      },
+      {
+        topic: "Folio",
+        link: "",
+      },
+      {
+        topic: "Garrya",
+        link: "",
+      },
+      {
+        topic: "Homm",
+        link: "",
+      },
+      {
+        topic: "Laguna",
+        link: "",
+      },
+    ],
   ],
   column_2: [
-    {
-      topic: "OUR PRODUCTS",
-      link: "",
-      className: "visible is-head",
-    },
-    {
-      topic: "Essentials",
-      link: "",
-    },
-    {
-      topic: "e-Gifting",
-      link: "",
-    },
+    [
+      {
+        topic: "OUR PRODUCTS",
+        link: "",
+        className: "visible is-head",
+      },
+      {
+        topic: "Essentials",
+        link: "",
+      },
+      {
+        topic: "e-Gifting",
+        link: "",
+      },
+    ],
   ],
   column_3: [
-    {
-      topic: "CORPORATE SITE",
-      link: "",
-      className: "visible is-head",
-    },
-    {
-      topic: "ASSOCIATED SITES",
-      link: "",
-      className: "visible is-head",
-    },
-    {
-      topic: "banyan Tree Global Foundation",
-      link: "",
-    },
-    {
-      topic: "Business Development",
-      link: "",
-    },
-    {
-      topic: "Private Collection",
-      link: "",
-    },
-    {
-      topic: "Sanctuary Club",
-      link: "",
-    },
-    {
-      topic: "Careers",
-      link: "",
-    },
+    [
+      {
+        topic: "CORPORATE SITE",
+        link: "",
+        className: "visible is-head",
+      },
+    ],
+    [
+      {
+        topic: "ASSOCIATED SITES",
+        link: "",
+        className: "visible is-head",
+      },
+      {
+        topic: "banyan Tree Global Foundation",
+        link: "",
+      },
+      {
+        topic: "Business Development",
+        link: "",
+      },
+      {
+        topic: "Private Collection",
+        link: "",
+      },
+      {
+        topic: "Sanctuary Club",
+        link: "",
+      },
+      {
+        topic: "Careers",
+        link: "",
+      },
+    ],
   ],
   column_4: [
-    {
-      topic: "CONTACT US",
-      link: "",
-      className: "visible is-head",
-    },
-    {
-      topic: "Brand Story",
-      link: "",
-    },
-    {
-      topic: "MEDIA",
-      link: "",
-      className: "visible is-head",
-    },
-    {
-      topic: "Press Releases",
-      link: "",
-    },
-    {
-      topic: "Under the Banyan Tree",
-      link: "",
-    },
+    [
+      {
+        topic: "CONTACT US",
+        link: "",
+        className: "visible is-head",
+      },
+      {
+        topic: "Brand Story",
+        link: "",
+      },
+    ],
+    [
+      {
+        topic: "MEDIA",
+        link: "",
+        className: "visible is-head",
+      },
+      {
+        topic: "Press Releases",
+        link: "",
+      },
+      {
+        topic: "Under the Banyan Tree",
+        link: "",
+      },
+    ],
   ],
 };
 

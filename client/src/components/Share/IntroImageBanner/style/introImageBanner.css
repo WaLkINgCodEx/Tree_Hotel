@@ -22,9 +22,13 @@
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", "sans-serif"; */
   border: 1px solid transparent;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   background-color: transparent;
   color: white;
+}
+
+.banner-link .fac-icon {
+  margin-right: 5px;
 }
 
 .banner-link:active {

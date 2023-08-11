@@ -16,8 +16,12 @@ export default function Header(props) {
       </div>
 
       <div className="heroView">
-        <div className="heroFrame">
-          <img src={props.img}></img>
+        <div
+          className={
+            props.className ? props.className + " heroFrame" : "heroFrame"
+          }
+        >
+          <img className={props.className} src={props.img}></img>
         </div>
         <div className="heroText">
           <h1>{props.hotel}</h1>
