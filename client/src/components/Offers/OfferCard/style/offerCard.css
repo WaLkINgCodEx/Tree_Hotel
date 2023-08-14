@@ -1,8 +1,10 @@
 .offer-card {
   max-width: 266px;
   min-width: 266px;
-  padding: 15px;
-  margin: 15px;
+  /* padding: 15px;
+  margin: 15px; */
+  /* margin-top: 45px;
+  margin-bottom: 60px; */
   display: grid;
   flex-direction: column;
   background-color: #fff;
@@ -10,10 +12,11 @@
 
 @media (min-width: 1300px) {
   .offer-card {
-    max-width: 396px;
-    min-width: 396px;
+    /* min-width: 420px;
+    max-width: 420px; */
+    min-width: 100%;
     min-height: 800px;
-    margin: 40px;
+    /* margin: 40px; */
   }
 }
 .offer-image-container {
@@ -40,6 +43,15 @@
 
 .offer-desc {
   text-align: left;
+}
+
+.offer-desc h3 {
+  text-align: left;
+  font-weight: 100;
+}
+
+.offer-desc p {
+  min-height: 126px;
 }
 
 .read-more-btn-area {
