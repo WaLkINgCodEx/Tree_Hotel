@@ -5,6 +5,13 @@
   padding: 50px 110px;
 }
 
+@media (min-width: 1500px) {
+  .carousel-row-container {
+    margin: auto;
+    margin-top: 50px;
+  }
+}
+
 .carousel-row-container .swiper-slide {
   text-align: center;
   background: #fff;

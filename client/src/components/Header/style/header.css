@@ -406,9 +406,17 @@ img.darkfilter {
 
 .heroText h1,
 .heroText p {
-  margin: 0 5rem;
-  font-size: 1.5rem;
+  margin: auto;
+  font-size: 1.1rem;
   letter-spacing: 0.75rem;
+}
+
+@media (min-width: 600px) {
+  .heroText h1,
+  .heroText p {
+    font-size: 1.5rem;
+    margin: 0 5rem;
+  }
 }
 
 @media (min-width: 960px) {

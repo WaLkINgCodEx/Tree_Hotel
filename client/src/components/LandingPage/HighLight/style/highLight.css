@@ -215,7 +215,7 @@
   position: absolute;
   top: 50%;
   z-index: 1;
-  right: 0px;
+  right: 5px;
   background: none;
   opacity: 1 !important;
   transform: rotate(-90deg);
@@ -225,7 +225,7 @@
 
 .silder-frame .swiper-button-prev {
   transform: rotate(90deg);
-  left: 0px;
+  left: 5px;
 }
 
 @media (max-width: 500px) {
@@ -233,10 +233,5 @@
   .silder-frame .swiper-button-prev {
     width: 50px;
     height: 50px;
-    right: 5px;
-  }
-
-  .silder-frame .swiper-button-prev {
-    left: 5px;
   }
 }

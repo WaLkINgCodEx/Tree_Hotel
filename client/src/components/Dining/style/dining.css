@@ -49,11 +49,15 @@
   }
 }
 
+.dining-photo-container {
+  min-height: 225px;
+}
+
 @media (min-width: 960px) {
   .dining-photo-container {
     min-width: 50%;
     max-width: 50%;
-    height: initial;
+    max-height: 400px;
     flex-grow: 1;
     overflow: hidden;
   }
@@ -68,11 +72,15 @@
 }
 
 .dining-info {
-  padding: 15px;
+  min-height: 365px;
+  /* height: 100%; */
+  position: relative;
+  margin: 15px;
 }
 
 @media (min-width: 960px) {
   .dining-info {
+    min-height: 300px;
     width: 50%;
     padding: 30px;
   }
@@ -93,6 +101,7 @@
   display: flex;
   flex-direction: column;
 }
+
 @media (min-width: 960px) {
   .dining-card-rows {
     padding: 30px 0px;
@@ -109,4 +118,10 @@
   .dining-card-row {
     width: 50%;
   }
+}
+
+.dining-info .button-area {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }

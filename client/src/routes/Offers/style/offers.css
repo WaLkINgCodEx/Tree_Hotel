@@ -11,7 +11,7 @@
 .carousel-container {
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   display: none;
   margin-bottom: 50px;
 }
@@ -23,7 +23,7 @@
 }
 
 .carousel-container .swiper {
-  width: 1280px;
+  max-width: 1280px;
 }
 
 .small-card-wrapper {
@@ -31,6 +31,10 @@
 }
 
 .small-card-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   overflow-y: auto;
   background-color: white;
