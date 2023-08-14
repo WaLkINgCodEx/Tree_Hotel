@@ -178,6 +178,10 @@
   justify-content: space-between;
 }
 
+.nav-sidebar-container.showSidebar ul:nth-child(1) {
+  overflow: scroll;
+}
+
 .nav-sidebar-container li {
   border-bottom: 1px solid #f5f5f5;
   margin-bottom: 10.625px;
