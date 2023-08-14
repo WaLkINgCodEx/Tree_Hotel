@@ -41,11 +41,11 @@ export default function HighLight(props) {
                 <SwiperSlide key={index}>
                   <div className="img-container">
                     <span className="img-box">
-                      <img src={story.image} />
+                      <img src={story.image} alt="" />
                     </span>
                   </div>
                   <div className="swiper-btn">
-                    <a>
+                    <a href="/">
                       <span>Explore</span>
                     </a>
                   </div>

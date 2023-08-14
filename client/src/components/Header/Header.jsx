@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import NavBar from "./NavBar";
 import NavBarMobile from "./NavBarMobile";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -21,7 +21,7 @@ export default function Header(props) {
             props.className ? props.className + " heroFrame" : "heroFrame"
           }
         >
-          <img className={props.className} src={props.img}></img>
+          <img className={props.className} src={props.img} alt=""></img>
         </div>
         <div className="heroText">
           <h1>{props.hotel}</h1>

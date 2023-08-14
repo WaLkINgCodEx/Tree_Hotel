@@ -41,8 +41,8 @@ const Accommodation = () => {
       <RoomCards />
       <div className="policies-wrapper">
         {policies &&
-          policies.map((policy) => {
-            return <PolicydropDown policy={policy} />;
+          policies.map((policy, index) => {
+            return <PolicydropDown policy={policy} key={index} />;
           })}
       </div>
       <Footer socialMediaSVG={socialMediaSVG} footerMidData={footerMidData} />

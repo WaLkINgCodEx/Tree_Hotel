@@ -10,17 +10,20 @@ export default function ColumnMenu(props) {
 
   function handleClick() {
     setmenuOpen(!menuOpen);
-    console.log(menuOpen);
+    // console.log(menuOpen);
   }
 
   if (props.columnTopic.length > 1) {
     return (
       <Fragment>
-        {props.columnTopic.map((topic) => {
+        {props.columnTopic.map((topic, index) => {
           return (
-            <MenuList className={menuOpen ? "menuOpen" : "menuClose"}>
+            <MenuList
+              className={menuOpen ? "menuOpen" : "menuClose"}
+              key={index}
+            >
               {topic.map((item, index) => {
-                console.log(item);
+                // console.log(item);
                 return (
                   <MenuItem
                     className={

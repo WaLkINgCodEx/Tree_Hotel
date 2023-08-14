@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { styled, alpha, duration } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import BigArrow from "../../assets/icons/BigArrow";
 
 export default function LangMenu(props) {
@@ -58,7 +58,7 @@ export default function LangMenu(props) {
   ))(({ theme }) => ({
     "& .MuiPaper-root": {
       borderRadius: 0,
-      marginTop: theme.spacing(1),
+      // marginTop: theme.spacing(1),
       Width: 116.5,
       marginTop: 0,
       color:
@@ -100,7 +100,7 @@ export default function LangMenu(props) {
         <MenuItem>
           <a
             className="menu-item-link"
-            href=""
+            href="/"
             onClick={handleClose}
             value={props.notMobile ? "ENG" : "ENGLISH"}
           >
@@ -117,7 +117,7 @@ export default function LangMenu(props) {
             className="menu-item-link"
             onClick={handleClose}
             value="日本語"
-            href=""
+            href="/"
           >
             <span onClick={handleClose} value="日本語">
               日本語
@@ -125,7 +125,7 @@ export default function LangMenu(props) {
           </a>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a className="menu-item-link" value="中文" href="">
+          <a className="menu-item-link" value="中文" href="/">
             <span onClick={handleClose} value="中文">
               中文
             </span>

@@ -1,5 +1,5 @@
 import SearchResultOffer from "./SearchResultOffer";
-import { offers } from "../../../data";
+// import { offers } from "../../../data";
 import { useState } from "react";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
@@ -32,7 +32,7 @@ const SearchResultCard = ({ roomType, offers, handleNext }) => {
           Guest {roomType.capacity} | {roomType.bed} | {roomType.size}m2
         </span>
         <p className="avail-card-desc">{roomType.roomDesc}</p>
-        <a href="" className="avail-room-details-link">
+        <a href="/" className="avail-room-details-link">
           Room details
         </a>
         <hr className="avail-room-hr" />

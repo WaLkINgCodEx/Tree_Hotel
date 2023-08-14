@@ -23,7 +23,7 @@ const IntroImageBanner = ({ title, paragraphs, image, haveLink }) => {
       </div>
       {haveLink && (
         <div>
-          <a className="banner-link" href="">
+          <a className="banner-link" href="/">
             <img
               className="fac-icon reverse-icon-x reverse-icon-color"
               src={icons.arrow}

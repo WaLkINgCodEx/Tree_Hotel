@@ -15,7 +15,7 @@ export default function Gallery(props) {
 
             <div className="booth-p">
               <p>Destination • Sanctuaries • Experiences • Communities</p>
-              <a href="">
+              <a href="/">
                 <span className="booth-btn">View More</span>
               </a>
             </div>

@@ -28,7 +28,7 @@ const InfoSection = () => {
             <h6>Address</h6>
             <div className="address">{hotelBasic.address}</div>
             <div>
-              <a href="#">
+              <a href="/">
                 <button className="address-btn">How to get there</button>
               </a>
             </div>

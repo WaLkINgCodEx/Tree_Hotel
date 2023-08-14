@@ -22,9 +22,9 @@ const ExperienceCard = ({ title, desc, images }) => {
               swiperRef.current = swiper;
             }}
           >
-            {images.map((image) => {
+            {images.map((image, idx) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={idx}>
                   <img className="slide-image" src={image} alt={title} />
                 </SwiperSlide>
               );

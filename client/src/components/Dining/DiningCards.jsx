@@ -25,21 +25,21 @@ const DiningCards = ({ dining }) => {
           {attire && (
             <div className="dining-card-row">
               <div>
-                <img className="fac-icon" src={icons.attire} />
+                <img className="fac-icon" src={icons.attire} alt="" />
               </div>
               <div>{attire}</div>
             </div>
           )}
           <div className="dining-card-row">
             <div>
-              <img className="fac-icon" src={icons.cuisine} />
+              <img className="fac-icon" src={icons.cuisine} alt="" />
             </div>
             <div>{cuisine}</div>
           </div>
 
           <div className="dining-card-row">
             <div>
-              <img className="fac-icon" src={icons.time} />
+              <img className="fac-icon" src={icons.time} alt="" />
             </div>
             <div>
               {time && <span>{time}</span>}

@@ -23,15 +23,15 @@ const Offers = () => {
           <div className="small-card-container">
             {offers
               .filter((_, idx) => idx < 7)
-              .map((offer) => {
-                return <OfferCard offer={offer} />;
+              .map((offer, index) => {
+                return <OfferCard offer={offer} key={index} />;
               })}
           </div>
           <div className="small-card-container">
             {offers
               .filter((_, idx) => idx > 6)
-              .map((offer) => {
-                return <OfferCard offer={offer} />;
+              .map((offer, index) => {
+                return <OfferCard offer={offer} key={index} />;
               })}
           </div>
         </div>

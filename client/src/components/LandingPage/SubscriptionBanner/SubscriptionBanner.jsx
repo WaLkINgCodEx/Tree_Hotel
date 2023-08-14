@@ -17,7 +17,7 @@ export default function ubscriptionBanner() {
           Please click below to chat with our team of Banyan Tree Hosts directly
           via WhatsApp.
         </p>
-        <a>
+        <a href="/">
           <span className="connect-btn">Click to chat</span>
         </a>
       </div>

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import BigArrow from "../../assets/icons/BigArrow";
 import MenuItem from "@mui/material/MenuItem";
 
-export default function (props) {
+export default function Li(props) {
   if (props.logoFrame) {
     return (
       <Fragment>
