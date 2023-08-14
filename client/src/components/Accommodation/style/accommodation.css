@@ -136,6 +136,15 @@
   background-color: #fff;
 }
 
+@media (max-width: 675px) {
+  .policies-wrapper
+    .policies-container:nth-child(1)
+    .policy.open
+    .policy-details {
+    height: auto;
+  }
+}
+
 .policy.open .policy-details {
   height: 10rem;
 }

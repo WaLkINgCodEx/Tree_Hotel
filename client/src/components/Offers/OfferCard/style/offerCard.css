@@ -8,6 +8,7 @@
   display: grid;
   flex-direction: column;
   background-color: #fff;
+  margin-right: 30px;
 }
 
 @media (min-width: 1300px) {

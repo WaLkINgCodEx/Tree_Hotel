@@ -3,6 +3,7 @@
   background-color: #e7e6e2;
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .condition-container {
