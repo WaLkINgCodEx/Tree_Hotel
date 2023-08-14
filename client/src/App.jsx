@@ -1,14 +1,14 @@
 import React from "react";
 import "react-dates/initialize";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import HomeLayout from "../routes/HomeLayout";
-import LandingPage from "../routes/LandingPage/LandingPage";
-import Dining from "../routes//Dining/Dining";
-import Offers from "../routes/Offers/Offers";
-import Spa from "../routes//Spa/Spa";
-import Accommodation from "../routes//Accommodation/Accommodation";
-import Experience from "../routes/Experiences/Experiences";
-import Reservation from "../routes/Reservation/Reservation";
+import HomeLayout from "./routes/HomeLayout";
+import LandingPage from "./routes/LandingPage/LandingPage";
+import Dining from "./routes/Dining/Dining";
+import Offers from "./routes/Offers/Offers";
+import Spa from "./routes/Spa/Spa";
+import Accommodation from "./routes/Accommodation/Accommodation";
+import Experience from "./routes/Experiences/Experiences";
+import Reservation from "./routes/Reservation/Reservation";
 
 const router = createBrowserRouter([
   {
