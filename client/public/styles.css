@@ -31,6 +31,8 @@ body {
     "Arial", "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", "sans-serif";
   background-color: #e7e6e2;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a,
