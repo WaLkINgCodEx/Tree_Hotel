@@ -1,5 +1,8 @@
 .carousel-row-container {
-  margin: 15px;
+  position: relative;
+  background-color: #ffff;
+  margin-top: 50px;
+  padding: 50px 110px;
 }
 
 .carousel-row-container .swiper-slide {
@@ -10,33 +13,30 @@
   align-items: center;
 }
 
-.swiper-button-prev {
-  /* background-image: url(/public/assets/images/ArrowLeft.svg); */
-  background-size: contain;
-  background-position: 50% 50%;
-  width: 34px;
-  background-repeat: no-repeat;
-  /* left: 69px; */
-}
-
 .swiper-button-prev::after {
   display: none;
 }
 
-.swiper-button-next {
-  /* background-image: url(/public/assets/images/ArrowLeft.svg); */
-  transform: rotate(180deg);
-  background-size: contain;
-  background-position: 50% 50%;
-  width: 34px;
-  background-repeat: no-repeat;
-  /* right: 69px; */
+.carousel-row-container .swiper-button-next,
+.carousel-row-container .swiper-button-prev {
+  display: block;
+  color: black;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  right: 20px;
+  background: none;
+  opacity: 1 !important;
+  transform: rotate(-90deg);
+  border: none;
 }
 
-/* .swiper-button-prev:hover,
-.swiper-button-next:hover, {
-  color:
-} */
+.carousel-row-container .swiper-button-prev {
+  transform: rotate(90deg);
+  left: 20px;
+}
 
 .swiper-button-next::after {
   display: none;

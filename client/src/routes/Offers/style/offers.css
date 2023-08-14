@@ -13,26 +13,30 @@
   justify-content: center;
   align-items: center;
   display: none;
+  margin-bottom: 50px;
 }
+
 @media (min-width: 1300px) {
   .carousel-container {
     display: flex;
   }
 }
+
 .carousel-container .swiper {
-  width: 1450px;
-  margin: 15px 0px;
+  width: 1280px;
 }
 
 .small-card-wrapper {
   max-width: 1300px;
 }
+
 .small-card-container {
   display: flex;
   overflow-y: auto;
   background-color: white;
   margin-bottom: 50px;
 }
+
 @media (min-width: 1300px) {
   .small-card-container {
     display: none;

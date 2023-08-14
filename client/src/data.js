@@ -497,6 +497,82 @@ export const offers = [
     addOnPrice: 200,
     discountRate: 1,
   },
+  {
+    name: "Stay More Pay Less",
+    desc: "Extend your fun and adventure at Banyan Tree Krabi",
+    image: "/assets/images/offer-stay-more-pay-less.webp",
+    bookDesc:
+      "Extended fun and adventure when you stay 2 or more nights with us.",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 2,
+    addOnPrice: 60,
+    discountRate: 0.9,
+  },
+  {
+    name: "Advance Purchase",
+    desc: "Save up to 10% off your stay at Banyan Tree Krabi when you book in advance",
+    image: "/assets/images/offer-card-advance-purchase-krabi.webp",
+    bookDesc:
+      "Plan and book your holiday early. Save up to 10% off your stay at Banyan Tree Krabi when you book in advance.",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 2,
+    addOnPrice: 0,
+    discountRate: 0.9,
+  },
+  {
+    name: "Best Available Rate",
+    desc: "Book now to enjoy greater fliexbility on our villas with our Best Available Rates",
+    image: "/assets/images/offer-krabi-bar-best-rate.webp",
+    bookDesc:
+      "Enjoy our best available rate inclusive of breakfast for 2 persons",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 2,
+    minNights: 1,
+    addOnPrice: 70,
+    discountRate: 0.9,
+  },
+  {
+    name: "Thai Resident Offer",
+    desc: " Exclusive and limited time offer for residents of Thailand",
+    image: "/assets/images/offer-thai-resident.webp",
+    isOpen: false,
+    dateOpen: {
+      start: new Date("2023-01-01"),
+      end: new Date("2023-12-31"),
+    },
+    minGuests: 1,
+    minNights: 1,
+    addOnPrice: 0,
+    discountRate: 0.95,
+  },
+  {
+    name: "New Year's Eve Sanctuary Offer",
+    desc: "Revel in a four-night stay in your very own private pool suite or villa at the tropical beachfront sanctuary of Banyan Tree Krabi.",
+    image: "/assets/images/offer-new-year.webp",
+    isOpen: true,
+    dateOpen: {
+      start: new Date("2023-12-25"),
+      end: new Date("2024-01-03"),
+    },
+    minGuests: 1,
+    minNights: 4,
+    addOnPrice: 200,
+    discountRate: 1,
+  },
 ];
 
 export const gerneralConditions = [

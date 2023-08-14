@@ -49,7 +49,7 @@ const ReservationStepper = () => {
   return (
     <div className="stepper-wrapper">
       <Box sx={{ width: "100%" }}>
-        <Stepper activeStep={activeStep}>
+        <Stepper activeStep={activeStep} className="stepper-bar">
           {steps.map((label, index) => {
             const stepProps = {};
             const labelProps = {};
