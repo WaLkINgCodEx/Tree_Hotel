@@ -116,7 +116,6 @@
   overflow: hidden;
   inset: 0px;
   min-height: 100%;
-  padding-right: 18px;
 }
 
 @media (min-width: 960px) {
