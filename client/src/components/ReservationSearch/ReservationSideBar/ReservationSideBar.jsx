@@ -23,19 +23,19 @@ const ReservationSideBar = ({ showSidebar, toggleSidebar }) => {
             </div>
           </div>
           <div className="sidebar-nav-links">
-            <a href="" className="sidebar-nav-link">
+            <a href="/" className="sidebar-nav-link">
               Hotel Details
             </a>
-            <a href="" className="sidebar-nav-link">
+            <a href="/" className="sidebar-nav-link">
               Select a room
             </a>
-            <a href="" className="sidebar-nav-link">
+            <a href="/" className="sidebar-nav-link">
               Find Reservation
             </a>
-            <a href="" className="sidebar-nav-link mid-lg-only-sidebar">
+            <a href="/" className="sidebar-nav-link mid-lg-only-sidebar">
               English <PiCaretDownLight />
             </a>
-            <a href="" className="sidebar-nav-link mid-lg-only-sidebar">
+            <a href="/" className="sidebar-nav-link mid-lg-only-sidebar">
               Canadian Dollars <PiCaretDownLight />
             </a>
             <span className="sidebar-nav-link">

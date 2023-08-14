@@ -14,14 +14,14 @@ export default function Card(props) {
             {props.card.paragraphs.map((para, index) => {
               return (
                 <Fragment key={index}>
-                  {index != 0 && <br />}
+                  {index !== 0 && <br />}
                   <p>{para}</p>
                 </Fragment>
               );
             })}
 
             {props.card.button && (
-              <a href="">
+              <a href="/">
                 <span className="card-btn">{props.card.button}</span>{" "}
               </a>
             )}
@@ -29,7 +29,7 @@ export default function Card(props) {
         </div>
 
         <div className="card-right">
-          {props.card.img.length == 2 ? (
+          {props.card.img.length === 2 ? (
             <div className="silder-container">
               <PhotoSlider
                 image1={props.card.img[0]}

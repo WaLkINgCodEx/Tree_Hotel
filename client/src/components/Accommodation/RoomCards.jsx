@@ -9,15 +9,15 @@ const RoomCards = () => {
       <div className="room-cards-container">
         {roomType
           .filter((room) => room.size < 200)
-          .map((room) => {
-            return <AccomCardSmall room={room} />;
+          .map((room, index) => {
+            return <AccomCardSmall room={room} key={index} />;
           })}
       </div>
       <div className="room-cards-container">
         {roomType
           .filter((room) => room.size > 200)
-          .map((room) => {
-            return <AccomCardBig room={room} />;
+          .map((room, index) => {
+            return <AccomCardBig room={room} key={index} />;
           })}
       </div>
     </div>

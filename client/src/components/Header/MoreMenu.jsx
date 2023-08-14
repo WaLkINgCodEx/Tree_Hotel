@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -37,7 +37,7 @@ export default function MoreMenu(props) {
   ))(({ theme }) => ({
     "& .MuiPaper-root": {
       borderRadius: 0,
-      marginTop: theme.spacing(1),
+      // marginTop: theme.spacing(1),
       Width: 116.5,
       marginTop: 0,
       color:
@@ -90,6 +90,7 @@ export default function MoreMenu(props) {
               </MenuItem>
             );
           }
+          return;
         })}
       </StyledMenu>
     </div>

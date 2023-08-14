@@ -14,20 +14,20 @@ const Conditions = () => {
         <h3>General Terms & Conditions</h3>
         <div className="condition-list">
           <ul>
-            {gerneralConditions.map((condition) => {
-              return <ConditionList condition={condition} />;
+            {gerneralConditions.map((condition, index) => {
+              return <ConditionList condition={condition} key={index} />;
             })}
           </ul>
           <h4>Child Policy</h4>
           <ul>
-            {childPolicy.map((policy) => {
-              return <ConditionList condition={policy} />;
+            {childPolicy.map((policy, index) => {
+              return <ConditionList condition={policy} key={index} />;
             })}
           </ul>
           <h4>Other Information</h4>
           <ul>
-            {otherInformation.map((info) => {
-              return <ConditionList condition={info} />;
+            {otherInformation.map((info, index) => {
+              return <ConditionList condition={info} key={index} />;
             })}
           </ul>
         </div>

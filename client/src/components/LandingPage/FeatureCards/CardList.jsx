@@ -3,7 +3,7 @@ import Card from "./Card.jsx";
 import "./style/card.css";
 
 export default function CardList(props) {
-  if (props.cardData.type == "silder") {
+  if (props.cardData.type === "silder") {
     return (
       <Card
         card={props.cardData}

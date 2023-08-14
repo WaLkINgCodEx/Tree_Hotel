@@ -30,9 +30,9 @@ const Carousel = ({ offers }) => {
           {offers &&
             offers
               .filter((_, idx) => idx < 7)
-              .map((offer) => {
+              .map((offer, index) => {
                 return (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                     <OfferCard offer={offer} />
                   </SwiperSlide>
                 );
@@ -88,9 +88,9 @@ const Carousel = ({ offers }) => {
             {offers &&
               offers
                 .filter((_, idx) => idx > 6)
-                .map((offer) => {
+                .map((offer, index) => {
                   return (
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                       <OfferCard offer={offer} />
                     </SwiperSlide>
                   );

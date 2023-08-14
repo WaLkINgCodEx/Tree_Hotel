@@ -6,8 +6,8 @@ const DiningList = () => {
   return (
     <div className="dining-list-wrapper">
       <div className="dining-list-container">
-        {diningList.map((dining) => {
-          return <DiningCards dining={dining} />;
+        {diningList.map((dining, index) => {
+          return <DiningCards dining={dining} key={index} />;
         })}
       </div>
     </div>

@@ -41,6 +41,8 @@
   display: block;
   width: 100%;
   height: 100%;
+  text-decoration: none;
+  color: white;
 }
 
 .social-buttons .whatsapp {
@@ -62,6 +64,8 @@
   box-sizing: border-box;
   align-items: center;
   padding: 10.5px 29px;
+  color: white;
+  text-decoration: none;
 }
 
 .footer-separator {

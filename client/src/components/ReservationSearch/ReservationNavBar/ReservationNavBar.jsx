@@ -10,21 +10,23 @@ const ReservationNavBar = ({ toggleSidebar }) => {
           <RxHamburgerMenu />
         </div>
         <div className="reservation-brand">
-          <img src="/assets/images/bt-logo-plain.png" alt="brand" />
+          <a href="/">
+            <img src="/assets/images/bt-logo-plain.png" alt="brand" />
+          </a>
         </div>
         <h3 className="nav-brand-name">Banyan Tree Krabi</h3>
       </div>
       <div className="res-navbar-right">
-        <a href="">
+        <a href="/">
           <div className="mid-lg-only">Find a Reservation</div>
         </a>
 
-        <a href="">
+        <a href="/">
           <div>
             English <PiCaretDownLight />
           </div>
         </a>
-        <a href="">
+        <a href="/">
           <div>
             Canadian Dollars <PiCaretDownLight />
           </div>

@@ -1,10 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useState } from "react";
-import {
-  DateRangePicker,
-  SingleDatePicker,
-  DayPickerRangeController,
-} from "react-dates";
+import { DateRangePicker } from "react-dates";
 import "./style/resSearch.css";
 import "react-dates/lib/css/_datepicker.css";
 import "./style/react_dates_overrides.css";

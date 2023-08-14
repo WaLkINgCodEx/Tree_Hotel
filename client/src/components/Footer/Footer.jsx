@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
+// import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
@@ -7,11 +7,11 @@ import ColumnMenu from "./ColumnMenu";
 import { createTheme } from "@mui/material/styles";
 import "./style/footer.css";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: "transparent",
-  textAlign: "left",
-  color: "white",
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+//   backgroundColor: "transparent",
+//   textAlign: "left",
+//   color: "white",
+// }));
 
 const footerBottomBP = createTheme({
   breakpoints: {
@@ -33,7 +33,7 @@ export default function Footer(props) {
           {props.socialMediaSVG.map((item, index) => {
             return (
               <div key={index}>
-                <a className={item.className}>
+                <a className={item.className} href="/">
                   <svg
                     width={item.width}
                     height={item.height}
@@ -53,7 +53,7 @@ export default function Footer(props) {
           })}
         </div>
         <div className="price-col">
-          <a className="best-price">
+          <a className="best-price" href="/">
             <span>BEST PRICE GUARANTEE</span>
           </a>
         </div>
@@ -99,7 +99,7 @@ export default function Footer(props) {
             xl={2}
             theme={footerBottomBP}
           >
-            <a href="">
+            <a href="/">
               <img
                 className="footer-logo"
                 src="/assets/images/icon-logo-white.svg"

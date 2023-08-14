@@ -65,9 +65,9 @@ const ExpFilterNav = () => {
       <div className="filter-nav-container">
         <div className="filter-left">
           <h4 className="filter-looking-for">I am looking for</h4>
-          {tagList.map((tag) => {
+          {tagList.map((tag, idx) => {
             return (
-              <div className="filter-nav-select">
+              <div className="filter-nav-select" key={idx}>
                 <input
                   type="checkbox"
                   id={tag.tag}
@@ -97,6 +97,7 @@ const ExpFilterNav = () => {
                 title={activity.name}
                 desc={activity.desc}
                 images={activity.image}
+                key={idx}
               />
             );
           })}

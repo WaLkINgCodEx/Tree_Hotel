@@ -1,5 +1,5 @@
 import { BsCheck2, BsFillCreditCardFill } from "react-icons/bs";
-import { pricing } from "../../../data";
+// import { pricing } from "../../../data";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
 const SearchResultOffer = ({
@@ -27,7 +27,7 @@ const SearchResultOffer = ({
       }
     >
       <div className="avail-card-offer-left">
-        <a href="" className="avail-room-details-link avail-offer-link">
+        <a href="/" className="avail-room-details-link avail-offer-link">
           {offer.name}
         </a>
         <ul>

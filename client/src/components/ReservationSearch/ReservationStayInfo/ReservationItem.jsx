@@ -12,7 +12,8 @@ const ReservationItem = ({ reservationItem }) => {
     offer.discountRate *
     totalNights
   ).toFixed(2);
-  const pricePerNight = (totalPrice / totalNights).toFixed(2);
+
+  // const pricePerNight = (totalPrice / totalNights).toFixed(2);
 
   const govTax = totalPrice * pricing.govTax;
   const provTax = totalPrice * pricing.provTax;

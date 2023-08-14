@@ -12,8 +12,8 @@ const PolicydropDown = ({ policy }) => {
         </div>
         <div className="policy-details">
           <ul>
-            {policy.details.map((details) => {
-              return <ConditionList condition={details} />;
+            {policy.details.map((details, index) => {
+              return <ConditionList condition={details} key={index} />;
             })}
           </ul>
         </div>

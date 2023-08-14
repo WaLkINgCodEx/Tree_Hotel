@@ -1,6 +1,5 @@
 import React from "react";
 import Li from "./Li";
-import sideBarURLs from "../../data";
 import LangMenu from "./LangMenu";
 import MoreMenu from "./MoreMenu";
 

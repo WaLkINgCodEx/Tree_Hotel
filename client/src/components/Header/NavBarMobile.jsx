@@ -10,7 +10,7 @@ export default function NavBarMobile() {
   const [showSidebar, setShowSidebar] = useState(false);
 
   const toggleSidebar = () => {
-    console.log(showSidebar);
+    // console.log(showSidebar);
     setShowSidebar(!showSidebar);
   };
 
@@ -47,7 +47,7 @@ export default function NavBarMobile() {
                 },
               }}
             >
-              <a href="">
+              <a href="/reservation">
                 <span>BOOK NOW</span>
               </a>
             </Button>
