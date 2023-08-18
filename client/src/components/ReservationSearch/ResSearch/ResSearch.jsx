@@ -17,17 +17,19 @@ import { useReservationContext } from "../../../contexts/ReservationContext";
 
 const ResSearch = () => {
   const {
-    startDate,
     setStartDate,
-    endDate,
+
     setEndDate,
     focusedInput,
     setFocusedInput,
-    adultNumber,
+
     setAdultNumber,
-    kidNumber,
+
     setKidNumber,
+    searchValues,
   } = useReservationContext();
+
+  const { adultNumber, kidNumber, startDate, endDate } = searchValues;
 
   const [showDropdown, setShowDropdown] = useState(false);
 

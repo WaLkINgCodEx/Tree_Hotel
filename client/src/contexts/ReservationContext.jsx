@@ -1,8 +1,25 @@
 import { useEffect, useState } from "react";
 import moment from "moment";
 import { createContext, useContext } from "react";
+import customFetch from "../utils/customFetch";
+import { useLoaderData } from "react-router-dom";
 
 const ReservationContext = createContext();
+
+export const loader = async ({ request }) => {
+  const params = Object.fromEntries([
+    ...new URL(request.url).searchParams.entries(),
+  ]);
+  console.log(params);
+  try {
+    const { data } = await customFetch.get("/rooms", {
+      params,
+    });
+    return { data, searchValues: { ...params } };
+  } catch (error) {
+    return error;
+  }
+};
 
 export const ReservationProvider = ({ children }) => {
   const today = moment();
@@ -15,6 +32,8 @@ export const ReservationProvider = ({ children }) => {
   const [reservationTotal, setReservationTotal] = useState(0);
   const [adultNumber, setAdultNumber] = useState(0);
   const [kidNumber, setKidNumber] = useState(0);
+
+  const { data, searchValues } = useLoaderData();
 
   const getTotalNights = () => {
     if (startDate && endDate) {
@@ -87,6 +106,8 @@ export const ReservationProvider = ({ children }) => {
     addItemToCart,
     reservationTotal,
     setReservationTotal,
+    data,
+    searchValues,
   };
 
   return (

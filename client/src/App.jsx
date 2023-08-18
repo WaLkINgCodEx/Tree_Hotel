@@ -10,6 +10,8 @@ import Accommodation from "./routes/Accommodation/Accommodation";
 import Experience from "./routes/Experiences/Experiences";
 import Reservation from "./routes/Reservation/Reservation";
 
+import { loader as reservationLoader } from "./contexts/ReservationContext";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +41,7 @@ const router = createBrowserRouter([
       {
         path: "reservation",
         element: <Reservation />,
+        loader: reservationLoader,
       },
     ],
   },
