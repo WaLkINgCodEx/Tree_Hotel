@@ -18,19 +18,19 @@ import { useReservationContext } from "../../../contexts/ReservationContext";
 const ResSearch = () => {
   const {
     setStartDate,
-
     setEndDate,
     focusedInput,
     setFocusedInput,
-
     setAdultNumber,
-
     setKidNumber,
     searchValues,
+    adultNumber,
+    kidNumber,
+    startDate,
+    endDate,
   } = useReservationContext();
 
-  const { adultNumber, kidNumber, startDate, endDate } = searchValues;
-
+  // const { adultNumber, kidNumber, startDate, endDate } = searchValues;
   const [showDropdown, setShowDropdown] = useState(false);
 
   const isBigScreen = useMediaQuery({

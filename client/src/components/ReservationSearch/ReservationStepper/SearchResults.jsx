@@ -14,9 +14,10 @@ const SearchResults = ({ handleNext }) => {
     <>
       {adultNumber > 0 &&
         filteredList.length !== 0 &&
-        filteredList.map((room) => {
+        filteredList.map((room, idx) => {
           return (
             <SearchResultCard
+              key={idx}
               roomType={room}
               offers={offers}
               handleNext={handleNext}

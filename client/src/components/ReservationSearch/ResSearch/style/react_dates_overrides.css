@@ -53,6 +53,7 @@
 
 .CalendarDay__selected {
   background-color: #baa382;
+  border: #ffffff;
 }
 
 .CalendarDay__selected:active,
@@ -75,6 +76,7 @@
 
 .CalendarDay__selected_span {
   background-color: #baa382;
+  border: #ffffff;
 }
 
 .CalendarDay__selected_span:active,
