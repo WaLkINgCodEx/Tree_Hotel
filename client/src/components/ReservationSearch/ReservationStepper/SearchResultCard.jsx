@@ -40,7 +40,7 @@ const SearchResultCard = ({ roomType, offers, handleNext }) => {
           {nowAvailOffers.map((offer, idx) => {
             return (
               <SearchResultOffer
-                key={offer.name}
+                key={idx}
                 idx={idx}
                 offer={offer}
                 isMoreOfferOpen={isMoreOfferOpen}
