@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 const RoomSchema = new mongoose.Schema({
-  _id: String,
   room: String,
   roomType: String,
   roomLongDesc: String,

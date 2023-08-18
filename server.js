@@ -3,10 +3,12 @@ dotenv.config();
 import express from "express";
 const app = express();
 import mongoose from "mongoose";
+import cors from "cors";
 
 import roomRouter from "./routes/roomRouter.js";
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Hello world");

@@ -2,8 +2,8 @@ import { Router } from "express";
 
 const router = Router();
 
-import { createRoom } from "../controllers/roomController.js";
+import { createRoom, getAllRooms } from "../controllers/roomController.js";
 
-router.route("/").post(createRoom);
+router.route("/").post(createRoom).get(getAllRooms);
 
 export default router;
