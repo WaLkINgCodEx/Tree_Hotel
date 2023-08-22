@@ -5,7 +5,7 @@ import "./style/resSearch.css";
 import "react-dates/lib/css/_datepicker.css";
 import "./style/react_dates_overrides.css";
 import { useMediaQuery } from "react-responsive";
-
+import { Form } from "react-router-dom";
 import { GoDash } from "react-icons/go";
 import { PiCaretDownLight } from "react-icons/pi";
 import { SlUser } from "react-icons/sl";
@@ -23,14 +23,15 @@ const ResSearch = () => {
     setFocusedInput,
     setAdultNumber,
     setKidNumber,
+    startDate,
+    endDate,
     searchValues,
     adultNumber,
     kidNumber,
-    startDate,
-    endDate,
   } = useReservationContext();
 
-  // const { adultNumber, kidNumber, startDate, endDate } = searchValues;
+  const { adultnumber, kidnumber } = searchValues;
+  console.log(searchValues);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const isBigScreen = useMediaQuery({
@@ -56,119 +57,149 @@ const ResSearch = () => {
 
   return (
     <div className="res-search-wrapper">
-      <div className="res-search-bar small-size-only">
-        <div className="top-stay-bar">
-          Your Stay:
-          <div className="date-range">
-            <DateRangePicker
-              startDate={startDate}
-              startDateId="start-date"
-              endDate={endDate}
-              endDateId="end-date"
-              onDatesChange={({ startDate, endDate }) => {
-                setStartDate(startDate);
-                setEndDate(endDate);
-              }}
-              focusedInput={focusedInput}
-              onFocusChange={(focusedInput) => setFocusedInput(focusedInput)}
-              displayFormat="ddd, MMM D, YYYY"
-              noBorder
-              customArrowIcon={<GoDash />}
-              numberOfMonths={1}
-              withPortal
-              daySize={50}
-              keepOpenOnDateSelect
-              renderCalendarInfo={renderCalendarInfo}
-            />
-          </div>
-          <div className="stay-info">
-            CA 0.00 <PiCaretDownLight />
-          </div>
-        </div>
-        <div className="bottom-guest-bar">
-          Guest:
-          <div className="guest-count-bar">
-            <GuestCount
-              adultNumber={adultNumber}
-              setAdultNumber={setAdultNumber}
-              kidNumber={kidNumber}
-              setKidNumber={setKidNumber}
-            />
-          </div>
-          <div className="guest-count-bar-end"></div>
-        </div>
-        <div className="special-rates-bar">
-          <button
-            type="button"
-            onClick={toggleDropdown}
-            className="special-rate-btn"
-          >
-            Special codes or rates <PiCaretDownLight />
-          </button>
-          <SpecialRateDropdown
-            showDropdown={showDropdown}
-            toggleDropdown={toggleDropdown}
-          />
-        </div>
-      </div>
-
-      <div className="warning-area">
-        <ReservationWarning />
-        {isBigScreen && (
-          <div className="lg-only">
-            <div className="lg-search-container">
-              <div className="guest-number">
-                <SlUser /> <span className="search-title">Guest:</span>
-                <GuestCount
-                  adultNumber={adultNumber}
-                  setAdultNumber={setAdultNumber}
-                  kidNumber={kidNumber}
-                  setKidNumber={setKidNumber}
-                />
-              </div>
-              <div className="lg-date-range">
-                <span className="search-title">Check-in & Check-out Date:</span>
-                <DateRangePicker
-                  startDate={startDate}
-                  startDateId="start-date"
-                  endDate={endDate}
-                  endDateId="end-date"
-                  onDatesChange={({ startDate, endDate }) => {
-                    setStartDate(startDate);
-                    setEndDate(endDate);
-                  }}
-                  focusedInput={focusedInput}
-                  onFocusChange={(focusedInput) =>
-                    setFocusedInput(focusedInput)
-                  }
-                  displayFormat="ddd, MMM D, YYYY"
-                  noBorder
-                  customArrowIcon={<GoDash />}
-                  numberOfMonths={2}
-                  withPortal
-                  daySize={60}
-                  keepOpenOnDateSelect
-                  renderCalendarInfo={renderCalendarInfo}
-                />
-              </div>
-            </div>
-            <div className="additional-search">
-              <button
-                type="button"
-                onClick={toggleDropdown}
-                className="special-rate-btn lg-special-rate-btn"
-              >
-                Special codes or rates <PiCaretDownLight />
-              </button>
-              <SpecialRateDropdown
-                showDropdown={showDropdown}
-                toggleDropdown={toggleDropdown}
-                isBigScreen={isBigScreen}
+      <Form>
+        <div className="res-search-bar small-size-only">
+          <div className="top-stay-bar">
+            Your Stay:
+            <div className="date-range">
+              <DateRangePicker
+                startDate={startDate}
+                startDateId="start-date"
+                endDate={endDate}
+                endDateId="end-date"
+                onDatesChange={({ startDate, endDate }) => {
+                  setStartDate(startDate);
+                  setEndDate(endDate);
+                }}
+                focusedInput={focusedInput}
+                onFocusChange={(focusedInput) => setFocusedInput(focusedInput)}
+                displayFormat="yyyy-MM-D"
+                noBorder
+                customArrowIcon={<GoDash />}
+                numberOfMonths={1}
+                withPortal
+                daySize={50}
+                keepOpenOnDateSelect
+                renderCalendarInfo={renderCalendarInfo}
               />
             </div>
+            <div className="stay-info">
+              CA 0.00 <PiCaretDownLight />
+            </div>
           </div>
-        )}
-      </div>
+          <div className="bottom-guest-bar">
+            Guest:
+            <div className="guest-count-bar">
+              <GuestCount
+                adultNumber={adultNumber}
+                setAdultNumber={setAdultNumber}
+                kidNumber={kidNumber}
+                setKidNumber={setKidNumber}
+              />
+            </div>
+            <div className="guest-count-bar-end"></div>
+          </div>
+          <div className="special-rates-bar">
+            <button
+              type="button"
+              onClick={toggleDropdown}
+              className="special-rate-btn"
+            >
+              Special codes or rates <PiCaretDownLight />
+            </button>
+            <SpecialRateDropdown
+              showDropdown={showDropdown}
+              toggleDropdown={toggleDropdown}
+            />
+          </div>
+        </div>
+        <button type="sumbit">Submit</button>
+      </Form>
+      <Form>
+        <div className="warning-area">
+          <ReservationWarning />
+          {isBigScreen && (
+            <div className="lg-only">
+              <div className="lg-search-container">
+                <div className="guest-number">
+                  <SlUser /> <span className="search-title">Guest:</span>
+                  <GuestCount
+                    adultNumber={adultNumber}
+                    setAdultNumber={setAdultNumber}
+                    kidNumber={kidNumber}
+                    setKidNumber={setKidNumber}
+                  />
+                  {/* Adult:
+                  <input
+                    type="number"
+                    name="adultnumber"
+                    defaultValue="2"
+                    min="0"
+                    max="9"
+                  />
+                  Children
+                  <input
+                    type="number"
+                    name="kidnumber"
+                    defaultValue="0"
+                    min="0"
+                    max="5"
+                  /> */}
+                </div>
+                <div className="lg-date-range">
+                  <span className="search-title">
+                    Check-in & Check-out Date:
+                  </span>
+                  <DateRangePicker
+                    startDate={startDate}
+                    startDateId="startdate"
+                    endDate={endDate}
+                    endDateId="enddate"
+                    onDatesChange={({ startDate, endDate }) => {
+                      setStartDate(startDate);
+                      setEndDate(endDate);
+                    }}
+                    focusedInput={focusedInput}
+                    onFocusChange={(focusedInput) =>
+                      setFocusedInput(focusedInput)
+                    }
+                    displayFormat="yyyy-MM-D"
+                    noBorder
+                    customArrowIcon={<GoDash />}
+                    numberOfMonths={2}
+                    withPortal
+                    daySize={60}
+                    keepOpenOnDateSelect
+                    renderCalendarInfo={renderCalendarInfo}
+                  />
+                </div>
+                <div className="apply-btn">
+                  <button
+                    type="sumbit"
+                    className="box-btn submit-btn inverse-btn"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+              <div className="additional-search">
+                <button
+                  type="button"
+                  onClick={toggleDropdown}
+                  className="special-rate-btn lg-special-rate-btn"
+                >
+                  Special codes or rates <PiCaretDownLight />
+                </button>
+                <SpecialRateDropdown
+                  showDropdown={showDropdown}
+                  toggleDropdown={toggleDropdown}
+                  isBigScreen={isBigScreen}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </Form>
     </div>
   );
 };

@@ -5,10 +5,13 @@
 
 .res-search-bar .DateRangePickerInput {
   width: 100%;
-
+  border: 0px;
   background-color: transparent;
 }
 
+.DateRangePickerInput {
+  border: 0px;
+}
 .res-search-bar .DateInput {
   background-color: transparent;
   width: 140px;
@@ -36,7 +39,6 @@
 }
 
 .lg-search-container .DateInput_input {
-  width: 145px;
   font-size: 17px;
   font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
     Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
