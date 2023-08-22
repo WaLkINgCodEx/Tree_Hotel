@@ -82,6 +82,23 @@
   width: 70px;
 }
 
+.guest-stepper {
+  width: 15px;
+  font-size: 18px;
+  border: transparent;
+}
+
+.apply-btn {
+  align-self: end;
+
+  height: 50px;
+}
+.submit-btn {
+  width: 100px;
+  text-align: end;
+  height: 100%;
+}
+
 .warning-area {
   margin: 0 auto;
   max-width: 1260px;

@@ -12,13 +12,12 @@ export const createRoom = async (req, res) => {
 };
 
 export const getAllRooms = async (req, res) => {
-  const { adultNumber, kidNumber, startDate, endDate, sort } = req.query;
-  const totalGuest = Number(adultNumber) + Number(kidNumber);
-
+  const { adultnumber, kidnumber, startdate, enddate, sort } = req.query;
+  const totalGuest = Number(adultnumber) + Number(kidnumber);
   let rooms = await Availability.aggregate([
     {
       $match: {
-        date: { $gte: new Date(startDate), $lt: new Date(endDate) },
+        date: { $gte: new Date(startdate), $lt: new Date(enddate) },
         "availability.availableRooms": { $gt: 1 },
       },
     },

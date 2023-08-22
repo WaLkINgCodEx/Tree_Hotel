@@ -31,7 +31,16 @@ const GuestCount = () => {
           <button type="button" onClick={minusAdult} className="control-btn">
             -
           </button>
-          {adultNumber}
+          <input
+            type="text"
+            name="adultnumber"
+            defaultValue={adultNumber}
+            value={adultNumber}
+            readOnly
+            min="0"
+            max="6"
+            className="guest-stepper"
+          />
           <button type="button" onClick={addAdult} className="control-btn">
             +
           </button>
@@ -42,7 +51,16 @@ const GuestCount = () => {
           <button type="button" onClick={minusKid} className="control-btn">
             -
           </button>
-          {kidNumber}
+          <input
+            type="text"
+            name="kidnumber"
+            defaultValue={kidNumber}
+            value={kidNumber}
+            readOnly
+            min="0"
+            max="6"
+            className="guest-stepper"
+          />
           <button type="button" onClick={addKid} className="control-btn">
             +
           </button>
