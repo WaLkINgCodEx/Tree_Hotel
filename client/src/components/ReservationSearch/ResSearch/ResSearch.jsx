@@ -134,7 +134,7 @@ const ResSearch = () => {
       </Form>
       <Form>
         <div className="warning-area">
-          {data.rooms.length === 0 && <ReservationWarning />}
+          <ReservationWarning />
           {isBigScreen && (
             <div className="lg-only">
               <div className="lg-search-container">
