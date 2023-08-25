@@ -13,6 +13,7 @@ import { SlUser } from "react-icons/sl";
 import ReservationWarning from "./ReservationWarning";
 import GuestCount from "./GuestCount";
 import SpecialRateDropdown from "./SpecialRateDropdown";
+import ReservationStayInfo from "../ReservationStayInfo/ReservationStayInfo";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
 const ResSearch = () => {
@@ -28,11 +29,14 @@ const ResSearch = () => {
     searchValues,
     adultNumber,
     kidNumber,
+    data,
+    reservationTotal,
   } = useReservationContext();
 
   const { adultnumber, kidnumber } = searchValues;
-  console.log(searchValues);
+  console.log(data);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showStayInfo, setShowStayInfo] = useState(false);
 
   const isBigScreen = useMediaQuery({
     query: "(min-width: 960px)",
@@ -55,6 +59,10 @@ const ResSearch = () => {
     setShowDropdown(!showDropdown);
   };
 
+  const toggleStayInfo = () => {
+    setShowStayInfo(!showStayInfo);
+  };
+
   return (
     <div className="res-search-wrapper">
       <Form>
@@ -64,9 +72,9 @@ const ResSearch = () => {
             <div className="date-range">
               <DateRangePicker
                 startDate={startDate}
-                startDateId="start-date"
+                startDateId="startdate"
                 endDate={endDate}
-                endDateId="end-date"
+                endDateId="enddate"
                 onDatesChange={({ startDate, endDate }) => {
                   setStartDate(startDate);
                   setEndDate(endDate);
@@ -83,9 +91,15 @@ const ResSearch = () => {
                 renderCalendarInfo={renderCalendarInfo}
               />
             </div>
-            <div className="stay-info">
-              CA 0.00 <PiCaretDownLight />
-            </div>
+            <button
+              type="button"
+              className="res-search-bar-btn"
+              onClick={toggleStayInfo}
+            >
+              <div className="stay-info">
+                CA ${reservationTotal} <PiCaretDownLight />
+              </div>
+            </button>
           </div>
           <div className="bottom-guest-bar">
             Guest:
@@ -112,12 +126,15 @@ const ResSearch = () => {
               toggleDropdown={toggleDropdown}
             />
           </div>
+          <br />
+          <button type="sumbit" className="box-btn">
+            Submit
+          </button>
         </div>
-        <button type="sumbit">Submit</button>
       </Form>
       <Form>
         <div className="warning-area">
-          <ReservationWarning />
+          {data.rooms.length === 0 ? <ReservationWarning /> : ""}
           {isBigScreen && (
             <div className="lg-only">
               <div className="lg-search-container">
@@ -129,22 +146,6 @@ const ResSearch = () => {
                     kidNumber={kidNumber}
                     setKidNumber={setKidNumber}
                   />
-                  {/* Adult:
-                  <input
-                    type="number"
-                    name="adultnumber"
-                    defaultValue="2"
-                    min="0"
-                    max="9"
-                  />
-                  Children
-                  <input
-                    type="number"
-                    name="kidnumber"
-                    defaultValue="0"
-                    min="0"
-                    max="5"
-                  /> */}
                 </div>
                 <div className="lg-date-range">
                   <span className="search-title">
@@ -200,6 +201,11 @@ const ResSearch = () => {
           )}
         </div>
       </Form>
+      {showStayInfo && (
+        <div className="sm-stay-info">
+          <ReservationStayInfo toggleStayInfo={toggleStayInfo} />
+        </div>
+      )}
     </div>
   );
 };

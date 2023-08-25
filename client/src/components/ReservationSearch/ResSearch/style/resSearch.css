@@ -53,6 +53,16 @@
     display: none;
   }
 }
+.res-search-bar-btn {
+  border: 0px;
+  background-color: #173f35;
+  font-size: 15px;
+  color: #ffffff;
+  font-family: Reforma_1969, AXtManalBold Regular, Helvetica, Arial,
+    Microsoft Yahei, PingFang SC, PingFang TC, PingFang HK, Hiragino Sans;
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 .top-stay-bar {
   display: flex;
@@ -89,9 +99,6 @@
 }
 
 .apply-btn {
-  align-self: end;
-
-  height: 50px;
 }
 .submit-btn {
   width: 100px;
@@ -152,6 +159,7 @@
 .lg-search-container {
   display: flex;
   border: 1px solid #baa382;
+  margin-top: 20px;
 }
 
 .guest-number {
