@@ -3,7 +3,7 @@ import moment from "moment";
 import ReservationItem from "./ReservationItem";
 import "./style/reservationStayInfo.css";
 
-const ReservationStayInfo = () => {
+const ReservationStayInfo = ({ toggleStayInfo }) => {
   const {
     adultNumber,
     kidNumber,
@@ -15,6 +15,9 @@ const ReservationStayInfo = () => {
 
   return (
     <div className="avail-stay-info">
+      <span class="avail-stay-close" onClick={toggleStayInfo}>
+        &times;
+      </span>
       <h2 className="avail-stay-title">Your Stay</h2>
       <div className="avail-stay-check-time">
         <div>
