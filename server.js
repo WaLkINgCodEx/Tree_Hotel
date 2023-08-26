@@ -1,11 +1,11 @@
 import * as dotenv from "dotenv";
-dotenv.config();
 import express from "express";
-const app = express();
 import mongoose from "mongoose";
 import cors from "cors";
-
 import roomRouter from "./routes/roomRouter.js";
+
+dotenv.config();
+const app = express();
 
 app.use(express.json());
 app.use(cors());
