@@ -52,7 +52,7 @@ export const ReservationProvider = ({ children }) => {
   };
 
   const addAdult = () => {
-    if (adultNumber >= 0 && adultNumber < 10) {
+    if (adultNumber >= 0 && adultNumber < 6) {
       setAdultNumber(adultNumber + 1);
     }
   };
@@ -64,7 +64,7 @@ export const ReservationProvider = ({ children }) => {
   };
 
   const addKid = () => {
-    if (kidNumber >= 0 && kidNumber < 10) {
+    if (kidNumber >= 0 && kidNumber < 6) {
       setKidNumber(kidNumber + 1);
     }
   };

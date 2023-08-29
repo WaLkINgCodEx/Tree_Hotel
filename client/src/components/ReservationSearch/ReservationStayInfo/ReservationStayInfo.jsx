@@ -18,7 +18,9 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
       <span class="avail-stay-close" onClick={toggleStayInfo}>
         &times;
       </span>
+
       <h2 className="avail-stay-title">Your Stay</h2>
+
       <div className="avail-stay-check-time">
         <div>
           <h6 className="stay-check-time-title">Check-in</h6>
@@ -29,15 +31,17 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
           <p>Before 12:00 PM</p>
         </div>
       </div>
+
       <div className="avail-stay-date">
         {moment(startDate).format("ddd, MMM D, YYYY")} -
         {moment(endDate).format("ddd, MMM D, YYYY")}
       </div>
+
       <div className="avail-stay-guest">
-        {adultNumber}
-        {adultNumber > 1 ? " Adults" : " Adult"}, {kidNumber}
+        {adultNumber} {adultNumber > 1 ? " Adults" : " Adult"},{kidNumber}{" "}
         {kidNumber > 1 ? " Children" : " Child"}
       </div>
+
       {reservationItems.length > 0 &&
         reservationItems.map((reservationItem) => {
           return <ReservationItem reservationItem={reservationItem} />;

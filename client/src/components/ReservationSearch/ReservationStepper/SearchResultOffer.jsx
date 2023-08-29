@@ -16,6 +16,7 @@ const SearchResultOffer = ({
     (roomType.basePrice + offer.addOnPrice) *
     offer.discountRate *
     getTotalNights();
+
   const pricePerNight = (totalPrice / getTotalNights()).toFixed(2);
 
   return (

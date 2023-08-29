@@ -12,9 +12,9 @@ export const createRoom = async (req, res) => {
 };
 
 export const getAllRooms = async (req, res) => {
-  const { adultnumber, kidnumber, startdate, enddate, sort } = req.query;
+  const { adultnumber, kidnumber, startdate, enddate, sort } = await req.query;
   const totalGuest = Number(adultnumber) + Number(kidnumber);
-
+  console.log(totalGuest);
   let rooms = await Availability.aggregate([
     {
       $match: {
@@ -34,38 +34,13 @@ export const getAllRooms = async (req, res) => {
       },
     },
     {
-      $unwind: "$roomDetails",
-    },
-    {
-      $addFields: {
-        "availability.room": "$roomDetails.room",
-        "availability.roomType": "$roomDetails.roomType",
-        "availability.roomLongDesc": "$roomDetails.roomLongDesc",
-        "availability.capacity": "$roomDetails.capacity",
-        "availability.size": "$roomDetails.size",
-        "availability.bed": "$roomDetails.bed",
-        "availability.view": "$roomDetails.view",
-        "availability.quantity": "$roomDetails.quantity",
-        "availability.amenities": "$roomDetails.amenities",
-        "availability.basePrice": "$roomDetails.basePrice",
-        "availability.image": "$roomDetails.image",
-      },
-    },
-    {
-      $group: {
-        _id: "$_id",
-        date: { $first: "$date" },
-        availability: { $push: "$availability" },
-      },
-    },
-    {
       $match: {
-        "availability.capacity": { $gte: totalGuest },
+        "roomDetails.capacity": { $gte: totalGuest },
       },
     },
   ]);
 
-  console.log(rooms);
+  // console.log(rooms);
 
   res.status(200).json({ rooms });
 
