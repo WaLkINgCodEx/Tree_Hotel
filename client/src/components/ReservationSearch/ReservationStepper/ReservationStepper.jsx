@@ -17,6 +17,7 @@ const ReservationStepper = () => {
   const getSteps = () => {
     return ["Rooms", "Guest Details", "Confirmation"];
   };
+
   const getStepContent = (step) => {
     switch (step) {
       case 0:

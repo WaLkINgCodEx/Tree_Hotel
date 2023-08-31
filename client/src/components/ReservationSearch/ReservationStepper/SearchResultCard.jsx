@@ -29,7 +29,8 @@ const SearchResultCard = ({ roomType, offers, handleNext }) => {
         <h2 className="avail-card-title">{roomType.room}</h2>
         <div className="avail-card-desc">{roomType.roomType}</div>
         <span className="avail-card-room-prop">
-          Guest {roomType.capacity} | {roomType.bed} | {roomType.size}m2
+          Guest {roomType.capacity} | {roomType.bed} | {roomType.size} m
+          <sup>2</sup>
         </span>
         <p className="avail-card-desc">{roomType.roomDesc}</p>
         <a href="/" className="avail-room-details-link">
