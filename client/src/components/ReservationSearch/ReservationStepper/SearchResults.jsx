@@ -1,20 +1,19 @@
 import { useReservationContext } from "../../../contexts/ReservationContext";
-import { roomType, pricing, offers } from "../../../data";
-import ReservationStayInfo from "../ReservationStayInfo/ReservationStayInfo";
+import { offers } from "../../../data";
 import SearchResultCard from "./SearchResultCard";
 
 const SearchResults = ({ handleNext }) => {
-  const { adultNumber, kidNumber, getTotalGuests } = useReservationContext();
-
-  const filteredList = roomType.filter((room) => {
-    return room.capacity >= adultNumber + kidNumber;
-  });
+  const { data, searchValues, adultNumber } = useReservationContext();
+  const { adultnumber } = searchValues;
+  const { rooms } = data;
+  const adultnumberToInt = Number(adultnumber);
 
   return (
     <>
       {adultNumber > 0 &&
-        filteredList.length !== 0 &&
-        filteredList.map((room, idx) => {
+        adultNumber > 0 &&
+        rooms.length !== 0 &&
+        rooms.map((room, idx) => {
           return (
             <SearchResultCard
               key={idx}

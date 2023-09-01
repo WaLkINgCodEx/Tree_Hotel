@@ -30,11 +30,10 @@ export const ReservationProvider = ({ children }) => {
 
   const [reservationItems, setReservationItems] = useState([]);
   const [reservationTotal, setReservationTotal] = useState(0);
-  const [adultNumber, setAdultNumber] = useState(0);
+  const [adultNumber, setAdultNumber] = useState(2);
   const [kidNumber, setKidNumber] = useState(0);
 
   const { data, searchValues } = useLoaderData();
-
   const getTotalNights = () => {
     if (startDate && endDate) {
       return endDate.diff(startDate, "days");

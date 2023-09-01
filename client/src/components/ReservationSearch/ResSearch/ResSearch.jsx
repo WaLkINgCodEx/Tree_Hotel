@@ -81,7 +81,7 @@ const ResSearch = () => {
                 }}
                 focusedInput={focusedInput}
                 onFocusChange={(focusedInput) => setFocusedInput(focusedInput)}
-                displayFormat="yyyy-MM-D"
+                displayFormat="yyyy-MM-DD"
                 noBorder
                 customArrowIcon={<GoDash />}
                 numberOfMonths={1}
@@ -164,7 +164,7 @@ const ResSearch = () => {
                     onFocusChange={(focusedInput) =>
                       setFocusedInput(focusedInput)
                     }
-                    displayFormat="yyyy-MM-D"
+                    displayFormat="yyyy-MM-DD"
                     noBorder
                     customArrowIcon={<GoDash />}
                     numberOfMonths={2}
