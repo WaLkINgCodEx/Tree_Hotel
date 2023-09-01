@@ -3,8 +3,16 @@ import { TfiClose } from "react-icons/tfi";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
 const GuestCount = () => {
-  const { minusAdult, addAdult, minusKid, addKid, kidNumber, adultNumber } =
-    useReservationContext();
+  const {
+    minusAdult,
+    addAdult,
+    minusKid,
+    addKid,
+    kidNumber,
+    adultNumber,
+    searchValues,
+  } = useReservationContext();
+  const { adultnumber, kidnumber } = searchValues;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const dropdown = () => {
@@ -35,7 +43,7 @@ const GuestCount = () => {
           <input
             type="text"
             name="adultnumber"
-            defaultValue={adultNumber}
+            defaultValue={adultnumber}
             value={adultNumber}
             readOnly
             min="0"
@@ -55,7 +63,7 @@ const GuestCount = () => {
           <input
             type="text"
             name="kidnumber"
-            defaultValue={kidNumber}
+            defaultValue={kidnumber}
             value={kidNumber}
             readOnly
             min="0"
