@@ -22,13 +22,9 @@ const ResSearch = () => {
     setEndDate,
     focusedInput,
     setFocusedInput,
-    setAdultNumber,
-    setKidNumber,
     startDate,
     endDate,
     searchValues,
-    adultNumber,
-    kidNumber,
     data,
     reservationTotal,
   } = useReservationContext();
@@ -104,12 +100,7 @@ const ResSearch = () => {
           <div className="bottom-guest-bar">
             Guest:
             <div className="guest-count-bar">
-              <GuestCount
-                adultNumber={adultNumber}
-                setAdultNumber={setAdultNumber}
-                kidNumber={kidNumber}
-                setKidNumber={setKidNumber}
-              />
+              <GuestCount />
             </div>
             <div className="guest-count-bar-end"></div>
           </div>
@@ -140,12 +131,7 @@ const ResSearch = () => {
               <div className="lg-search-container">
                 <div className="guest-number">
                   <SlUser /> <span className="search-title">Guest:</span>
-                  <GuestCount
-                    adultNumber={adultNumber}
-                    setAdultNumber={setAdultNumber}
-                    kidNumber={kidNumber}
-                    setKidNumber={setKidNumber}
-                  />
+                  <GuestCount />
                 </div>
                 <div className="lg-date-range">
                   <span className="search-title">

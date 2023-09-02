@@ -214,6 +214,9 @@
   right: 5px;
   top: 5px;
   color: #baa382;
+  border: transparent;
+  background-color: transparent;
+  padding: 5px;
 }
 
 .control-container {
