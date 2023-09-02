@@ -10,8 +10,7 @@ const SearchResults = ({ handleNext }) => {
 
   return (
     <>
-      {adultNumber > 0 &&
-        adultNumber > 0 &&
+      {adultnumberToInt > 0 &&
         rooms.length !== 0 &&
         rooms.map((room, idx) => {
           return (

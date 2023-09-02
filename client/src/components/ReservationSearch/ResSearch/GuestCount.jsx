@@ -12,7 +12,9 @@ const GuestCount = () => {
     adultNumber,
     searchValues,
   } = useReservationContext();
-  const { adultnumber, kidnumber } = searchValues;
+  let { adultnumber, kidnumber } = searchValues;
+  adultnumber = Number(adultnumber);
+  console.log(adultnumber);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const dropdown = () => {
@@ -21,7 +23,7 @@ const GuestCount = () => {
 
   return (
     <div className="guest-count-button-area">
-      <button className="guest-count-button" onClick={dropdown}>
+      <button type="button" className="guest-count-button" onClick={dropdown}>
         {adultNumber} {adultNumber > 1 ? " Adults" : " Adult"}, {kidNumber}
         {kidNumber > 1 ? " Children" : " Child"}
       </button>
@@ -32,10 +34,11 @@ const GuestCount = () => {
             : "dropdown-select-container"
         }
       >
-        <div className="dropdown-close" onClick={dropdown}>
+        <button type="button" className="dropdown-close" onClick={dropdown}>
           <TfiClose />
-        </div>
+        </button>
         <h5>Adults:</h5>
+
         <div className="control-container">
           <button type="button" onClick={minusAdult} className="control-btn">
             -
@@ -43,12 +46,11 @@ const GuestCount = () => {
           <input
             type="text"
             name="adultnumber"
-            defaultValue={adultnumber}
-            value={adultNumber}
-            readOnly
             min="0"
             max="6"
             className="guest-stepper"
+            value={adultNumber}
+            defaultValue={adultNumber}
           />
           <button type="button" onClick={addAdult} className="control-btn">
             +
@@ -63,11 +65,10 @@ const GuestCount = () => {
           <input
             type="text"
             name="kidnumber"
-            defaultValue={kidnumber}
-            value={kidNumber}
-            readOnly
             min="0"
             max="6"
+            defaultValue={kidNumber}
+            value={kidNumber}
             className="guest-stepper"
           />
           <button type="button" onClick={addKid} className="control-btn">

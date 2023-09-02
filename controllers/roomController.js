@@ -13,7 +13,7 @@ export const createRoom = async (req, res) => {
 };
 
 export const getAllRooms = async (req, res) => {
-  const { adultnumber, kidnumber, startdate, enddate, sort } = await req.query;
+  const { adultnumber, kidnumber, startdate, enddate, sort } = req.query;
   const totalGuest = Number(adultnumber) + Number(kidnumber);
   const totalNights = Math.floor(
     (new Date(enddate) - new Date(startdate)) / (1000 * 60 * 60 * 24)
