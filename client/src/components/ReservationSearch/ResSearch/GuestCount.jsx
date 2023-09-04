@@ -13,8 +13,6 @@ const GuestCount = () => {
     searchValues,
   } = useReservationContext();
   let { adultnumber, kidnumber } = searchValues;
-  adultnumber = Number(adultnumber);
-  console.log(adultnumber);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const dropdown = () => {
