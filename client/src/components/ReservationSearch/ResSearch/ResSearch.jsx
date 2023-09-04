@@ -27,6 +27,7 @@ const ResSearch = () => {
     searchValues,
     data,
     reservationTotal,
+    adultNumber,
   } = useReservationContext();
 
   const { adultnumber, kidnumber } = searchValues;
@@ -125,7 +126,9 @@ const ResSearch = () => {
       </Form>
       <Form>
         <div className="warning-area">
-          <ReservationWarning />
+          {(data.rooms.length === 0 || adultNumber === 0) && (
+            <ReservationWarning />
+          )}
           {isBigScreen && (
             <div className="lg-only">
               <div className="lg-search-container">
