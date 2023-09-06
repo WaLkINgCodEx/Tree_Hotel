@@ -10,7 +10,9 @@ const SearchResults = ({ handleNext }) => {
   const { rooms } = data;
   const adultnumberToInt = Number(adultnumber);
   useEffect(() => {
-    setAdultNumber(adultnumberToInt);
+    if (!isNaN(adultnumber)) {
+      setAdultNumber(adultnumberToInt);
+    }
   }, []);
 
   return (
