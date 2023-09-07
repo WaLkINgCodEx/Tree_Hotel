@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { pricing } from "../../../data";
 import { useReservationContext } from "../../../contexts/ReservationContext";
+import PenToSquare from "../../../assets/icons/PenToSquare";
+import TrashCan from "../../../assets/icons/TrashCan";
 
 const ReservationItem = ({ reservationItem }) => {
   const { basePrice, offer, totalNights } = reservationItem;
@@ -45,12 +47,29 @@ const ReservationItem = ({ reservationItem }) => {
         </div>
         <div className="reservation-item-right">CA$ {totalPrice}</div>
       </div>
+
       <div className="reservation-item">
         <div className="reservation-item-left">
           <div className="reservation-item-tax">Tax and Fees</div>
           <div className="reservation-item-nights-button">Details</div>
         </div>
         <div className="reservation-item-right">CA$ {totalFees}</div>
+      </div>
+
+      <div className="reservation-item-action">
+        <button className="btn">
+          <span className="btn-edit">
+            <PenToSquare />
+          </span>
+          <span>Edit</span>
+        </button>
+        <span></span>
+        <button className="btn">
+          <span className="btn-remove">
+            <TrashCan />
+          </span>
+          <span>Remove</span>
+        </button>
       </div>
     </div>
   );

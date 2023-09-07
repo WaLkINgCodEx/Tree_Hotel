@@ -130,6 +130,66 @@
   margin-bottom: 10px;
 }
 
+.add-room {
+  margin-top: 20px;
+}
+
+.add-room,
+.reservation-item-action {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.add-room .btn,
+.reservation-item-action .btn {
+  display: inline-flex;
+  margin-right: 15px;
+  font-size: 16px;
+  font-family: Niramit, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: none;
+  color: #baa382;
+  text-decoration: underline;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  transition: color 150ms;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.add-room .btn > span,
+.reservation-item-action .btn > span {
+  /* width: 15px; */
+  margin-right: 5px;
+}
+
+.add-room svg {
+  vertical-align: -7px;
+}
+
+.reservation-item-action svg {
+  vertical-align: -1px;
+}
+
+.add-room > span,
+.reservation-item-action > span {
+  margin-right: 15px;
+  border-left: 2px solid #baa38245;
+}
+
+/* .reservation-item-action .btn-edit::before {
+  display: inline-block;
+  line-height: 1em;
+  font-family: "spark-icon-line";
+  font-size: 1em;
+  vertical-align: baseline;
+  font-weight: normal;
+  content: "\F14C";
+} */
+
 .avail-stay-total-fee {
   font-size: 20px;
   padding: 10px 0px;
