@@ -2,6 +2,7 @@ import { useReservationContext } from "../../../contexts/ReservationContext";
 import moment from "moment";
 import ReservationItem from "./ReservationItem";
 import "./style/reservationStayInfo.css";
+import CirclePlus from "../../../assets/icons/CirclePlus";
 
 const ReservationStayInfo = ({ toggleStayInfo }) => {
   const {
@@ -46,6 +47,15 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
         reservationItems.map((reservationItem) => {
           return <ReservationItem reservationItem={reservationItem} />;
         })}
+
+      <div className="add-room">
+        <button className="btn">
+          <span className="add-icon">
+            <CirclePlus />
+          </span>
+          <span>Add a Room</span>
+        </button>
+      </div>
 
       <div className="avail-stay-total-fee">
         <div className="avail-stay-total-fee-left">Total:</div>
