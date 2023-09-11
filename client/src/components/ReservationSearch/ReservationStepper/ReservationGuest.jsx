@@ -57,7 +57,7 @@ const ReservationGuest = () => {
             fullWidth
             sx={{
               mb: { xs: 2, md: "initial" },
-              width: { md: 120 },
+              width: { md: "15%" },
             }}
           >
             <InputLabel id="demo-simple-select-label">Prefix</InputLabel>
@@ -70,6 +70,7 @@ const ReservationGuest = () => {
               required
               error={prefix === ""}
               helperText={prefix === "" && `Please Provide ${prefix}`}
+              sx={{ borderRadius: 0 }}
             >
               <MenuItem value="" disabled></MenuItem>
               <MenuItem value="dr">Dr.</MenuItem>
@@ -82,42 +83,60 @@ const ReservationGuest = () => {
               <MenuItem value="rev">Rev.</MenuItem>
             </Select>
           </FormControl>
-          <FormControl sx={{ width: { xs: "100%", md: "initial" } }}>
-            <div>
-              <TextField
-                sx={{
-                  mr: { xs: 0, md: 2 },
-                  mb: 2,
-                  width: { xs: "100%", md: 300 },
-                }}
-                id="filled-textarea"
-                label="First Name"
-                placeholder=""
-                variant="filled"
-                required
-                value={firstName}
-                error={firstName === ""}
-                helperText={
-                  firstName === "" && `Please Provide Your First Name`
-                }
-                onChange={handleChangeFirstName}
-              />
+          <FormControl
+            className="cus-name"
+            sx={{ width: { xs: "100%", md: "initial" } }}
+          >
+            <TextField
+              className="first-name"
+              sx={{
+                mr: { xs: 0, md: 2 },
+                mb: 2,
+                width: { xs: "100%", md: 280 },
+                borderRadius: 0,
+                "& .MuiFilledInput-root": {
+                  borderRadius: "0px",
+                },
+              }}
+              id="filled-textarea"
+              label="First Name"
+              placeholder=""
+              variant="filled"
+              required
+              value={firstName}
+              error={firstName === ""}
+              helperText={firstName === "" && `Please Provide Your First Name`}
+              onChange={handleChangeFirstName}
+            />
 
-              <TextField
-                sx={{ mb: 2, width: { xs: "100%", md: 380 } }}
-                id="filled-textarea"
-                label="Last Name"
-                placeholder=""
-                variant="filled"
-                required
-              />
-            </div>
+            <TextField
+              className="last-name"
+              sx={{
+                mb: 2,
+                width: { xs: "100%", md: 400 },
+                "& .MuiFilledInput-root": {
+                  borderRadius: "0px",
+                },
+              }}
+              id="filled-textarea"
+              label="Last Name"
+              placeholder=""
+              variant="filled"
+              required
+            />
           </FormControl>
 
           <div>
             <FormControl sx={{ width: { xs: "100%", md: "initial" } }}>
               <TextField
-                sx={{ mb: 2, width: { xs: "100%", md: 420 }, mr: 2 }}
+                sx={{
+                  mb: 2,
+                  width: { xs: "100%", md: 400 },
+                  mr: 2,
+                  "& .MuiFilledInput-root": {
+                    borderRadius: "0px",
+                  },
+                }}
                 id="filled-textarea"
                 label="Phone"
                 placeholder=""
@@ -127,7 +146,12 @@ const ReservationGuest = () => {
             </FormControl>
             <FormControl sx={{ width: { xs: "100%", md: "initial" } }}>
               <TextField
-                sx={{ width: { xs: "100%", md: 380 } }}
+                sx={{
+                  width: { xs: "100%", md: 400 },
+                  "& .MuiFilledInput-root": {
+                    borderRadius: "0px",
+                  },
+                }}
                 id="filled-textarea"
                 label="Email Address"
                 placeholder=""
@@ -147,7 +171,14 @@ const ReservationGuest = () => {
                 disablePortal
                 id="combo-box-demo"
                 options={countryRegion}
-                sx={{ mr: { xs: 0, md: 2 }, mb: 2, width: { md: 420 } }}
+                sx={{
+                  mr: { xs: 0, md: 2 },
+                  mb: 2,
+                  width: { md: 400 },
+                  "& .MuiFilledInput-root": {
+                    borderRadius: "0px",
+                  },
+                }}
                 renderInput={(params) => (
                   <TextField
                     variant="filled"
@@ -164,7 +195,13 @@ const ReservationGuest = () => {
               }}
             >
               <TextField
-                sx={{ mb: 2, width: { xs: "100%", md: 380 } }}
+                sx={{
+                  mb: 2,
+                  width: { xs: "100%", md: 400 },
+                  "& .MuiFilledInput-root": {
+                    borderRadius: "0px",
+                  },
+                }}
                 id="filled-textarea"
                 label="Zip/Postal Code"
                 placeholder=""
@@ -175,10 +212,19 @@ const ReservationGuest = () => {
           <br />
           <hr />
           <h2>Special Requests</h2>
-          <FormControl fullWidth>
+
+          <FormControl
+            className="special-request"
+            sx={{ width: { xs: "100%" } }}
+          >
             <TextField
               fullWidth
-              sx={{ mb: 2 }}
+              sx={{
+                mb: 2,
+                "& .MuiFilledInput-root": {
+                  borderRadius: "0px",
+                },
+              }}
               multiline
               rows={3}
               id="filled-textarea"
@@ -188,14 +234,24 @@ const ReservationGuest = () => {
             />
           </FormControl>
 
-          <Accordion>
+          <Accordion
+            // className="transportaion"
+            id="transportaion-form"
+            sx={{
+              width: { xs: "100%" },
+            }}
+          >
             <AccordionSummary
               expandIcon={<AiOutlineCaretDown />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              sx={{
+                width: { xs: "100%" },
+              }}
             >
-              <h5>Transportation(Optional)</h5>
+              <h5>Transportation (Optional)</h5>
             </AccordionSummary>
+
             <AccordionDetails>
               <p>
                 This information is to estimate your arrival and departure time,
@@ -212,6 +268,9 @@ const ReservationGuest = () => {
                     mb: { xs: 2, md: "initial" },
                     mr: { md: 2 },
                     width: { md: 400 },
+                    "& .MuiFilledInput-root": {
+                      borderRadius: "0px",
+                    },
                   }}
                 >
                   <InputLabel id="demo-simple-select-label">
@@ -241,6 +300,9 @@ const ReservationGuest = () => {
                   sx={{
                     mb: { xs: 2, md: "initial" },
                     width: { md: 400 },
+                    "& .MuiFilledInput-root": {
+                      borderRadius: "0px",
+                    },
                   }}
                 >
                   <InputLabel id="demo-simple-select-label">

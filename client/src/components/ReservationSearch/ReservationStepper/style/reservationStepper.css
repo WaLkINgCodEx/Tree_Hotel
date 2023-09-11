@@ -202,20 +202,58 @@
 
 .guest-details-container {
   background-color: #eee;
-  padding: 10px;
+  padding: 30px;
+  margin: auto;
   border: 1px solid #baa382;
   color: #173f35;
-  text-align: center;
+  /* text-align: center; */
 }
-@media (min-width: 960px) {
+
+@media (min-width: 900px) {
   .guest-details-container {
-    max-width: 835px;
+    max-width: 816px;
   }
 }
 
 .guest-details-container h2 {
   text-align: left;
   padding: 10px;
+}
+
+@media (min-width: 900px) {
+  .guest-details-container .cus-name {
+    flex-direction: row;
+    width: 85%;
+  }
+}
+
+/* @media (min-width: 900px) {
+  .guest-details-container .cus-name .first-name {
+    width: 50%;
+  }
+} */
+
+@media (min-width: 900px) {
+  .guest-details-container .cus-name .last-name {
+    width: 61.095%;
+  }
+}
+
+@media (min-width: 900px) {
+  .special-request {
+    max-width: 816px;
+  }
+}
+
+@media (min-width: 900px) {
+  .transportaion {
+    max-width: 816px;
+  }
+}
+
+#transportaion-form {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .transport-accordion-input {
