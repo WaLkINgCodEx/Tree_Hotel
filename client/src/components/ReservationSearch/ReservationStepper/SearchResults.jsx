@@ -3,7 +3,7 @@ import { useReservationContext } from "../../../contexts/ReservationContext";
 import { offers } from "../../../data";
 import SearchResultCard from "./SearchResultCard";
 
-const SearchResults = ({ handleNext }) => {
+const SearchResults = () => {
   const { data, searchValues, adultNumber, setAdultNumber } =
     useReservationContext();
   const { adultnumber } = searchValues;
@@ -20,14 +20,7 @@ const SearchResults = ({ handleNext }) => {
       {adultNumber !== 0 &&
         rooms.length !== 0 &&
         rooms.map((room, idx) => {
-          return (
-            <SearchResultCard
-              key={idx}
-              roomType={room}
-              offers={offers}
-              handleNext={handleNext}
-            />
-          );
+          return <SearchResultCard key={idx} roomType={room} offers={offers} />;
         })}
     </>
   );

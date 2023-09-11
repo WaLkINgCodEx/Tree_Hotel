@@ -22,12 +22,7 @@
 
 .results-left {
   width: 100%;
-}
-
-@media (min-width: 960px) {
-  .results-left {
-    width: 70%;
-  }
+  background-color: #fff;
 }
 
 .results-right {

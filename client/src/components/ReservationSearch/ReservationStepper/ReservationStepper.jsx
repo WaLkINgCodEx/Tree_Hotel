@@ -12,7 +12,8 @@ import { useReservationContext } from "../../../contexts/ReservationContext";
 import "./style/reservationStepper.css";
 
 const ReservationStepper = () => {
-  const { reservationItems } = useReservationContext();
+  const { reservationItems, activeStep, handleReset, handleNext, handleBack } =
+    useReservationContext();
 
   const getSteps = () => {
     return ["Rooms", "Guest Details", "Confirmation"];
@@ -30,22 +31,7 @@ const ReservationStepper = () => {
         return "Error occurred";
     }
   };
-
-  const [activeStep, setActiveStep] = useState(0);
-
   const steps = getSteps();
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-  };
 
   return (
     <div className="stepper-wrapper">

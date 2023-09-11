@@ -7,7 +7,8 @@ import TrashCan from "../../../assets/icons/TrashCan";
 const ReservationItem = ({ reservationItem }) => {
   const { basePrice, offer, totalNights } = reservationItem;
 
-  const { setReservationTotal } = useReservationContext();
+  const { setReservationTotal, handleBack, reservationItems } =
+    useReservationContext();
 
   const totalPrice = (
     (basePrice + offer.addOnPrice) *
