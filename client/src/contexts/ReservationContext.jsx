@@ -34,6 +34,20 @@ export const ReservationProvider = ({ children }) => {
   const [kidNumber, setKidNumber] = useState(0);
 
   const { data, searchValues } = useLoaderData();
+  const [activeStep, setActiveStep] = useState(0);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleReset = () => {
+    setActiveStep(0);
+  };
+
   const getTotalNights = () => {
     if (startDate && endDate) {
       return endDate.diff(startDate, "days");
@@ -107,6 +121,11 @@ export const ReservationProvider = ({ children }) => {
     setReservationTotal,
     data,
     searchValues,
+    activeStep,
+    setActiveStep,
+    handleNext,
+    handleBack,
+    handleReset,
   };
 
   return (

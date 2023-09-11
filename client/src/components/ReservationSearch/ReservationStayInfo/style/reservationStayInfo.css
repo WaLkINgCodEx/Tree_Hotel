@@ -23,6 +23,8 @@
     max-width: 410px;
     font-size: 16px;
     height: unset;
+    position: sticky;
+    top: 20px;
   }
 }
 

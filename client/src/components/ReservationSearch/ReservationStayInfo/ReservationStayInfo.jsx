@@ -12,7 +12,16 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
     endDate,
     reservationItems,
     reservationTotal,
+    handleBack,
   } = useReservationContext();
+
+  // const totalPrice = reservationItems.reduce(
+  //   (total, reservationItem) =>
+  //     total + (reservationItem.basePrice + offer.addOnPrice) *
+  //   offer.discountRate *
+  //   totalNights,
+  //   0
+  // );
 
   return (
     <div className="avail-stay-info">
@@ -47,16 +56,16 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
         reservationItems.map((reservationItem) => {
           return <ReservationItem reservationItem={reservationItem} />;
         })}
-
-      <div className="add-room">
-        <button className="btn">
-          <span className="add-icon">
-            <CirclePlus />
-          </span>
-          <span>Add a Room</span>
-        </button>
-      </div>
-
+      {reservationItems.length > 0 && (
+        <div className="add-room">
+          <button className="btn" onClick={handleBack}>
+            <span className="add-icon">
+              <CirclePlus />
+            </span>
+            <span>Add a Room</span>
+          </button>
+        </div>
+      )}
       <div className="avail-stay-total-fee">
         <div className="avail-stay-total-fee-left">Total:</div>
         <div className="avail-stay-total-fee-right">
