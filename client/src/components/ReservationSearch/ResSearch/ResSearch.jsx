@@ -33,6 +33,7 @@ const ResSearch = () => {
 
   const { adultnumber, kidnumber } = searchValues;
   console.log(data);
+
   const [showDropdown, setShowDropdown] = useState(false);
   const [showStayInfo, setShowStayInfo] = useState(false);
 
@@ -63,7 +64,7 @@ const ResSearch = () => {
 
   return (
     <div className="res-search-wrapper">
-      <Form>
+      {/* <Form>
         <div className="small-size-only">
           <div className="res-search-bar ">
             <div className="top-stay-bar">
@@ -127,17 +128,16 @@ const ResSearch = () => {
               Submit
             </button>
           </div>
-          <div className="results-left">
-            <ReservationStepper />
-          </div>
+          <div className="results-left"><ReservationStepper /></div>
         </div>
-      </Form>
+      </Form> */}
+
       <Form>
-        <div className="warning-area">
+        {/* <div className="warning-area">
           {(data.rooms.length === 0 || adultNumber === 0) && (
             <ReservationWarning />
           )}
-        </div>
+        </div> */}
         {isBigScreen && (
           <div className="lg-only">
             <div className="searching-area">
@@ -197,22 +197,22 @@ const ResSearch = () => {
                     isBigScreen={isBigScreen}
                   />
                 </div>
-                <div className="results-left">
+                {/* <div className="results-left">
                   <ReservationStepper />
-                </div>
+                </div> */}
               </div>
-              <div className="results-right">
+              {/* <div className="results-right">
                 <ReservationStayInfo />
-              </div>
+              </div> */}
             </div>
           </div>
         )}
       </Form>
-      {showStayInfo && (
+      {/* {showStayInfo && (
         <div className="sm-stay-info">
           <ReservationStayInfo toggleStayInfo={toggleStayInfo} />
         </div>
-      )}
+      )} */}
     </div>
   );
 };

@@ -11,14 +11,18 @@
 
 .DateRangePickerInput {
   border: 0px;
+  display: flex;
 }
+
 .res-search-bar .DateInput {
+  display: flex;
   background-color: transparent;
   width: 140px;
 }
 
 .res-search-bar .DateInput_input {
   background-color: transparent;
+  text-align: center;
   color: white;
   font-size: 15px;
   padding: 0px 5px;
@@ -30,6 +34,10 @@
   color: white;
 }
 
+.res-search-bar .DateRangePickerInput_arrow > svg {
+  height: 100%;
+}
+
 .res-search-bar .DayPicker_portal__horizontal {
   top: 380px;
 }
@@ -39,14 +47,24 @@
 }
 
 .lg-search-container .DateInput_input {
+  padding: 0;
+  border: 0;
+  text-align: center;
   font-size: 17px;
-  font-family: Niramit ExtraLight Regular, "AXtManalBold Regular", Helvetica,
-    Arial, "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
-    "Hiragino Sans", sans-serif;
+  font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
 }
 
 .lg-search-container .DateRangePickerInput_arrow {
-  font-size: 15px;
+  font-size: 20px;
+  display: flex;
+  margin: auto;
+}
+
+.lg-search-container .DateRangePickerInput_arrow > svg {
+  width: 100%;
+  height: 100%;
 }
 
 .CalendarDay__default {

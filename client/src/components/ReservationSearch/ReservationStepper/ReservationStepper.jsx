@@ -6,6 +6,9 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 import { useState } from "react";
+import ResSearch from "../ResSearch/ResSearch";
+import ResSearchMobile from "../ResSearch/ResSerachMobile";
+import ReservationStayInfo from "../ReservationStayInfo/ReservationStayInfo";
 import SearchResults from "./SearchResults";
 import ReservationGuest from "./ReservationGuest";
 import { useReservationContext } from "../../../contexts/ReservationContext";
@@ -23,18 +26,25 @@ const ReservationStepper = () => {
     switch (step) {
       case 0:
         return <SearchResults handleNext={handleNext} />;
+
       case 1:
         return <ReservationGuest />;
+
       case 2:
         return "Confirmed";
+
       default:
         return "Error occurred";
     }
   };
+
   const steps = getSteps();
 
   return (
     <div className="stepper-wrapper">
+      <ResSearchMobile />
+      {activeStep < 1 && <ResSearch />}
+
       <Box sx={{ width: "100%" }}>
         <Stepper activeStep={activeStep} className="stepper-bar">
           {steps.map((label, index) => {
