@@ -29,17 +29,28 @@ const Reservation = () => {
           />
           <ReservationNavBar toggleSidebar={toggleSidebar} />
         </div>
-        <ResSearch />
         <div className="avail-cards-container">
           <div className="avail-results-container">
-            {/* <div className="results-left">
+            <div className="results-left">
               <ReservationStepper />
-            </div> */}
-            {/* <div className="results-right">
+            </div>
+            <div className="results-right">
               <ReservationStayInfo />
-            </div> */}
+            </div>
           </div>
         </div>
+
+        {/* <ResSearch /> */}
+        {/* <div className="avail-cards-container">
+          <div className="avail-results-container">
+            <div className="results-left">
+              <ReservationStepper />
+            </div>
+            <div className="results-right">
+              <ReservationStayInfo />
+            </div>
+          </div>
+        </div> */}
         {/* <SearchResults />
         <ReservationGuest /> */}
       </div>
