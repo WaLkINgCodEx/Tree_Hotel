@@ -215,7 +215,7 @@
 }
 
 .guest-details-container h2 {
-  padding: 20px 0 10px 8px;
+  padding: 20px 0 15px 8px;
   text-align: left;
   margin: auto;
 }
@@ -264,6 +264,11 @@
     width: 50%;
     max-width: 394px;
     margin: 0 7px;
+  }
+
+  #email-helper-text {
+    margin-left: 14px;
+    margin-right: 14px;
   }
 
   .guest-details-container .special-request,
