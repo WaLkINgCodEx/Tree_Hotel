@@ -95,8 +95,9 @@ export const ReservationProvider = ({ children }) => {
     ];
   };
 
-  const addItemToCart = (reservationToAdd, offer) =>
+  const addItemToCart = (reservationToAdd, offer) => {
     setReservationItems(addReservationItem(reservationToAdd, offer));
+  };
 
   const value = {
     startDate,

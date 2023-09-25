@@ -73,22 +73,29 @@ const ReservationStepper = () => {
             {getStepContent(activeStep)}
 
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-              <Button
-                color="inherit"
-                disabled={activeStep === 0}
-                onClick={handleBack}
-                sx={{ mr: 1 }}
-              >
-                Back
-              </Button>
+              {activeStep >= 1 && (
+                <Button
+                  color="inherit"
+                  disabled={activeStep === 0}
+                  onClick={handleBack}
+                  sx={{ mr: 1 }}
+                >
+                  SELECT ROOM
+                </Button>
+              )}
+
               <Box sx={{ flex: "1 1 auto" }} />
 
-              <Button
-                onClick={handleNext}
-                disabled={reservationItems.length < 1}
-              >
-                {activeStep === steps.length - 1 ? "Finish" : "Next"}
-              </Button>
+              {activeStep >= 1 && (
+                <Button
+                  onClick={handleNext}
+                  disabled={reservationItems.length < 1}
+                >
+                  {activeStep === steps.length - 1
+                    ? "Finish"
+                    : "COMPLETE BOOKING"}
+                </Button>
+              )}
             </Box>
           </>
         )}

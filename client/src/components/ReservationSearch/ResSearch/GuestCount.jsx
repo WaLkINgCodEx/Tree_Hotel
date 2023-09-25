@@ -42,13 +42,13 @@ const GuestCount = () => {
             -
           </button>
           <input
+            className="guest-stepper"
             type="text"
             name="adultnumber"
             min="0"
             max="6"
-            className="guest-stepper"
-            value={adultNumber}
             defaultValue={adultNumber}
+            value={adultNumber}
           />
           <button type="button" onClick={addAdult} className="control-btn">
             +
@@ -61,13 +61,13 @@ const GuestCount = () => {
             -
           </button>
           <input
+            className="guest-stepper"
             type="text"
             name="kidnumber"
             min="0"
             max="6"
             defaultValue={kidNumber}
             value={kidNumber}
-            className="guest-stepper"
           />
           <button type="button" onClick={addKid} className="control-btn">
             +
