@@ -21,7 +21,7 @@ const SearchResults = () => {
   // console.log(rooms);
   // console.log(rooms.length);
 
-  if ((adultNumber > 0) & (rooms.length != undefined)) {
+  if ((adultNumber > 0) & (rooms != undefined)) {
     return (
       <>
         {rooms.map((room, idx) => {
