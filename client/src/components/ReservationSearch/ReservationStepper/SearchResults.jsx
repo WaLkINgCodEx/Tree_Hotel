@@ -15,10 +15,13 @@ const SearchResults = () => {
     }
   }, []);
 
+  console.log(adultNumber);
+  console.log(data);
+
   return (
     <>
-      {adultNumber !== 0 &&
-        rooms.length !== 0 &&
+      {/* {adultNumber !== 0 && */}
+      {rooms.length !== 0 &&
         rooms.map((room, idx) => {
           return <SearchResultCard key={idx} roomType={room} offers={offers} />;
         })}

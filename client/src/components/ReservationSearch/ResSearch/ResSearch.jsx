@@ -32,7 +32,7 @@ const ResSearch = () => {
   } = useReservationContext();
 
   const { adultnumber, kidnumber } = searchValues;
-  console.log(data);
+  // console.log(data);
 
   const [showDropdown, setShowDropdown] = useState(false);
   const [showStayInfo, setShowStayInfo] = useState(false);

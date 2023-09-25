@@ -676,6 +676,7 @@ const ReservationGuest = () => {
           <button type="submit" />
         </Box> */}
       </div>
+
       <div className="res-policy-wrapper">
         <ReservationPolicy />
       </div>
