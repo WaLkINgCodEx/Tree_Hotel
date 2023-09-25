@@ -9,6 +9,7 @@ const SearchResults = () => {
   const { adultnumber } = searchValues;
   const { rooms } = data;
   const adultnumberToInt = Number(adultnumber);
+
   useEffect(() => {
     if (!isNaN(adultnumber)) {
       setAdultNumber(adultnumberToInt);
@@ -17,11 +18,14 @@ const SearchResults = () => {
 
   console.log(adultNumber);
   console.log(data);
+  console.log(rooms);
+  console.log(rooms.length);
 
   return (
     <>
-      {/* {adultNumber !== 0 && */}
-      {rooms.length !== 0 &&
+      {adultNumber > 0 &&
+        rooms &&
+        rooms.length > 0 &&
         rooms.map((room, idx) => {
           return <SearchResultCard key={idx} roomType={room} offers={offers} />;
         })}
