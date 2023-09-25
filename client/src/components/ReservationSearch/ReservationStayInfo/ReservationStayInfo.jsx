@@ -25,7 +25,7 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
 
   return (
     <div className="avail-stay-info">
-      <span class="avail-stay-close" onClick={toggleStayInfo}>
+      <span className="avail-stay-close" onClick={toggleStayInfo}>
         &times;
       </span>
 

@@ -16,19 +16,20 @@ const SearchResults = () => {
     }
   }, []);
 
-  console.log(adultNumber);
+  // console.log(adultNumber);
   console.log(data);
-  console.log(rooms);
-  console.log(rooms.length);
+  // console.log(rooms);
+  // console.log(rooms.length);
 
   return (
     <>
-      {adultNumber > 0 &&
-        rooms &&
-        rooms.length > 0 &&
-        rooms.map((room, idx) => {
-          return <SearchResultCard key={idx} roomType={room} offers={offers} />;
-        })}
+      {adultNumber > 0 && rooms.length
+        ? rooms.map((room, idx) => {
+            return (
+              <SearchResultCard key={idx} roomType={room} offers={offers} />
+            );
+          })
+        : false}
     </>
   );
 };
