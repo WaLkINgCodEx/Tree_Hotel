@@ -1,30 +1,17 @@
-import { useEffect } from "react";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 import { offers } from "../../../data";
 import SearchResultCard from "./SearchResultCard";
 
 const SearchResults = () => {
-  const { data, searchValues, adultNumber, setAdultNumber } =
-    useReservationContext();
-  const { adultnumber } = searchValues;
-  const { rooms } = data;
-  const adultnumberToInt = Number(adultnumber);
+  const { data, searchValues, adultNumber } = useReservationContext();
 
-  useEffect(() => {
-    if (!isNaN(adultnumber)) {
-      setAdultNumber(adultnumberToInt);
-    }
-  }, []);
-
-  // console.log(adultNumber);
+  console.log(searchValues);
   console.log(data);
-  // console.log(rooms);
-  // console.log(rooms.length);
 
-  if ((adultNumber > 0) & (rooms != undefined)) {
+  if (adultNumber > 0) {
     return (
       <>
-        {rooms.map((room, idx) => {
+        {data.rooms.map((room, idx) => {
           return <SearchResultCard key={idx} roomType={room} offers={offers} />;
         })}
       </>
