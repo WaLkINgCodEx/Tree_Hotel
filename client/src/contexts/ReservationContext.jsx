@@ -16,7 +16,7 @@ export const loader = async ({ request }) => {
       const { data } = await customFetch.get("/rooms", {
         params,
       });
-      // console.log(data);
+      console.log(data);
       return { data, searchValues: { ...params } };
     } catch (error) {
       return error;
