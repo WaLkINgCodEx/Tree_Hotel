@@ -5,10 +5,10 @@ import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import { useState } from "react";
+// import { useState } from "react";
 import ResSearch from "../ResSearch/ResSearch";
-import ResSearchMobile from "../ResSearch/ResSerachMobile";
-import ReservationStayInfo from "../ReservationStayInfo/ReservationStayInfo";
+// import ResSearchMobile from "../ResSearch/ResSerachMobile";
+// import ReservationStayInfo from "../ReservationStayInfo/ReservationStayInfo";
 import SearchResults from "./SearchResults";
 import ReservationGuest from "./ReservationGuest";
 import { useReservationContext } from "../../../contexts/ReservationContext";
@@ -19,18 +19,21 @@ const ReservationStepper = () => {
     useReservationContext();
 
   const getSteps = () => {
-    return ["Rooms", "Guest Details", "Confirmation"];
+    return ["Rooms", "Select", "Guest Details", "Confirmation"];
   };
 
   const getStepContent = (step) => {
     switch (step) {
       case 0:
-        return <SearchResults handleNext={handleNext} />;
+        return <ResSearch />;
 
       case 1:
-        return <ReservationGuest />;
+        return <SearchResults />;
 
       case 2:
+        return <ReservationGuest />;
+
+      case 3:
         return "Confirmed";
 
       default:
@@ -42,10 +45,11 @@ const ReservationStepper = () => {
 
   return (
     <div className="stepper-wrapper">
-      <ResSearchMobile />
-      {activeStep < 1 && <ResSearch />}
+      {/* <ResSearchMobile /> */}
 
       <Box sx={{ width: "100%" }}>
+        {activeStep < 1 && getStepContent(activeStep)}
+
         <Stepper activeStep={activeStep} className="stepper-bar">
           {steps.map((label, index) => {
             const stepProps = {};
@@ -58,6 +62,9 @@ const ReservationStepper = () => {
             );
           })}
         </Stepper>
+
+        {activeStep >= 1 && getStepContent(activeStep)}
+
         {activeStep === steps.length ? (
           <>
             <Typography sx={{ mt: 2, mb: 1 }}>
@@ -70,10 +77,8 @@ const ReservationStepper = () => {
           </>
         ) : (
           <>
-            {getStepContent(activeStep)}
-
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-              {activeStep >= 1 && (
+              {activeStep >= 2 && (
                 <Button
                   color="inherit"
                   disabled={activeStep === 0}
@@ -86,7 +91,7 @@ const ReservationStepper = () => {
 
               <Box sx={{ flex: "1 1 auto" }} />
 
-              {activeStep >= 1 && (
+              {activeStep >= 2 && (
                 <Button
                   onClick={handleNext}
                   disabled={reservationItems.length < 1}

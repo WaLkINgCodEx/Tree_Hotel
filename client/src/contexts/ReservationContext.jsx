@@ -10,15 +10,19 @@ export const loader = async ({ request }) => {
   const params = Object.fromEntries([
     ...new URL(request.url).searchParams.entries(),
   ]);
-  // console.log(params);
-  try {
-    const { data } = await customFetch.get("/rooms", {
-      params,
-    });
-    // console.log(data);
-    return { data, searchValues: { ...params } };
-  } catch (error) {
-    return error;
+  console.log(params);
+  if (params.adultnumber > 0) {
+    try {
+      const { data } = await customFetch.get("/rooms", {
+        params,
+      });
+      // console.log(data);
+      return { data, searchValues: { ...params } };
+    } catch (error) {
+      return error;
+    }
+  } else {
+    return { data: {}, searchValues: { ...params } };
   }
 };
 
@@ -37,8 +41,9 @@ export const ReservationProvider = ({ children }) => {
   const { data, searchValues } = useLoaderData();
   const [activeStep, setActiveStep] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = (event) => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    // event.preventDefault();
   };
 
   const handleBack = () => {
@@ -65,9 +70,10 @@ export const ReservationProvider = ({ children }) => {
     }
   };
 
-  const addAdult = () => {
+  const addAdult = (num) => {
     if (adultNumber >= 0 && adultNumber < 6) {
-      setAdultNumber(adultNumber + 1);
+      setAdultNumber(num);
+      // console.log(adultNumber);
     }
   };
 

@@ -59,9 +59,9 @@ export const getAllRooms = async (req, res) => {
     },
   ]);
 
-  // console.log(rooms);
-
   res.status(200).json({ rooms });
+
+  // console.log(rooms);
 
   // const sortOptions = {
   //   newest: "-createdAt",

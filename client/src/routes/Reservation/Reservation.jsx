@@ -1,13 +1,13 @@
 import { useState } from "react";
 import ReservationSideBar from "../../components/ReservationSearch/ReservationSideBar/ReservationSideBar";
 import ReservationNavBar from "../../components/ReservationSearch/ReservationNavBar/ReservationNavBar";
-import ResSearch from "../../components/ReservationSearch/ResSearch/ResSearch";
+// import ResSearch from "../../components/ReservationSearch/ResSearch/ResSearch";
 import {
   ReservationProvider,
-  useReservationContext,
+  // useReservationContext,
 } from "../../contexts/ReservationContext";
-import SearchResults from "../../components/ReservationSearch/ReservationStepper/SearchResults";
-import ReservationGuest from "../../components/ReservationSearch/ReservationStepper/ReservationGuest";
+// import SearchResults from "../../components/ReservationSearch/ReservationStepper/SearchResults";
+// import ReservationGuest from "../../components/ReservationSearch/ReservationStepper/ReservationGuest";
 import ReservationStepper from "../../components/ReservationSearch/ReservationStepper/ReservationStepper";
 import ReservationStayInfo from "../../components/ReservationSearch/ReservationStayInfo/ReservationStayInfo";
 import "./style/reservation.css";
@@ -39,20 +39,6 @@ const Reservation = () => {
             </div>
           </div>
         </div>
-
-        {/* <ResSearch /> */}
-        {/* <div className="avail-cards-container">
-          <div className="avail-results-container">
-            <div className="results-left">
-              <ReservationStepper />
-            </div>
-            <div className="results-right">
-              <ReservationStayInfo />
-            </div>
-          </div>
-        </div> */}
-        {/* <SearchResults />
-        <ReservationGuest /> */}
       </div>
     </ReservationProvider>
   );

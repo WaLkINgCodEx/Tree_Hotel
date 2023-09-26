@@ -24,7 +24,7 @@ const ResSearchMobile = () => {
     searchValues,
     data,
     reservationTotal,
-    adultNumber,
+    // adultNumber,
   } = useReservationContext();
 
   const [showDropdown, setShowDropdown] = useState(false);

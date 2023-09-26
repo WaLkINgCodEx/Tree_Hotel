@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
@@ -10,9 +11,35 @@ const GuestCount = () => {
     addKid,
     kidNumber,
     adultNumber,
+    setAdultNumber,
     searchValues,
+    handleNext,
   } = useReservationContext();
+
   // let { adultnumber, kidnumber } = searchValues;
+
+  // const adultnumberToInt = Number(adultnumber);
+
+  // useEffect(() => {
+  //   if (!isNaN(adultnumber)) {
+  //     setAdultNumber(adultnumberToInt);
+  //   }
+  // }, []);
+
+  const [number, newNumber] = useState(0);
+
+  const addNum = () => {
+    if (number >= 0 && number < 6) {
+      newNumber(number + 1);
+    }
+  };
+
+  const minusNum = () => {
+    if (number > 0) {
+      newNumber(number - 1);
+    }
+  };
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const dropdown = () => {
@@ -22,7 +49,7 @@ const GuestCount = () => {
   return (
     <div className="guest-count-button-area">
       <button type="button" className="guest-count-button" onClick={dropdown}>
-        {adultNumber} {adultNumber > 1 ? " Adults" : " Adult"}, {kidNumber}
+        {number} {number > 1 ? " Adults" : " Adult"},{kidNumber}{" "}
         {kidNumber > 1 ? " Children" : " Child"}
       </button>
       <div
@@ -38,7 +65,7 @@ const GuestCount = () => {
         <h5>Adults:</h5>
 
         <div className="control-container">
-          <button type="button" onClick={minusAdult} className="control-btn">
+          <button type="button" onClick={minusNum} className="control-btn">
             -
           </button>
           <input
@@ -47,15 +74,16 @@ const GuestCount = () => {
             name="adultnumber"
             min="0"
             max="6"
-            defaultValue={adultNumber}
-            value={adultNumber}
+            // defaultValue={number}
+            value={number}
           />
-          <button type="button" onClick={addAdult} className="control-btn">
+          <button type="button" onClick={addNum} className="control-btn">
             +
           </button>
         </div>
 
         <h5>Children:</h5>
+
         <div className="control-container">
           <button type="button" onClick={minusKid} className="control-btn">
             -
@@ -71,6 +99,16 @@ const GuestCount = () => {
           />
           <button type="button" onClick={addKid} className="control-btn">
             +
+          </button>
+        </div>
+
+        <div className="apply-btn">
+          <button
+            type="sumbit"
+            className="box-btn submit-btn inverse-btn"
+            onClick={addAdult(number)}
+          >
+            Confirm
           </button>
         </div>
       </div>
