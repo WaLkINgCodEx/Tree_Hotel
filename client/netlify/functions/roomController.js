@@ -11,18 +11,16 @@ router.get("/rooms", async (req, res) => {
     const totalGuest = Number(adultnumber) + Number(kidnumber);
     const startDate = new Date(startdate);
     const endDate = new Date(enddate);
-    // const totalNights = Math.floor(
-    //   (endDate - startDate) / (1000 * 60 * 60 * 24)
-    // );
-
-    const totalNights = 1;
+    const totalNights = Math.floor(
+      (endDate - startDate) / (1000 * 60 * 60 * 24)
+    );
 
     // const rooms = await Availability.find({});
 
-    console.log("server_adult", adultnumber);
-    console.log("server_startdate", startDate);
-    console.log("server_enddate", endDate);
-    console.log("totalNights", totalNights);
+    // console.log("server_adult", adultnumber);
+    // console.log("server_startdate", startDate);
+    // console.log("server_enddate", endDate);
+    // console.log("totalNights", totalNights);
 
     let rooms = await Availability.aggregate([
       {
@@ -63,7 +61,7 @@ router.get("/rooms", async (req, res) => {
         $replaceRoot: { newRoot: "$roomDetails" },
       },
     ]);
-    console.log("rooms", rooms);
+    // console.log("rooms", rooms);
     res.status(200).json({ rooms });
   } catch (error) {
     console.error(error);
