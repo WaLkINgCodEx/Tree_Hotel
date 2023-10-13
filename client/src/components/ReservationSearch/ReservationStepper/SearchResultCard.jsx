@@ -3,7 +3,7 @@ import SearchResultOffer from "./SearchResultOffer";
 import { useState } from "react";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
-const SearchResultCard = ({ roomType, offers, handleNext }) => {
+const SearchResultCard = ({ roomType, offers }) => {
   const { startDate, endDate, getTotalGuests, getTotalNights, data } =
     useReservationContext();
   const [isMoreOfferOpen, setIsMoreOfferOpen] = useState(false);
@@ -46,7 +46,6 @@ const SearchResultCard = ({ roomType, offers, handleNext }) => {
                 offer={offer}
                 isMoreOfferOpen={isMoreOfferOpen}
                 roomType={roomType}
-                handleNext={handleNext}
               />
             );
           })}

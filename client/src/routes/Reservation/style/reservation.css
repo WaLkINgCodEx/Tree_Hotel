@@ -22,11 +22,14 @@
 
 .results-left {
   width: 100%;
+  background-color: #fff;
 }
 
 @media (min-width: 960px) {
-  .results-left {
-    width: 70%;
+  .results-right {
+    max-width: 852px;
+    width: 30%;
+    margin-right: 20px;
   }
 }
 
@@ -36,7 +39,7 @@
 
 @media (min-width: 960px) {
   .results-right {
-    width: 30%;
+    width: 43%;
     display: block;
     margin-left: 10px;
   }

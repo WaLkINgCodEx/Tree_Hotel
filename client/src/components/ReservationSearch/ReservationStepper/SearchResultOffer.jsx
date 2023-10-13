@@ -2,14 +2,8 @@ import { BsCheck2, BsFillCreditCardFill } from "react-icons/bs";
 // import { pricing } from "../../../data";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
-const SearchResultOffer = ({
-  offer,
-  idx,
-  isMoreOfferOpen,
-  roomType,
-  handleNext,
-}) => {
-  const { getTotalNights, addItemToCart, reservationItems } =
+const SearchResultOffer = ({ offer, idx, isMoreOfferOpen, roomType }) => {
+  const { getTotalNights, addItemToCart, reservationItems, handleNext } =
     useReservationContext();
 
   const totalPrice =
