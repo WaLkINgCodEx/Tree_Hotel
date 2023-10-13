@@ -1,6 +1,10 @@
 import Availability from "./models/availabilityModel.js";
+import * as dotenv from "dotenv";
 import Room from "./models/roomModel.js";
 import mongoose from "mongoose";
+
+dotenv.config();
+
 const roomAvailabilityData = [
   {
     roomTypeId: "64d546396619ec193f122951",
@@ -56,16 +60,19 @@ const roomAvailabilityData = [
   },
 ];
 
-//   try {
-//     const availability = await Availability.create(req.body);
-//     res.status(201).json({ availability });
-//   } catch (error) {
-//     res.status(500).json({ msg: `server error ${error}` });
-//   }
+try {
+  await mongoose.connect(process.env.MONGO_URL);
+  console.log("MongoDB Connected!!");
+
+  // const rooms = await Room.find({});
+  // console.log(rooms);
+} catch (err) {
+  console.error("Error connecting to MongoDB:", err);
+}
 
 try {
-  const startDate = new Date("2023-08-10");
-  const endDate = new Date("2023-09-30");
+  const startDate = new Date("2023-10-01");
+  const endDate = new Date("2023-12-31");
   for (
     let date = startDate;
     date <= endDate;
@@ -81,14 +88,25 @@ try {
           availableRooms: roomData.availableRooms,
         });
       }
+      // console.log("availabilityItems", availabilityItems);
     }
 
     const availabilityDocument = await Availability.create({
       date,
       availability: availabilityItems,
     });
+    console.log(availabilityDocument);
   }
-  res.status(201).json({ msg: "complete" });
+
+  // res.status(201).json({ msg: "complete" });
 } catch (error) {
-  res.status(500).json({ msg: "server error" });
+  // res.status(500).json({ msg: "server error" });
+  console.log(error);
 }
+
+// try {
+//   const availability = await Availability.create(req.body);
+//   res.status(201).json({ availability });
+// } catch (error) {
+//   res.status(500).json({ msg: `server error ${error}` });
+// }

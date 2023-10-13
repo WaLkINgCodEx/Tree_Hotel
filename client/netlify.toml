@@ -1,9 +1,25 @@
+[build]
+  base = "/client"
+  command = "react-scripts build"
+  publish = "public"
+  functions = "netlify/functions"
+
+
 [functions]
   external_node_modules = ["express"]
   node_bundler = "esbuild"
-  
+
+[dev]
+    publish = "client/public"
+    node_bundler = "esbuild"
+    functions = "netlify/functions"
+
 [[redirects]]
-  force = true
-  from = "/api/*"
+  from = "/test/*"
   status = 200
-  to = "/.netlify/functions/api/:splat"
+  to = ".netlify/functions/test/:splat"
+
+[[redirects]]
+from = "/api/v1/*"
+status = 200
+to = ".netlify/functions/api/:splat"

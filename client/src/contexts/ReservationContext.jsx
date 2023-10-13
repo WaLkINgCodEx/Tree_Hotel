@@ -6,26 +6,6 @@ import { useLoaderData } from "react-router-dom";
 
 const ReservationContext = createContext();
 
-export const loader = async ({ request }) => {
-  const params = Object.fromEntries([
-    ...new URL(request.url).searchParams.entries(),
-  ]);
-  console.log(params);
-  if (params.adultnumber > 0) {
-    try {
-      const { data } = await customFetch.get("/rooms", {
-        params,
-      });
-      console.log(data);
-      return { data, searchValues: { ...params } };
-    } catch (error) {
-      return error;
-    }
-  } else {
-    return { data: {}, searchValues: { ...params } };
-  }
-};
-
 export const ReservationProvider = ({ children }) => {
   const today = moment();
   const tomorrow = moment(today).add(1, "days");
@@ -70,9 +50,9 @@ export const ReservationProvider = ({ children }) => {
     }
   };
 
-  const addAdult = (num) => {
+  const addAdult = () => {
     if (adultNumber >= 0 && adultNumber < 6) {
-      setAdultNumber(num);
+      setAdultNumber(adultNumber + 1);
       // console.log(adultNumber);
     }
   };
@@ -144,3 +124,62 @@ export const ReservationProvider = ({ children }) => {
 };
 
 export const useReservationContext = () => useContext(ReservationContext);
+
+export const loader = async ({ request }) => {
+  // const params = new URLSearchParams(request.url);
+
+  const params = Object.fromEntries([
+    ...new URL(request.url).searchParams.entries(),
+  ]);
+
+  const adultnumber = Number(params.adultnumber);
+  const kidnumber = Number(params.kidnumber);
+  const startdate = params.startdate;
+  const enddate = params.enddate;
+
+  console.log("params", params);
+  console.log(adultnumber);
+
+  if (adultnumber > 0) {
+    try {
+      const { data } = await customFetch.get("/rooms", {
+        params: {
+          adultnumber,
+          kidnumber,
+          startdate,
+          enddate,
+        },
+      });
+      console.log("data", data);
+      return {
+        data,
+        searchValues: { adultnumber, kidnumber, startdate, enddate },
+      };
+    } catch (error) {
+      return error;
+    }
+  } else {
+    return {
+      data: {},
+      searchValues: { adultnumber, kidnumber, startdate, enddate },
+    };
+  }
+
+  // const params = Object.fromEntries([
+  //   ...new URL(request.url).searchParams.entries(),
+  // ]);
+  // console.log(params);
+  // if (params.adultnumber > 0) {
+  //   try {
+  //     const { data } = await customFetch.get("/rooms", {
+  //       params,
+  //     });
+  //     console.log(data);
+  //     return { data, searchValues: { ...params } };
+  //   } catch (error) {
+  //     return error;
+  //   }
+  // } else {
+  //   return { data: {}, searchValues: { ...params } };
+  // }
+};

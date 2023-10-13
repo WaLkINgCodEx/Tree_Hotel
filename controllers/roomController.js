@@ -1,7 +1,5 @@
 import Room from "../models/roomModel.js";
 import Availability from "../models/availabilityModel.js";
-import mongoose from "mongoose";
-import moment from "moment";
 
 export const createRoom = async (req, res) => {
   try {
