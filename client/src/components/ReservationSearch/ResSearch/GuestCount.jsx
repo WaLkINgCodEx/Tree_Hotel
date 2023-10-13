@@ -11,9 +11,7 @@ const GuestCount = () => {
     addKid,
     kidNumber,
     adultNumber,
-    setAdultNumber,
     searchValues,
-    handleNext,
   } = useReservationContext();
 
   // let { adultnumber, kidnumber } = searchValues;
@@ -26,19 +24,19 @@ const GuestCount = () => {
   //   }
   // }, []);
 
-  const [number, newNumber] = useState(0);
+  // const [number, newNumber] = useState(0);
 
-  const addNum = () => {
-    if (number >= 0 && number < 6) {
-      newNumber(number + 1);
-    }
-  };
+  // const addNum = () => {
+  //   if (number >= 0 && number < 6) {
+  //     newNumber(number + 1);
+  //   }
+  // };
 
-  const minusNum = () => {
-    if (number > 0) {
-      newNumber(number - 1);
-    }
-  };
+  // const minusNum = () => {
+  //   if (number > 0) {
+  //     newNumber(number - 1);
+  //   }
+  // };
 
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
@@ -49,7 +47,7 @@ const GuestCount = () => {
   return (
     <div className="guest-count-button-area">
       <button type="button" className="guest-count-button" onClick={dropdown}>
-        {number} {number > 1 ? " Adults" : " Adult"},{kidNumber}{" "}
+        {adultNumber} {adultNumber > 1 ? " Adults" : " Adult"},{kidNumber}{" "}
         {kidNumber > 1 ? " Children" : " Child"}
       </button>
       <div
@@ -65,7 +63,7 @@ const GuestCount = () => {
         <h5>Adults:</h5>
 
         <div className="control-container">
-          <button type="button" onClick={minusNum} className="control-btn">
+          <button type="button" onClick={minusAdult} className="control-btn">
             -
           </button>
           <input
@@ -74,10 +72,10 @@ const GuestCount = () => {
             name="adultnumber"
             min="0"
             max="6"
-            // defaultValue={number}
-            value={number}
+            defaultValue={adultNumber}
+            value={adultNumber}
           />
-          <button type="button" onClick={addNum} className="control-btn">
+          <button type="button" onClick={addAdult} className="control-btn">
             +
           </button>
         </div>
@@ -106,7 +104,7 @@ const GuestCount = () => {
           <button
             type="sumbit"
             className="box-btn submit-btn inverse-btn"
-            onClick={addAdult(number)}
+            // onClick={addAdult(adultNumber)}
           >
             Confirm
           </button>

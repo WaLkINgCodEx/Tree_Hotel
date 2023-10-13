@@ -250,7 +250,7 @@
 @media (min-width: 1278px) {
   .footer-bottom-R {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;

@@ -120,7 +120,7 @@
 
 .nav-m-r {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .nav-m-r button {

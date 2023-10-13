@@ -313,7 +313,7 @@
   padding: 5px;
   margin: initial;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .results-left {
@@ -373,7 +373,7 @@
 
 .search-bottons {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   background-color: #eee;
   padding: 10px;
 }
