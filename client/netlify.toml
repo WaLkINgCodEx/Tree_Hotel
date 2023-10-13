@@ -1,7 +1,7 @@
 [build]
   base = "/client"
-  command = "react-scripts build"
-  publish = "public"
+  command = "CI='' npm run build"
+  publish = "build"
   functions = "netlify/functions"
 
 
