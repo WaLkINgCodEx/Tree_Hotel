@@ -5,10 +5,8 @@ import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-// import { useState } from "react";
 import ResSearch from "../ResSearch/ResSearch";
-// import ResSearchMobile from "../ResSearch/ResSerachMobile";
-// import ReservationStayInfo from "../ReservationStayInfo/ReservationStayInfo";
+import ResSearchMobile from "../ResSearch/ResSerachMobile";
 import SearchResults from "./SearchResults";
 import ReservationGuest from "./ReservationGuest";
 import { useReservationContext } from "../../../contexts/ReservationContext";
@@ -45,11 +43,10 @@ const ReservationStepper = () => {
 
   return (
     <div className="stepper-wrapper">
-      {/* <ResSearchMobile /> */}
+      <ResSearchMobile />
+      {activeStep <= 1 && <ResSearch />}
 
       <Box sx={{ width: "100%" }}>
-        {activeStep < 1 && getStepContent(activeStep)}
-
         <Stepper activeStep={activeStep} className="stepper-bar">
           {steps.map((label, index) => {
             const stepProps = {};

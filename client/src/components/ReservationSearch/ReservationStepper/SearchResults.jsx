@@ -3,19 +3,26 @@ import { offers } from "../../../data";
 import SearchResultCard from "./SearchResultCard";
 
 const SearchResults = () => {
-  const { data, searchValues, adultNumber } = useReservationContext();
+  const { fetchedData, setFetchedData, activeStep } = useReservationContext();
 
-  console.log(searchValues);
-  console.log(data);
+  console.log("fetchedData", fetchedData);
+  // console.log("activeStep", activeStep);
 
-  if (adultNumber > 0) {
+  // let newData = fetchedData;
+
+  // console.log("newData", newData);
+
+  if (fetchedData && activeStep === 1) {
     return (
       <>
-        {data.rooms.map((room, idx) => {
+        {fetchedData.rooms.map((room, idx) => {
           return <SearchResultCard key={idx} roomType={room} offers={offers} />;
         })}
       </>
     );
+  } else {
+    console.log("No room availability data found.");
+    // return;
   }
 };
 export default SearchResults;

@@ -61,7 +61,8 @@ router.get("/rooms", async (req, res) => {
         $replaceRoot: { newRoot: "$roomDetails" },
       },
     ]);
-    // console.log("rooms", rooms);
+    // console.log("server_adult", adultnumber);
+    console.log("rooms", rooms);
     res.status(200).json({ rooms });
   } catch (error) {
     console.error(error);

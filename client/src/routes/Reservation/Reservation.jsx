@@ -1,13 +1,7 @@
 import { useState } from "react";
 import ReservationSideBar from "../../components/ReservationSearch/ReservationSideBar/ReservationSideBar";
 import ReservationNavBar from "../../components/ReservationSearch/ReservationNavBar/ReservationNavBar";
-// import ResSearch from "../../components/ReservationSearch/ResSearch/ResSearch";
-import {
-  ReservationProvider,
-  // useReservationContext,
-} from "../../contexts/ReservationContext";
-// import SearchResults from "../../components/ReservationSearch/ReservationStepper/SearchResults";
-// import ReservationGuest from "../../components/ReservationSearch/ReservationStepper/ReservationGuest";
+import { ReservationProvider } from "../../contexts/ReservationContext";
 import ReservationStepper from "../../components/ReservationSearch/ReservationStepper/ReservationStepper";
 import ReservationStayInfo from "../../components/ReservationSearch/ReservationStayInfo/ReservationStayInfo";
 import "./style/reservation.css";

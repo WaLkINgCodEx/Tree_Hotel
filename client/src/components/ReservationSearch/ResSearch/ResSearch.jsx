@@ -1,41 +1,84 @@
 import React from "react";
 import { useState } from "react";
 import { DateRangePicker } from "react-dates";
-import "./style/resSearch.css";
-import "react-dates/lib/css/_datepicker.css";
-import "./style/react_dates_overrides.css";
 import { useMediaQuery } from "react-responsive";
-import { Form } from "react-router-dom";
 import { GoDash } from "react-icons/go";
 import { PiCaretDownLight } from "react-icons/pi";
 import { SlUser } from "react-icons/sl";
 
-import ReservationWarning from "./ReservationWarning";
 import GuestCount from "./GuestCount";
+import { GuestSubmit } from "./GuestSubmit";
 import SpecialRateDropdown from "./SpecialRateDropdown";
-import ReservationStayInfo from "../ReservationStayInfo/ReservationStayInfo";
 import { useReservationContext } from "../../../contexts/ReservationContext";
-import ReservationStepper from "../ReservationStepper/ReservationStepper";
+import customFetch from "../../../utils/customFetch";
+import "./style/resSearch.css";
+import "react-dates/lib/css/_datepicker.css";
+import "./style/react_dates_overrides.css";
 
 const ResSearch = () => {
   const {
-    setStartDate,
-    setEndDate,
     focusedInput,
     setFocusedInput,
+    setAdultNumber,
+    setKidNumber,
+    setStartDate,
+    setEndDate,
     startDate,
     endDate,
-    searchValues,
-    data,
-    reservationTotal,
-    handleNext,
-    adultNumber,
+    setFetchedData,
+    setActiveStep,
   } = useReservationContext();
 
-  // const { adultnumber, kidnumber } = searchValues;
+  const [localAdultNumber, setLocalAdultNumber] = useState(0);
+  const [localKidNumber, setlocalKidNumber] = useState(0);
+  const [isGuestSubmitOpen, setGuestSubmitOpen] = useState(false);
+  const [showDiscount, setShowDiscount] = useState(false);
 
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [showStayInfo, setShowStayInfo] = useState(false);
+  const addLocalGuest = (e) => {
+    console.log(e.target.name);
+
+    if (e.target.name === "adult") {
+      if (localAdultNumber >= 0 && localAdultNumber < 6) {
+        setLocalAdultNumber(localAdultNumber + 1);
+      }
+    } else {
+      if (localKidNumber >= 0 && localKidNumber < 6) {
+        setlocalKidNumber(localKidNumber + 1);
+      }
+    }
+  };
+
+  const subtractLocalGuest = (e) => {
+    console.log(e.target.name);
+
+    if (e.target.name === "adult") {
+      if (localAdultNumber > 0) {
+        setLocalAdultNumber(localAdultNumber - 1);
+      }
+    } else {
+      if (localKidNumber > 0) {
+        setlocalKidNumber(localKidNumber - 1);
+      }
+    }
+  };
+
+  const handleGuestCountClick = () => {
+    if (!isGuestSubmitOpen) {
+      setGuestSubmitOpen(!isGuestSubmitOpen);
+    }
+  };
+
+  const handleGuestsApply = () => {
+    handleGuestClose();
+  };
+
+  const handleGuestClose = () => {
+    setGuestSubmitOpen(!isGuestSubmitOpen);
+  };
+
+  const toggleDiscountMenu = () => {
+    setShowDiscount(!showDiscount);
+  };
 
   const isBigScreen = useMediaQuery({
     query: "(min-width: 960px)",
@@ -54,94 +97,128 @@ const ResSearch = () => {
     );
   };
 
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
+  const handleSubmitClick = async () => {
+    const params = {
+      adultnumber: localAdultNumber,
+      kidnumber: localKidNumber,
+      startdate: startDate,
+      enddate: endDate,
+    };
 
-  // const toggleStayInfo = () => {
-  //   setShowStayInfo(!showStayInfo);
-  // };
+    try {
+      const { data } = await customFetch.get("/rooms", { params });
 
-  const handleSubmit = (event) => {
-    if (adultNumber > 0) {
-      handleNext();
-      event.preventDefault();
+      setAdultNumber(params.adultnumber);
+      setKidNumber(params.kidnumber);
+      setStartDate(params.startdate);
+      setEndDate(params.enddate);
+
+      // Set the fetched data in the context
+      setFetchedData(data);
+
+      setActiveStep(1);
+
+      // Handle other data as needed
+    } catch (error) {
+      console.error(error);
     }
   };
 
   return (
     <div className="res-search-wrapper">
-      <Form>
-        {/* <div className="warning-area">
-          {(data.rooms.length === 0 || adultNumber === 0) && (
-            <ReservationWarning />
-          )}
-        </div> */}
-        {isBigScreen && (
-          <div className="lg-only">
-            <div className="searching-area">
-              <div className="lg-search-container">
-                <div className="basic-search">
-                  <div className="guest-number">
-                    <SlUser /> <span className="search-title">Guest:</span>
-                    <GuestCount />
+      {/* <div className="warning-area">
+        {(data.rooms.length === 0 || adultNumber === 0) && (
+          <ReservationWarning />
+        )}
+      </div> */}
+      {isBigScreen && (
+        <div className="lg-only">
+          <div className="searching-area">
+            <div className="lg-search-container">
+              <div className="basic-search">
+                <div
+                  className="guest-number-container"
+                  onClick={handleGuestCountClick}
+                >
+                  <div className="guest-number-frame">
+                    <div className="guest-icon">
+                      <SlUser />
+                    </div>
+                    <div className="guest-number">
+                      <span className="search-title">Guests:</span>
+                      <GuestCount
+                        localAdultNumber={localAdultNumber}
+                        localKidNumber={localKidNumber}
+                      />
+                    </div>
                   </div>
-                  <div className="lg-date-range">
-                    <span className="search-title">
-                      Check-in & Check-out Date:
-                    </span>
-                    <DateRangePicker
-                      startDate={startDate}
-                      startDateId="startdate"
-                      endDate={endDate}
-                      endDateId="enddate"
-                      onDatesChange={({ startDate, endDate }) => {
-                        setStartDate(startDate);
-                        setEndDate(endDate);
-                      }}
-                      focusedInput={focusedInput}
-                      onFocusChange={(focusedInput) =>
-                        setFocusedInput(focusedInput)
-                      }
-                      displayFormat="yyyy-MM-DD"
-                      noBorder
-                      customArrowIcon={<GoDash />}
-                      numberOfMonths={2}
-                      withPortal
-                      daySize={60}
-                      keepOpenOnDateSelect
-                      renderCalendarInfo={renderCalendarInfo}
-                    />
-                  </div>
-                  <div className="apply-btn">
-                    <button
-                      type="sumbit"
-                      className="box-btn submit-btn inverse-btn"
-                      onClick={handleSubmit}
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </div>
-                <div className="additional-search">
-                  <button
-                    type="button"
-                    onClick={toggleDropdown}
-                    className="special-rate-btn lg-special-rate-btn"
-                  >
-                    Special codes or rates <PiCaretDownLight />
-                  </button>
-                  <SpecialRateDropdown
-                    showDropdown={showDropdown}
-                    toggleDropdown={toggleDropdown}
-                    isBigScreen={isBigScreen}
+
+                  <GuestSubmit
+                    isGuestSubmitOpen={isGuestSubmitOpen}
+                    localAdultNumber={localAdultNumber}
+                    localKidNumber={localKidNumber}
+                    addLocalGuest={addLocalGuest}
+                    subtractLocalGuest={subtractLocalGuest}
+                    handleGuestsApply={handleGuestsApply}
+                    handleGuestClose={handleGuestClose}
                   />
                 </div>
+
+                <div className="lg-date-range">
+                  <span className="search-title">
+                    Check-in & Check-out Date:
+                  </span>
+                  <DateRangePicker
+                    startDate={startDate}
+                    startDateId="startdate"
+                    endDate={endDate}
+                    endDateId="enddate"
+                    onDatesChange={({ startDate, endDate }) => {
+                      setStartDate(startDate);
+                      setEndDate(endDate);
+                    }}
+                    focusedInput={focusedInput}
+                    onFocusChange={(focusedInput) =>
+                      setFocusedInput(focusedInput)
+                    }
+                    displayFormat="yyyy-MM-DD"
+                    customArrowIcon={<GoDash />}
+                    numberOfMonths={2}
+                    withPortal
+                    daySize={60}
+                    // keepOpenOnDateSelect
+                    renderCalendarInfo={renderCalendarInfo}
+                  />
+                </div>
+
+                <div className="apply-btn">
+                  <button
+                    type="sumbit"
+                    className="box-btn submit-btn inverse-btn"
+                    onClick={handleSubmitClick}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+
+              <div className="additional-search">
+                <button
+                  type="button"
+                  onClick={toggleDiscountMenu}
+                  className="special-rate-btn lg-special-rate-btn"
+                >
+                  Special codes or rates <PiCaretDownLight />
+                </button>
+                <SpecialRateDropdown
+                  showDiscount={showDiscount}
+                  isBigScreen={isBigScreen}
+                />
               </div>
             </div>
           </div>
-        )}
-      </Form>
+        </div>
+      )}
     </div>
   );
 };
