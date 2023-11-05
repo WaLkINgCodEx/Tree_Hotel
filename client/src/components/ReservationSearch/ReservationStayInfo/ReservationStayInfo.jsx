@@ -48,7 +48,7 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
       </div>
 
       <div className="avail-stay-guest">
-        {adultNumber} {adultNumber > 1 ? " Adults" : " Adult"},{kidNumber}{" "}
+        {adultNumber} {adultNumber > 1 ? " Adults" : " Adult"}, {kidNumber}{" "}
         {kidNumber > 1 ? " Children" : " Child"}
       </div>
 

@@ -62,12 +62,18 @@
   margin-bottom: 15px;
 }
 
+.date-range {
+  display: flex;
+  align-items: center;
+}
+
 .stay-info {
   text-align: end;
   height: 100%;
 }
 
 .bottom-guest-bar {
+  position: relative;
   text-align: left;
   display: flex;
   justify-content: space-between;
@@ -77,12 +83,12 @@
   width: 15%;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .top-stay-bar .date-range,
   .top-stay-bar > span {
     display: none;
   }
-}
+} */
 
 .top-stay-bar span {
   width: 20%;
@@ -103,7 +109,7 @@
 
 @media (max-width: 600px) {
   .res-search-bar-btn {
-    width: 50%;
+    /* width: 50%; */
     margin-left: auto;
   }
 }
@@ -115,6 +121,13 @@
 
 .guest-count-bar {
   color: #000;
+}
+
+.bottom-guest-bar .dropdown-select-container {
+  color: #000;
+  padding: 10px 70px;
+  left: initial;
+  min-width: 100%;
 }
 
 .guest-count-bar-end {
@@ -129,7 +142,9 @@
 
 .apply-btn {
   min-width: 20%;
+  min-height: 60px;
 }
+
 .submit-btn {
   width: 100%;
   text-align: end;
@@ -205,17 +220,43 @@
   border-bottom: 0px;
 }
 
-.guest-number {
-  min-width: 24%;
+.guest-number-container {
+  position: relative;
+  /* padding-left: 15px; */
+  min-width: 32%;
   font-size: 18px;
   border-right: 1px solid #baa382;
-  display: flex;
   align-items: center;
-  margin-left: 15px;
+  /* display: flex;
+  margin-left: 15px; */
+}
+
+@media (min-width: 1200px) {
+  .guest-number-container {
+    min-width: 25%;
+  }
+}
+
+.guest-number-frame {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.guest-icon {
+  margin: auto 20px;
+  display: inline-flex;
+}
+
+.guest-number {
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  /* padding-right: 15px; */
 }
 
 .search-title {
-  margin-left: 10px;
+  /* margin-left: 10px; */
   font-weight: bold;
   font-size: 15px;
   color: #baa382;
@@ -226,6 +267,7 @@
 
 .guest-count-button-area {
   position: relative;
+  display: inline-flex;
 }
 
 .guest-count-button {
@@ -235,16 +277,20 @@
   font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", "sans-serif";
+  padding: 0;
 }
 
 .dropdown-select-container {
   display: none;
   background-color: #fff;
   border: 1px solid #baa382;
-  min-width: 200px;
-  min-height: 250px;
+  min-width: 100.7%;
+  box-sizing: border-box;
+  /* min-width: 201px;
+  min-height: 250px; */
   position: absolute;
-  top: 45px;
+  /* top: 46px; */
+  left: -0.4%;
   z-index: 5;
   padding: 0px 10px;
 }
@@ -319,6 +365,12 @@
 .results-left {
   width: 100%;
   background-color: #fff;
+}
+
+@media (min-width: 960px) {
+  .results-left {
+    margin-left: 20px;
+  }
 }
 
 .results-right {

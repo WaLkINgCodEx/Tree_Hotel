@@ -1,10 +1,9 @@
 import SearchResultOffer from "./SearchResultOffer";
-// import { offers } from "../../../data";
 import { useState } from "react";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
 const SearchResultCard = ({ roomType, offers }) => {
-  const { startDate, endDate, getTotalGuests, getTotalNights, data } =
+  const { startDate, endDate, getTotalGuests, getTotalNights } =
     useReservationContext();
   const [isMoreOfferOpen, setIsMoreOfferOpen] = useState(false);
   const toggleMoreOfferOpen = () => {

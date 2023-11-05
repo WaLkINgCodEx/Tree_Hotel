@@ -1,8 +1,8 @@
-const SpecialRateDropdown = ({ showDropdown, toggleDropdown }) => {
+const SpecialRateDropdown = ({ showDiscount }) => {
   return (
     <div
       className={
-        showDropdown
+        showDiscount
           ? "additional-search-container show-dropdown"
           : "additional-search-container"
       }
