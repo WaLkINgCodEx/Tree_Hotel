@@ -1,14 +1,15 @@
 import mongoose from "mongoose";
 import * as dotenv from "dotenv";
-dotenv.config();
+// dotenv.config();
 
 let isConnected = false;
 
-export const connectToDatabase = async () => {
+export const connectToDatabase = async (mongoURL) => {
   // Check if the database is already connected to avoid reconnecting
   if (!isConnected) {
     try {
-      const mongoURL = process.env.MONGO_URL;
+      // const mongoURL = process.env.MONGO_URL;
+      // console.log(mongoURL);
       await mongoose.connect(mongoURL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,

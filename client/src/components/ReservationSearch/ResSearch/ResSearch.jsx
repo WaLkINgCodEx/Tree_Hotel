@@ -35,7 +35,7 @@ const ResSearch = () => {
   const [showDiscount, setShowDiscount] = useState(false);
 
   const addLocalGuest = (e) => {
-    console.log(e.target.name);
+    // console.log(e.target.name);
 
     if (e.target.name === "adult") {
       if (localAdultNumber >= 0 && localAdultNumber < 6) {
@@ -49,7 +49,7 @@ const ResSearch = () => {
   };
 
   const subtractLocalGuest = (e) => {
-    console.log(e.target.name);
+    // console.log(e.target.name);
 
     if (e.target.name === "adult") {
       if (localAdultNumber > 0) {
