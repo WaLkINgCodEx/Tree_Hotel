@@ -16,9 +16,11 @@ api.use("/api/v1/", router);
 // Define the Netlify function handler
 export const handler = async (event, context) => {
   const mongoURL = process.env.MONGO_URL;
-  console.log(mongoURL);
+  // console.log(mongoURL);
   await connectToDatabase(mongoURL);
   const result = await serverless(api)(event, context);
+
+  console.log("result", result);
 
   // Disconnect from the database after the request is done
   await disconnectFromDatabase();
