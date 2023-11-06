@@ -82,13 +82,31 @@ router.get("/rooms", async (req, res) => {
 // Use the roomsRouter for the /api2/ route
 api.use("/api/v1/", router);
 
-// Define the Netlify function handler
-export const handler = async (event, context) => {
+const handler = serverless(api);
+
+// // Define the Netlify function handler
+// export const handler = async (event, context) => {
+//   const mongoURL = process.env.MONGO_URL;
+//   // console.log(mongoURL);
+//   await connectToDatabase(mongoURL);
+
+//   const result = await serverless(api)(event, context);
+
+//   console.log("result", result);
+
+//   // Disconnect from the database after the request is done
+//   await disconnectFromDatabase();
+
+//   return result;
+// };
+
+module.exports.handler = async (event, context) => {
   const mongoURL = process.env.MONGO_URL;
+
   // console.log(mongoURL);
   await connectToDatabase(mongoURL);
 
-  const result = await serverless(api)(event, context);
+  const result = await handler(event, context);
 
   console.log("result", result);
 
