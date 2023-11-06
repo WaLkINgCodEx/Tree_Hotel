@@ -10,9 +10,9 @@
   node_bundler = "esbuild"
 
 [dev]
-    publish = "client/public"
-    node_bundler = "esbuild"
-    functions = "netlify/functions"
+  publish = "client/public"
+  node_bundler = "esbuild"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/test/*"
@@ -20,6 +20,6 @@
   to = ".netlify/functions/test/:splat"
 
 [[redirects]]
-from = "/api/v1/*"
-status = 200
-to = ".netlify/functions/api/:splat"
+  from = "/api/v1/*"
+  status = 200
+  to = ".netlify/functions/api/:splat"
