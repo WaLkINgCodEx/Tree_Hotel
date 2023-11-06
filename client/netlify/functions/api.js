@@ -13,6 +13,7 @@ const api = express();
 const router = Router();
 
 router.get("/rooms", async (req, res) => {
+  console.log("/rooms");
   try {
     const { adultnumber, kidnumber, startdate, enddate } = req.query;
     const totalGuest = Number(adultnumber) + Number(kidnumber);
@@ -24,7 +25,7 @@ router.get("/rooms", async (req, res) => {
 
     // const rooms = await Availability.find({});
 
-    // console.log("server_adult", adultnumber);
+    console.log("server_adult", adultnumber);
     // console.log("server_startdate", startDate);
     // console.log("server_enddate", endDate);
     // console.log("totalNights", totalNights);
@@ -82,31 +83,17 @@ router.get("/rooms", async (req, res) => {
 // Use the roomsRouter for the /api2/ route
 api.use("/api/v1/", router);
 
-const handler = serverless(api);
+// const handler = serverless(api);
 
-// // Define the Netlify function handler
-// export const handler = async (event, context) => {
-//   const mongoURL = process.env.MONGO_URL;
-//   // console.log(mongoURL);
-//   await connectToDatabase(mongoURL);
-
-//   const result = await serverless(api)(event, context);
-
-//   console.log("result", result);
-
-//   // Disconnect from the database after the request is done
-//   await disconnectFromDatabase();
-
-//   return result;
-// };
-
-module.exports.handler = async (event, context) => {
+// Define the Netlify function handler
+export const handler = async (event, context) => {
+  console.log("event", event);
+  console.log("context", context);
   const mongoURL = process.env.MONGO_URL;
-
   // console.log(mongoURL);
   await connectToDatabase(mongoURL);
 
-  const result = await handler(event, context);
+  const result = await serverless(api)(event, context);
 
   console.log("result", result);
 
@@ -115,3 +102,22 @@ module.exports.handler = async (event, context) => {
 
   return result;
 };
+
+// module.exports.handler = async (event, context) => {
+//   const mongoURL = process.env.MONGO_URL;
+
+//   // console.log(mongoURL);
+//   await connectToDatabase(mongoURL);
+
+//   console.log("event", event);
+//   console.log("context", context);
+
+//   const result = await handler(event, context);
+
+//   console.log("result", result);
+
+//   // Disconnect from the database after the request is done
+//   await disconnectFromDatabase();
+
+//   return result;
+// };
