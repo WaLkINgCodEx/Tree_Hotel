@@ -20,7 +20,6 @@
   to = ".netlify/functions/test/:splat"
 
 [[redirects]]
-  force = true
   from = "/api/v1/*"
   status = 200
   to = ".netlify/functions/api/:splat"
