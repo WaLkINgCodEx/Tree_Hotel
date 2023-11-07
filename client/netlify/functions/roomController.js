@@ -4,6 +4,10 @@ import Availability from "./availabilityModel.js";
 // Create an Express Router
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.status(200).json({ test: "Hello" });
+});
+
 // Define a route handler for GET /api/v1/rooms
 router.get("/rooms", async (req, res) => {
   try {
