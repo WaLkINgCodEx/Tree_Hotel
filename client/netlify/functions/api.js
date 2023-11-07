@@ -12,7 +12,14 @@ dotenv.config();
 const api = express();
 const router = Router();
 
+router.get("/", (req, res) => {
+  res.status(200).json({ test: "Hello" });
+});
+
 router.get("/rooms", async (req, res) => {
+  const mongoURL = process.env.MONGO_URL;
+  await connectToDatabase(mongoURL);
+
   console.log("/rooms");
   try {
     const { adultnumber, kidnumber, startdate, enddate } = req.query;
@@ -78,30 +85,32 @@ router.get("/rooms", async (req, res) => {
       .status(500)
       .json({ error: "Internal Server Error", message: error.message });
   }
+
+  await disconnectFromDatabase();
 });
 
 // Use the roomsRouter for the /api2/ route
-api.use("/api/v1/", router);
+api.use("/.netlify/functions/api", router);
 
 // const handler = serverless(api);
 
-// Define the Netlify function handler
-export const handler = async (event, context) => {
-  console.log("event", event);
-  console.log("context", context);
-  const mongoURL = process.env.MONGO_URL;
-  // console.log(mongoURL);
-  await connectToDatabase(mongoURL);
+// // Define the Netlify function handler
+// export const handler = async (event, context) => {
+//   console.log("event", event);
+//   console.log("context", context);
+//   const mongoURL = process.env.MONGO_URL;
+//   // console.log(mongoURL);
+//   await connectToDatabase(mongoURL);
 
-  const result = await serverless(api)(event, context);
+//   const result = await serverless(api)(event, context);
 
-  console.log("result", result);
+//   console.log("result", result);
 
-  // Disconnect from the database after the request is done
-  await disconnectFromDatabase();
+//   // Disconnect from the database after the request is done
+//   await disconnectFromDatabase();
 
-  return result;
-};
+//   return result;
+// };
 
 // module.exports.handler = async (event, context) => {
 //   const mongoURL = process.env.MONGO_URL;
@@ -121,3 +130,13 @@ export const handler = async (event, context) => {
 
 //   return result;
 // };
+
+// export const handler = async (event, context) => {
+//   console.log("event", event);
+//   console.log("context", context);
+//   const result = await serverless(api)(event, context);
+
+//   return result;
+// };
+
+module.exports.handler = serverless(api);
