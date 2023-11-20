@@ -22,11 +22,11 @@ const ResSearchMobile = () => {
     setFocusedInput,
     startDate,
     endDate,
-    reservationTotal,
     setAdultNumber,
     setKidNumber,
     setFetchedData,
     setActiveStep,
+    totalCharge,
   } = useReservationContext();
 
   const [localAdultNumber, setLocalAdultNumber] = useState(0);
@@ -160,7 +160,7 @@ const ResSearchMobile = () => {
               onClick={toggleStayInfo}
             >
               <div className="stay-info">
-                CA ${reservationTotal} <PiCaretDownLight />
+                CA ${totalCharge} <PiCaretDownLight />
               </div>
             </button>
           </div>

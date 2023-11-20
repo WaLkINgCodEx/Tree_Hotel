@@ -1,17 +1,13 @@
 import { BsCheck2, BsFillCreditCardFill } from "react-icons/bs";
-// import { pricing } from "../../../data";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 
 const SearchResultOffer = ({ offer, idx, isMoreOfferOpen, roomType }) => {
-  const { getTotalNights, addItemToCart, reservationItems, handleNext } =
-    useReservationContext();
+  let { getTotalNights, addItemToCart, handleNext } = useReservationContext();
 
-  const totalPrice =
-    (roomType.basePrice + offer.addOnPrice) *
-    offer.discountRate *
-    getTotalNights();
-
-  const pricePerNight = (totalPrice / getTotalNights()).toFixed(2);
+  const totalNights = getTotalNights();
+  const roomCharge =
+    (roomType.basePrice + offer.addOnPrice) * offer.discountRate * totalNights;
+  const pricePerNight = (roomCharge / getTotalNights()).toFixed(2);
 
   return (
     <div
@@ -52,7 +48,7 @@ const SearchResultOffer = ({ offer, idx, isMoreOfferOpen, roomType }) => {
           type="button"
           className="avail-card-btn"
           onClick={() => {
-            addItemToCart(roomType, offer);
+            addItemToCart(roomType, offer, roomCharge);
             handleNext();
           }}
         >

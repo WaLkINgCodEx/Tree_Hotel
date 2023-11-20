@@ -5,7 +5,7 @@ import SearchResultCard from "./SearchResultCard";
 const SearchResults = () => {
   const { fetchedData, setFetchedData, activeStep } = useReservationContext();
 
-  console.log("fetchedData", fetchedData);
+  // console.log("fetchedData", fetchedData);
   // console.log("activeStep", activeStep);
 
   // let newData = fetchedData;

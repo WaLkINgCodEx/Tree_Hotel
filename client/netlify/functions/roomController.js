@@ -66,7 +66,7 @@ router.get("/rooms", async (req, res) => {
       },
     ]);
     // console.log("server_adult", adultnumber);
-    console.log("rooms", rooms);
+    // console.log("rooms", rooms);
     res.status(200).json({ rooms });
   } catch (error) {
     console.error(error);

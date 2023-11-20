@@ -29,7 +29,11 @@ const ReservationStepper = () => {
         return <SearchResults />;
 
       case 2:
-        return <ReservationGuest />;
+        if (!reservationItems.length) {
+          handleReset();
+        } else {
+          return <ReservationGuest />;
+        }
 
       case 3:
         return "Confirmed";
@@ -75,7 +79,7 @@ const ReservationStepper = () => {
         ) : (
           <>
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-              {activeStep >= 2 && (
+              {/* {activeStep >= 2 && (
                 <Button
                   color="inherit"
                   disabled={activeStep === 0}
@@ -84,7 +88,7 @@ const ReservationStepper = () => {
                 >
                   SELECT ROOM
                 </Button>
-              )}
+              )} */}
 
               <Box sx={{ flex: "1 1 auto" }} />
 
