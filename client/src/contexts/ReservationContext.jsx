@@ -1,7 +1,7 @@
 import { useState } from "react";
 import moment from "moment";
 import { createContext, useContext } from "react";
-// import customFetch from "../utils/customFetch";
+import { pricing } from "../data";
 import { useLoaderData } from "react-router-dom";
 
 const ReservationContext = createContext();
@@ -21,39 +21,8 @@ export const loader = async ({ request }) => {
   const enddate = params.enddate;
 
   return {
-    // data: {},
     searchValues: { adultnumber, kidnumber, startdate, enddate },
   };
-
-  // // console.log("params", params);
-  // // console.log(adultnumber);
-
-  // if (adultnumber > 0) {
-  //   try {
-  //     const roomAvailability = await customFetch.get("/rooms", {
-  //       params: {
-  //         adultnumber,
-  //         kidnumber,
-  //         startdate,
-  //         enddate,
-  //       },
-  //     });
-
-  //     console.log("roomAvailability", roomAvailability);
-
-  //     return {
-  //       data: { roomAvailability },
-  //       searchValues: { adultnumber, kidnumber, startdate, enddate },
-  //     };
-  //   } catch (error) {
-  //     return error;
-  //   }
-  // } else {
-  //   return {
-  //     data: {},
-  //     searchValues: { adultnumber, kidnumber, startdate, enddate },
-  //   };
-  // }
 };
 
 export const ReservationProvider = ({ children }) => {
@@ -62,19 +31,17 @@ export const ReservationProvider = ({ children }) => {
   const [startDate, setStartDate] = useState(today);
   const [endDate, setEndDate] = useState(tomorrow);
   const [focusedInput, setFocusedInput] = useState();
-
+  const [currentBookingID, setCurrentBookingID] = useState(0);
   const [reservationItems, setReservationItems] = useState([]);
-  const [reservationTotal, setReservationTotal] = useState(0);
+  const [chargeList, setchargeList] = useState([]);
   const [adultNumber, setAdultNumber] = useState(0);
   const [kidNumber, setKidNumber] = useState(0);
-
   const { searchValues } = useLoaderData();
   const [fetchedData, setFetchedData] = useState(null);
-
   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
-    console.log(activeStep);
+    // console.log(activeStep);
     if (activeStep === 0) {
       setActiveStep(1);
     } else {
@@ -124,7 +91,7 @@ export const ReservationProvider = ({ children }) => {
     }
   };
 
-  const addReservationItem = (reservationToAdd, offer) => {
+  const addReservationItem = (reservationToAdd, offer, currentBookingID) => {
     return [
       ...reservationItems,
       {
@@ -133,12 +100,71 @@ export const ReservationProvider = ({ children }) => {
         adult: adultNumber,
         kid: kidNumber,
         totalNights: getTotalNights(),
+        bookingID: currentBookingID,
       },
     ];
   };
 
-  const addItemToCart = (reservationToAdd, offer) => {
-    setReservationItems(addReservationItem(reservationToAdd, offer));
+  const addChargeList = (reservationToAdd, roomCharge, currentBookingID) => {
+    const govTax = roomCharge * pricing.govTax;
+    const provTax = roomCharge * pricing.provTax;
+    const serviceCharge = roomCharge * pricing.serviceCharge;
+    const subCharge = (govTax + provTax + serviceCharge).toFixed(2);
+
+    const totalCharge = (Number(roomCharge) + Number(subCharge)).toFixed(2);
+
+    return [
+      ...chargeList,
+      {
+        bookingID: currentBookingID,
+        roomID: reservationToAdd._id,
+        price: totalCharge,
+      },
+    ];
+  };
+
+  const totalCharge = chargeList.reduce((accumulator, order) => {
+    return accumulator + parseFloat(order.price);
+  }, 0);
+
+  const addItemToCart = (reservationToAdd, offer, roomCharge) => {
+    setCurrentBookingID((prevID) => prevID + 1);
+
+    setReservationItems(
+      addReservationItem(reservationToAdd, offer, currentBookingID)
+    );
+    setchargeList(
+      addChargeList(reservationToAdd, roomCharge, currentBookingID)
+    );
+  };
+
+  const removeOrder = (bookingID, roomID) => {
+    const hasBookingID = reservationItems.some(
+      (reser) => reser.bookingID === bookingID
+    );
+
+    if (hasBookingID) {
+      console.log("Order exists!");
+
+      const undatedReservationItems = reservationItems.filter(
+        (reservation) =>
+          !(
+            (reservation.bookingID === bookingID) &
+            (reservation._id === roomID)
+          )
+      );
+
+      const updatedChargeList = chargeList.filter(
+        (chargeOrder) =>
+          !(
+            (chargeOrder.bookingID === bookingID) &
+            (chargeOrder.roomID === roomID)
+          )
+      );
+
+      setReservationItems(undatedReservationItems);
+      setchargeList(updatedChargeList);
+    }
   };
 
   const value = {
@@ -160,8 +186,9 @@ export const ReservationProvider = ({ children }) => {
     getTotalGuests,
     reservationItems,
     addItemToCart,
-    reservationTotal,
-    setReservationTotal,
+    chargeList,
+    removeOrder,
+    totalCharge,
     searchValues,
     activeStep,
     setActiveStep,

@@ -4,11 +4,11 @@ import { useReservationContext } from "../../../contexts/ReservationContext";
 import PenToSquare from "../../../assets/icons/PenToSquare";
 import TrashCan from "../../../assets/icons/TrashCan";
 
-const ReservationItem = ({ reservationItem }) => {
-  const { basePrice, offer, totalNights } = reservationItem;
+const ReservationItem = ({ reservationItem, bookingID }) => {
+  // console.log(reservationItem);
+  const { removeOrder } = useReservationContext();
 
-  const { setReservationTotal, handleBack, reservationItems } =
-    useReservationContext();
+  const { basePrice, offer, totalNights, _id } = reservationItem;
 
   const totalPrice = (
     (basePrice + offer.addOnPrice) *
@@ -16,17 +16,10 @@ const ReservationItem = ({ reservationItem }) => {
     totalNights
   ).toFixed(2);
 
-  // const pricePerNight = (totalPrice / totalNights).toFixed(2);
-
   const govTax = totalPrice * pricing.govTax;
   const provTax = totalPrice * pricing.provTax;
   const serviceCharge = totalPrice * pricing.serviceCharge;
   const totalFees = (govTax + provTax + serviceCharge).toFixed(2);
-
-  useEffect(() => {
-    const newTotal = (Number(totalPrice) + Number(totalFees)).toFixed(2);
-    setReservationTotal(newTotal);
-  }, [totalPrice, totalFees]);
 
   return (
     <div className="reservation-item-container">
@@ -65,7 +58,7 @@ const ReservationItem = ({ reservationItem }) => {
           <span>Edit</span>
         </button>
         <span></span>
-        <button className="btn">
+        <button className="btn" onClick={() => removeOrder(bookingID, _id)}>
           <span className="btn-remove">
             <TrashCan />
           </span>

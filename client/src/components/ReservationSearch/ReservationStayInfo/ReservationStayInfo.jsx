@@ -11,17 +11,10 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
     startDate,
     endDate,
     reservationItems,
-    reservationTotal,
-    handleBack,
+    handleReset,
+    chargeList,
+    totalCharge,
   } = useReservationContext();
-
-  // const totalPrice = reservationItems.reduce(
-  //   (total, reservationItem) =>
-  //     total + (reservationItem.basePrice + offer.addOnPrice) *
-  //   offer.discountRate *
-  //   totalNights,
-  //   0
-  // );
 
   return (
     <div className="avail-stay-info">
@@ -51,14 +44,20 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
         {adultNumber} {adultNumber > 1 ? " Adults" : " Adult"}, {kidNumber}{" "}
         {kidNumber > 1 ? " Children" : " Child"}
       </div>
-
+      {console.log("reservationItems", reservationItems)}
       {reservationItems.length > 0 &&
-        reservationItems.map((reservationItem) => {
-          return <ReservationItem reservationItem={reservationItem} />;
+        reservationItems.map((reservationItem, index) => {
+          return (
+            <ReservationItem
+              key={index}
+              bookingID={reservationItem.bookingID}
+              reservationItem={reservationItem}
+            />
+          );
         })}
       {reservationItems.length > 0 && (
         <div className="add-room">
-          <button className="btn" onClick={handleBack}>
+          <button className="btn" onClick={handleReset}>
             <span className="add-icon">
               <CirclePlus />
             </span>
@@ -69,12 +68,14 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
       <div className="avail-stay-total-fee">
         <div className="avail-stay-total-fee-left">Total:</div>
         <div className="avail-stay-total-fee-right">
-          CA$ {reservationTotal}
-          {reservationTotal > 0 && (
+          CA$ {totalCharge}
+          {totalCharge > 0 && (
             <span className="avail-stay-total-fee-tax-stat">
               (CAD tax included)
             </span>
           )}
+          {}
+          {console.log("chargeList", chargeList)}
         </div>
       </div>
     </div>
