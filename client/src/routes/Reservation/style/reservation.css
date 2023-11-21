@@ -7,9 +7,22 @@ body {
   font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", "sans-serif";
-  padding-bottom: 330px;
+  padding-bottom: 381px;
+
   position: relative;
   min-height: 78vh;
+}
+
+@media (min-width: 960px) {
+  .reservation-wrapper {
+    padding-bottom: 330px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .reservation-wrapper {
+    padding-bottom: 223px;
+  }
 }
 
 @media (min-width: 1280px) {
