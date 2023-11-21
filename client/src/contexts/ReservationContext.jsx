@@ -99,6 +99,8 @@ export const ReservationProvider = ({ children }) => {
         offer: offer,
         adult: adultNumber,
         kid: kidNumber,
+        checkInDate: startDate,
+        checkOutDate: endDate,
         totalNights: getTotalNights(),
         bookingID: currentBookingID,
       },

@@ -222,6 +222,23 @@
   margin-right: 0;
 }
 
+.reservation-wrapper .banyanfooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.reservation-wrapper .bottom-container {
+  min-height: 130px;
+}
+
+.reservation-wrapper .footer-bottom-L {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .footer-bottom-C {
   display: flex;
   margin: auto;

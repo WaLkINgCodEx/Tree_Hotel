@@ -1,20 +1,11 @@
 import { useReservationContext } from "../../../contexts/ReservationContext";
-import moment from "moment";
 import ReservationItem from "./ReservationItem";
 import "./style/reservationStayInfo.css";
 import CirclePlus from "../../../assets/icons/CirclePlus";
 
 const ReservationStayInfo = ({ toggleStayInfo }) => {
-  const {
-    adultNumber,
-    kidNumber,
-    startDate,
-    endDate,
-    reservationItems,
-    handleReset,
-    chargeList,
-    totalCharge,
-  } = useReservationContext();
+  const { reservationItems, handleReset, chargeList, totalCharge } =
+    useReservationContext();
 
   return (
     <div className="avail-stay-info">
@@ -35,15 +26,6 @@ const ReservationStayInfo = ({ toggleStayInfo }) => {
         </div>
       </div>
 
-      <div className="avail-stay-date">
-        {moment(startDate).format("ddd, MMM D, YYYY")} -
-        {moment(endDate).format("ddd, MMM D, YYYY")}
-      </div>
-
-      <div className="avail-stay-guest">
-        {adultNumber} {adultNumber > 1 ? " Adults" : " Adult"}, {kidNumber}{" "}
-        {kidNumber > 1 ? " Children" : " Child"}
-      </div>
       {console.log("reservationItems", reservationItems)}
       {reservationItems.length > 0 &&
         reservationItems.map((reservationItem, index) => {
