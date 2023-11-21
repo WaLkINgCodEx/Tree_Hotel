@@ -86,8 +86,8 @@
 .avail-stay-guest {
   color: #173f35;
   padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #baa382;
+  /* margin-bottom: 15px; */
+  /* border-bottom: 1px solid #baa382; */
 }
 
 .reservation-item-container {

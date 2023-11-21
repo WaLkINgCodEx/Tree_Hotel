@@ -78,7 +78,10 @@ const ReservationStepper = () => {
           </>
         ) : (
           <>
-            <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+            <Box
+              className="nextStep-bar"
+              sx={{ display: "flex", flexDirection: "row", pt: 2 }}
+            >
               {/* {activeStep >= 2 && (
                 <Button
                   color="inherit"
@@ -94,6 +97,7 @@ const ReservationStepper = () => {
 
               {activeStep >= 2 && (
                 <Button
+                  className="complete-btn"
                   onClick={handleNext}
                   disabled={reservationItems.length < 1}
                 >

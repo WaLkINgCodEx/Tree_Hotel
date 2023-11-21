@@ -1,8 +1,8 @@
-import { useEffect } from "react";
 import { pricing } from "../../../data";
 import { useReservationContext } from "../../../contexts/ReservationContext";
 import PenToSquare from "../../../assets/icons/PenToSquare";
 import TrashCan from "../../../assets/icons/TrashCan";
+import moment from "moment";
 
 const ReservationItem = ({ reservationItem, bookingID }) => {
   // console.log(reservationItem);
@@ -23,6 +23,16 @@ const ReservationItem = ({ reservationItem, bookingID }) => {
 
   return (
     <div className="reservation-item-container">
+      <div className="avail-stay-date">
+        {moment(reservationItem.checkInDate).format("ddd, MMM D, YYYY")} -{" "}
+        {moment(reservationItem.checkOutDate).format("ddd, MMM D, YYYY")}
+      </div>
+
+      <div className="avail-stay-guest">
+        {reservationItem.adult}{" "}
+        {reservationItem.adult > 1 ? " Adults" : " Adult"},{" "}
+        {reservationItem.kid} {reservationItem.kid > 1 ? " Children" : " Child"}
+      </div>
       <div className="reservation-item">
         <div className="reservation-item-left">
           <div className="reservation-item-suite">

@@ -1,8 +1,21 @@
+body {
+  background-color: #fff;
+}
+
 .reservation-wrapper {
   background-color: #fff;
   font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
     "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
     "Hiragino Sans", "sans-serif";
+  padding-bottom: 330px;
+  position: relative;
+  min-height: 78vh;
+}
+
+@media (min-width: 1280px) {
+  .reservation-wrapper {
+    padding-bottom: 223px;
+  }
 }
 
 .reservation-nav-bar-wrapper {
@@ -41,6 +54,6 @@
   .results-right {
     width: 43%;
     display: block;
-    margin-left: 10px;
+    margin-left: 20px;
   }
 }

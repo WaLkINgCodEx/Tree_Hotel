@@ -1,5 +1,4 @@
 .avail-card {
-  /* max-width: 850px; */
   background-color: #e7e6e2;
   border: 1px solid #baa382;
   display: flex;
@@ -205,7 +204,6 @@
   padding: 17px;
   border: 1px solid #baa382;
   color: #173f35;
-  /* text-align: center; */
 }
 
 @media (min-width: 960px) {
@@ -220,23 +218,14 @@
   margin: auto;
 }
 
-/* .guest-details-container .cus-name .first-name {
-  width: 50%;
-} */
-
 @media (max-width: 800px) {
   .guest-details-container .prefix-last {
     display: flex;
-    /* width: 50%;
-    max-width: 394px; */
-    /* position: relative; */
-    /* margin: 0 7px; */
   }
 }
 
 @media (min-width: 800px) {
   .guest-details-container .cus-name,
-  /* .guest-details-container .prefix-last > div, */
   .guest-details-container .contact,
   .guest-details-container .address {
     display: flex;
@@ -244,15 +233,10 @@
 
   .guest-details-container .prefix-last {
     display: inline-flex;
-    /* width: 50%;
-    max-width: 394px; */
-    /* position: relative; */
-    /* margin: 0 7px; */
   }
 
   .guest-details-container .prefix-last .first-name {
     width: 74%;
-    /* margin: 0 8px; */
   }
 
   .guest-details-container .prefix-last,
@@ -288,37 +272,19 @@
   .transport-accordion-input .departure-time {
     width: 48%;
   }
-
-  /* .guest-details-container .contact div {
-    margin: 0 8px;
-    width: 50%;
-  } */
-
-  /* .guest-details-container .tel-number,
-  .guest-details-container .email {
-    width: 50%;
-  } */
 }
 
 #transportaion-box > div {
   border-radius: 0;
-  /* border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0; */
 }
-
-/* .transport-accordion-input {
-  display: flex;
-} */
 
 .res-policy-wrapper {
   margin: 15px auto;
-  /* max-width: 1260px; */
 }
 
 .res-policy-container {
   background-color: #eee;
   padding: 24px;
-  /* max-width: 835px; */
   border: 1px solid #baa382;
   color: #173f35;
 }
@@ -351,7 +317,6 @@
 .acknow-container {
   background-color: #eee;
   padding: 24px;
-  /* max-width: 835px; */
   border: 1px solid #baa382;
   color: #173f35;
   font-family: "Niramit Regular", "AXtManalBold Regular", "Helvetica", "Arial",
@@ -366,4 +331,26 @@
 
 .stepper-bar {
   margin-bottom: 30px;
+}
+
+.nextStep-bar {
+  margin: auto;
+  max-width: 852px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nextStep-bar .complete-btn {
+  font-size: 1rem;
+  background-color: #baa382;
+  border-radius: 0;
+  color: white;
+  padding: 20px 45px;
+  font-family: "Reforma_1969", "AXtManalBold Regular", "Helvetica", "Arial",
+    "Microsoft Yahei", "PingFang SC", "PingFang TC", "PingFang HK",
+    "Hiragino Sans", "sans-serif";
+}
+
+.nextStep-bar .complete-btn:hover {
+  background-color: #baa382;
 }
