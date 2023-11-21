@@ -333,6 +333,11 @@
   margin-bottom: 30px;
 }
 
+.stepper-bar .MuiStep-horizontal {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .nextStep-bar {
   margin: auto;
   max-width: 852px;
